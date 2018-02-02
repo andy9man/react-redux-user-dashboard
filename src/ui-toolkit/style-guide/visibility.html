@@ -1,0 +1,687 @@
+<!doctype html>
+<html>
+<head>
+	<title>Style Guide - NM / LV</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+	<link rel="stylesheet" href="../css/static/fader-overlay.css">
+	<style>
+	/*
+	
+	github.com style (c) Vasily Polovnyov <vast@whiteants.net>
+	
+	*/
+	
+	.hljs {
+	  display: block;
+	  overflow-x: auto;
+	  padding: 0.5em;
+	  color: #333;
+	  background: #f8f8f8;
+	  -webkit-text-size-adjust: none;
+	}
+	
+	.hljs-comment,
+	.diff .hljs-header {
+	  color: #998;
+	  font-style: italic;
+	}
+	
+	.hljs-keyword,
+	.css .rule .hljs-keyword,
+	.hljs-winutils,
+	.nginx .hljs-title,
+	.hljs-subst,
+	.hljs-request,
+	.hljs-status {
+	  color: #333;
+	  font-weight: bold;
+	}
+	
+	.hljs-number,
+	.hljs-hexcolor,
+	.ruby .hljs-constant {
+	  color: #008080;
+	}
+	
+	.hljs-string,
+	.hljs-tag .hljs-value,
+	.hljs-doctag,
+	.tex .hljs-formula {
+	  color: #d14;
+	}
+	
+	.hljs-title,
+	.hljs-id,
+	.scss .hljs-preprocessor {
+	  color: #900;
+	  font-weight: bold;
+	}
+	
+	.hljs-list .hljs-keyword,
+	.hljs-subst {
+	  font-weight: normal;
+	}
+	
+	.hljs-class .hljs-title,
+	.hljs-type,
+	.vhdl .hljs-literal,
+	.tex .hljs-command {
+	  color: #458;
+	  font-weight: bold;
+	}
+	
+	.hljs-tag,
+	.hljs-tag .hljs-title,
+	.hljs-rule .hljs-property,
+	.django .hljs-tag .hljs-keyword {
+	  color: #000080;
+	  font-weight: normal;
+	}
+	
+	.hljs-attribute,
+	.hljs-variable,
+	.lisp .hljs-body,
+	.hljs-name {
+	  color: #008080;
+	}
+	
+	.hljs-regexp {
+	  color: #009926;
+	}
+	
+	.hljs-symbol,
+	.ruby .hljs-symbol .hljs-string,
+	.lisp .hljs-keyword,
+	.clojure .hljs-keyword,
+	.scheme .hljs-keyword,
+	.tex .hljs-special,
+	.hljs-prompt {
+	  color: #990073;
+	}
+	
+	.hljs-built_in {
+	  color: #0086b3;
+	}
+	
+	.hljs-preprocessor,
+	.hljs-pragma,
+	.hljs-pi,
+	.hljs-doctype,
+	.hljs-shebang,
+	.hljs-cdata {
+	  color: #999;
+	  font-weight: bold;
+	}
+	
+	.hljs-deletion {
+	  background: #fdd;
+	}
+	
+	.hljs-addition {
+	  background: #dfd;
+	}
+	
+	.diff .hljs-change {
+	  background: #0086b3;
+	}
+	
+	.hljs-chunk {
+	  color: #aaa;
+	}
+	
+	</style></head>
+<body>
+	<div class="page-container">
+		<div id="fader-overlay" class="sg-fader-overlay"></div>
+
+		<nav class="row sg-nav padding-vert-small viewport-el" role="navigation" data-emit-events data-top-bottom >
+			<div class="small-2 columns burger-wrapper show-for-small">
+				<button class="burger reset-button trigger-menu">
+					<div class="burger-content"></div>
+				</button>
+			</div>
+
+			<h1 class="medium-7 columns hide-for-small margin-vert-none"><a href="#">LearnVest &amp; Northwestern Mutual - A Style Guide</a></h1>
+
+			<div class="small-10 medium-5 columns theme-switch-wrapper reset-child-margins text-right">
+				<span class="text-white inline-block valign-middle margin-right-small">Select Theme: </span>
+				<!-- jQuery injects select el here (theme-switch.js) -->
+			</div>
+		</nav>
+
+		<section class="row height-full">
+			<div class="medium-4 large-3 xlarge-2 columns height-full hide-for-small sg-sidebar">
+				<div class="padding-top-medium reset-child-margins">
+					<ul class="sg-block-nav sg-block-nav-submenu reset-list reset-child-margins">
+
+						<h3>Visibility</h3>
+						<li><a href="#Visibility-Show_by_Screen_Size">Show by Screen Size</a></li>
+						<li><a href="#Visibility-Hide_by_Screen_Size">Hide by Screen Size</a></li>
+						<li><a href="#Visibility-Orientation_Detection">Orientation Detection</a></li>
+						<li><a href="#Visibility-Touch_Detection">Touch Detection</a></li>
+						<li><a href="#Visibility-Accessibility_-_Screen_Readers">Accessibility - Screen Readers</a></li>
+						<li><a href="#Visibility-Show_for_Screen_Readers_Only">Show for Screen Readers Only</a></li>
+						<li><a href="#Visibility-Hide_for_Screen_Readers_Only">Hide for Screen Readers Only</a></li>
+						<li><a href="#Visibility-Creating_Skip_Links">Creating Skip Links</a></li>
+						<li><a href="#Visibility-Responsive_Visibility_-_Hiding">Responsive Visibility - Hiding</a></li>
+						<li><a href="#Visibility-Responsive_Visibility_-_Showing">Responsive Visibility - Showing</a></li>
+						<li><a href="#Visibility-Print_Visibility">Print Visibility</a></li>
+
+					</ul>
+
+
+					<ul class="sg-block-nav sg-category-nav reset-list reset-child-margins">
+						<h3>Categories</h3>
+						<li><a href="button-groups.html">Button Groups</a></li>
+						<li><a href="buttons.html">Buttons</a></li>
+						<li><a href="card.html">Card</a></li>
+						<li><a href="colors.html">Colors</a></li>
+						<li><a href="forms.html">Forms</a></li>
+						<li><a href="ghosting.html">Ghosting</a></li>
+						<li><a href="graphs.html">Graphs</a></li>
+						<li><a href="grid.html">Grid</a></li>
+						<li><a href="icons.html">Icons</a></li>
+						<li><a href="labels.html">Labels</a></li>
+						<li><a href="loading-indicators.html">Loading Indicators</a></li>
+						<li><a href="modals.html">Modals</a></li>
+						<li><a href="navigation.html">Navigation</a></li>
+						<li><a href="notifications.html">Notifications</a></li>
+						<li><a href="switches.html">Switches</a></li>
+						<li><a href="tables.html">Tables</a></li>
+						<li><a href="tooltips.html">Tooltips</a></li>
+						<li><a href="type.html">Type</a></li>
+						<li><a href="utility-classes.html">Utility Classes</a></li>
+						<li><a href="visibility.html">Visibility</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="medium-8 large-9 xlarge-10 columns sg-content" id="styleguide">
+				<div class="section" id="Visibility-Visibility" data-section="Visibility" data-heading="Visibility">
+
+					<div class="comment">
+						<h1>Visibility</h1>
+						<p>Visibility classes let you show or hide elements based on screen size or device orientation. You can use visibility classes to control which elements users see depending on their browsing environment.</p>
+					</div>
+
+
+
+				</div>
+				<div class="section" id="Visibility-Show_by_Screen_Size" data-section="Visibility" data-heading="Show by Screen Size">
+
+					<div class="comment">
+						<h1>Show by Screen Size</h1>
+						<p>In this example, we use the show visibility classes to show certain strings of text based on the device on which users view a page. If their browser meets the class&apos;s conditions, the element will be shown. If not, it will be hidden.</p>
+					</div>
+
+					<div class="ss-title">EXAMPLE
+						<span class="icon-code tooltip-target tooltip-show-on-hover">
+							<div class="show-hide-code tooltip tooltip-top-right reset-child-margins">
+								<p>Show Code</p>
+							</div>
+							<span class="icon icon-caret-left"></span>
+							<span class="icon icon-caret-right"></span>
+						</span>
+					</div>
+					<div class="codeBlock markup hljs">
+						<pre><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"row"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">strong</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"columns show-for-small-only"</span>&gt;</span>This text is shown only on a small screen.<span class="hljs-tag">&lt;/<span class="hljs-title">strong</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-title">strong</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"columns show-for-medium-up"</span>&gt;</span>This text is shown on medium screens and up.<span class="hljs-tag">&lt;/<span class="hljs-title">strong</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-title">strong</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"columns show-for-medium-only"</span>&gt;</span>This text is shown only on a medium screen.<span class="hljs-tag">&lt;/<span class="hljs-title">strong</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-title">strong</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"columns show-for-large-up"</span>&gt;</span>This text is shown on large screens and up.<span class="hljs-tag">&lt;/<span class="hljs-title">strong</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-title">strong</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"columns show-for-large-only"</span>&gt;</span>This text is shown only on a large screen.<span class="hljs-tag">&lt;/<span class="hljs-title">strong</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-title">strong</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"columns show-for-xlarge-up"</span>&gt;</span>This text is shown on xlarge screens and up.<span class="hljs-tag">&lt;/<span class="hljs-title">strong</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-title">strong</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"columns show-for-xlarge-only"</span>&gt;</span>This text is shown only on an xlarge screen.<span class="hljs-tag">&lt;/<span class="hljs-title">strong</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
+					</div>
+
+					<div class="result codeExample">
+						<div class="exampleOutput">
+							<div class="row">
+    <strong class="columns show-for-small-only">This text is shown only on a small screen.</strong>
+
+    <strong class="columns show-for-medium-up">This text is shown on medium screens and up.</strong>
+
+    <strong class="columns show-for-medium-only">This text is shown only on a medium screen.</strong>
+
+    <strong class="columns show-for-large-up">This text is shown on large screens and up.</strong>
+
+    <strong class="columns show-for-large-only">This text is shown only on a large screen.</strong>
+
+    <strong class="columns show-for-xlarge-up">This text is shown on xlarge screens and up.</strong>
+
+    <strong class="columns show-for-xlarge-only">This text is shown only on an xlarge screen.</strong>
+</div>
+						</div>
+					</div>
+
+				</div>
+				<div class="section" id="Visibility-Hide_by_Screen_Size" data-section="Visibility" data-heading="Hide by Screen Size">
+
+					<div class="comment">
+						<h1>Hide by Screen Size</h1>
+						<p>This example shows the opposite - using the hide visibility classes to state which elements should disappear based on your device&apos;s screen size or orientation. Users will see elements on every browser except those that meet these conditions.</p>
+					</div>
+
+					<div class="ss-title">EXAMPLE
+						<span class="icon-code tooltip-target tooltip-show-on-hover">
+							<div class="show-hide-code tooltip tooltip-top-right reset-child-margins">
+								<p>Show Code</p>
+							</div>
+							<span class="icon icon-caret-left"></span>
+							<span class="icon icon-caret-right"></span>
+						</span>
+					</div>
+					<div class="codeBlock markup hljs">
+						<pre><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"row"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">strong</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"columns hide-for-small-only"</span>&gt;</span>You are <span class="hljs-tag">&lt;<span class="hljs-title">em</span>&gt;</span>not<span class="hljs-tag">&lt;/<span class="hljs-title">em</span>&gt;</span> on a small screen.<span class="hljs-tag">&lt;/<span class="hljs-title">strong</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-title">strong</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"columns hide-for-medium-up"</span>&gt;</span>You are <span class="hljs-tag">&lt;<span class="hljs-title">em</span>&gt;</span>not<span class="hljs-tag">&lt;/<span class="hljs-title">em</span>&gt;</span> on a medium, large, or xlarge screen.<span class="hljs-tag">&lt;/<span class="hljs-title">strong</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-title">strong</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"columns hide-for-medium-only"</span>&gt;</span>You are <span class="hljs-tag">&lt;<span class="hljs-title">em</span>&gt;</span>not<span class="hljs-tag">&lt;/<span class="hljs-title">em</span>&gt;</span> on a medium screen.<span class="hljs-tag">&lt;/<span class="hljs-title">strong</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-title">strong</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"columns hide-for-large-up"</span>&gt;</span>You are <span class="hljs-tag">&lt;<span class="hljs-title">em</span>&gt;</span>not<span class="hljs-tag">&lt;/<span class="hljs-title">em</span>&gt;</span> on a large, or xlarge screen.<span class="hljs-tag">&lt;/<span class="hljs-title">strong</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-title">strong</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"columns hide-for-large-only"</span>&gt;</span>You are <span class="hljs-tag">&lt;<span class="hljs-title">em</span>&gt;</span>not<span class="hljs-tag">&lt;/<span class="hljs-title">em</span>&gt;</span> on a large screen.<span class="hljs-tag">&lt;/<span class="hljs-title">strong</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-title">strong</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"columns hide-for-xlarge-up"</span>&gt;</span>You are <span class="hljs-tag">&lt;<span class="hljs-title">em</span>&gt;</span>not<span class="hljs-tag">&lt;/<span class="hljs-title">em</span>&gt;</span> on an xlarge screen and up.<span class="hljs-tag">&lt;/<span class="hljs-title">strong</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-title">strong</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"columns hide-for-xlarge-only"</span>&gt;</span>You are <span class="hljs-tag">&lt;<span class="hljs-title">em</span>&gt;</span>not<span class="hljs-tag">&lt;/<span class="hljs-title">em</span>&gt;</span> on an xlarge screen.<span class="hljs-tag">&lt;/<span class="hljs-title">strong</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
+					</div>
+
+					<div class="result codeExample">
+						<div class="exampleOutput">
+							<div class="row">
+    <strong class="columns hide-for-small-only">You are <em>not</em> on a small screen.</strong>
+
+    <strong class="columns hide-for-medium-up">You are <em>not</em> on a medium, large, or xlarge screen.</strong>
+
+    <strong class="columns hide-for-medium-only">You are <em>not</em> on a medium screen.</strong>
+
+    <strong class="columns hide-for-large-up">You are <em>not</em> on a large, or xlarge screen.</strong>
+
+    <strong class="columns hide-for-large-only">You are <em>not</em> on a large screen.</strong>
+
+    <strong class="columns hide-for-xlarge-up">You are <em>not</em> on an xlarge screen and up.</strong>
+
+    <strong class="columns hide-for-xlarge-only">You are <em>not</em> on an xlarge screen.</strong>
+</div>
+						</div>
+					</div>
+
+				</div>
+				<div class="section" id="Visibility-Orientation_Detection" data-section="Visibility" data-heading="Orientation Detection">
+
+					<div class="comment">
+						<h1>Orientation Detection</h1>
+						<p>This straightforward example shows how two strings of text determine whether or not an element is visible in different orientations. This will change on mobile devices when you rotate the device. On desktop, the orientation is almost always reported as landscape.</p>
+					</div>
+
+					<div class="ss-title">EXAMPLE
+						<span class="icon-code tooltip-target tooltip-show-on-hover">
+							<div class="show-hide-code tooltip tooltip-top-right reset-child-margins">
+								<p>Show Code</p>
+							</div>
+							<span class="icon icon-caret-left"></span>
+							<span class="icon icon-caret-right"></span>
+						</span>
+					</div>
+					<div class="codeBlock markup hljs">
+						<pre><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"row"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">strong</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"columns show-for-landscape"</span>&gt;</span>You are in landscape orientation.<span class="hljs-tag">&lt;/<span class="hljs-title">strong</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-title">strong</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"columns show-for-portrait"</span>&gt;</span>You are in portrait orientation.<span class="hljs-tag">&lt;/<span class="hljs-title">strong</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
+					</div>
+
+					<div class="result codeExample">
+						<div class="exampleOutput">
+							<div class="row">
+    <strong class="columns show-for-landscape">You are in landscape orientation.</strong>
+
+    <strong class="columns show-for-portrait">You are in portrait orientation.</strong>
+</div>
+						</div>
+					</div>
+
+				</div>
+				<div class="section" id="Visibility-Touch_Detection" data-section="Visibility" data-heading="Touch Detection">
+
+					<div class="comment">
+						<h1>Touch Detection</h1>
+						<p>There are also visibility classes to hide or show content based on whether a device supports touch (as determined by Modernizr).</p>
+					</div>
+
+					<div class="ss-title">EXAMPLE
+						<span class="icon-code tooltip-target tooltip-show-on-hover">
+							<div class="show-hide-code tooltip tooltip-top-right reset-child-margins">
+								<p>Show Code</p>
+							</div>
+							<span class="icon icon-caret-left"></span>
+							<span class="icon icon-caret-right"></span>
+						</span>
+					</div>
+					<div class="codeBlock markup hljs">
+						<pre><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"row"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">strong</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"columns show-for-touch"</span>&gt;</span>You are on a touch-enabled device.<span class="hljs-tag">&lt;/<span class="hljs-title">strong</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-title">strong</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"columns hide-for-touch"</span>&gt;</span>You are not on a touch-enabled device.<span class="hljs-tag">&lt;/<span class="hljs-title">strong</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
+					</div>
+
+					<div class="result codeExample">
+						<div class="exampleOutput">
+							<div class="row">
+    <strong class="columns show-for-touch">You are on a touch-enabled device.</strong>
+
+    <strong class="columns hide-for-touch">You are not on a touch-enabled device.</strong>
+</div>
+						</div>
+					</div>
+
+				</div>
+				<div class="section" id="Visibility-Accessibility_-_Screen_Readers" data-section="Visibility" data-heading="Accessibility - Screen Readers">
+
+					<div class="comment">
+						<h1>Accessibility - Screen Readers</h1>
+						<p>Adding <code>display: none</code> to an element will prevent screen readers from reading it. However, there are techniques to hide content while still making it readable by screen readers.</p>
+					</div>
+
+
+
+				</div>
+				<div class="section" id="Visibility-Show_for_Screen_Readers_Only" data-section="Visibility" data-heading="Show for Screen Readers Only">
+
+					<div class="comment">
+						<h1>Show for Screen Readers Only</h1>
+						<p>To visually hide content, while still allowing assistive technology to read it, add the class <code>.show-for-sr</code>.</p>
+					</div>
+
+					<div class="ss-title">EXAMPLE
+						<span class="icon-code tooltip-target tooltip-show-on-hover">
+							<div class="show-hide-code tooltip tooltip-top-right reset-child-margins">
+								<p>Show Code</p>
+							</div>
+							<span class="icon icon-caret-left"></span>
+							<span class="icon icon-caret-right"></span>
+						</span>
+					</div>
+					<div class="codeBlock markup hljs">
+						<pre><span class="hljs-tag">&lt;<span class="hljs-title">strong</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"show-for-sr"</span>&gt;</span>This text can only be read by a screen reader.<span class="hljs-tag">&lt;/<span class="hljs-title">strong</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">strong</span>&gt;</span>There is a line of text above this one, you just can&amp;apos;t see it.<span class="hljs-tag">&lt;/<span class="hljs-title">strong</span>&gt;</span></pre>
+					</div>
+
+					<div class="result codeExample">
+						<div class="exampleOutput">
+							<strong class="show-for-sr">This text can only be read by a screen reader.</strong>
+<strong>There is a line of text above this one, you just can&apos;t see it.</strong>
+						</div>
+					</div>
+
+				</div>
+				<div class="section" id="Visibility-Hide_for_Screen_Readers_Only" data-section="Visibility" data-heading="Hide for Screen Readers Only">
+
+					<div class="comment">
+						<h1>Hide for Screen Readers Only</h1>
+						<p>To hide text from assistive technology, while still keeping it visible, add the attribute aria-hidden=&quot;true&quot;. This doesn&apos;t affect how the element looks, but screen readers will skip over it.</p>
+					</div>
+
+					<div class="ss-title">EXAMPLE
+						<span class="icon-code tooltip-target tooltip-show-on-hover">
+							<div class="show-hide-code tooltip tooltip-top-right reset-child-margins">
+								<p>Show Code</p>
+							</div>
+							<span class="icon icon-caret-left"></span>
+							<span class="icon icon-caret-right"></span>
+						</span>
+					</div>
+					<div class="codeBlock markup hljs">
+						<pre><span class="hljs-tag">&lt;<span class="hljs-title">strong</span> <span class="hljs-attribute">aria-hidden</span>=<span class="hljs-value">"true"</span>&gt;</span>This text can be seen, but wont be read by a screen reader.<span class="hljs-tag">&lt;/<span class="hljs-title">strong</span>&gt;</span></pre>
+					</div>
+
+					<div class="result codeExample">
+						<div class="exampleOutput">
+							<strong aria-hidden="true">This text can be seen, but wont be read by a screen reader.</strong>
+						</div>
+					</div>
+
+				</div>
+				<div class="section" id="Visibility-Creating_Skip_Links" data-section="Visibility" data-heading="Creating Skip Links">
+
+					<div class="comment">
+						<h1>Creating Skip Links</h1>
+						<p>If your site has a lot of navigation, a screen reader will have to read through the entire navigation to get to your site&apos;s content. To remedy this, you can add a &quot;skip link&quot; at the very top of your page, which will send the user farther down the page, past the navigation when clicked on.</p>
+<p>Use the class <code>.show-on-focus</code> to hide an element, except when it has focus.</p>
+					</div>
+
+					<div class="ss-title">EXAMPLE
+						<span class="icon-code tooltip-target tooltip-show-on-hover">
+							<div class="show-hide-code tooltip tooltip-top-right reset-child-margins">
+								<p>Show Code</p>
+							</div>
+							<span class="icon icon-caret-left"></span>
+							<span class="icon icon-caret-right"></span>
+						</span>
+					</div>
+					<div class="codeBlock markup hljs">
+						<pre><span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"show-on-focus"</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#mainContent"</span>&gt;</span>Skip to Content<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"mainContent"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
+					</div>
+
+					<div class="result codeExample">
+						<div class="exampleOutput">
+							<p><a class="show-on-focus" href="#mainContent">Skip to Content</a></p>
+<div id="mainContent"></div>
+						</div>
+					</div>
+
+				</div>
+				<div class="section" id="Visibility-Responsive_Visibility_-_Hiding" data-section="Visibility" data-heading="Responsive Visibility - Hiding">
+
+					<div class="comment">
+						<h1>Responsive Visibility - Hiding</h1>
+						<p>Finally, if you want to hide some content but still make it accessible for screen readers, use the hidden visibility classes. Do not confuse these classes with hide visibility classes. Use these classes in conjunction with the hide and show visibility classes to control complex layouts while offering accessibility for those using screen readers.</p>
+					</div>
+
+					<div class="ss-title">EXAMPLE
+						<span class="icon-code tooltip-target tooltip-show-on-hover">
+							<div class="show-hide-code tooltip tooltip-top-right reset-child-margins">
+								<p>Show Code</p>
+							</div>
+							<span class="icon icon-caret-left"></span>
+							<span class="icon icon-caret-right"></span>
+						</span>
+					</div>
+					<div class="codeBlock markup hljs">
+						<pre><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"row"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">strong</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"small-12 columns hidden-for-small-only"</span>&gt;</span>You are <span class="hljs-tag">&lt;<span class="hljs-title">em</span>&gt;</span>not<span class="hljs-tag">&lt;/<span class="hljs-title">em</span>&gt;</span> on a small screen.<span class="hljs-tag">&lt;/<span class="hljs-title">strong</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-title">strong</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"small-12 columns hidden-for-medium-up"</span>&gt;</span>You are <span class="hljs-tag">&lt;<span class="hljs-title">em</span>&gt;</span>not<span class="hljs-tag">&lt;/<span class="hljs-title">em</span>&gt;</span> on a medium, large, or xlarge screen.<span class="hljs-tag">&lt;/<span class="hljs-title">strong</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-title">strong</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"small-12 columns hidden-for-medium-only"</span>&gt;</span>You are <span class="hljs-tag">&lt;<span class="hljs-title">em</span>&gt;</span>not<span class="hljs-tag">&lt;/<span class="hljs-title">em</span>&gt;</span> on a medium screen.<span class="hljs-tag">&lt;/<span class="hljs-title">strong</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-title">strong</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"small-12 columns hidden-for-large-up"</span>&gt;</span>You are <span class="hljs-tag">&lt;<span class="hljs-title">em</span>&gt;</span>not<span class="hljs-tag">&lt;/<span class="hljs-title">em</span>&gt;</span> on a large, or xlarge screen.<span class="hljs-tag">&lt;/<span class="hljs-title">strong</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-title">strong</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"small-12 columns hidden-for-large-only"</span>&gt;</span>You are <span class="hljs-tag">&lt;<span class="hljs-title">em</span>&gt;</span>not<span class="hljs-tag">&lt;/<span class="hljs-title">em</span>&gt;</span> on a large screen.<span class="hljs-tag">&lt;/<span class="hljs-title">strong</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-title">strong</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"small-12 columns hidden-for-xlarge-up"</span>&gt;</span>You are <span class="hljs-tag">&lt;<span class="hljs-title">em</span>&gt;</span>not<span class="hljs-tag">&lt;/<span class="hljs-title">em</span>&gt;</span> on an xlarge screen and up.<span class="hljs-tag">&lt;/<span class="hljs-title">strong</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-title">strong</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"small-12 columns hidden-for-xlarge-only"</span>&gt;</span>You are <span class="hljs-tag">&lt;<span class="hljs-title">em</span>&gt;</span>not<span class="hljs-tag">&lt;/<span class="hljs-title">em</span>&gt;</span> on an xlarge screen.<span class="hljs-tag">&lt;/<span class="hljs-title">strong</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
+					</div>
+
+					<div class="result codeExample">
+						<div class="exampleOutput">
+							<div class="row">
+    <strong class="small-12 columns hidden-for-small-only">You are <em>not</em> on a small screen.</strong>
+
+    <strong class="small-12 columns hidden-for-medium-up">You are <em>not</em> on a medium, large, or xlarge screen.</strong>
+
+    <strong class="small-12 columns hidden-for-medium-only">You are <em>not</em> on a medium screen.</strong>
+
+    <strong class="small-12 columns hidden-for-large-up">You are <em>not</em> on a large, or xlarge screen.</strong>
+
+    <strong class="small-12 columns hidden-for-large-only">You are <em>not</em> on a large screen.</strong>
+
+    <strong class="small-12 columns hidden-for-xlarge-up">You are <em>not</em> on an xlarge screen and up.</strong>
+
+    <strong class="small-12 columns hidden-for-xlarge-only">You are <em>not</em> on an xlarge screen.</strong>
+</div>
+						</div>
+					</div>
+
+				</div>
+				<div class="section" id="Visibility-Responsive_Visibility_-_Showing" data-section="Visibility" data-heading="Responsive Visibility - Showing">
+
+					<div class="comment">
+						<h1>Responsive Visibility - Showing</h1>
+						<p>To reverse the rules defined by hidden, use the visible visibility classes.</p>
+					</div>
+
+					<div class="ss-title">EXAMPLE
+						<span class="icon-code tooltip-target tooltip-show-on-hover">
+							<div class="show-hide-code tooltip tooltip-top-right reset-child-margins">
+								<p>Show Code</p>
+							</div>
+							<span class="icon icon-caret-left"></span>
+							<span class="icon icon-caret-right"></span>
+						</span>
+					</div>
+					<div class="codeBlock markup hljs">
+						<pre><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"row"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">strong</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"small-12 columns visible-for-small-only"</span>&gt;</span>This text is shown only on a small screen.<span class="hljs-tag">&lt;/<span class="hljs-title">strong</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-title">strong</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"small-12 columns visible-for-medium-up"</span>&gt;</span>This text is shown on medium screens and up.<span class="hljs-tag">&lt;/<span class="hljs-title">strong</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-title">strong</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"small-12 columns visible-for-medium-only"</span>&gt;</span>This text is shown only on a medium screen.<span class="hljs-tag">&lt;/<span class="hljs-title">strong</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-title">strong</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"small-12 columns visible-for-large-up"</span>&gt;</span>This text is shown on large screens and up.<span class="hljs-tag">&lt;/<span class="hljs-title">strong</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-title">strong</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"small-12 columns visible-for-large-only"</span>&gt;</span>This text is shown only on a large screen.<span class="hljs-tag">&lt;/<span class="hljs-title">strong</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-title">strong</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"small-12 columns visible-for-xlarge-up"</span>&gt;</span>This text is shown on xlarge screens and up.<span class="hljs-tag">&lt;/<span class="hljs-title">strong</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-title">strong</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"small-12 columns visible-for-xlarge-only"</span>&gt;</span>This text is shown only on an xlarge screen.<span class="hljs-tag">&lt;/<span class="hljs-title">strong</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
+					</div>
+
+					<div class="result codeExample">
+						<div class="exampleOutput">
+							<div class="row">
+    <strong class="small-12 columns visible-for-small-only">This text is shown only on a small screen.</strong>
+
+    <strong class="small-12 columns visible-for-medium-up">This text is shown on medium screens and up.</strong>
+
+    <strong class="small-12 columns visible-for-medium-only">This text is shown only on a medium screen.</strong>
+
+    <strong class="small-12 columns visible-for-large-up">This text is shown on large screens and up.</strong>
+
+    <strong class="small-12 columns visible-for-large-only">This text is shown only on a large screen.</strong>
+
+    <strong class="small-12 columns visible-for-xlarge-up">This text is shown on xlarge screens and up.</strong>
+
+    <strong class="small-12 columns visible-for-xlarge-only">This text is shown only on an xlarge screen.</strong>
+</div>
+						</div>
+					</div>
+
+				</div>
+				<div class="section" id="Visibility-Print_Visibility" data-section="Visibility" data-heading="Print Visibility">
+
+					<div class="comment">
+						<h1>Print Visibility</h1>
+						<p>The UITK includes a couple of simple classes you can use to control elements printing, or not printing. Simply attach <code>.show-for-print</code> to an element to show when printing, <code>.print-only</code> for showing the element only when printing, and <code>.hide-for-print</code> to hide something when printing.</p>
+<p><strong>Important:</strong> Grid classes can be used to style print media, just be sure to use the <code>.small-#</code> grid classes. This should already be mostly complete for you because of the <strong>MOBILE-FIRST</strong> implementation of the grid throughout your code.</p>
+<p>Available classes:</p>
+<ul class="padding-bottom-large">
+    <li><code>.show-for-print</code> and <code>.print-only</code> = (Visible for printing)</li>
+    <li><code>.hide-for-print</code> and <code>.hide-on-print</code> = (Hidden while printing)</li>
+</ul>
+					</div>
+
+					<div class="ss-title">EXAMPLE
+						<span class="icon-code tooltip-target tooltip-show-on-hover">
+							<div class="show-hide-code tooltip tooltip-top-right reset-child-margins">
+								<p>Show Code</p>
+							</div>
+							<span class="icon icon-caret-left"></span>
+							<span class="icon icon-caret-right"></span>
+						</span>
+					</div>
+					<div class="codeBlock markup hljs">
+						<pre><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"row"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">strong</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"columns text-center show-for-print"</span>&gt;</span>This will only display in print media.<span class="hljs-tag">&lt;/<span class="hljs-title">strong</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-title">strong</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"columns text-center hide-for-print"</span>&gt;</span>This will <span class="hljs-tag">&lt;<span class="hljs-title">i</span>&gt;</span>NOT<span class="hljs-tag">&lt;/<span class="hljs-title">i</span>&gt;</span> display in print media.<span class="hljs-tag">&lt;/<span class="hljs-title">strong</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-title">strong</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"columns text-center print-only"</span>&gt;</span>This will only display in print media.<span class="hljs-tag">&lt;/<span class="hljs-title">strong</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-title">strong</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"columns text-center hide-on-print"</span>&gt;</span>This will <span class="hljs-tag">&lt;<span class="hljs-title">i</span>&gt;</span>NOT<span class="hljs-tag">&lt;/<span class="hljs-title">i</span>&gt;</span> display in print media.<span class="hljs-tag">&lt;/<span class="hljs-title">strong</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
+					</div>
+
+					<div class="result codeExample">
+						<div class="exampleOutput">
+							<div class="row">
+    <strong class="columns text-center show-for-print">This will only display in print media.</strong>
+
+    <strong class="columns text-center hide-for-print">This will <i>NOT</i> display in print media.</strong>
+
+    <strong class="columns text-center print-only">This will only display in print media.</strong>
+
+    <strong class="columns text-center hide-on-print">This will <i>NOT</i> display in print media.</strong>
+</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</section>
+
+		<footer class="sg-footer">
+			<div class="grid-container reset-child-margins">
+				<p class="padding-horiz-xlarge"></p>
+			</div>
+		</footer>
+	</div>
+
+	<div class="modal-overlay"></div>
+
+	<div class="modal-container">
+		<div class="modal">
+			<h1>Example Modal</h1>
+
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodoconsequat. Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat nonproident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		</div>
+		<button class="modal-close">
+			<span class="icon icon-close"></span>
+		</button>
+	</div>
+
+	<div class="toaster-fixed-region">
+		<div class="grid-container sg-padding-responsive-horiz padding-vert-medium toaster-grid">
+			<div class="toaster-container show-with-transition text-right">
+				<div class="toaster-trigger inline-block bg-medium-grey padding-horiz-tiny">
+					<button class="reset-button">
+						<span class="icon icon-caret-down"></span>
+					</button>
+				</div>
+				<div class="toaster-content padding-small bg-medium-grey">
+					<a href="http://uitk.learnvest.com/explorer" class="button tiny info margin-bottom-none">Back to Version Explorer!</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="./resources/js/vendor/moment.min.js"></script>
+	<script src="./resources/js/vendor/d3.min.js"></script>
+	<script src="./resources/js/app.js" id="appjs"></script>
+</body>
+</html>

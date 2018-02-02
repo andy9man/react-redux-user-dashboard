@@ -1,0 +1,1264 @@
+<!doctype html>
+<html>
+<head>
+	<title>Style Guide - NM / LV</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+	<link rel="stylesheet" href="../css/static/fader-overlay.css">
+	<style>
+	/*
+	
+	github.com style (c) Vasily Polovnyov <vast@whiteants.net>
+	
+	*/
+	
+	.hljs {
+	  display: block;
+	  overflow-x: auto;
+	  padding: 0.5em;
+	  color: #333;
+	  background: #f8f8f8;
+	  -webkit-text-size-adjust: none;
+	}
+	
+	.hljs-comment,
+	.diff .hljs-header {
+	  color: #998;
+	  font-style: italic;
+	}
+	
+	.hljs-keyword,
+	.css .rule .hljs-keyword,
+	.hljs-winutils,
+	.nginx .hljs-title,
+	.hljs-subst,
+	.hljs-request,
+	.hljs-status {
+	  color: #333;
+	  font-weight: bold;
+	}
+	
+	.hljs-number,
+	.hljs-hexcolor,
+	.ruby .hljs-constant {
+	  color: #008080;
+	}
+	
+	.hljs-string,
+	.hljs-tag .hljs-value,
+	.hljs-doctag,
+	.tex .hljs-formula {
+	  color: #d14;
+	}
+	
+	.hljs-title,
+	.hljs-id,
+	.scss .hljs-preprocessor {
+	  color: #900;
+	  font-weight: bold;
+	}
+	
+	.hljs-list .hljs-keyword,
+	.hljs-subst {
+	  font-weight: normal;
+	}
+	
+	.hljs-class .hljs-title,
+	.hljs-type,
+	.vhdl .hljs-literal,
+	.tex .hljs-command {
+	  color: #458;
+	  font-weight: bold;
+	}
+	
+	.hljs-tag,
+	.hljs-tag .hljs-title,
+	.hljs-rule .hljs-property,
+	.django .hljs-tag .hljs-keyword {
+	  color: #000080;
+	  font-weight: normal;
+	}
+	
+	.hljs-attribute,
+	.hljs-variable,
+	.lisp .hljs-body,
+	.hljs-name {
+	  color: #008080;
+	}
+	
+	.hljs-regexp {
+	  color: #009926;
+	}
+	
+	.hljs-symbol,
+	.ruby .hljs-symbol .hljs-string,
+	.lisp .hljs-keyword,
+	.clojure .hljs-keyword,
+	.scheme .hljs-keyword,
+	.tex .hljs-special,
+	.hljs-prompt {
+	  color: #990073;
+	}
+	
+	.hljs-built_in {
+	  color: #0086b3;
+	}
+	
+	.hljs-preprocessor,
+	.hljs-pragma,
+	.hljs-pi,
+	.hljs-doctype,
+	.hljs-shebang,
+	.hljs-cdata {
+	  color: #999;
+	  font-weight: bold;
+	}
+	
+	.hljs-deletion {
+	  background: #fdd;
+	}
+	
+	.hljs-addition {
+	  background: #dfd;
+	}
+	
+	.diff .hljs-change {
+	  background: #0086b3;
+	}
+	
+	.hljs-chunk {
+	  color: #aaa;
+	}
+	
+	</style></head>
+<body>
+	<div class="page-container">
+		<div id="fader-overlay" class="sg-fader-overlay"></div>
+
+		<nav class="row sg-nav padding-vert-small viewport-el" role="navigation" data-emit-events data-top-bottom >
+			<div class="small-2 columns burger-wrapper show-for-small">
+				<button class="burger reset-button trigger-menu">
+					<div class="burger-content"></div>
+				</button>
+			</div>
+
+			<h1 class="medium-7 columns hide-for-small margin-vert-none"><a href="#">LearnVest &amp; Northwestern Mutual - A Style Guide</a></h1>
+
+			<div class="small-10 medium-5 columns theme-switch-wrapper reset-child-margins text-right">
+				<span class="text-white inline-block valign-middle margin-right-small">Select Theme: </span>
+				<!-- jQuery injects select el here (theme-switch.js) -->
+			</div>
+		</nav>
+
+		<section class="row height-full">
+			<div class="medium-4 large-3 xlarge-2 columns height-full hide-for-small sg-sidebar">
+				<div class="padding-top-medium reset-child-margins">
+					<ul class="sg-block-nav sg-block-nav-submenu reset-list reset-child-margins">
+
+						<h3>Typography</h3>
+						<li><a href="#Typography-Font_Families">Font Families</a></li>
+						<li><a href="#Typography-Bold_and_Italics">Bold and Italics</a></li>
+						<li><a href="#Typography-Links">Links</a></li>
+						<li><a href="#Typography-Paragraphs">Paragraphs</a></li>
+						<li><a href="#Typography-Headers">Headers</a></li>
+						<li><a href="#Typography-Decoupled_Header_Styles">Decoupled Header Styles</a></li>
+						<li><a href="#Typography-Contextual">Contextual</a></li>
+						<li><a href="#Typography-Horizontal_Rules">Horizontal Rules</a></li>
+						<li><a href="#Typography-Code_Blocks">Code Blocks</a></li>
+						<li><a href="#Typography-Lists">Lists</a></li>
+						<li><a href="#Typography-Abbreviations">Abbreviations</a></li>
+						<li><a href="#Typography-Quotes">Quotes</a></li>
+
+					</ul>
+					<ul class="sg-block-nav sg-block-nav-submenu reset-list reset-child-margins">
+
+						<h3></h3>
+
+					</ul>
+
+
+					<ul class="sg-block-nav sg-category-nav reset-list reset-child-margins">
+						<h3>Categories</h3>
+						<li><a href="button-groups.html">Button Groups</a></li>
+						<li><a href="buttons.html">Buttons</a></li>
+						<li><a href="card.html">Card</a></li>
+						<li><a href="colors.html">Colors</a></li>
+						<li><a href="forms.html">Forms</a></li>
+						<li><a href="ghosting.html">Ghosting</a></li>
+						<li><a href="graphs.html">Graphs</a></li>
+						<li><a href="grid.html">Grid</a></li>
+						<li><a href="icons.html">Icons</a></li>
+						<li><a href="labels.html">Labels</a></li>
+						<li><a href="loading-indicators.html">Loading Indicators</a></li>
+						<li><a href="modals.html">Modals</a></li>
+						<li><a href="navigation.html">Navigation</a></li>
+						<li><a href="notifications.html">Notifications</a></li>
+						<li><a href="switches.html">Switches</a></li>
+						<li><a href="tables.html">Tables</a></li>
+						<li><a href="tooltips.html">Tooltips</a></li>
+						<li><a href="type.html">Type</a></li>
+						<li><a href="utility-classes.html">Utility Classes</a></li>
+						<li><a href="visibility.html">Visibility</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="medium-8 large-9 xlarge-10 columns sg-content" id="styleguide">
+				<div class="section" id="Typography-Typography" data-section="Typography" data-heading="Typography">
+
+					<div class="comment">
+						<h1>Typography</h1>
+						<p>The typography in this style-guide is meant to make your life easier by providing
+clean, attractive, simple default styles for all of the most basic typographical
+elements.</p>
+					</div>
+
+
+
+				</div>
+				<div class="section" id="Typography-Font_Families" data-section="Typography" data-heading="Font Families">
+
+					<div class="comment">
+						<h1>Font Families</h1>
+						<div class="themeless">
+    <p class="row collapse">
+        <span class="columns">Nothing to see here. Move along now.</span>
+    </p>
+</div>
+
+<div class="show-for-lv-cx">
+    <p class="row collapse">
+        <span class="columns margin-bottom-medium"><code>Arial</code> is the one font to rule them all.</span>
+    </p>
+</div>
+
+<div class="show-for-lv-px">
+    <p class="row collapse">
+        <span class="columns margin-bottom-medium"><code>Arial</code> is the one font to rule them all.</span>
+    </p>
+</div>
+
+<div class="show-for-nm-cx">
+    <p><strong>To use the font styles/sizes found here, add the class <code>.nm-cx-theme</code> to the container of your body or section.</strong></p>
+    <p class="row collapse">
+        <span class="columns margin-bottom-large">As of UITK version <code>1.14.0</code>, only one font is to be used site-wide as per the Design department. <code>Guardian Sans</code> is the one font to rule them all.</span>
+        <span class="columns margin-bottom-large">As of UITK version <code>1.17.0</code>, only 3 font weights (plus 1 for print) are to be used site-wide as per the Design department. <code>Guardian Sans Light</code> should be used as the default font weight for all text.</span>
+        <span class="small-4 columns font-family-titles">font-weight</span>
+        <span class="small-4 columns font-family-titles">Normal</span>
+        <span class="small-4 columns font-family-titles">Italics</span>
+    </p>
+    <ul class="small-block-grid-3">
+        <li class="text-center"><code>200</code></li>
+        <li class="text-center" style="font-weight: 200">Guardian Sans Light</li>
+        <li class="text-center" style="font-weight: 200"><i>Guardian Sans Light Italic</i></li>
+
+        <li class="text-center"><code>400</code></li>
+        <li class="text-center" style="font-weight: 400">Guardian Sans Regular</li>
+        <li class="text-center" style="font-weight: 400"><i>Guardian Sans Regular Italic</i></li>
+
+        <li class="text-center"><code>500</code> <span> (Bold for Web)</span></li>
+        <li class="text-center" style="font-weight: 500">Guardian Sans Medium</li>
+        <li class="text-center" style="font-weight: 500"><i>Guardian Sans Medium Italic</i></li>
+
+        <li class="text-center"><code>800</code> <span> (Bold for Print)</span></li>
+        <li class="text-center" style="font-weight: 800">Guardian Sans Bold</li>
+        <li class="text-center" style="font-weight: 800"><i>Guardian Sans Bold Italic</i></li>
+    </ul>
+</div>
+
+<div class="show-for-nm-px">
+    <p class="row collapse">
+        <span class="columns margin-bottom-large">As of UITK version <code>1.13.0</code>, only one font is to be used site-wide as per the Design department. <code>Guardian Sans</code> is the one font to rule them all.</span>
+        <span class="small-4 columns font-family-titles">font-weight</span>
+        <span class="small-4 columns font-family-titles">Normal</span>
+        <span class="small-4 columns font-family-titles">Italics</span>
+    </p>
+    <ul class="small-block-grid-3">
+        <li class="text-center"><code>100</code></li>
+        <li class="text-center" style="font-weight: 100">Guardian Sans Thin</li>
+        <li class="text-center" style="font-weight: 100"><i>Guardian Sans Thin Italic</i></li>
+
+        <li class="text-center"><code>200</code></li>
+        <li class="text-center" style="font-weight: 200">Guardian Sans Light</li>
+        <li class="text-center" style="font-weight: 200"><i>Guardian Sans Light Italic</i></li>
+
+        <li class="text-center"><code>400</code> or <code>normal</code></li>
+        <li class="text-center">Guardian Sans Regular</li>
+        <li class="text-center"><i>Guardian Sans Regular Italic</i></li>
+
+        <li class="text-center"><code>500</code></li>
+        <li class="text-center" style="font-weight: 500">Guardian Sans Medium</li>
+        <li class="text-center" style="font-weight: 500"><i>Guardian Sans Medium Italic</i></li>
+
+        <li class="text-center"><code>700</code></li>
+        <li class="text-center" style="font-weight: 700">Guardian Sans SemiBold</li>
+        <li class="text-center" style="font-weight: 700"><i>Guardian Sans SemiBold Italic</i></li>
+
+        <li class="text-center"><code>800</code></li>
+        <li class="text-center" style="font-weight: 800">Guardian Sans Bold</li>
+        <li class="text-center" style="font-weight: 800"><i>Guardian Sans Bold Italic</i></li>
+
+        <li class="text-center"><code>900</code></li>
+        <li class="text-center" style="font-weight: 900">GuardianSans Black</li>
+        <li class="text-center" style="font-weight: 900"><i>GuardianSans Black Italic</i></li>
+    </ul>
+</div>
+					</div>
+
+
+
+				</div>
+				<div class="section" id="Typography-Bold_and_Italics" data-section="Typography" data-heading="Bold and Italics">
+
+					<div class="comment">
+						<h1>Bold and Italics</h1>
+						<p>Wrap <code>&lt;b&gt;&lt;/b&gt;</code> or <code>&lt;strong&gt;&lt;/strong&gt;</code> around type to make it bold.</p>
+<p>Use <code>&lt;i&gt;&lt;/i&gt;</code> or <code>&lt;em&gt;&lt;/em&gt;</code> to
+italicize your words.</p>
+					</div>
+
+					<div class="ss-title">EXAMPLE
+						<span class="icon-code tooltip-target tooltip-show-on-hover">
+							<div class="show-hide-code tooltip tooltip-top-right reset-child-margins">
+								<p>Show Code</p>
+							</div>
+							<span class="icon icon-caret-left"></span>
+							<span class="icon icon-caret-right"></span>
+						</span>
+					</div>
+					<div class="codeBlock markup hljs">
+						<pre><span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>This is <span class="hljs-tag">&lt;<span class="hljs-title">strong</span>&gt;</span>bold<span class="hljs-tag">&lt;/<span class="hljs-title">strong</span>&gt;</span> and this is <span class="hljs-tag">&lt;<span class="hljs-title">em</span>&gt;</span>italicized<span class="hljs-tag">&lt;/<span class="hljs-title">em</span>&gt;</span>.<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span></pre>
+					</div>
+
+					<div class="result codeExample">
+						<div class="exampleOutput">
+							<p>This is <strong>bold</strong> and this is <em>italicized</em>.</p>
+						</div>
+					</div>
+
+				</div>
+				<div class="section" id="Typography-Links" data-section="Typography" data-heading="Links">
+
+					<div class="comment">
+						<h1>Links</h1>
+						<p>Links are standard.</p>
+					</div>
+
+					<div class="ss-title">EXAMPLE
+						<span class="icon-code tooltip-target tooltip-show-on-hover">
+							<div class="show-hide-code tooltip tooltip-top-right reset-child-margins">
+								<p>Show Code</p>
+							</div>
+							<span class="icon icon-caret-left"></span>
+							<span class="icon icon-caret-right"></span>
+						</span>
+					</div>
+					<div class="codeBlock markup hljs">
+						<pre><span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>This is a <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span>&gt;</span>link<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>.<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span></pre>
+					</div>
+
+					<div class="result codeExample">
+						<div class="exampleOutput">
+							<p>This is a <a href="#">link</a>.</p>
+						</div>
+					</div>
+
+				</div>
+				<div class="section" id="Typography-Paragraphs" data-section="Typography" data-heading="Paragraphs">
+
+					<div class="comment">
+						<h1>Paragraphs</h1>
+						<p>Paragraphs are preset with a font size, line height and spacing to match the overall vertical rhythm.</p>
+					</div>
+
+					<div class="ss-title">EXAMPLE
+						<span class="icon-code tooltip-target tooltip-show-on-hover">
+							<div class="show-hide-code tooltip tooltip-top-right reset-child-margins">
+								<p>Show Code</p>
+							</div>
+							<span class="icon icon-caret-left"></span>
+							<span class="icon icon-caret-right"></span>
+						</span>
+					</div>
+					<div class="codeBlock markup hljs">
+						<pre><span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>Lorem ipsum dolor sit amet, eu est tamquam meliore. Sed id graeco partiendo reprehendunt, vel at corrumpit appellantur, ius debet semper deserunt ut. Ex duo mundi nostro, pri ex mentitum offendit laboramus, ut his quas nulla error.<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span></pre>
+					</div>
+
+					<div class="result codeExample">
+						<div class="exampleOutput">
+							<p>Lorem ipsum dolor sit amet, eu est tamquam meliore. Sed id graeco partiendo reprehendunt, vel at corrumpit appellantur, ius debet semper deserunt ut. Ex duo mundi nostro, pri ex mentitum offendit laboramus, ut his quas nulla error.</p>
+						</div>
+					</div>
+
+				</div>
+				<div class="section" id="NM_Large_Paragraph" data-section="" data-heading="">
+
+					<div class="comment">
+						
+						<h2 class="main-section-sg-by-lvnm" id="section-NM_Large_Paragraph">NM Large Paragraph</h2>
+<p>Some designs may require body type to be 20px instead of the default (14px for PX and 16px for CX). A <code>.paragraph-large</code> class can be added to the <code>&lt;p&gt;</code> to make all type on the page default to 20px;</p>
+					</div>
+
+					<div class="ss-title">EXAMPLE
+						<span class="icon-code tooltip-target tooltip-show-on-hover">
+							<div class="show-hide-code tooltip tooltip-top-right reset-child-margins">
+								<p>Show Code</p>
+							</div>
+							<span class="icon icon-caret-left"></span>
+							<span class="icon icon-caret-right"></span>
+						</span>
+					</div>
+					<div class="codeBlock markup hljs">
+						<pre><span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"paragraph-large"</span>&gt;</span>Lorem ipsum dolor sit amet, eu est tamquam meliore. Sed id graeco partiendo reprehendunt, vel at corrumpit appellantur, ius debet semper deserunt ut. Ex duo mundi nostro, pri ex mentitum offendit laboramus, ut his quas nulla error.<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span></pre>
+					</div>
+
+					<div class="result codeExample">
+						<div class="exampleOutput">
+							<p class="paragraph-large">Lorem ipsum dolor sit amet, eu est tamquam meliore. Sed id graeco partiendo reprehendunt, vel at corrumpit appellantur, ius debet semper deserunt ut. Ex duo mundi nostro, pri ex mentitum offendit laboramus, ut his quas nulla error.</p>
+						</div>
+					</div>
+
+				</div>
+				<div class="section" id="Typography-Headers" data-section="Typography" data-heading="Headers">
+
+					<div class="comment">
+						<h1>Headers</h1>
+						<p>Included are styles for all of the header elements that are balanced and based on a modular scale.</p>
+					</div>
+
+
+
+				</div>
+				<div class="section" id="NM_Header_Styles" data-section="" data-heading="">
+
+					<div class="comment">
+						
+						<h2 class="main-section-sg-by-lvnm" id="section-NM_Header_Styles">NM Header Styles</h2>
+<table class="docs-variable-table show-for-nm-cx" style="margin-bottom: 1rem; border: 1px solid #e6e6e6;">
+    <tbody>
+        <tr style="font-weight: bold;">
+            <td>Header
+            </td><td>Default
+            </td><td>Medium and up
+        </td></tr>
+        <tr>
+            <td><code>&lt;h1&gt;</code></td>
+            <td>30px</td>
+            <td>40px</td>
+        </tr>
+        <tr>
+            <td><code>&lt;h2&gt;</code></td>
+            <td>24px</td>
+            <td>32px</td>
+        </tr>
+        <tr>
+            <td><code>&lt;h3&gt;</code></td>
+            <td>20px</td>
+            <td>28px</td>
+        </tr>
+        <tr>
+            <td><code>&lt;h4&gt;</code></td>
+            <td>16px</td>
+            <td>16px</td>
+        </tr>
+        <tr>
+            <td><code>&lt;h5&gt;</code></td>
+            <td>14px</td>
+            <td>14px</td>
+        </tr>
+        <tr>
+            <td><code>&lt;h6&gt;</code></td>
+            <td>12px</td>
+            <td>12px</td>
+        </tr>
+    </tbody>
+</table>
+					</div>
+
+					<div class="ss-title">EXAMPLE
+						<span class="icon-code tooltip-target tooltip-show-on-hover">
+							<div class="show-hide-code tooltip tooltip-top-right reset-child-margins">
+								<p>Show Code</p>
+							</div>
+							<span class="icon icon-caret-left"></span>
+							<span class="icon icon-caret-right"></span>
+						</span>
+					</div>
+					<div class="codeBlock markup hljs">
+						<pre><span class="hljs-comment">&lt;!-- Header styles --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">h1</span>&gt;</span>This is an extra large <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"show-for-medium-up show-for-nm-cx"</span>&gt;</span>40px Light<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"show-for-small-only show-for-nm-cx"</span>&gt;</span>24px Light<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span> header<span class="hljs-tag">&lt;/<span class="hljs-title">h1</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">h2</span>&gt;</span>This is a large <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"show-for-medium-up show-for-nm-cx"</span>&gt;</span>32px Light<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"show-for-small-only show-for-nm-cx"</span>&gt;</span>20px Light<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span> header<span class="hljs-tag">&lt;/<span class="hljs-title">h2</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">h3</span>&gt;</span>This is a medium <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"show-for-medium-up show-for-nm-cx"</span>&gt;</span>28px Light<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"show-for-small-only show-for-nm-cx"</span>&gt;</span>18px Light<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span> header<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">h4</span>&gt;</span>This is a moderate <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"show-for-nm-cx"</span>&gt;</span>16px Normal<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span> header<span class="hljs-tag">&lt;/<span class="hljs-title">h4</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">h5</span>&gt;</span>This is a small <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"show-for-nm-cx"</span>&gt;</span>14px Light<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span> header<span class="hljs-tag">&lt;/<span class="hljs-title">h5</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">h6</span>&gt;</span>This is a tiny <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"show-for-nm-cx"</span>&gt;</span>12px Light<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span> header<span class="hljs-tag">&lt;/<span class="hljs-title">h6</span>&gt;</span></pre>
+					</div>
+
+					<div class="result codeExample">
+						<div class="exampleOutput">
+							<!-- Header styles -->
+<h1>This is an extra large <span class="show-for-medium-up show-for-nm-cx">40px Light</span><span class="show-for-small-only show-for-nm-cx">24px Light</span> header</h1>
+<h2>This is a large <span class="show-for-medium-up show-for-nm-cx">32px Light</span><span class="show-for-small-only show-for-nm-cx">20px Light</span> header</h2>
+<h3>This is a medium <span class="show-for-medium-up show-for-nm-cx">28px Light</span><span class="show-for-small-only show-for-nm-cx">18px Light</span> header</h3>
+<h4>This is a moderate <span class="show-for-nm-cx">16px Normal</span> header</h4>
+<h5>This is a small <span class="show-for-nm-cx">14px Light</span> header</h5>
+<h6>This is a tiny <span class="show-for-nm-cx">12px Light</span> header</h6>
+						</div>
+					</div>
+
+				</div>
+				<div class="section" id="NM_CX_Landing_Header" data-section="" data-heading="">
+
+					<div class="comment">
+						
+						<h2 class="main-section-sg-by-lvnm" id="section-NM_CX_Landing_Header">NM CX Landing Header</h2>
+<p>A <code>.landing-header</code> class is available for the blue headers commonly found on the NM landing pages. Add the class to the <code>.row</code> containing the header text. Additionally a <code>.header-date</code> class is available for the secondary &apos;As of&apos; date displayed. While the <code>.landing-header</code> row should be full width, all text in the header should left align with the rest of your text in the grid. The internal <code>.columns</code> element can have a max-width to match the layout of your page on x-large screens.</p>
+					</div>
+
+					<div class="ss-title">EXAMPLE
+						<span class="icon-code tooltip-target tooltip-show-on-hover">
+							<div class="show-hide-code tooltip tooltip-top-right reset-child-margins">
+								<p>Show Code</p>
+							</div>
+							<span class="icon icon-caret-left"></span>
+							<span class="icon icon-caret-right"></span>
+						</span>
+					</div>
+					<div class="codeBlock markup hljs">
+						<pre><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"row landing-header"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"small-12 columns"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"header-date"</span>&gt;</span>As of October 17, 2016<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">h1</span>&gt;</span>Your Net Death Benefit is <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"header-number"</span>&gt;</span>$76,015.00<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span> with a <span class="hljs-tag">&lt;<span class="hljs-title">br</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"show-for-xlarge"</span>&gt;</span>Net Cash Value of <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"header-number"</span>&gt;</span>$25,419.92<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">h1</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
+					</div>
+
+					<div class="result codeExample">
+						<div class="exampleOutput">
+							<div class="row landing-header">
+        <div class="small-12 columns">
+            <p class="header-date">As of October 17, 2016</p>
+            <h1>Your Net Death Benefit is <span class="header-number">$76,015.00</span> with a <br class="show-for-xlarge">Net Cash Value of <span class="header-number">$25,419.92</span></h1>
+        </div>
+</div>
+						</div>
+					</div>
+
+				</div>
+				<div class="section" id="LV_Header_Styles" data-section="" data-heading="">
+
+					<div class="comment">
+						
+						<h2 class="main-section-sg-by-lvnm" id="section-LV_Header_Styles">LV Header Styles</h2>
+					</div>
+
+					<div class="ss-title">EXAMPLE
+						<span class="icon-code tooltip-target tooltip-show-on-hover">
+							<div class="show-hide-code tooltip tooltip-top-right reset-child-margins">
+								<p>Show Code</p>
+							</div>
+							<span class="icon icon-caret-left"></span>
+							<span class="icon icon-caret-right"></span>
+						</span>
+					</div>
+					<div class="codeBlock markup hljs">
+						<pre><span class="hljs-comment">&lt;!-- Header styles --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">h1</span>&gt;</span>This is an extra large header.<span class="hljs-tag">&lt;/<span class="hljs-title">h1</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">h2</span>&gt;</span>This is a large header.<span class="hljs-tag">&lt;/<span class="hljs-title">h2</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">h3</span>&gt;</span>This is a medium header.<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">h4</span>&gt;</span>This is a moderate header.<span class="hljs-tag">&lt;/<span class="hljs-title">h4</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">h5</span>&gt;</span>This is a small header.<span class="hljs-tag">&lt;/<span class="hljs-title">h5</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">h6</span>&gt;</span>This is a tiny header.<span class="hljs-tag">&lt;/<span class="hljs-title">h6</span>&gt;</span></pre>
+					</div>
+
+					<div class="result codeExample">
+						<div class="exampleOutput">
+							<!-- Header styles -->
+<h1>This is an extra large header.</h1>
+<h2>This is a large header.</h2>
+<h3>This is a medium header.</h3>
+<h4>This is a moderate header.</h4>
+<h5>This is a small header.</h5>
+<h6>This is a tiny header.</h6>
+						</div>
+					</div>
+
+				</div>
+				<div class="section" id="LV_Subheaders" data-section="" data-heading="">
+
+					<div class="comment">
+						
+						<h2 class="main-section-sg-by-lvnm" id="section-LV_Subheaders">LV Subheaders</h2>
+<p>Lighten up your headers by adding a class of <code>.subheader</code> to any header element.</p>
+					</div>
+
+					<div class="ss-title">EXAMPLE
+						<span class="icon-code tooltip-target tooltip-show-on-hover">
+							<div class="show-hide-code tooltip tooltip-top-right reset-child-margins">
+								<p>Show Code</p>
+							</div>
+							<span class="icon icon-caret-left"></span>
+							<span class="icon icon-caret-right"></span>
+						</span>
+					</div>
+					<div class="codeBlock markup hljs">
+						<pre><span class="hljs-comment">&lt;!-- Subheader styles --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">h1</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"subheader"</span>&gt;</span>Subheader<span class="hljs-tag">&lt;/<span class="hljs-title">h1</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">h2</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"subheader"</span>&gt;</span>Subheader<span class="hljs-tag">&lt;/<span class="hljs-title">h2</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">h3</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"subheader"</span>&gt;</span>Subheader<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">h4</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"subheader"</span>&gt;</span>Subheader<span class="hljs-tag">&lt;/<span class="hljs-title">h4</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">h5</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"subheader"</span>&gt;</span>Subheader<span class="hljs-tag">&lt;/<span class="hljs-title">h5</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">h6</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"subheader"</span>&gt;</span>Subheader<span class="hljs-tag">&lt;/<span class="hljs-title">h6</span>&gt;</span></pre>
+					</div>
+
+					<div class="result codeExample">
+						<div class="exampleOutput">
+							<!-- Subheader styles -->
+<h1 class="subheader">Subheader</h1>
+<h2 class="subheader">Subheader</h2>
+<h3 class="subheader">Subheader</h3>
+<h4 class="subheader">Subheader</h4>
+<h5 class="subheader">Subheader</h5>
+<h6 class="subheader">Subheader</h6>
+						</div>
+					</div>
+
+				</div>
+				<div class="section" id="LV_Small_header_segments" data-section="" data-heading="">
+
+					<div class="comment">
+						
+						<h2 class="main-section-sg-by-lvnm" id="section-LV_Small_header_segments">LV Small header segments</h2>
+<p>By inserting a small element into a header, the toolkit will scale the header
+font size down for an inline element, allowing you to use this for subtitles
+or other secondary header text.</p>
+					</div>
+
+					<div class="ss-title">EXAMPLE
+						<span class="icon-code tooltip-target tooltip-show-on-hover">
+							<div class="show-hide-code tooltip tooltip-top-right reset-child-margins">
+								<p>Show Code</p>
+							</div>
+							<span class="icon icon-caret-left"></span>
+							<span class="icon icon-caret-right"></span>
+						</span>
+					</div>
+					<div class="codeBlock markup hljs">
+						<pre><span class="hljs-tag">&lt;<span class="hljs-title">h1</span>&gt;</span>Main header <span class="hljs-tag">&lt;<span class="hljs-title">small</span>&gt;</span>Header segment<span class="hljs-tag">&lt;/<span class="hljs-title">small</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">h1</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">h2</span>&gt;</span>Main header <span class="hljs-tag">&lt;<span class="hljs-title">small</span>&gt;</span>Header segment<span class="hljs-tag">&lt;/<span class="hljs-title">small</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">h2</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">h3</span>&gt;</span>Main header <span class="hljs-tag">&lt;<span class="hljs-title">small</span>&gt;</span>Header segment<span class="hljs-tag">&lt;/<span class="hljs-title">small</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">h4</span>&gt;</span>Main header <span class="hljs-tag">&lt;<span class="hljs-title">small</span>&gt;</span>Header segment<span class="hljs-tag">&lt;/<span class="hljs-title">small</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">h4</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">h5</span>&gt;</span>Main header <span class="hljs-tag">&lt;<span class="hljs-title">small</span>&gt;</span>Header segment<span class="hljs-tag">&lt;/<span class="hljs-title">small</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">h5</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">h6</span>&gt;</span>Main header <span class="hljs-tag">&lt;<span class="hljs-title">small</span>&gt;</span>Header segment<span class="hljs-tag">&lt;/<span class="hljs-title">small</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">h6</span>&gt;</span></pre>
+					</div>
+
+					<div class="result codeExample">
+						<div class="exampleOutput">
+							<h1>Main header <small>Header segment</small></h1>
+<h2>Main header <small>Header segment</small></h2>
+<h3>Main header <small>Header segment</small></h3>
+<h4>Main header <small>Header segment</small></h4>
+<h5>Main header <small>Header segment</small></h5>
+<h6>Main header <small>Header segment</small></h6>
+						</div>
+					</div>
+
+				</div>
+				<div class="section" id="Typography-Decoupled_Header_Styles" data-section="Typography" data-heading="Decoupled Header Styles">
+
+					<div class="comment">
+						<h1>Decoupled Header Styles</h1>
+						<p>There are times when the header styles need to be decoupled from the header markup tags. In those rare instances, the following class names can be
+added to your output in order to provide the header styles without using the header tags.</p>
+<p><b class="text-alert">Important note:</b> Please do not use these classes in place of the header tags, (<code>h1</code>, <code>h2</code>, <code>h3</code>, <code>h4</code>, <code>h5</code>, and <code>h6</code>).
+These classes have only been added to provide header tag formatting in the rare instances where semantic markup can&apos;t be written.</p>
+					</div>
+
+					<div class="ss-title">EXAMPLE
+						<span class="icon-code tooltip-target tooltip-show-on-hover">
+							<div class="show-hide-code tooltip tooltip-top-right reset-child-margins">
+								<p>Show Code</p>
+							</div>
+							<span class="icon icon-caret-left"></span>
+							<span class="icon icon-caret-right"></span>
+						</span>
+					</div>
+					<div class="codeBlock markup hljs">
+						<pre><span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"heading-xlarge"</span>&gt;</span>Extra large header style<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"heading-large"</span>&gt;</span>Large header style<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"heading-medium"</span>&gt;</span>Medium header style<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"heading-moderate"</span>&gt;</span>Moderate header style<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"heading-small"</span>&gt;</span>Small header style<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"heading-tiny"</span>&gt;</span>Tiny header style<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
+					</div>
+
+					<div class="result codeExample">
+						<div class="exampleOutput">
+							<div>
+    <div class="heading-xlarge">Extra large header style</div>
+    <div class="heading-large">Large header style</div>
+    <div class="heading-medium">Medium header style</div>
+    <div class="heading-moderate">Moderate header style</div>
+    <div class="heading-small">Small header style</div>
+    <div class="heading-tiny">Tiny header style</div>
+</div>
+						</div>
+					</div>
+
+				</div>
+				<div class="section" id="Typography-Contextual" data-section="Typography" data-heading="Contextual">
+
+					<div class="comment">
+						<h1>Contextual</h1>
+						
+					</div>
+
+
+
+				</div>
+				<div class="section" id="NM_Example" data-section="" data-heading="">
+
+					<div class="comment">
+						
+						<h2 class="main-section-sg-by-lvnm" id="section-NM_Example">NM Example</h2>
+<p>A combination of type styles means you can do almost anything.
+Listed below are styles for individual type components used in combination with others.</p>
+					</div>
+
+					<div class="ss-title">EXAMPLE
+						<span class="icon-code tooltip-target tooltip-show-on-hover">
+							<div class="show-hide-code tooltip tooltip-top-right reset-child-margins">
+								<p>Show Code</p>
+							</div>
+							<span class="icon icon-caret-left"></span>
+							<span class="icon icon-caret-right"></span>
+						</span>
+					</div>
+					<div class="codeBlock markup hljs">
+						<pre><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"show-for-nm-cx"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"row padding-vert-large padding-horiz-xlarge"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"medium-4 columns"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">h2</span>&gt;</span>Notifications<span class="hljs-tag">&lt;/<span class="hljs-title">h2</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"medium-4 columns"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>Your Annulized Premium of $706.20 is due in 11 days on October 31, 2016<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"button btn-cta"</span>&gt;</span>Make Payment<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"medium-4 columns"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>You have an outstanding load on your account<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"tertiary button btn-cta"</span>&gt;</span>View Details<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"row bg-primary"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"columns padding-vert-large padding-horiz-xlarge text-center"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">h3</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"text-white padding-vert-large padding-horiz-xlarge"</span>&gt;</span>Assign a savings account to your goal:<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"row padding-vert-large padding-horiz-xlarge"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"medium-4 columns"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">h4</span>&gt;</span>The Index Protection Benefit<span class="hljs-tag">&lt;/<span class="hljs-title">h4</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>The Index Protection Benefit (IPB) can keep a policy&amp;apos;s deathe benefit on pace with inflaction by providing yeary, automatic increases in a policy&amp;apos;s face amount in years two through ten<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"medium-4 columns end"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>123 Whipperwillow Dr<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>Vacation Home<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"row padding-vert-large padding-horiz-xlarge"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"columns"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">h5</span>&gt;</span>Pay with out of pocket funds through your <span class="hljs-tag">&lt;<span class="hljs-title">a</span>&gt;</span>Billng Account online<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">h5</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"row padding-vert-large padding-horiz-xlarge"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"medium-4 columns"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">h6</span>&gt;</span>Get Estimate<span class="hljs-tag">&lt;/<span class="hljs-title">h6</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"medium-4 columns end"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">h6</span>&gt;</span>Connecting you accounts is safe and secure. Here&amp;apos;s why<span class="hljs-tag">&lt;<span class="hljs-title">br</span>&gt;</span> Review our <span class="hljs-tag">&lt;<span class="hljs-title">a</span>&gt;</span>Terms of Use<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">h6</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"show-for-nm-px"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">h1</span>&gt;</span>This is an extra large header.<span class="hljs-tag">&lt;/<span class="hljs-title">h1</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-title">h3</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"subheader"</span>&gt;</span>Subheader<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>This is a paragraph with a <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span>&gt;</span>link<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span> inside!<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-title">h2</span>&gt;</span>TODO:<span class="hljs-tag">&lt;/<span class="hljs-title">h2</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">ol</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>Pick up groceries <span class="hljs-tag">&lt;<span class="hljs-title">abbr</span> <span class="hljs-attribute">title</span>=<span class="hljs-value">"as soon as possible"</span>&gt;</span>ASAP<span class="hljs-tag">&lt;/<span class="hljs-title">abbr</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>Work on the <span class="hljs-tag">&lt;<span class="hljs-title">abbr</span> <span class="hljs-attribute">title</span>=<span class="hljs-value">"Graphical User Interface"</span>&gt;</span>GUI<span class="hljs-tag">&lt;/<span class="hljs-title">abbr</span>&gt;</span> for my new site!<span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>Clean my room (maybe)<span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">ol</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-title">hr</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-title">blockquote</span>&gt;</span>&amp;quot;This is an example of a blockquote.&amp;quot;
+        <span class="hljs-tag">&lt;<span class="hljs-title">cite</span>&gt;</span>Cited Source<span class="hljs-tag">&lt;/<span class="hljs-title">cite</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">blockquote</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-title">h3</span>&gt;</span>Here&amp;apos;s some contact info:<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"vcard"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"fn"</span>&gt;</span>Gaius Baltar<span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"street-address"</span>&gt;</span>123 Colonial Ave.<span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"locality"</span>&gt;</span>Caprica City<span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"state"</span>&gt;</span>Caprica<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>, <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"zip"</span>&gt;</span>12345<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"email"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span>&gt;</span>g.baltar@example.com<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
+					</div>
+
+					<div class="result codeExample">
+						<div class="exampleOutput">
+							<div class="show-for-nm-cx">
+    <div class="row padding-vert-large padding-horiz-xlarge">
+        <div class="medium-4 columns">
+            <h2>Notifications</h2>
+        </div>
+        <div class="medium-4 columns">
+            <p>Your Annulized Premium of $706.20 is due in 11 days on October 31, 2016</p>
+            <button class="button btn-cta">Make Payment</button>
+        </div>
+        <div class="medium-4 columns">
+            <p>You have an outstanding load on your account</p>
+            <button class="tertiary button btn-cta">View Details</button>
+        </div>
+    </div>
+    <div class="row bg-primary">
+        <div class="columns padding-vert-large padding-horiz-xlarge text-center">
+            <h3 class="text-white padding-vert-large padding-horiz-xlarge">Assign a savings account to your goal:</h3>
+        </div>
+    </div>
+    <div class="row padding-vert-large padding-horiz-xlarge">
+        <div class="medium-4 columns">
+            <h4>The Index Protection Benefit</h4>
+            <p>The Index Protection Benefit (IPB) can keep a policy&apos;s deathe benefit on pace with inflaction by providing yeary, automatic increases in a policy&apos;s face amount in years two through ten</p>
+        </div>
+        <div class="medium-4 columns end">
+            <p>123 Whipperwillow Dr</p>
+            <p>Vacation Home</p>
+        </div>
+    </div>
+    <div class="row padding-vert-large padding-horiz-xlarge">
+        <div class="columns">
+            <h5>Pay with out of pocket funds through your <a>Billng Account online</a></h5>
+        </div>
+    </div>
+    <div class="row padding-vert-large padding-horiz-xlarge">
+        <div class="medium-4 columns">
+            <h6>Get Estimate</h6>
+        </div>
+        <div class="medium-4 columns end">
+            <h6>Connecting you accounts is safe and secure. Here&apos;s why<br> Review our <a>Terms of Use</a></h6>
+        </div>
+    </div>
+</div>
+
+<div class="show-for-nm-px">
+    <h1>This is an extra large header.</h1>
+
+    <h3 class="subheader">Subheader</h3>
+
+    <p>This is a paragraph with a <a href="#">link</a> inside!</p>
+
+    <h2>TODO:</h2>
+    <ol>
+        <li>Pick up groceries <abbr title="as soon as possible">ASAP</abbr></li>
+        <li>Work on the <abbr title="Graphical User Interface">GUI</abbr> for my new site!</li>
+        <li>Clean my room (maybe)</li>
+    </ol>
+
+    <hr>
+
+    <blockquote>&quot;This is an example of a blockquote.&quot;
+        <cite>Cited Source</cite>
+    </blockquote>
+
+    <h3>Here&apos;s some contact info:</h3>
+    <ul class="vcard">
+        <li class="fn">Gaius Baltar</li>
+        <li class="street-address">123 Colonial Ave.</li>
+        <li class="locality">Caprica City</li>
+        <li><span class="state">Caprica</span>, <span class="zip">12345</span></li>
+        <li class="email"><a href="#">g.baltar@example.com</a></li>
+    </ul>
+</div>
+						</div>
+					</div>
+
+				</div>
+				<div class="section" id="LV_Example" data-section="" data-heading="">
+
+					<div class="comment">
+						
+						<h2 class="main-section-sg-by-lvnm" id="section-LV_Example">LV Example</h2>
+<p>A combination of type styles means you can do almost anything.
+Listed below are styles for individual type components used in combination with others.</p>
+					</div>
+
+					<div class="ss-title">EXAMPLE
+						<span class="icon-code tooltip-target tooltip-show-on-hover">
+							<div class="show-hide-code tooltip tooltip-top-right reset-child-margins">
+								<p>Show Code</p>
+							</div>
+							<span class="icon icon-caret-left"></span>
+							<span class="icon icon-caret-right"></span>
+						</span>
+					</div>
+					<div class="codeBlock markup hljs">
+						<pre><span class="hljs-tag">&lt;<span class="hljs-title">h1</span>&gt;</span>This is an extra large header.<span class="hljs-tag">&lt;/<span class="hljs-title">h1</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-title">h3</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"subheader"</span>&gt;</span>Subheader<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>This is a paragraph with a <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span>&gt;</span>link<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span> inside!<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-title">h2</span>&gt;</span>TODO:<span class="hljs-tag">&lt;/<span class="hljs-title">h2</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">ol</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>Pick up groceries <span class="hljs-tag">&lt;<span class="hljs-title">abbr</span> <span class="hljs-attribute">title</span>=<span class="hljs-value">"as soon as possible"</span>&gt;</span>ASAP<span class="hljs-tag">&lt;/<span class="hljs-title">abbr</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>Work on the <span class="hljs-tag">&lt;<span class="hljs-title">abbr</span> <span class="hljs-attribute">title</span>=<span class="hljs-value">"Graphical User Interface"</span>&gt;</span>GUI<span class="hljs-tag">&lt;/<span class="hljs-title">abbr</span>&gt;</span> for my new site!<span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>Clean my room (maybe)<span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">ol</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-title">hr</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-title">blockquote</span>&gt;</span>&amp;quot;This is an example of a blockquote.&amp;quot;
+    <span class="hljs-tag">&lt;<span class="hljs-title">cite</span>&gt;</span>Cited Source<span class="hljs-tag">&lt;/<span class="hljs-title">cite</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">blockquote</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-title">h3</span>&gt;</span>Here&amp;apos;s some contact info:<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"vcard"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"fn"</span>&gt;</span>Gaius Baltar<span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"street-address"</span>&gt;</span>123 Colonial Ave.<span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"locality"</span>&gt;</span>Caprica City<span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"state"</span>&gt;</span>Caprica<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>, <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"zip"</span>&gt;</span>12345<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"email"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span>&gt;</span>g.baltar@example.com<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span></pre>
+					</div>
+
+					<div class="result codeExample">
+						<div class="exampleOutput">
+							<h1>This is an extra large header.</h1>
+
+<h3 class="subheader">Subheader</h3>
+
+<p>This is a paragraph with a <a href="#">link</a> inside!</p>
+
+<h2>TODO:</h2>
+<ol>
+    <li>Pick up groceries <abbr title="as soon as possible">ASAP</abbr></li>
+    <li>Work on the <abbr title="Graphical User Interface">GUI</abbr> for my new site!</li>
+    <li>Clean my room (maybe)</li>
+</ol>
+
+<hr>
+
+<blockquote>&quot;This is an example of a blockquote.&quot;
+    <cite>Cited Source</cite>
+</blockquote>
+
+<h3>Here&apos;s some contact info:</h3>
+<ul class="vcard">
+    <li class="fn">Gaius Baltar</li>
+    <li class="street-address">123 Colonial Ave.</li>
+    <li class="locality">Caprica City</li>
+    <li><span class="state">Caprica</span>, <span class="zip">12345</span></li>
+    <li class="email"><a href="#">g.baltar@example.com</a></li>
+</ul>
+						</div>
+					</div>
+
+				</div>
+				<div class="section" id="Typography-Horizontal_Rules" data-section="Typography" data-heading="Horizontal Rules">
+
+					<div class="comment">
+						<h1>Horizontal Rules</h1>
+						<p>Horizontal rules will give you a horizontal border (or ruler) above your <code>&lt;hr&gt;</code> denoted elements.</p>
+					</div>
+
+					<div class="ss-title">EXAMPLE
+						<span class="icon-code tooltip-target tooltip-show-on-hover">
+							<div class="show-hide-code tooltip tooltip-top-right reset-child-margins">
+								<p>Show Code</p>
+							</div>
+							<span class="icon icon-caret-left"></span>
+							<span class="icon icon-caret-right"></span>
+						</span>
+					</div>
+					<div class="codeBlock markup hljs">
+						<pre><span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>This represents a horizontal rule and how it looks when combined underneath another element.<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>Lorem ipsum dolor sit amet, eu est tamquam meliore. Sed id graeco partiendo reprehendunt, vel at corrumpit appellantur, ius debet semper deserunt ut. Ex duo mundi nostro, pri ex mentitum offendit laboramus, ut his quas nulla error.<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">hr</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>Lorem ipsum dolor sit amet, eu est tamquam meliore. Sed id graeco partiendo reprehendunt, vel at corrumpit appellantur, ius debet semper deserunt ut. Ex duo mundi nostro, pri ex mentitum offendit laboramus, ut his quas nulla error.<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span></pre>
+					</div>
+
+					<div class="result codeExample">
+						<div class="exampleOutput">
+							<p>This represents a horizontal rule and how it looks when combined underneath another element.</p>
+<p>Lorem ipsum dolor sit amet, eu est tamquam meliore. Sed id graeco partiendo reprehendunt, vel at corrumpit appellantur, ius debet semper deserunt ut. Ex duo mundi nostro, pri ex mentitum offendit laboramus, ut his quas nulla error.</p>
+<hr>
+<p>Lorem ipsum dolor sit amet, eu est tamquam meliore. Sed id graeco partiendo reprehendunt, vel at corrumpit appellantur, ius debet semper deserunt ut. Ex duo mundi nostro, pri ex mentitum offendit laboramus, ut his quas nulla error.</p>
+						</div>
+					</div>
+
+				</div>
+				<div class="section" id="Typography-Code_Blocks" data-section="Typography" data-heading="Code Blocks">
+
+					<div class="comment">
+						<h1>Code Blocks</h1>
+						<p>The <code>code</code> tag can be used when trying to display code snippets.</p>
+					</div>
+
+					<div class="ss-title">EXAMPLE
+						<span class="icon-code tooltip-target tooltip-show-on-hover">
+							<div class="show-hide-code tooltip tooltip-top-right reset-child-margins">
+								<p>Show Code</p>
+							</div>
+							<span class="icon icon-caret-left"></span>
+							<span class="icon icon-caret-right"></span>
+						</span>
+					</div>
+					<div class="codeBlock markup hljs">
+						<pre><span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>To display code inline, use the <span class="hljs-tag">&lt;<span class="hljs-title">code</span>&gt;</span>&amp;lt;code&amp;gt;<span class="hljs-tag">&lt;/<span class="hljs-title">code</span>&gt;</span> tag.<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span></pre>
+					</div>
+
+					<div class="result codeExample">
+						<div class="exampleOutput">
+							<p>To display code inline, use the <code>&lt;code&gt;</code> tag.</p>
+						</div>
+					</div>
+
+				</div>
+				<div class="section" id="Typography-Lists" data-section="Typography" data-heading="Lists">
+
+					<div class="comment">
+						<h1>Lists</h1>
+						<p>Lists are helpful for, well, lists of things. Didn&apos;t see that coming did you! There are baked-in styles for a number of different unordered list styles, as well as ordered and definition lists.</p>
+					</div>
+
+					<div class="ss-title">EXAMPLE
+						<span class="icon-code tooltip-target tooltip-show-on-hover">
+							<div class="show-hide-code tooltip tooltip-top-right reset-child-margins">
+								<p>Show Code</p>
+							</div>
+							<span class="icon icon-caret-left"></span>
+							<span class="icon icon-caret-right"></span>
+						</span>
+					</div>
+					<div class="codeBlock markup hljs">
+						<pre><span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"disc"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>List item with a much longer description or more content.<span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>List item<span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>List item
+        <span class="hljs-tag">&lt;<span class="hljs-title">ul</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>Nested list item<span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>Nested list item<span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>Nested list item<span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>List item<span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>List item<span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>List item<span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span></pre>
+					</div>
+
+					<div class="result codeExample">
+						<div class="exampleOutput">
+							<ul class="disc">
+    <li>List item with a much longer description or more content.</li>
+    <li>List item</li>
+    <li>List item
+        <ul>
+            <li>Nested list item</li>
+            <li>Nested list item</li>
+            <li>Nested list item</li>
+        </ul></li>
+    <li>List item</li>
+    <li>List item</li>
+    <li>List item</li>
+</ul>
+						</div>
+					</div>
+
+				</div>
+				<div class="section" id="Typography-Abbreviations" data-section="Typography" data-heading="Abbreviations">
+
+					<div class="comment">
+						<h1>Abbreviations</h1>
+						<p>The <code>&lt;abbr&gt;</code> tag can be used to provide a description of what an abbreviation (or acronym) stands for.
+The <code>&lt;acronym&gt;</code> tag is <em>not</em> supported with HTML5. You may use it with earlier HTML versions, however it is suggested to use <code>&lt;abbr&gt;</code> instead.</p>
+					</div>
+
+					<div class="ss-title">EXAMPLE
+						<span class="icon-code tooltip-target tooltip-show-on-hover">
+							<div class="show-hide-code tooltip tooltip-top-right reset-child-margins">
+								<p>Show Code</p>
+							</div>
+							<span class="icon icon-caret-left"></span>
+							<span class="icon icon-caret-right"></span>
+						</span>
+					</div>
+					<div class="codeBlock markup hljs">
+						<pre>Would you mind doing this <span class="hljs-tag">&lt;<span class="hljs-title">abbr</span> <span class="hljs-attribute">title</span>=<span class="hljs-value">"as soon as possible"</span>&gt;</span>ASAP<span class="hljs-tag">&lt;/<span class="hljs-title">abbr</span>&gt;</span>?</pre>
+					</div>
+
+					<div class="result codeExample">
+						<div class="exampleOutput">
+							Would you mind doing this <abbr title="as soon as possible">ASAP</abbr>?
+						</div>
+					</div>
+
+				</div>
+				<div class="section" id="Typography-Quotes" data-section="Typography" data-heading="Quotes">
+
+					<div class="comment">
+						<h1>Quotes</h1>
+						<p>Blockquotes are used to provide styling around a quoted resource. You may use the <code>&lt;blockquote&gt;</code> tags along with the optional <code>&lt;cite&gt;</code> tags nested
+inside the blockquote as shown below.</p>
+					</div>
+
+					<div class="ss-title">EXAMPLE
+						<span class="icon-code tooltip-target tooltip-show-on-hover">
+							<div class="show-hide-code tooltip tooltip-top-right reset-child-margins">
+								<p>Show Code</p>
+							</div>
+							<span class="icon icon-caret-left"></span>
+							<span class="icon icon-caret-right"></span>
+						</span>
+					</div>
+					<div class="codeBlock markup hljs">
+						<pre><span class="hljs-tag">&lt;<span class="hljs-title">blockquote</span>&gt;</span>&amp;quot;This is an example of a blockquote.&amp;quot;
+    <span class="hljs-tag">&lt;<span class="hljs-title">cite</span>&gt;</span>Cited Source<span class="hljs-tag">&lt;/<span class="hljs-title">cite</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">blockquote</span>&gt;</span></pre>
+					</div>
+
+					<div class="result codeExample">
+						<div class="exampleOutput">
+							<blockquote>&quot;This is an example of a blockquote.&quot;
+    <cite>Cited Source</cite>
+</blockquote>
+						</div>
+					</div>
+
+				</div>
+				<div class="section" id="LV_Typography/Microformats_-_vcard" data-section="" data-heading="">
+
+					<div class="comment">
+						
+						<h2 class="main-section-sg-by-lvnm" id="section-LV_Typography/Microformats_-_vcard">LV Typography/Microformats - vcard</h2>
+<p>We can use the <code>.vcard</code> class to create a card. You may also use classes nested inside for things like full name (<code>.fn</code>) as shown below.
+Notice how the <code>&lt;h1&gt;</code> tag is being used, but the styling from the <code>.fn</code> class will take precedence.</p>
+					</div>
+
+					<div class="ss-title">EXAMPLE
+						<span class="icon-code tooltip-target tooltip-show-on-hover">
+							<div class="show-hide-code tooltip tooltip-top-right reset-child-margins">
+								<p>Show Code</p>
+							</div>
+							<span class="icon icon-caret-left"></span>
+							<span class="icon icon-caret-right"></span>
+						</span>
+					</div>
+					<div class="codeBlock markup hljs">
+						<pre><span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"vcard"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"fn"</span>&gt;</span>Gaius Baltar<span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"street-address"</span>&gt;</span>123 Colonial Ave.<span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"locality"</span>&gt;</span>Caprica City<span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"state"</span>&gt;</span>Caprica<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>, <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"zip"</span>&gt;</span>12345<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"email"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span>&gt;</span>g.baltar@example.com<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span></pre>
+					</div>
+
+					<div class="result codeExample">
+						<div class="exampleOutput">
+							<ul class="vcard">
+    <li class="fn">Gaius Baltar</li>
+    <li class="street-address">123 Colonial Ave.</li>
+    <li class="locality">Caprica City</li>
+    <li><span class="state">Caprica</span>, <span class="zip">12345</span></li>
+    <li class="email"><a href="#">g.baltar@example.com</a></li>
+</ul>
+						</div>
+					</div>
+
+				</div>
+				<div class="section" id="LV_Microformats_-_vevent" data-section="" data-heading="">
+
+					<div class="comment">
+						
+						<h2 class="main-section-sg-by-lvnm" id="section-LV_Microformats_-_vevent">LV Microformats - vevent</h2>
+<p>You may also use the <code>.vevent</code> class in order to build a card with a summary included.</p>
+					</div>
+
+					<div class="ss-title">EXAMPLE
+						<span class="icon-code tooltip-target tooltip-show-on-hover">
+							<div class="show-hide-code tooltip tooltip-top-right reset-child-margins">
+								<p>Show Code</p>
+							</div>
+							<span class="icon icon-caret-left"></span>
+							<span class="icon icon-caret-right"></span>
+						</span>
+					</div>
+					<div class="codeBlock markup hljs">
+						<pre><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"vevent"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">h1</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"fn"</span>&gt;</span>Firstname Lastname<span class="hljs-tag">&lt;/<span class="hljs-title">h1</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"summary"</span>&gt;</span>Lorem ipsum dolor sit amet, eu est tamquam meliore. Sed id graeco partiendo reprehendunt, vel at corrumpit appellantur,
+    ius debet semper deserunt ut. Ex duo mundi nostro, pri ex mentitum offendit laboramus, ut his quas nulla error.<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
+					</div>
+
+					<div class="result codeExample">
+						<div class="exampleOutput">
+							<div class="vevent">
+    <h1 class="fn">Firstname Lastname</h1>
+    <p class="summary">Lorem ipsum dolor sit amet, eu est tamquam meliore. Sed id graeco partiendo reprehendunt, vel at corrumpit appellantur,
+    ius debet semper deserunt ut. Ex duo mundi nostro, pri ex mentitum offendit laboramus, ut his quas nulla error.</p>
+</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</section>
+
+		<footer class="sg-footer">
+			<div class="grid-container reset-child-margins">
+				<p class="padding-horiz-xlarge"></p>
+			</div>
+		</footer>
+	</div>
+
+	<div class="modal-overlay"></div>
+
+	<div class="modal-container">
+		<div class="modal">
+			<h1>Example Modal</h1>
+
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodoconsequat. Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat nonproident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		</div>
+		<button class="modal-close">
+			<span class="icon icon-close"></span>
+		</button>
+	</div>
+
+	<div class="toaster-fixed-region">
+		<div class="grid-container sg-padding-responsive-horiz padding-vert-medium toaster-grid">
+			<div class="toaster-container show-with-transition text-right">
+				<div class="toaster-trigger inline-block bg-medium-grey padding-horiz-tiny">
+					<button class="reset-button">
+						<span class="icon icon-caret-down"></span>
+					</button>
+				</div>
+				<div class="toaster-content padding-small bg-medium-grey">
+					<a href="http://uitk.learnvest.com/explorer" class="button tiny info margin-bottom-none">Back to Version Explorer!</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="./resources/js/vendor/moment.min.js"></script>
+	<script src="./resources/js/vendor/d3.min.js"></script>
+	<script src="./resources/js/app.js" id="appjs"></script>
+</body>
+</html>

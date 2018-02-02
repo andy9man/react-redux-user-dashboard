@@ -1,0 +1,702 @@
+<!doctype html>
+<html>
+<head>
+	<title>Style Guide - NM / LV</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+	<link rel="stylesheet" href="../css/static/fader-overlay.css">
+	<style>
+	/*
+	
+	github.com style (c) Vasily Polovnyov <vast@whiteants.net>
+	
+	*/
+	
+	.hljs {
+	  display: block;
+	  overflow-x: auto;
+	  padding: 0.5em;
+	  color: #333;
+	  background: #f8f8f8;
+	  -webkit-text-size-adjust: none;
+	}
+	
+	.hljs-comment,
+	.diff .hljs-header {
+	  color: #998;
+	  font-style: italic;
+	}
+	
+	.hljs-keyword,
+	.css .rule .hljs-keyword,
+	.hljs-winutils,
+	.nginx .hljs-title,
+	.hljs-subst,
+	.hljs-request,
+	.hljs-status {
+	  color: #333;
+	  font-weight: bold;
+	}
+	
+	.hljs-number,
+	.hljs-hexcolor,
+	.ruby .hljs-constant {
+	  color: #008080;
+	}
+	
+	.hljs-string,
+	.hljs-tag .hljs-value,
+	.hljs-doctag,
+	.tex .hljs-formula {
+	  color: #d14;
+	}
+	
+	.hljs-title,
+	.hljs-id,
+	.scss .hljs-preprocessor {
+	  color: #900;
+	  font-weight: bold;
+	}
+	
+	.hljs-list .hljs-keyword,
+	.hljs-subst {
+	  font-weight: normal;
+	}
+	
+	.hljs-class .hljs-title,
+	.hljs-type,
+	.vhdl .hljs-literal,
+	.tex .hljs-command {
+	  color: #458;
+	  font-weight: bold;
+	}
+	
+	.hljs-tag,
+	.hljs-tag .hljs-title,
+	.hljs-rule .hljs-property,
+	.django .hljs-tag .hljs-keyword {
+	  color: #000080;
+	  font-weight: normal;
+	}
+	
+	.hljs-attribute,
+	.hljs-variable,
+	.lisp .hljs-body,
+	.hljs-name {
+	  color: #008080;
+	}
+	
+	.hljs-regexp {
+	  color: #009926;
+	}
+	
+	.hljs-symbol,
+	.ruby .hljs-symbol .hljs-string,
+	.lisp .hljs-keyword,
+	.clojure .hljs-keyword,
+	.scheme .hljs-keyword,
+	.tex .hljs-special,
+	.hljs-prompt {
+	  color: #990073;
+	}
+	
+	.hljs-built_in {
+	  color: #0086b3;
+	}
+	
+	.hljs-preprocessor,
+	.hljs-pragma,
+	.hljs-pi,
+	.hljs-doctype,
+	.hljs-shebang,
+	.hljs-cdata {
+	  color: #999;
+	  font-weight: bold;
+	}
+	
+	.hljs-deletion {
+	  background: #fdd;
+	}
+	
+	.hljs-addition {
+	  background: #dfd;
+	}
+	
+	.diff .hljs-change {
+	  background: #0086b3;
+	}
+	
+	.hljs-chunk {
+	  color: #aaa;
+	}
+	
+	</style></head>
+<body>
+	<div class="page-container">
+		<div id="fader-overlay" class="sg-fader-overlay"></div>
+
+		<nav class="row sg-nav padding-vert-small viewport-el" role="navigation" data-emit-events data-top-bottom >
+			<div class="small-2 columns burger-wrapper show-for-small">
+				<button class="burger reset-button trigger-menu">
+					<div class="burger-content"></div>
+				</button>
+			</div>
+
+			<h1 class="medium-7 columns hide-for-small margin-vert-none"><a href="#">LearnVest &amp; Northwestern Mutual - A Style Guide</a></h1>
+
+			<div class="small-10 medium-5 columns theme-switch-wrapper reset-child-margins text-right">
+				<span class="text-white inline-block valign-middle margin-right-small">Select Theme: </span>
+				<!-- jQuery injects select el here (theme-switch.js) -->
+			</div>
+		</nav>
+
+		<section class="row height-full">
+			<div class="medium-4 large-3 xlarge-2 columns height-full hide-for-small sg-sidebar">
+				<div class="padding-top-medium reset-child-margins">
+					<ul class="sg-block-nav sg-block-nav-submenu reset-list reset-child-margins">
+
+						<h3>Button Groups</h3>
+						<li><a href="#Button_Groups-Basic">Basic</a></li>
+						<li><a href="#Button_Groups-Expanded">Expanded</a></li>
+						<li><a href="#Button_Groups-Stacking">Stacking</a></li>
+
+					</ul>
+					<ul class="sg-block-nav sg-block-nav-submenu reset-list reset-child-margins">
+
+						<h3></h3>
+
+					</ul>
+
+
+					<ul class="sg-block-nav sg-category-nav reset-list reset-child-margins">
+						<h3>Categories</h3>
+						<li><a href="button-groups.html">Button Groups</a></li>
+						<li><a href="buttons.html">Buttons</a></li>
+						<li><a href="card.html">Card</a></li>
+						<li><a href="colors.html">Colors</a></li>
+						<li><a href="forms.html">Forms</a></li>
+						<li><a href="ghosting.html">Ghosting</a></li>
+						<li><a href="graphs.html">Graphs</a></li>
+						<li><a href="grid.html">Grid</a></li>
+						<li><a href="icons.html">Icons</a></li>
+						<li><a href="labels.html">Labels</a></li>
+						<li><a href="loading-indicators.html">Loading Indicators</a></li>
+						<li><a href="modals.html">Modals</a></li>
+						<li><a href="navigation.html">Navigation</a></li>
+						<li><a href="notifications.html">Notifications</a></li>
+						<li><a href="switches.html">Switches</a></li>
+						<li><a href="tables.html">Tables</a></li>
+						<li><a href="tooltips.html">Tooltips</a></li>
+						<li><a href="type.html">Type</a></li>
+						<li><a href="utility-classes.html">Utility Classes</a></li>
+						<li><a href="visibility.html">Visibility</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="medium-8 large-9 xlarge-10 columns sg-content" id="styleguide">
+				<div class="section" id="Button_Groups-Button_Groups" data-section="Button Groups" data-heading="Button Groups">
+
+					<div class="comment">
+						<h1>Button Groups</h1>
+						<p>Button groups are containers for related action items. They&apos;re great when you
+need to display a group of actions in a bar. These build off the button styles
+and work perfectly with the grid.</p>
+					</div>
+
+
+
+				</div>
+				<div class="section" id="Button_Groups-Basic" data-section="Button Groups" data-heading="Basic">
+
+					<div class="comment">
+						<h1>Basic</h1>
+						<p>You can create a button group as follows.</p>
+<p><strong><strong>NOTE:</strong></strong>  NM should use both <code>.button-group</code> and <code>.btn-cta</code> classes when adding new buttons groups to get the most recent design styles. Legacy styles are still available by using just the <code>.button-group</code> class. LV can leave out the btn-cta since those styles are not currently available for LV.</p>
+					</div>
+
+					<div class="ss-title">EXAMPLE
+						<span class="icon-code tooltip-target tooltip-show-on-hover">
+							<div class="show-hide-code tooltip tooltip-top-right reset-child-margins">
+								<p>Show Code</p>
+							</div>
+							<span class="icon icon-caret-left"></span>
+							<span class="icon icon-caret-right"></span>
+						</span>
+					</div>
+					<div class="codeBlock markup hljs">
+						<pre><span class="hljs-comment">&lt;!-- A default button-group --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"button-group btn-cta"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">button</span>&gt;</span>Button 1<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">button</span>&gt;</span>Button 2<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">button</span>&gt;</span>Button 3<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span></pre>
+					</div>
+
+					<div class="result codeExample">
+						<div class="exampleOutput">
+							<!-- A default button-group -->
+<ul class="button-group btn-cta">
+    <li><button>Button 1</button></li>
+    <li><button>Button 2</button></li>
+    <li><button>Button 3</button></li>
+</ul>
+						</div>
+					</div>
+
+				</div>
+				<div class="section" id="Colors" data-section="" data-heading="">
+
+					<div class="comment">
+						
+						<h2 class="main-section-sg-by-lvnm" id="section-Colors">Colors</h2>
+<p>To show a button-group containing non-primary colors, (e.g. secondary, contextual
+colors, etc.), add the desired class on a per-button-group level.</p>
+					</div>
+
+					<div class="ss-title">EXAMPLE
+						<span class="icon-code tooltip-target tooltip-show-on-hover">
+							<div class="show-hide-code tooltip tooltip-top-right reset-child-margins">
+								<p>Show Code</p>
+							</div>
+							<span class="icon icon-caret-left"></span>
+							<span class="icon icon-caret-right"></span>
+						</span>
+					</div>
+					<div class="codeBlock markup hljs">
+						<pre><span class="hljs-comment">&lt;!-- Secondary Button Group --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"button-group btn-cta secondary"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">button</span>&gt;</span>Button 1<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">button</span>&gt;</span>Button 2<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">button</span>&gt;</span>Button 3<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">button</span>&gt;</span>Button 4<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span>
+
+<span class="hljs-comment">&lt;!-- Tertiary Button Group --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"button-group btn-cta tertiary"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">button</span>&gt;</span>Button 1<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">button</span>&gt;</span>Button 2<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">button</span>&gt;</span>Button 3<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">button</span>&gt;</span>Button 4<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span>
+
+<span class="hljs-comment">&lt;!-- Dull Button Group --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"button-group btn-cta dull"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">button</span>&gt;</span>Button 1<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">button</span>&gt;</span>Button 2<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">button</span>&gt;</span>Button 3<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">button</span>&gt;</span>Button 4<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span>
+
+
+<span class="hljs-comment">&lt;!-- Info Button Group --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"button-group btn-cta info"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">button</span>&gt;</span>Button 1<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">button</span>&gt;</span>Button 2<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">button</span>&gt;</span>Button 3<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">button</span>&gt;</span>Button 4<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span></pre>
+					</div>
+
+					<div class="result codeExample">
+						<div class="exampleOutput">
+							<!-- Secondary Button Group -->
+<ul class="button-group btn-cta secondary">
+    <li><button>Button 1</button></li>
+    <li><button>Button 2</button></li>
+    <li><button>Button 3</button></li>
+    <li><button>Button 4</button></li>
+</ul>
+
+<!-- Tertiary Button Group -->
+<ul class="button-group btn-cta tertiary">
+    <li><button>Button 1</button></li>
+    <li><button>Button 2</button></li>
+    <li><button>Button 3</button></li>
+    <li><button>Button 4</button></li>
+</ul>
+
+<!-- Dull Button Group -->
+<ul class="button-group btn-cta dull">
+    <li><button>Button 1</button></li>
+    <li><button>Button 2</button></li>
+    <li><button>Button 3</button></li>
+    <li><button>Button 4</button></li>
+</ul>
+
+
+<!-- Info Button Group -->
+<ul class="button-group btn-cta info">
+    <li><button>Button 1</button></li>
+    <li><button>Button 2</button></li>
+    <li><button>Button 3</button></li>
+    <li><button>Button 4</button></li>
+</ul>
+						</div>
+					</div>
+
+				</div>
+				<div class="section" id="Active_States" data-section="" data-heading="">
+
+					<div class="comment">
+						
+						<h2 class="main-section-sg-by-lvnm" id="section-Active_States">Active States</h2>
+<p>Just as you would add an <em>active</em> state to a button, you may do the same
+on entries in a button-group.</p>
+					</div>
+
+					<div class="ss-title">EXAMPLE
+						<span class="icon-code tooltip-target tooltip-show-on-hover">
+							<div class="show-hide-code tooltip tooltip-top-right reset-child-margins">
+								<p>Show Code</p>
+							</div>
+							<span class="icon icon-caret-left"></span>
+							<span class="icon icon-caret-right"></span>
+						</span>
+					</div>
+					<div class="codeBlock markup hljs">
+						<pre><span class="hljs-comment">&lt;!-- Primary Button Group --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"button-group btn-cta"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"active"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">button</span>&gt;</span>Button 1<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">button</span>&gt;</span>Button 2<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">button</span>&gt;</span>Button 3<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">button</span>&gt;</span>Button 4<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span>
+
+<span class="hljs-comment">&lt;!-- Secondary Button Group --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"button-group btn-cta secondary"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"active"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">button</span>&gt;</span>Button 1<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">button</span>&gt;</span>Button 2<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">button</span>&gt;</span>Button 3<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">button</span>&gt;</span>Button 4<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span>
+
+<span class="hljs-comment">&lt;!-- Tertiary Button Group --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"button-group btn-cta tertiary"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"active"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">button</span>&gt;</span>Button 1<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">button</span>&gt;</span>Button 2<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">button</span>&gt;</span>Button 3<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">button</span>&gt;</span>Button 4<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span>
+
+<span class="hljs-comment">&lt;!-- Dull Button Group --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"button-group btn-cta dull"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"active"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">button</span>&gt;</span>Button 1<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">button</span>&gt;</span>Button 2<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">button</span>&gt;</span>Button 3<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">button</span>&gt;</span>Button 4<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span>
+
+<span class="hljs-comment">&lt;!-- Info Button Group --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"button-group btn-cta info"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"active"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">button</span>&gt;</span>Button 1<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">button</span>&gt;</span>Button 2<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">button</span>&gt;</span>Button 3<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">button</span>&gt;</span>Button 4<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span></pre>
+					</div>
+
+					<div class="result codeExample">
+						<div class="exampleOutput">
+							<!-- Primary Button Group -->
+<ul class="button-group btn-cta">
+    <li class="active"><button>Button 1</button></li>
+    <li><button>Button 2</button></li>
+    <li><button>Button 3</button></li>
+    <li><button>Button 4</button></li>
+</ul>
+
+<!-- Secondary Button Group -->
+<ul class="button-group btn-cta secondary">
+    <li class="active"><button>Button 1</button></li>
+    <li><button>Button 2</button></li>
+    <li><button>Button 3</button></li>
+    <li><button>Button 4</button></li>
+</ul>
+
+<!-- Tertiary Button Group -->
+<ul class="button-group btn-cta tertiary">
+    <li class="active"><button>Button 1</button></li>
+    <li><button>Button 2</button></li>
+    <li><button>Button 3</button></li>
+    <li><button>Button 4</button></li>
+</ul>
+
+<!-- Dull Button Group -->
+<ul class="button-group btn-cta dull">
+    <li class="active"><button>Button 1</button></li>
+    <li><button>Button 2</button></li>
+    <li><button>Button 3</button></li>
+    <li><button>Button 4</button></li>
+</ul>
+
+<!-- Info Button Group -->
+<ul class="button-group btn-cta info">
+    <li class="active"><button>Button 1</button></li>
+    <li><button>Button 2</button></li>
+    <li><button>Button 3</button></li>
+    <li><button>Button 4</button></li>
+</ul>
+						</div>
+					</div>
+
+				</div>
+				<div class="section" id="Sizing" data-section="" data-heading="">
+
+					<div class="comment">
+						
+						<h2 class="main-section-sg-by-lvnm" id="section-Sizing">Sizing</h2>
+<p>You may resize buttons in button-groups as you would a normal button.</p>
+					</div>
+
+					<div class="ss-title">EXAMPLE
+						<span class="icon-code tooltip-target tooltip-show-on-hover">
+							<div class="show-hide-code tooltip tooltip-top-right reset-child-margins">
+								<p>Show Code</p>
+							</div>
+							<span class="icon icon-caret-left"></span>
+							<span class="icon icon-caret-right"></span>
+						</span>
+					</div>
+					<div class="codeBlock markup hljs">
+						<pre><span class="hljs-comment">&lt;!-- A tiny button-group --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"button-group btn-cta tiny"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">button</span>&gt;</span>Button 1<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">button</span>&gt;</span>Button 2<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">button</span>&gt;</span>Button 3<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span>
+
+<span class="hljs-comment">&lt;!-- A small button-group --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"button-group btn-cta small"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">button</span>&gt;</span>Button 1<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">button</span>&gt;</span>Button 2<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">button</span>&gt;</span>Button 3<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span>
+
+<span class="hljs-comment">&lt;!-- Default button-group --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"button-group btn-cta"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">button</span>&gt;</span>Button 1<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">button</span>&gt;</span>Button 2<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">button</span>&gt;</span>Button 3<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span>
+
+<span class="hljs-comment">&lt;!-- A large button-group --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"button-group btn-cta large"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">button</span>&gt;</span>Button 1<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">button</span>&gt;</span>Button 2<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">button</span>&gt;</span>Button 3<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span></pre>
+					</div>
+
+					<div class="result codeExample">
+						<div class="exampleOutput">
+							<!-- A tiny button-group -->
+<ul class="button-group btn-cta tiny">
+    <li><button>Button 1</button></li>
+    <li><button>Button 2</button></li>
+    <li><button>Button 3</button></li>
+</ul>
+
+<!-- A small button-group -->
+<ul class="button-group btn-cta small">
+    <li><button>Button 1</button></li>
+    <li><button>Button 2</button></li>
+    <li><button>Button 3</button></li>
+</ul>
+
+<!-- Default button-group -->
+<ul class="button-group btn-cta">
+    <li><button>Button 1</button></li>
+    <li><button>Button 2</button></li>
+    <li><button>Button 3</button></li>
+</ul>
+
+<!-- A large button-group -->
+<ul class="button-group btn-cta large">
+    <li><button>Button 1</button></li>
+    <li><button>Button 2</button></li>
+    <li><button>Button 3</button></li>
+</ul>
+						</div>
+					</div>
+
+				</div>
+				<div class="section" id="Button_Groups-Expanded" data-section="Button Groups" data-heading="Expanded">
+
+					<div class="comment">
+						<h1>Expanded</h1>
+						<p>Adding an <code>.even</code> class with the specified number of buttons in that group
+allows the button group to evenly expand to the edges of its container.
+With Foundation classes you can use the even class up to <code>.even-8</code>.</p>
+					</div>
+
+					<div class="ss-title">EXAMPLE
+						<span class="icon-code tooltip-target tooltip-show-on-hover">
+							<div class="show-hide-code tooltip tooltip-top-right reset-child-margins">
+								<p>Show Code</p>
+							</div>
+							<span class="icon icon-caret-left"></span>
+							<span class="icon icon-caret-right"></span>
+						</span>
+					</div>
+					<div class="codeBlock markup hljs">
+						<pre><span class="hljs-comment">&lt;!-- Expanded button groups --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"button-group btn-cta secondary even-3"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">button</span>&gt;</span>Button 1<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">button</span>&gt;</span>Button 2<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">button</span>&gt;</span>Button 3<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"button-group btn-cta even-6"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">button</span>&gt;</span>Butt 1<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">button</span>&gt;</span>Butt 2<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">button</span>&gt;</span>Butt 3<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">button</span>&gt;</span>Butt 4<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">button</span>&gt;</span>Butt 5<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">button</span>&gt;</span>Butt 6<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span></pre>
+					</div>
+
+					<div class="result codeExample">
+						<div class="exampleOutput">
+							<!-- Expanded button groups -->
+<ul class="button-group btn-cta secondary even-3">
+    <li><button>Button 1</button></li>
+    <li><button>Button 2</button></li>
+    <li><button>Button 3</button></li>
+</ul>
+<ul class="button-group btn-cta even-6">
+    <li><button>Butt 1</button></li>
+    <li><button>Butt 2</button></li>
+    <li><button>Butt 3</button></li>
+    <li><button>Butt 4</button></li>
+    <li><button>Butt 5</button></li>
+    <li><button>Butt 6</button></li>
+</ul>
+						</div>
+					</div>
+
+				</div>
+				<div class="section" id="Button_Groups-Stacking" data-section="Button Groups" data-heading="Stacking">
+
+					<div class="comment">
+						<h1>Stacking</h1>
+						<p>You can change the orientation of a button group with the <code>.stack</code> classes.</p>
+					</div>
+
+					<div class="ss-title">EXAMPLE
+						<span class="icon-code tooltip-target tooltip-show-on-hover">
+							<div class="show-hide-code tooltip tooltip-top-right reset-child-margins">
+								<p>Show Code</p>
+							</div>
+							<span class="icon icon-caret-left"></span>
+							<span class="icon icon-caret-right"></span>
+						</span>
+					</div>
+					<div class="codeBlock markup hljs">
+						<pre><span class="hljs-comment">&lt;!-- Stacked button group --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"stack button-group btn-cta"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">button</span>&gt;</span>Button 1<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">button</span>&gt;</span>Button 2<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"stack button-group btn-cta secondary"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">button</span>&gt;</span>Button 1<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">button</span>&gt;</span>Button 2<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span></pre>
+					</div>
+
+					<div class="result codeExample">
+						<div class="exampleOutput">
+							<!-- Stacked button group -->
+<ul class="stack button-group btn-cta">
+    <li><button>Button 1</button></li>
+    <li><button>Button 2</button></li>
+</ul>
+
+<ul class="stack button-group btn-cta secondary">
+    <li><button>Button 1</button></li>
+    <li><button>Button 2</button></li>
+</ul>
+						</div>
+					</div>
+
+				</div>
+				<div class="section" id="Responsiveness" data-section="" data-heading="">
+
+					<div class="comment">
+						
+						<h2 class="main-section-sg-by-lvnm" id="section-Responsiveness">Responsiveness</h2>
+<p>To stacks buttons vertically on small screens and horizontally on large screens,
+use the <code>.stack-for-small</code> class.</p>
+					</div>
+
+					<div class="ss-title">EXAMPLE
+						<span class="icon-code tooltip-target tooltip-show-on-hover">
+							<div class="show-hide-code tooltip tooltip-top-right reset-child-margins">
+								<p>Show Code</p>
+							</div>
+							<span class="icon icon-caret-left"></span>
+							<span class="icon icon-caret-right"></span>
+						</span>
+					</div>
+					<div class="codeBlock markup hljs">
+						<pre><span class="hljs-comment">&lt;!-- Responsively stacked button group --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"stack-for-small button-group btn-cta"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">button</span>&gt;</span>Button 1<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">button</span>&gt;</span>Button 2<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span></pre>
+					</div>
+
+					<div class="result codeExample">
+						<div class="exampleOutput">
+							<!-- Responsively stacked button group -->
+<ul class="stack-for-small button-group btn-cta">
+    <li><button>Button 1</button></li>
+    <li><button>Button 2</button></li>
+</ul>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</section>
+
+		<footer class="sg-footer">
+			<div class="grid-container reset-child-margins">
+				<p class="padding-horiz-xlarge"></p>
+			</div>
+		</footer>
+	</div>
+
+	<div class="modal-overlay"></div>
+
+	<div class="modal-container">
+		<div class="modal">
+			<h1>Example Modal</h1>
+
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodoconsequat. Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat nonproident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		</div>
+		<button class="modal-close">
+			<span class="icon icon-close"></span>
+		</button>
+	</div>
+
+	<div class="toaster-fixed-region">
+		<div class="grid-container sg-padding-responsive-horiz padding-vert-medium toaster-grid">
+			<div class="toaster-container show-with-transition text-right">
+				<div class="toaster-trigger inline-block bg-medium-grey padding-horiz-tiny">
+					<button class="reset-button">
+						<span class="icon icon-caret-down"></span>
+					</button>
+				</div>
+				<div class="toaster-content padding-small bg-medium-grey">
+					<a href="http://uitk.learnvest.com/explorer" class="button tiny info margin-bottom-none">Back to Version Explorer!</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="./resources/js/vendor/moment.min.js"></script>
+	<script src="./resources/js/vendor/d3.min.js"></script>
+	<script src="./resources/js/app.js" id="appjs"></script>
+</body>
+</html>

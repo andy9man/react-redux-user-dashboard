@@ -1,0 +1,669 @@
+<!doctype html>
+<html>
+<head>
+	<title>Style Guide - NM / LV</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+	<link rel="stylesheet" href="../css/static/fader-overlay.css">
+	<style>
+	/*
+	
+	github.com style (c) Vasily Polovnyov <vast@whiteants.net>
+	
+	*/
+	
+	.hljs {
+	  display: block;
+	  overflow-x: auto;
+	  padding: 0.5em;
+	  color: #333;
+	  background: #f8f8f8;
+	  -webkit-text-size-adjust: none;
+	}
+	
+	.hljs-comment,
+	.diff .hljs-header {
+	  color: #998;
+	  font-style: italic;
+	}
+	
+	.hljs-keyword,
+	.css .rule .hljs-keyword,
+	.hljs-winutils,
+	.nginx .hljs-title,
+	.hljs-subst,
+	.hljs-request,
+	.hljs-status {
+	  color: #333;
+	  font-weight: bold;
+	}
+	
+	.hljs-number,
+	.hljs-hexcolor,
+	.ruby .hljs-constant {
+	  color: #008080;
+	}
+	
+	.hljs-string,
+	.hljs-tag .hljs-value,
+	.hljs-doctag,
+	.tex .hljs-formula {
+	  color: #d14;
+	}
+	
+	.hljs-title,
+	.hljs-id,
+	.scss .hljs-preprocessor {
+	  color: #900;
+	  font-weight: bold;
+	}
+	
+	.hljs-list .hljs-keyword,
+	.hljs-subst {
+	  font-weight: normal;
+	}
+	
+	.hljs-class .hljs-title,
+	.hljs-type,
+	.vhdl .hljs-literal,
+	.tex .hljs-command {
+	  color: #458;
+	  font-weight: bold;
+	}
+	
+	.hljs-tag,
+	.hljs-tag .hljs-title,
+	.hljs-rule .hljs-property,
+	.django .hljs-tag .hljs-keyword {
+	  color: #000080;
+	  font-weight: normal;
+	}
+	
+	.hljs-attribute,
+	.hljs-variable,
+	.lisp .hljs-body,
+	.hljs-name {
+	  color: #008080;
+	}
+	
+	.hljs-regexp {
+	  color: #009926;
+	}
+	
+	.hljs-symbol,
+	.ruby .hljs-symbol .hljs-string,
+	.lisp .hljs-keyword,
+	.clojure .hljs-keyword,
+	.scheme .hljs-keyword,
+	.tex .hljs-special,
+	.hljs-prompt {
+	  color: #990073;
+	}
+	
+	.hljs-built_in {
+	  color: #0086b3;
+	}
+	
+	.hljs-preprocessor,
+	.hljs-pragma,
+	.hljs-pi,
+	.hljs-doctype,
+	.hljs-shebang,
+	.hljs-cdata {
+	  color: #999;
+	  font-weight: bold;
+	}
+	
+	.hljs-deletion {
+	  background: #fdd;
+	}
+	
+	.hljs-addition {
+	  background: #dfd;
+	}
+	
+	.diff .hljs-change {
+	  background: #0086b3;
+	}
+	
+	.hljs-chunk {
+	  color: #aaa;
+	}
+	
+	</style></head>
+<body>
+	<div class="page-container">
+		<div id="fader-overlay" class="sg-fader-overlay"></div>
+
+		<nav class="row sg-nav padding-vert-small viewport-el" role="navigation" data-emit-events data-top-bottom >
+			<div class="small-2 columns burger-wrapper show-for-small">
+				<button class="burger reset-button trigger-menu">
+					<div class="burger-content"></div>
+				</button>
+			</div>
+
+			<h1 class="medium-7 columns hide-for-small margin-vert-none"><a href="#">LearnVest &amp; Northwestern Mutual - A Style Guide</a></h1>
+
+			<div class="small-10 medium-5 columns theme-switch-wrapper reset-child-margins text-right">
+				<span class="text-white inline-block valign-middle margin-right-small">Select Theme: </span>
+				<!-- jQuery injects select el here (theme-switch.js) -->
+			</div>
+		</nav>
+
+		<section class="row height-full">
+			<div class="medium-4 large-3 xlarge-2 columns height-full hide-for-small sg-sidebar">
+				<div class="padding-top-medium reset-child-margins">
+					<ul class="sg-block-nav sg-block-nav-submenu reset-list reset-child-margins">
+
+						<h3>Switches</h3>
+						<li><a href="#Switches-Radio_Buttons">Radio Buttons</a></li>
+						<li><a href="#Switches-Sizing">Sizing</a></li>
+						<li><a href="#Switches-Text_Inside">Text Inside</a></li>
+
+					</ul>
+					<ul class="sg-block-nav sg-block-nav-submenu reset-list reset-child-margins">
+
+						<h3></h3>
+
+					</ul>
+
+
+					<ul class="sg-block-nav sg-category-nav reset-list reset-child-margins">
+						<h3>Categories</h3>
+						<li><a href="button-groups.html">Button Groups</a></li>
+						<li><a href="buttons.html">Buttons</a></li>
+						<li><a href="card.html">Card</a></li>
+						<li><a href="colors.html">Colors</a></li>
+						<li><a href="forms.html">Forms</a></li>
+						<li><a href="ghosting.html">Ghosting</a></li>
+						<li><a href="graphs.html">Graphs</a></li>
+						<li><a href="grid.html">Grid</a></li>
+						<li><a href="icons.html">Icons</a></li>
+						<li><a href="labels.html">Labels</a></li>
+						<li><a href="loading-indicators.html">Loading Indicators</a></li>
+						<li><a href="modals.html">Modals</a></li>
+						<li><a href="navigation.html">Navigation</a></li>
+						<li><a href="notifications.html">Notifications</a></li>
+						<li><a href="switches.html">Switches</a></li>
+						<li><a href="tables.html">Tables</a></li>
+						<li><a href="tooltips.html">Tooltips</a></li>
+						<li><a href="type.html">Type</a></li>
+						<li><a href="utility-classes.html">Utility Classes</a></li>
+						<li><a href="visibility.html">Visibility</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="medium-8 large-9 xlarge-10 columns sg-content" id="styleguide">
+				<div class="section" id="Switches-Switches" data-section="Switches" data-heading="Switches">
+
+					<div class="comment">
+						<h1>Switches</h1>
+						<p>Switches are toggle element that switch between an Off and On state on tap or click. They make use of checkbox inputs (or radio buttons) and require no javascript.</p>
+<p>To render a switch, you need only a container element with the class <code>.switch</code> that contains both an <code>&lt;input&gt;</code> either of type <code>checkbox</code> or <code>radio</code> and an empty <code>&lt;label&gt;</code>.</p>
+					</div>
+
+					<div class="ss-title">EXAMPLE
+						<span class="icon-code tooltip-target tooltip-show-on-hover">
+							<div class="show-hide-code tooltip tooltip-top-right reset-child-margins">
+								<p>Show Code</p>
+							</div>
+							<span class="icon icon-caret-left"></span>
+							<span class="icon icon-caret-right"></span>
+						</span>
+					</div>
+					<div class="codeBlock markup hljs">
+						<pre><span class="hljs-comment">&lt;!-- Default checkbox switch --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">label</span> <span class="hljs-attribute">for</span>=<span class="hljs-value">"checkbox-switch"</span>&gt;</span>Example switch<span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"switch"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"switch-input"</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"checkbox-switch"</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"checkbox"</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"checkbox-switch"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">label</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"switch-paddle"</span> <span class="hljs-attribute">for</span>=<span class="hljs-value">"checkbox-switch"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"show-for-sr"</span>&gt;</span>Download Kittens<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
+					</div>
+
+					<div class="result codeExample">
+						<div class="exampleOutput">
+							<!-- Default checkbox switch -->
+<label for="checkbox-switch">Example switch</label>
+<div class="switch">
+    <input class="switch-input" id="checkbox-switch" type="checkbox" name="checkbox-switch">
+    <label class="switch-paddle" for="checkbox-switch">
+        <span class="show-for-sr">Download Kittens</span>
+    </label>
+</div>
+						</div>
+					</div>
+
+				</div>
+				<div class="section" id="-" data-section="" data-heading="">
+
+					<div class="comment">
+						
+						<p>You may also display a switch without a label, in which case the wrapper element is optional.</p>
+					</div>
+
+					<div class="ss-title">EXAMPLE
+						<span class="icon-code tooltip-target tooltip-show-on-hover">
+							<div class="show-hide-code tooltip tooltip-top-right reset-child-margins">
+								<p>Show Code</p>
+							</div>
+							<span class="icon icon-caret-left"></span>
+							<span class="icon icon-caret-right"></span>
+						</span>
+					</div>
+					<div class="codeBlock markup hljs">
+						<pre><span class="hljs-comment">&lt;!-- Switch with no label --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"switch"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"switch-input"</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"checkbox-switch-labeless"</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"checkbox"</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"checkbox-switch-labeless"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">label</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"switch-paddle"</span> <span class="hljs-attribute">for</span>=<span class="hljs-value">"checkbox-switch-labeless"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"show-for-sr"</span>&gt;</span>Download Puppies<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
+					</div>
+
+					<div class="result codeExample">
+						<div class="exampleOutput">
+							<!-- Switch with no label -->
+<div class="switch">
+    <input class="switch-input" id="checkbox-switch-labeless" type="checkbox" name="checkbox-switch-labeless">
+    <label class="switch-paddle" for="checkbox-switch-labeless">
+        <span class="show-for-sr">Download Puppies</span>
+    </label>
+</div>
+						</div>
+					</div>
+
+				</div>
+				<div class="section" id="Switches-Radio_Buttons" data-section="Switches" data-heading="Radio Buttons">
+
+					<div class="comment">
+						<h1>Radio Buttons</h1>
+						<p>If you serve multiple switches with <code>[type=radio]</code>, toggling an individual switch on will toggle all other corresponding switches off.</p>
+					</div>
+
+					<div class="ss-title">EXAMPLE
+						<span class="icon-code tooltip-target tooltip-show-on-hover">
+							<div class="show-hide-code tooltip tooltip-top-right reset-child-margins">
+								<p>Show Code</p>
+							</div>
+							<span class="icon icon-caret-left"></span>
+							<span class="icon icon-caret-right"></span>
+						</span>
+					</div>
+					<div class="codeBlock markup hljs">
+						<pre><span class="hljs-comment">&lt;!-- Example radio switch set --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">form</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"row"</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"large-3 columns"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">label</span> <span class="hljs-attribute">for</span>=<span class="hljs-value">"radio-switch-1"</span>&gt;</span>Large Radio Switch<span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"switch large"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"switch-input"</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"radio-switch-1"</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"radio"</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"oneOfUs"</span> <span class="hljs-attribute">checked</span>=<span class="hljs-value">"checked"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">label</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"switch-paddle"</span> <span class="hljs-attribute">for</span>=<span class="hljs-value">"radio-switch-1"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"show-for-sr"</span>&gt;</span>Baby Back Ribs<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"large-3 columns"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">label</span> <span class="hljs-attribute">for</span>=<span class="hljs-value">"radio-switch-2"</span>&gt;</span>Default Radio Switch<span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"switch"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"switch-input"</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"radio-switch-2"</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"radio"</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"oneOfUs"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">label</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"switch-paddle"</span> <span class="hljs-attribute">for</span>=<span class="hljs-value">"radio-switch-2"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"show-for-sr"</span>&gt;</span>7 Pepper Brisket<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"large-3 columns"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">label</span> <span class="hljs-attribute">for</span>=<span class="hljs-value">"radio-switch-3"</span>&gt;</span>Small Radio Switch<span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"switch small"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"switch-input"</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"radio-switch-3"</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"radio"</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"oneOfUs"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">label</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"switch-paddle"</span> <span class="hljs-attribute">for</span>=<span class="hljs-value">"radio-switch-3"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"show-for-sr"</span>&gt;</span>Grilled Chicken Wings<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"large-3 columns"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">label</span> <span class="hljs-attribute">for</span>=<span class="hljs-value">"radio-switch-4"</span>&gt;</span>Tiny Radio Switch<span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"switch tiny"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"switch-input"</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"radio-switch-4"</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"radio"</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"oneOfUs"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">label</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"switch-paddle"</span> <span class="hljs-attribute">for</span>=<span class="hljs-value">"radio-switch-4"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"show-for-sr"</span>&gt;</span>Baked Beans<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+
+<span class="hljs-tag">&lt;/<span class="hljs-title">form</span>&gt;</span></pre>
+					</div>
+
+					<div class="result codeExample">
+						<div class="exampleOutput">
+							<!-- Example radio switch set -->
+<form class="row">
+
+    <div class="large-3 columns">
+        <label for="radio-switch-1">Large Radio Switch</label>
+        <div class="switch large">
+            <input class="switch-input" id="radio-switch-1" type="radio" name="oneOfUs" checked="checked">
+            <label class="switch-paddle" for="radio-switch-1">
+                <span class="show-for-sr">Baby Back Ribs</span>
+            </label>
+        </div>
+    </div>
+
+    <div class="large-3 columns">
+        <label for="radio-switch-2">Default Radio Switch</label>
+        <div class="switch">
+            <input class="switch-input" id="radio-switch-2" type="radio" name="oneOfUs">
+            <label class="switch-paddle" for="radio-switch-2">
+                <span class="show-for-sr">7 Pepper Brisket</span>
+            </label>
+        </div>
+    </div>
+
+    <div class="large-3 columns">
+        <label for="radio-switch-3">Small Radio Switch</label>
+        <div class="switch small">
+            <input class="switch-input" id="radio-switch-3" type="radio" name="oneOfUs">
+            <label class="switch-paddle" for="radio-switch-3">
+                <span class="show-for-sr">Grilled Chicken Wings</span>
+            </label>
+        </div>
+    </div>
+
+    <div class="large-3 columns">
+        <label for="radio-switch-4">Tiny Radio Switch</label>
+        <div class="switch tiny">
+            <input class="switch-input" id="radio-switch-4" type="radio" name="oneOfUs">
+            <label class="switch-paddle" for="radio-switch-4">
+                <span class="show-for-sr">Baked Beans</span>
+            </label>
+        </div>
+    </div>
+
+</form>
+						</div>
+					</div>
+
+				</div>
+				<div class="section" id="Switches-Sizing" data-section="Switches" data-heading="Sizing">
+
+					<div class="comment">
+						<h1>Sizing</h1>
+						<p>Switches also come in a variety of sizes. As per convention, these sizes can be accessed with the <code>.large</code>, <code>.small</code>, and <code>.tiny</code> classes.</p>
+					</div>
+
+					<div class="ss-title">EXAMPLE
+						<span class="icon-code tooltip-target tooltip-show-on-hover">
+							<div class="show-hide-code tooltip tooltip-top-right reset-child-margins">
+								<p>Show Code</p>
+							</div>
+							<span class="icon icon-caret-left"></span>
+							<span class="icon icon-caret-right"></span>
+						</span>
+					</div>
+					<div class="codeBlock markup hljs">
+						<pre><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"row"</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"large-3 columns"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">label</span> <span class="hljs-attribute">for</span>=<span class="hljs-value">"check-switch-1"</span>&gt;</span>Large Switch<span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"switch large"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"switch-input"</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"check-switch-1"</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"checkbox"</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"exampleSwitch"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">label</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"switch-paddle"</span> <span class="hljs-attribute">for</span>=<span class="hljs-value">"check-switch-1"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"show-for-sr"</span>&gt;</span>Show Large Elephants<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"large-3 columns"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">label</span> <span class="hljs-attribute">for</span>=<span class="hljs-value">"check-switch-2"</span>&gt;</span>Default Switch<span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"switch"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"switch-input"</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"check-switch-2"</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"checkbox"</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"exampleSwitch"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">label</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"switch-paddle"</span> <span class="hljs-attribute">for</span>=<span class="hljs-value">"check-switch-2"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"show-for-sr"</span>&gt;</span>Show Default: <span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"large-3 columns"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">label</span> <span class="hljs-attribute">for</span>=<span class="hljs-value">"check-switch-3"</span>&gt;</span>Small Switch<span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"switch small"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"switch-input"</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"check-switch-3"</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"checkbox"</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"exampleSwitch"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">label</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"switch-paddle"</span> <span class="hljs-attribute">for</span>=<span class="hljs-value">"check-switch-3"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"show-for-sr"</span>&gt;</span>Small Portions Only<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"large-3 columns"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">label</span> <span class="hljs-attribute">for</span>=<span class="hljs-value">"check-switch-4"</span>&gt;</span>Tiny Switch<span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"switch tiny"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"switch-input"</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"check-switch-4"</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"checkbox"</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"exampleSwitch"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">label</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"switch-paddle"</span> <span class="hljs-attribute">for</span>=<span class="hljs-value">"check-switch-4"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"show-for-sr"</span>&gt;</span>Tiny Sandwiches Enabled<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
+					</div>
+
+					<div class="result codeExample">
+						<div class="exampleOutput">
+							<div class="row">
+
+    <div class="large-3 columns">
+        <label for="check-switch-1">Large Switch</label>
+        <div class="switch large">
+            <input class="switch-input" id="check-switch-1" type="checkbox" name="exampleSwitch">
+            <label class="switch-paddle" for="check-switch-1">
+                <span class="show-for-sr">Show Large Elephants</span>
+            </label>
+        </div>
+    </div>
+
+    <div class="large-3 columns">
+        <label for="check-switch-2">Default Switch</label>
+        <div class="switch">
+            <input class="switch-input" id="check-switch-2" type="checkbox" name="exampleSwitch">
+            <label class="switch-paddle" for="check-switch-2">
+                <span class="show-for-sr">Show Default: </span>
+            </label>
+        </div>
+    </div>
+
+    <div class="large-3 columns">
+        <label for="check-switch-3">Small Switch</label>
+        <div class="switch small">
+            <input class="switch-input" id="check-switch-3" type="checkbox" name="exampleSwitch">
+            <label class="switch-paddle" for="check-switch-3">
+                <span class="show-for-sr">Small Portions Only</span>
+            </label>
+        </div>
+    </div>
+
+    <div class="large-3 columns">
+        <label for="check-switch-4">Tiny Switch</label>
+        <div class="switch tiny">
+            <input class="switch-input" id="check-switch-4" type="checkbox" name="exampleSwitch">
+            <label class="switch-paddle" for="check-switch-4">
+                <span class="show-for-sr">Tiny Sandwiches Enabled</span>
+            </label>
+        </div>
+    </div>
+</div>
+						</div>
+					</div>
+
+				</div>
+				<div class="section" id="Switches-Text_Inside" data-section="Switches" data-heading="Text Inside">
+
+					<div class="comment">
+						<h1>Text Inside</h1>
+						<p>The UITK also provides switches that alow text inside the slider area in a variety of sizes. As per convention, these sizes can be
+accessed with the <code>.large</code>, <code>.small</code>, and <code>.tiny</code> classes.</p>
+<p>Just be sure to add the <code>.switch-text</code> class to the same element you placed the <code>.switch</code> class on. Everything else works the same.</p>
+					</div>
+
+					<div class="ss-title">EXAMPLE
+						<span class="icon-code tooltip-target tooltip-show-on-hover">
+							<div class="show-hide-code tooltip tooltip-top-right reset-child-margins">
+								<p>Show Code</p>
+							</div>
+							<span class="icon icon-caret-left"></span>
+							<span class="icon icon-caret-right"></span>
+						</span>
+					</div>
+					<div class="codeBlock markup hljs">
+						<pre><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"row"</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"large-3 columns"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">label</span> <span class="hljs-attribute">for</span>=<span class="hljs-value">"text-switch-1"</span>&gt;</span>Large Text Switch<span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"switch switch-text large"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"switch-input"</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"text-switch-1"</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"checkbox"</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"exampleSwitch"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">label</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"switch-paddle"</span> <span class="hljs-attribute">for</span>=<span class="hljs-value">"text-switch-1"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"show-for-sr"</span>&gt;</span>Screen reader text only<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"switch-active"</span> <span class="hljs-attribute">aria-hidden</span>=<span class="hljs-value">"true"</span>&gt;</span>Buzzword<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"switch-inactive"</span> <span class="hljs-attribute">aria-hidden</span>=<span class="hljs-value">"true"</span>&gt;</span>Flapjack<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"large-3 columns"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">label</span> <span class="hljs-attribute">for</span>=<span class="hljs-value">"text-switch-1"</span>&gt;</span>Default Text Switch<span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"switch switch-text"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"switch-input"</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"text-switch-2"</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"checkbox"</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"exampleSwitch"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">label</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"switch-paddle"</span> <span class="hljs-attribute">for</span>=<span class="hljs-value">"text-switch-2"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"show-for-sr"</span>&gt;</span>Screen reader text only<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"switch-active"</span> <span class="hljs-attribute">aria-hidden</span>=<span class="hljs-value">"true"</span>&gt;</span>Buzzword<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"switch-inactive"</span> <span class="hljs-attribute">aria-hidden</span>=<span class="hljs-value">"true"</span>&gt;</span>Flapjack<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"large-3 columns"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">label</span> <span class="hljs-attribute">for</span>=<span class="hljs-value">"text-switch-3"</span>&gt;</span>Small Text Switch<span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"switch switch-text small"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"switch-input"</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"text-switch-3"</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"checkbox"</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"exampleSwitch"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">label</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"switch-paddle"</span> <span class="hljs-attribute">for</span>=<span class="hljs-value">"text-switch-3"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"show-for-sr"</span>&gt;</span>Screen reader text only<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"switch-active"</span> <span class="hljs-attribute">aria-hidden</span>=<span class="hljs-value">"true"</span>&gt;</span>Buzzword<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"switch-inactive"</span> <span class="hljs-attribute">aria-hidden</span>=<span class="hljs-value">"true"</span>&gt;</span>Flapjack<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"large-3 columns"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">label</span> <span class="hljs-attribute">for</span>=<span class="hljs-value">"text-switch-4"</span>&gt;</span>Tiny Text Switch<span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"switch switch-text tiny"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"switch-input"</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"text-switch-4"</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"checkbox"</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"exampleSwitch"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">label</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"switch-paddle"</span> <span class="hljs-attribute">for</span>=<span class="hljs-value">"text-switch-4"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"show-for-sr"</span>&gt;</span>Screen reader text only<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"switch-active"</span> <span class="hljs-attribute">aria-hidden</span>=<span class="hljs-value">"true"</span>&gt;</span>Buzzword<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"switch-inactive"</span> <span class="hljs-attribute">aria-hidden</span>=<span class="hljs-value">"true"</span>&gt;</span>Flapjack<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
+					</div>
+
+					<div class="result codeExample">
+						<div class="exampleOutput">
+							<div class="row">
+
+    <div class="large-3 columns">
+        <label for="text-switch-1">Large Text Switch</label>
+        <div class="switch switch-text large">
+            <input class="switch-input" id="text-switch-1" type="checkbox" name="exampleSwitch">
+            <label class="switch-paddle" for="text-switch-1">
+                <span class="show-for-sr">Screen reader text only</span>
+                <span class="switch-active" aria-hidden="true">Buzzword</span>
+                <span class="switch-inactive" aria-hidden="true">Flapjack</span>
+            </label>
+        </div>
+    </div>
+
+    <div class="large-3 columns">
+        <label for="text-switch-1">Default Text Switch</label>
+        <div class="switch switch-text">
+            <input class="switch-input" id="text-switch-2" type="checkbox" name="exampleSwitch">
+            <label class="switch-paddle" for="text-switch-2">
+                <span class="show-for-sr">Screen reader text only</span>
+                <span class="switch-active" aria-hidden="true">Buzzword</span>
+                <span class="switch-inactive" aria-hidden="true">Flapjack</span>
+            </label>
+        </div>
+    </div>
+
+    <div class="large-3 columns">
+        <label for="text-switch-3">Small Text Switch</label>
+        <div class="switch switch-text small">
+            <input class="switch-input" id="text-switch-3" type="checkbox" name="exampleSwitch">
+            <label class="switch-paddle" for="text-switch-3">
+                <span class="show-for-sr">Screen reader text only</span>
+                <span class="switch-active" aria-hidden="true">Buzzword</span>
+                <span class="switch-inactive" aria-hidden="true">Flapjack</span>
+            </label>
+        </div>
+    </div>
+
+    <div class="large-3 columns">
+        <label for="text-switch-4">Tiny Text Switch</label>
+        <div class="switch switch-text tiny">
+            <input class="switch-input" id="text-switch-4" type="checkbox" name="exampleSwitch">
+            <label class="switch-paddle" for="text-switch-4">
+                <span class="show-for-sr">Screen reader text only</span>
+                <span class="switch-active" aria-hidden="true">Buzzword</span>
+                <span class="switch-inactive" aria-hidden="true">Flapjack</span>
+            </label>
+        </div>
+    </div>
+</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</section>
+
+		<footer class="sg-footer">
+			<div class="grid-container reset-child-margins">
+				<p class="padding-horiz-xlarge"></p>
+			</div>
+		</footer>
+	</div>
+
+	<div class="modal-overlay"></div>
+
+	<div class="modal-container">
+		<div class="modal">
+			<h1>Example Modal</h1>
+
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodoconsequat. Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat nonproident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		</div>
+		<button class="modal-close">
+			<span class="icon icon-close"></span>
+		</button>
+	</div>
+
+	<div class="toaster-fixed-region">
+		<div class="grid-container sg-padding-responsive-horiz padding-vert-medium toaster-grid">
+			<div class="toaster-container show-with-transition text-right">
+				<div class="toaster-trigger inline-block bg-medium-grey padding-horiz-tiny">
+					<button class="reset-button">
+						<span class="icon icon-caret-down"></span>
+					</button>
+				</div>
+				<div class="toaster-content padding-small bg-medium-grey">
+					<a href="http://uitk.learnvest.com/explorer" class="button tiny info margin-bottom-none">Back to Version Explorer!</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="./resources/js/vendor/moment.min.js"></script>
+	<script src="./resources/js/vendor/d3.min.js"></script>
+	<script src="./resources/js/app.js" id="appjs"></script>
+</body>
+</html>

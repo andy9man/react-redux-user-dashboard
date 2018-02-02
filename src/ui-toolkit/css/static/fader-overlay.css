@@ -1,0 +1,33 @@
+.sg-fader-overlay {
+  background-color: #F2F2F2;
+  background-image: url("../../style-guide/resources/img/gears.svg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 1000000000000000000;
+  transition: opacity .3s linear; }
+  .sg-fader-overlay.hidden {
+    opacity: 0; }
+
+.docs-variable-table {
+  width: 100%;
+  border: 0; }
+  .docs-variable-table thead {
+    border: 0;
+    background: transparent;
+    border-bottom: 2px solid #cacaca; }
+    .docs-variable-table thead th {
+      text-align: left;
+      white-space: nowrap; }
+  .docs-variable-table td:first-child {
+    white-space: nowrap; }
+  .docs-variable-table tbody tr:nth-child(even) {
+    border-bottom: 0;
+    background-color: #f1f1f1; }
+  .docs-variable-table tbody th,
+  .docs-variable-table tbody td {
+    padding: 0.5rem 0.625rem 0.625rem; }

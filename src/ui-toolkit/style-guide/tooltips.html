@@ -1,0 +1,836 @@
+<!doctype html>
+<html>
+<head>
+	<title>Style Guide - NM / LV</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+	<link rel="stylesheet" href="../css/static/fader-overlay.css">
+	<style>
+	/*
+	
+	github.com style (c) Vasily Polovnyov <vast@whiteants.net>
+	
+	*/
+	
+	.hljs {
+	  display: block;
+	  overflow-x: auto;
+	  padding: 0.5em;
+	  color: #333;
+	  background: #f8f8f8;
+	  -webkit-text-size-adjust: none;
+	}
+	
+	.hljs-comment,
+	.diff .hljs-header {
+	  color: #998;
+	  font-style: italic;
+	}
+	
+	.hljs-keyword,
+	.css .rule .hljs-keyword,
+	.hljs-winutils,
+	.nginx .hljs-title,
+	.hljs-subst,
+	.hljs-request,
+	.hljs-status {
+	  color: #333;
+	  font-weight: bold;
+	}
+	
+	.hljs-number,
+	.hljs-hexcolor,
+	.ruby .hljs-constant {
+	  color: #008080;
+	}
+	
+	.hljs-string,
+	.hljs-tag .hljs-value,
+	.hljs-doctag,
+	.tex .hljs-formula {
+	  color: #d14;
+	}
+	
+	.hljs-title,
+	.hljs-id,
+	.scss .hljs-preprocessor {
+	  color: #900;
+	  font-weight: bold;
+	}
+	
+	.hljs-list .hljs-keyword,
+	.hljs-subst {
+	  font-weight: normal;
+	}
+	
+	.hljs-class .hljs-title,
+	.hljs-type,
+	.vhdl .hljs-literal,
+	.tex .hljs-command {
+	  color: #458;
+	  font-weight: bold;
+	}
+	
+	.hljs-tag,
+	.hljs-tag .hljs-title,
+	.hljs-rule .hljs-property,
+	.django .hljs-tag .hljs-keyword {
+	  color: #000080;
+	  font-weight: normal;
+	}
+	
+	.hljs-attribute,
+	.hljs-variable,
+	.lisp .hljs-body,
+	.hljs-name {
+	  color: #008080;
+	}
+	
+	.hljs-regexp {
+	  color: #009926;
+	}
+	
+	.hljs-symbol,
+	.ruby .hljs-symbol .hljs-string,
+	.lisp .hljs-keyword,
+	.clojure .hljs-keyword,
+	.scheme .hljs-keyword,
+	.tex .hljs-special,
+	.hljs-prompt {
+	  color: #990073;
+	}
+	
+	.hljs-built_in {
+	  color: #0086b3;
+	}
+	
+	.hljs-preprocessor,
+	.hljs-pragma,
+	.hljs-pi,
+	.hljs-doctype,
+	.hljs-shebang,
+	.hljs-cdata {
+	  color: #999;
+	  font-weight: bold;
+	}
+	
+	.hljs-deletion {
+	  background: #fdd;
+	}
+	
+	.hljs-addition {
+	  background: #dfd;
+	}
+	
+	.diff .hljs-change {
+	  background: #0086b3;
+	}
+	
+	.hljs-chunk {
+	  color: #aaa;
+	}
+	
+	</style></head>
+<body>
+	<div class="page-container">
+		<div id="fader-overlay" class="sg-fader-overlay"></div>
+
+		<nav class="row sg-nav padding-vert-small viewport-el" role="navigation" data-emit-events data-top-bottom >
+			<div class="small-2 columns burger-wrapper show-for-small">
+				<button class="burger reset-button trigger-menu">
+					<div class="burger-content"></div>
+				</button>
+			</div>
+
+			<h1 class="medium-7 columns hide-for-small margin-vert-none"><a href="#">LearnVest &amp; Northwestern Mutual - A Style Guide</a></h1>
+
+			<div class="small-10 medium-5 columns theme-switch-wrapper reset-child-margins text-right">
+				<span class="text-white inline-block valign-middle margin-right-small">Select Theme: </span>
+				<!-- jQuery injects select el here (theme-switch.js) -->
+			</div>
+		</nav>
+
+		<section class="row height-full">
+			<div class="medium-4 large-3 xlarge-2 columns height-full hide-for-small sg-sidebar">
+				<div class="padding-top-medium reset-child-margins">
+					<ul class="sg-block-nav sg-block-nav-submenu reset-list reset-child-margins">
+
+						<h3>Tooltips</h3>
+						<li><a href="#Tooltips-Tooltip_Positions">Tooltip Positions</a></li>
+						<li><a href="#Tooltips-Sizing">Sizing</a></li>
+						<li><a href="#Tooltips-Tooltip_Colors">Tooltip Colors</a></li>
+						<li><a href="#Tooltips-Show___Hide">Show &amp; Hide</a></li>
+						<li><a href="#Tooltips-Padding">Padding</a></li>
+
+					</ul>
+					<ul class="sg-block-nav sg-block-nav-submenu reset-list reset-child-margins">
+
+						<h3></h3>
+
+					</ul>
+
+
+					<ul class="sg-block-nav sg-category-nav reset-list reset-child-margins">
+						<h3>Categories</h3>
+						<li><a href="button-groups.html">Button Groups</a></li>
+						<li><a href="buttons.html">Buttons</a></li>
+						<li><a href="card.html">Card</a></li>
+						<li><a href="colors.html">Colors</a></li>
+						<li><a href="forms.html">Forms</a></li>
+						<li><a href="ghosting.html">Ghosting</a></li>
+						<li><a href="graphs.html">Graphs</a></li>
+						<li><a href="grid.html">Grid</a></li>
+						<li><a href="icons.html">Icons</a></li>
+						<li><a href="labels.html">Labels</a></li>
+						<li><a href="loading-indicators.html">Loading Indicators</a></li>
+						<li><a href="modals.html">Modals</a></li>
+						<li><a href="navigation.html">Navigation</a></li>
+						<li><a href="notifications.html">Notifications</a></li>
+						<li><a href="switches.html">Switches</a></li>
+						<li><a href="tables.html">Tables</a></li>
+						<li><a href="tooltips.html">Tooltips</a></li>
+						<li><a href="type.html">Type</a></li>
+						<li><a href="utility-classes.html">Utility Classes</a></li>
+						<li><a href="visibility.html">Visibility</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="medium-8 large-9 xlarge-10 columns sg-content" id="styleguide">
+				<div class="section" id="Tooltips-Tooltips" data-section="Tooltips" data-heading="Tooltips">
+
+					<div class="comment">
+						<h1>Tooltips</h1>
+						<p>Although simple, the tooltip component has a wide variety of uses. Below, we see a
+basic demonstration of the tooltip.</p>
+					</div>
+
+					<div class="ss-title">EXAMPLE
+						<span class="icon-code tooltip-target tooltip-show-on-hover">
+							<div class="show-hide-code tooltip tooltip-top-right reset-child-margins">
+								<p>Show Code</p>
+							</div>
+							<span class="icon icon-caret-left"></span>
+							<span class="icon icon-caret-right"></span>
+						</span>
+					</div>
+					<div class="codeBlock markup hljs">
+						<pre><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"inline-block"</span>&gt;</span>
+
+    <span class="hljs-comment">&lt;!-- Target relative to which tooltip should position itself --&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"tooltip-target"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"margin-bottom-none"</span>&gt;</span>Click me!<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
+
+        <span class="hljs-comment">&lt;!-- Tooltip --&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"tooltip tooltip-right-top reset-child-margins"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>This is a button.<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
+					</div>
+
+					<div class="result codeExample">
+						<div class="exampleOutput">
+							<div class="inline-block">
+
+    <!-- Target relative to which tooltip should position itself -->
+    <div class="tooltip-target">
+        <button class="margin-bottom-none">Click me!</button>
+
+        <!-- Tooltip -->
+        <div class="tooltip tooltip-right-top reset-child-margins">
+            <p>This is a button.</p>
+        </div>
+    </div>
+</div>
+						</div>
+					</div>
+
+				</div>
+				<div class="section" id="-" data-section="" data-heading="">
+
+					<div class="comment">
+						
+						<p>The two elements within the markup of which users should take note are the <code>.tooltip</code> and
+the <code>.tooltip-target</code>. The <code>.tooltip-target</code> will allow the <code>.tooltip</code> to be
+positioned accordingly to the element it is placed on.</p>
+<p>In the following notes, we will discuss the ways in which the tooltip can be
+configured on case-by-case basis. In particular, customization is available
+for tooltip <em>positions</em>, <em>colors</em>, and the use of UI pertaining to <em>dismissability</em>.</p>
+					</div>
+
+
+
+				</div>
+				<div class="section" id="Tooltips-Tooltip_Positions" data-section="Tooltips" data-heading="Tooltip Positions">
+
+					<div class="comment">
+						<h1>Tooltip Positions</h1>
+						<p>Tooltips can be positioned in a number of ways, each of which is a corresonding
+class. This class is always constructed in the pattern <code>.tooltip-[side]-[alignment]</code>.</p>
+<p>The example above uses the class <code>.tooltip-right-top</code>, and as a result, the
+<code>.tooltip</code> component is displayed on the <em>right</em> of its target, and aligned to
+the target&apos;s <em>top</em> side.</p>
+<p>Thus, if a tooltip is positioned on either the <em>left</em> or the <em>right</em> side,
+it can be aligned to the <em>top</em> or the <em>bottom</em> of the target. If a tooltip is
+positioned on either the <em>top</em> or the <em>bottom</em> target side, it can be aligned
+either to the <em>left</em>, <em>right</em>, or <em>middle</em> of the target. These configurations
+correspond to the following classes:</p>
+<ul>
+<li><code>.tooltip-top-left</code></li>
+<li><code>.tooltip-top-middle</code></li>
+<li><code>.tooltip-top-right</code></li>
+<li><code>.tooltip-bottom-left</code></li>
+<li><code>.tooltip-bottom-middle</code></li>
+<li><code>.tooltip-bottom-right</code></li>
+<li><code>.tooltip-left-top</code></li>
+<li><code>.tooltip-left-bottom</code></li>
+<li><code>.tooltip-right-top</code></li>
+<li><code>.tooltip-right-bottom</code></li>
+</ul>
+<p>Several of these classes are demonstrated below. We&apos;ve declined to show all of
+them solely for the sake of space.</p>
+					</div>
+
+					<div class="ss-title">EXAMPLE
+						<span class="icon-code tooltip-target tooltip-show-on-hover">
+							<div class="show-hide-code tooltip tooltip-top-right reset-child-margins">
+								<p>Show Code</p>
+							</div>
+							<span class="icon icon-caret-left"></span>
+							<span class="icon icon-caret-right"></span>
+						</span>
+					</div>
+					<div class="codeBlock markup hljs">
+						<pre><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"row"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"columns small-6"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"inline-block"</span>&gt;</span>
+
+            <span class="hljs-comment">&lt;!-- Tooltip example: bottom side / aligned to middle --&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"tooltip-target"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"margin-bottom-none"</span>&gt;</span>Click me!<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"tooltip tooltip-bottom-middle reset-child-margins"</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>This is a button.<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+
+        <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"columns small-6"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"inline-block"</span>&gt;</span>
+
+            <span class="hljs-comment">&lt;!-- Tooltip example: top side / aligned to left --&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"tooltip-target margin-bottom-large"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"margin-bottom-none"</span>&gt;</span>Click me!<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"tooltip tooltip-top-left reset-child-margins"</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>This is a button.<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+
+        <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"columns small-6"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"inline-block"</span>&gt;</span>
+
+            <span class="hljs-comment">&lt;!-- Tooltip example: top side / aligned to left --&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"tooltip-target"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"margin-bottom-none"</span>&gt;</span>Click me!<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"tooltip tooltip-left-bottom reset-child-margins"</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>This is a button.<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+
+        <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
+					</div>
+
+					<div class="result codeExample">
+						<div class="exampleOutput">
+							<div class="row">
+    <div class="columns small-6">
+        <div class="inline-block">
+
+            <!-- Tooltip example: bottom side / aligned to middle -->
+            <div class="tooltip-target">
+                <button class="margin-bottom-none">Click me!</button>
+                <div class="tooltip tooltip-bottom-middle reset-child-margins">
+                    <p>This is a button.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="columns small-6">
+        <div class="inline-block">
+
+            <!-- Tooltip example: top side / aligned to left -->
+            <div class="tooltip-target margin-bottom-large">
+                <button class="margin-bottom-none">Click me!</button>
+                <div class="tooltip tooltip-top-left reset-child-margins">
+                    <p>This is a button.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="columns small-6">
+        <div class="inline-block">
+
+            <!-- Tooltip example: top side / aligned to left -->
+            <div class="tooltip-target">
+                <button class="margin-bottom-none">Click me!</button>
+                <div class="tooltip tooltip-left-bottom reset-child-margins">
+                    <p>This is a button.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+						</div>
+					</div>
+
+				</div>
+				<div class="section" id="-" data-section="" data-heading="">
+
+					<div class="comment">
+						
+						<p>By default, if position is unspecified, a tooltip will appear on the top-left.</p>
+					</div>
+
+					<div class="ss-title">EXAMPLE
+						<span class="icon-code tooltip-target tooltip-show-on-hover">
+							<div class="show-hide-code tooltip tooltip-top-right reset-child-margins">
+								<p>Show Code</p>
+							</div>
+							<span class="icon icon-caret-left"></span>
+							<span class="icon icon-caret-right"></span>
+						</span>
+					</div>
+					<div class="codeBlock markup hljs">
+						<pre><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"inline-block"</span>&gt;</span>
+
+    <span class="hljs-comment">&lt;!-- Target relative to which tooltip should position itself --&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"tooltip-target"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"margin-bottom-none"</span>&gt;</span>Click me!<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
+
+        <span class="hljs-comment">&lt;!-- Tooltip --&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"tooltip reset-child-margins"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>This is a button.<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
+					</div>
+
+					<div class="result codeExample">
+						<div class="exampleOutput">
+							<div class="inline-block">
+
+    <!-- Target relative to which tooltip should position itself -->
+    <div class="tooltip-target">
+        <button class="margin-bottom-none">Click me!</button>
+
+        <!-- Tooltip -->
+        <div class="tooltip reset-child-margins">
+            <p>This is a button.</p>
+        </div>
+    </div>
+</div>
+						</div>
+					</div>
+
+				</div>
+				<div class="section" id="Tooltips-Sizing" data-section="Tooltips" data-heading="Sizing">
+
+					<div class="comment">
+						<h1>Sizing</h1>
+						<p>Tooltips can have a variety of widths. Each of these can be applied using
+a class of the form <code>.tooltip-width-[size-name]</code>.</p>
+<p>For example:</p>
+					</div>
+
+					<div class="ss-title">EXAMPLE
+						<span class="icon-code tooltip-target tooltip-show-on-hover">
+							<div class="show-hide-code tooltip tooltip-top-right reset-child-margins">
+								<p>Show Code</p>
+							</div>
+							<span class="icon icon-caret-left"></span>
+							<span class="icon icon-caret-right"></span>
+						</span>
+					</div>
+					<div class="codeBlock markup hljs">
+						<pre><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"inline-block"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"tooltip-target"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"margin-bottom-none"</span>&gt;</span>Click me!<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
+
+        <span class="hljs-comment">&lt;!-- Example Large Tooltip --&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"tooltip tooltip-bottom-left tooltip-width-large reset-child-margins"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">h3</span>&gt;</span>This tooltip is bigger.<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sit amet nibh eget ligula convallis consectetur quis quis nisl. Vestibulum pretium consectetur nisi, in mattis odio aliquam id. Nam a justo a est dignissim hendrerit vitae sollicitudin lectus. In nec leo ullamcorper, ultrices felis ut, sollicitudin odio.<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"text-right"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"margin-bottom-none"</span>&gt;</span>Primary<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"dull margin-bottom-none"</span>&gt;</span>Other<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
+					</div>
+
+					<div class="result codeExample">
+						<div class="exampleOutput">
+							<div class="inline-block">
+    <div class="tooltip-target">
+        <button class="margin-bottom-none">Click me!</button>
+
+        <!-- Example Large Tooltip -->
+        <div class="tooltip tooltip-bottom-left tooltip-width-large reset-child-margins">
+            <h3>This tooltip is bigger.</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sit amet nibh eget ligula convallis consectetur quis quis nisl. Vestibulum pretium consectetur nisi, in mattis odio aliquam id. Nam a justo a est dignissim hendrerit vitae sollicitudin lectus. In nec leo ullamcorper, ultrices felis ut, sollicitudin odio.</p>
+            <div class="text-right">
+                <button class="margin-bottom-none">Primary</button>
+                <button class="dull margin-bottom-none">Other</button>
+            </div>
+        </div>
+    </div>
+</div>
+						</div>
+					</div>
+
+				</div>
+				<div class="section" id="-" data-section="" data-heading="">
+
+					<div class="comment">
+						
+						<p>The following width-configurations are available.</p>
+<ul>
+<li><code>tooltip-width-auto</code></li>
+<li><code>tooltip-width-tiny</code></li>
+<li><code>tooltip-width-small</code></li>
+<li><code>tooltip-width-medium</code></li>
+<li><code>tooltip-width-large</code></li>
+<li><code>tooltip-width-xlarge</code></li>
+</ul>
+					</div>
+
+
+
+				</div>
+				<div class="section" id="Tooltips-Tooltip_Colors" data-section="Tooltips" data-heading="Tooltip Colors">
+
+					<div class="comment">
+						<h1>Tooltip Colors</h1>
+						<p>Tooltips can have a variety of colors, each of which is either neutral or
+contextual in nature. Each of these color settings can be applied using a class
+of the form <code>.tooltip-color-[color name]</code>.</p>
+<p>For example:</p>
+					</div>
+
+					<div class="ss-title">EXAMPLE
+						<span class="icon-code tooltip-target tooltip-show-on-hover">
+							<div class="show-hide-code tooltip tooltip-top-right reset-child-margins">
+								<p>Show Code</p>
+							</div>
+							<span class="icon icon-caret-left"></span>
+							<span class="icon icon-caret-right"></span>
+						</span>
+					</div>
+					<div class="codeBlock markup hljs">
+						<pre><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"inline-block"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"tooltip-target"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"margin-bottom-none"</span>&gt;</span>Click me!<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
+
+        <span class="hljs-comment">&lt;!-- Example Colored Tooltip --&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"tooltip tooltip-right-top tooltip-color-success reset-child-margins text-white"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>This is a button.<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
+					</div>
+
+					<div class="result codeExample">
+						<div class="exampleOutput">
+							<div class="inline-block">
+    <div class="tooltip-target">
+        <button class="margin-bottom-none">Click me!</button>
+
+        <!-- Example Colored Tooltip -->
+        <div class="tooltip tooltip-right-top tooltip-color-success reset-child-margins text-white">
+            <p>This is a button.</p>
+        </div>
+    </div>
+</div>
+						</div>
+					</div>
+
+				</div>
+				<div class="section" id="-" data-section="" data-heading="">
+
+					<div class="comment">
+						
+						<p>The following color classes are available:</p>
+<ul>
+<li><code>tooltip-color-success</code></li>
+<li><code>tooltip-color-info</code></li>
+<li><code>tooltip-color-warning</code></li>
+<li><code>tooltip-color-alert</code></li>
+<li><code>tooltip-color-white</code></li>
+<li><code>tooltip-color-dark</code></li>
+</ul>
+					</div>
+
+
+
+				</div>
+				<div class="section" id="Tooltips-Show___Hide" data-section="Tooltips" data-heading="Show &amp; Hide">
+
+					<div class="comment">
+						<h1>Show &amp; Hide</h1>
+						<p>The tooltip component comes with built-in show/hide functionality to apply desired transitions.
+This functionality can be harnessed in one of two ways; you may employ a CSS-only
+approach to show the tooltip only on hover, or you may add or remove a class
+with application-specific Javascript to show the tooltip as necessary.</p>
+<h2 class="main-section-sg-by-lvnm" id="section-Pure_CSS">Pure CSS</h2>
+<p>Add the <code>.tooltip-show-on-hover</code> class to your <code>.tooltip-target</code> to have your
+tooltip only appear on hover with no additional Javascript.</p>
+					</div>
+
+					<div class="ss-title">EXAMPLE
+						<span class="icon-code tooltip-target tooltip-show-on-hover">
+							<div class="show-hide-code tooltip tooltip-top-right reset-child-margins">
+								<p>Show Code</p>
+							</div>
+							<span class="icon icon-caret-left"></span>
+							<span class="icon icon-caret-right"></span>
+						</span>
+					</div>
+					<div class="codeBlock markup hljs">
+						<pre><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"inline-block"</span>&gt;</span>
+
+    <span class="hljs-comment">&lt;!-- Example tooltip shown on hover --&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"tooltip-target tooltip-show-on-hover"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"margin-bottom-none"</span>&gt;</span>Click me!<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"tooltip tooltip-right-top reset-child-margins"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>This is a button.<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
+					</div>
+
+					<div class="result codeExample">
+						<div class="exampleOutput">
+							<div class="inline-block">
+
+    <!-- Example tooltip shown on hover -->
+    <div class="tooltip-target tooltip-show-on-hover">
+        <button class="margin-bottom-none">Click me!</button>
+        <div class="tooltip tooltip-right-top reset-child-margins">
+            <p>This is a button.</p>
+        </div>
+    </div>
+</div>
+						</div>
+					</div>
+
+				</div>
+				<div class="section" id="Manual" data-section="" data-heading="">
+
+					<div class="comment">
+						
+						<h2 class="main-section-sg-by-lvnm" id="section-Manual">Manual</h2>
+<p>You may manually show/hide your tooltip by adding the <code>.tooltip-hide</code> class
+to your <code>.tooltip</code> element with application-specific Javascript. We demonstrate this strategy below.</p>
+					</div>
+
+					<div class="ss-title">EXAMPLE
+						<span class="icon-code tooltip-target tooltip-show-on-hover">
+							<div class="show-hide-code tooltip tooltip-top-right reset-child-margins">
+								<p>Show Code</p>
+							</div>
+							<span class="icon icon-caret-left"></span>
+							<span class="icon icon-caret-right"></span>
+						</span>
+					</div>
+					<div class="codeBlock markup hljs">
+						<pre><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"inline-block"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"tooltip-target tooltip-js-example"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"margin-bottom-none"</span>&gt;</span>Click me!<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
+
+        <span class="hljs-comment">&lt;!-- Example tooltip hidden with manual class-manipulation --&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"tooltip tooltip-right-top tooltip-hide reset-child-margins"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>This is a button.<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
+					</div>
+
+					<div class="result codeExample">
+						<div class="exampleOutput">
+							<div class="inline-block">
+    <div class="tooltip-target tooltip-js-example">
+        <button class="margin-bottom-none">Click me!</button>
+
+        <!-- Example tooltip hidden with manual class-manipulation -->
+        <div class="tooltip tooltip-right-top tooltip-hide reset-child-margins">
+            <p>This is a button.</p>
+        </div>
+    </div>
+</div>
+						</div>
+					</div>
+
+				</div>
+				<div class="section" id="Dismissability" data-section="" data-heading="">
+
+					<div class="comment">
+						
+						<h2 class="main-section-sg-by-lvnm" id="section-Dismissability">Dismissability</h2>
+<p>Should you wish to make your tooltip dismissable, simply add a <code>&lt;button&gt;</code> with class <code>.tooltip-close</code>
+to your tooltip. You may bind your desired dismissal functionality from there.</p>
+					</div>
+
+					<div class="ss-title">EXAMPLE
+						<span class="icon-code tooltip-target tooltip-show-on-hover">
+							<div class="show-hide-code tooltip tooltip-top-right reset-child-margins">
+								<p>Show Code</p>
+							</div>
+							<span class="icon icon-caret-left"></span>
+							<span class="icon icon-caret-right"></span>
+						</span>
+					</div>
+					<div class="codeBlock markup hljs">
+						<pre><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"inline-block"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"tooltip-target"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"margin-bottom-none"</span>&gt;</span>Click me!<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
+
+        <span class="hljs-comment">&lt;!-- Example Large Tooltip --&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"tooltip tooltip-right-top tooltip-width-large reset-child-margins"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"tooltip-close"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">h3</span>&gt;</span>This tooltip is bigger.<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sit amet nibh eget ligula convallis consectetur quis quis nisl. Vestibulum pretium consectetur nisi, in mattis odio aliquam id. Nam a justo a est dignissim hendrerit vitae sollicitudin lectus. In nec leo ullamcorper, ultrices felis ut, sollicitudin odio.<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"text-right"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"margin-bottom-none"</span>&gt;</span>Primary<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"dull margin-bottom-none"</span>&gt;</span>Other<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
+					</div>
+
+					<div class="result codeExample">
+						<div class="exampleOutput">
+							<div class="inline-block">
+    <div class="tooltip-target">
+        <button class="margin-bottom-none">Click me!</button>
+
+        <!-- Example Large Tooltip -->
+        <div class="tooltip tooltip-right-top tooltip-width-large reset-child-margins">
+            <button class="tooltip-close"></button>
+            <h3>This tooltip is bigger.</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sit amet nibh eget ligula convallis consectetur quis quis nisl. Vestibulum pretium consectetur nisi, in mattis odio aliquam id. Nam a justo a est dignissim hendrerit vitae sollicitudin lectus. In nec leo ullamcorper, ultrices felis ut, sollicitudin odio.</p>
+            <div class="text-right">
+                <button class="margin-bottom-none">Primary</button>
+                <button class="dull margin-bottom-none">Other</button>
+            </div>
+        </div>
+    </div>
+</div>
+						</div>
+					</div>
+
+				</div>
+				<div class="section" id="Tooltips-Padding" data-section="Tooltips" data-heading="Padding">
+
+					<div class="comment">
+						<h1>Padding</h1>
+						<p>Tooltips have padding by default. This padding can easily be overridden with one of the padding utility classes.</p>
+					</div>
+
+					<div class="ss-title">EXAMPLE
+						<span class="icon-code tooltip-target tooltip-show-on-hover">
+							<div class="show-hide-code tooltip tooltip-top-right reset-child-margins">
+								<p>Show Code</p>
+							</div>
+							<span class="icon icon-caret-left"></span>
+							<span class="icon icon-caret-right"></span>
+						</span>
+					</div>
+					<div class="codeBlock markup hljs">
+						<pre><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"inline-block"</span>&gt;</span>
+
+    <span class="hljs-comment">&lt;!-- Target relative to which tooltip should position itself --&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"tooltip-target"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"margin-bottom-none"</span>&gt;</span>Click me!<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
+
+        <span class="hljs-comment">&lt;!-- Tooltip --&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"tooltip tooltip-right-top tooltip-width-medium padding-xlarge reset-child-margins"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>This is a button.<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
+					</div>
+
+					<div class="result codeExample">
+						<div class="exampleOutput">
+							<div class="inline-block">
+
+    <!-- Target relative to which tooltip should position itself -->
+    <div class="tooltip-target">
+        <button class="margin-bottom-none">Click me!</button>
+
+        <!-- Tooltip -->
+        <div class="tooltip tooltip-right-top tooltip-width-medium padding-xlarge reset-child-margins">
+            <p>This is a button.</p>
+        </div>
+    </div>
+</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</section>
+
+		<footer class="sg-footer">
+			<div class="grid-container reset-child-margins">
+				<p class="padding-horiz-xlarge"></p>
+			</div>
+		</footer>
+	</div>
+
+	<div class="modal-overlay"></div>
+
+	<div class="modal-container">
+		<div class="modal">
+			<h1>Example Modal</h1>
+
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodoconsequat. Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat nonproident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		</div>
+		<button class="modal-close">
+			<span class="icon icon-close"></span>
+		</button>
+	</div>
+
+	<div class="toaster-fixed-region">
+		<div class="grid-container sg-padding-responsive-horiz padding-vert-medium toaster-grid">
+			<div class="toaster-container show-with-transition text-right">
+				<div class="toaster-trigger inline-block bg-medium-grey padding-horiz-tiny">
+					<button class="reset-button">
+						<span class="icon icon-caret-down"></span>
+					</button>
+				</div>
+				<div class="toaster-content padding-small bg-medium-grey">
+					<a href="http://uitk.learnvest.com/explorer" class="button tiny info margin-bottom-none">Back to Version Explorer!</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="./resources/js/vendor/moment.min.js"></script>
+	<script src="./resources/js/vendor/d3.min.js"></script>
+	<script src="./resources/js/app.js" id="appjs"></script>
+</body>
+</html>

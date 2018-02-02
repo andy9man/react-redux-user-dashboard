@@ -1,0 +1,1128 @@
+<!doctype html>
+<html>
+<head>
+	<title>Style Guide - NM / LV</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+	<link rel="stylesheet" href="../css/static/fader-overlay.css">
+	<style>
+	/*
+	
+	github.com style (c) Vasily Polovnyov <vast@whiteants.net>
+	
+	*/
+	
+	.hljs {
+	  display: block;
+	  overflow-x: auto;
+	  padding: 0.5em;
+	  color: #333;
+	  background: #f8f8f8;
+	  -webkit-text-size-adjust: none;
+	}
+	
+	.hljs-comment,
+	.diff .hljs-header {
+	  color: #998;
+	  font-style: italic;
+	}
+	
+	.hljs-keyword,
+	.css .rule .hljs-keyword,
+	.hljs-winutils,
+	.nginx .hljs-title,
+	.hljs-subst,
+	.hljs-request,
+	.hljs-status {
+	  color: #333;
+	  font-weight: bold;
+	}
+	
+	.hljs-number,
+	.hljs-hexcolor,
+	.ruby .hljs-constant {
+	  color: #008080;
+	}
+	
+	.hljs-string,
+	.hljs-tag .hljs-value,
+	.hljs-doctag,
+	.tex .hljs-formula {
+	  color: #d14;
+	}
+	
+	.hljs-title,
+	.hljs-id,
+	.scss .hljs-preprocessor {
+	  color: #900;
+	  font-weight: bold;
+	}
+	
+	.hljs-list .hljs-keyword,
+	.hljs-subst {
+	  font-weight: normal;
+	}
+	
+	.hljs-class .hljs-title,
+	.hljs-type,
+	.vhdl .hljs-literal,
+	.tex .hljs-command {
+	  color: #458;
+	  font-weight: bold;
+	}
+	
+	.hljs-tag,
+	.hljs-tag .hljs-title,
+	.hljs-rule .hljs-property,
+	.django .hljs-tag .hljs-keyword {
+	  color: #000080;
+	  font-weight: normal;
+	}
+	
+	.hljs-attribute,
+	.hljs-variable,
+	.lisp .hljs-body,
+	.hljs-name {
+	  color: #008080;
+	}
+	
+	.hljs-regexp {
+	  color: #009926;
+	}
+	
+	.hljs-symbol,
+	.ruby .hljs-symbol .hljs-string,
+	.lisp .hljs-keyword,
+	.clojure .hljs-keyword,
+	.scheme .hljs-keyword,
+	.tex .hljs-special,
+	.hljs-prompt {
+	  color: #990073;
+	}
+	
+	.hljs-built_in {
+	  color: #0086b3;
+	}
+	
+	.hljs-preprocessor,
+	.hljs-pragma,
+	.hljs-pi,
+	.hljs-doctype,
+	.hljs-shebang,
+	.hljs-cdata {
+	  color: #999;
+	  font-weight: bold;
+	}
+	
+	.hljs-deletion {
+	  background: #fdd;
+	}
+	
+	.hljs-addition {
+	  background: #dfd;
+	}
+	
+	.diff .hljs-change {
+	  background: #0086b3;
+	}
+	
+	.hljs-chunk {
+	  color: #aaa;
+	}
+	
+	</style></head>
+<body>
+	<div class="page-container">
+		<div id="fader-overlay" class="sg-fader-overlay"></div>
+
+		<nav class="row sg-nav padding-vert-small viewport-el" role="navigation" data-emit-events data-top-bottom >
+			<div class="small-2 columns burger-wrapper show-for-small">
+				<button class="burger reset-button trigger-menu">
+					<div class="burger-content"></div>
+				</button>
+			</div>
+
+			<h1 class="medium-7 columns hide-for-small margin-vert-none"><a href="#">LearnVest &amp; Northwestern Mutual - A Style Guide</a></h1>
+
+			<div class="small-10 medium-5 columns theme-switch-wrapper reset-child-margins text-right">
+				<span class="text-white inline-block valign-middle margin-right-small">Select Theme: </span>
+				<!-- jQuery injects select el here (theme-switch.js) -->
+			</div>
+		</nav>
+
+		<section class="row height-full">
+			<div class="medium-4 large-3 xlarge-2 columns height-full hide-for-small sg-sidebar">
+				<div class="padding-top-medium reset-child-margins">
+					<ul class="sg-block-nav sg-block-nav-submenu reset-list reset-child-margins">
+
+						<h3></h3>
+
+					</ul>
+					<ul class="sg-block-nav sg-block-nav-submenu reset-list reset-child-margins">
+
+						<h3>NM Graphs</h3>
+						<li><a href="#NM_Graphs-D3.js">D3.js</a></li>
+						<li><a href="#NM_Graphs-JavaScript">JavaScript</a></li>
+						<li><a href="#NM_Graphs-SASS_Reference">SASS Reference</a></li>
+
+					</ul>
+
+
+					<ul class="sg-block-nav sg-category-nav reset-list reset-child-margins">
+						<h3>Categories</h3>
+						<li><a href="button-groups.html">Button Groups</a></li>
+						<li><a href="buttons.html">Buttons</a></li>
+						<li><a href="card.html">Card</a></li>
+						<li><a href="colors.html">Colors</a></li>
+						<li><a href="forms.html">Forms</a></li>
+						<li><a href="ghosting.html">Ghosting</a></li>
+						<li><a href="graphs.html">Graphs</a></li>
+						<li><a href="grid.html">Grid</a></li>
+						<li><a href="icons.html">Icons</a></li>
+						<li><a href="labels.html">Labels</a></li>
+						<li><a href="loading-indicators.html">Loading Indicators</a></li>
+						<li><a href="modals.html">Modals</a></li>
+						<li><a href="navigation.html">Navigation</a></li>
+						<li><a href="notifications.html">Notifications</a></li>
+						<li><a href="switches.html">Switches</a></li>
+						<li><a href="tables.html">Tables</a></li>
+						<li><a href="tooltips.html">Tooltips</a></li>
+						<li><a href="type.html">Type</a></li>
+						<li><a href="utility-classes.html">Utility Classes</a></li>
+						<li><a href="visibility.html">Visibility</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="medium-8 large-9 xlarge-10 columns sg-content" id="styleguide">
+				<div class="section" id="LV_Graphs" data-section="" data-heading="">
+
+					<div class="comment">
+						
+						<h2 class="main-section-sg-by-lvnm" id="section-LV_Graphs">LV Graphs</h2>
+<div class="show-for-lv show-for-default">
+    <p class="heading-moderate">This version of UITK only contains graph styles for NM.</p>
+</div>
+					</div>
+
+
+
+				</div>
+				<div class="section" id="NM_Graphs-D3.js" data-section="NM Graphs" data-heading="D3.js">
+
+					<div class="comment">
+						<h1>D3.js</h1>
+						<h2 class="main-section-sg-by-lvnm" id="section-Line_Graphs">Line Graphs</h2>
+<div class="show-for-nm">
+<div class="row">
+    <div class="small-12 columns text-center">
+    <div class="hero-number accounts-added">
+    <span class="small-number">$</span>
+    <span class="big-number">1,388</span>
+    <span class="small-number">21</span>
+    </div>
+    </div>
+</div>
+<div class="row">
+    <div class="small-12 columns text-center">
+    <p>This month you are <span class="off-track-text">$388.21 off track</span> from your planned balance of $1,000.00.</p>
+    </div>
+</div>
+
+<div class="row">
+    <div class="small-12 columns text-center" style="overflow: auto;">
+    <svg id="nmlvChart">
+    </svg></div>
+</div>
+</div>
+
+<p></p><h3>Basics</h3><p></p>
+<div class="show-for-nm">
+Basic styles are provided for line graphs built with the D3.js library.
+
+All elements in the graph should be wrapped in an element <code>g</code> with <code>chart</code> class
+
+JavaScript Example:
+<div class="codeBlock hljs">
+<pre>
+var g = svg.append(&apos;g&apos;)
+    .attr(&apos;class&apos;, &apos;nm-chart&apos;)
+</pre>
+</div>
+
+<p>Output:</p>
+<div class="codeBlock hljs">
+<pre>
+<span class="hljs-tag">&lt;<span class="hljs-title">svg</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">&quot;nmlvChart&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">g</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;chart&quot;</span>&gt;</span>
+    ...
+    <span class="hljs-tag">&lt;/<span class="hljs-title">g</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">svg</span>&gt;</span>
+</pre>
+</div>
+
+<h3 class="main-section-sg-by-lvnm" id="section-Axes">Axes</h3>
+<p>X and Y Axes should add the classes <code>chart__axis chart__axis-x</code> and <code>chart__axis chart__axis-y</code>. By default the x and y axis has a stroke width of 0 since
+NM/LV designs do not show the y axis. The x-axis can be redrawn at the y-zero horizontal by calling provided addXAxisLine() js function. See JavaScript section below.</p>
+<h3 class="main-section-sg-by-lvnm" id="section-Ticks">Ticks</h3>
+<p>Ticks along the x-axis are added by default with the class <code>tick</code>, when creating the xAxis with d3. Two additional classes are provided by the UTIK:</p>
+<table class="docs-variable-table">
+    <thead>
+    <tr><th>Class</th><th>Description</th></tr>
+    </thead>
+    <tbody>
+    <tr>
+    <td class="name"><code>today</code></td>
+    <td><p>Add this class to the tick representing the current month or time.</p></td>
+    </tr>
+    <tr>
+    <td class="name"><code>active</code></td>
+    <td><p>Add this class to the tick on mouseover/hover.</p></td>
+    </tr>
+    </tbody>
+</table>
+
+<p>The line and text elements for each tick are automatically styled based on the class of the tick. If the text of line needs to be drawn with a different
+element you can use the <code>.graph-tick-line</code> and <code>.graph-tick-text</code> classes to assign the styles to your custom elements.</p>
+<h3 class="main-section-sg-by-lvnm" id="section-Value_Lines">Value Lines</h3>
+<p>By default there are two value lines classes defined, <code>.chart__val_line .chart__val_line-primary</code> and <code>.chart__val_line .chart__val_line-secondary</code> with the designated NM colors.</p>
+<p>JavaScript Example:</p>
+<div class="codeBlock hljs">
+<pre>
+// Config primary line
+lineConfig = d3.line()
+    .x((d) =&gt; x(moment(d.date)))
+    .y((d) =&gt; y(d.total));
+
+// Add value line - primary
+g.append(&apos;path&apos;)
+    .attr(&apos;class&apos;, &apos;chart__val_line chart__val_line-primary&apos;)
+    .datum(datum)
+    .attr(&apos;d&apos;, lineConfig2(datum));
+</pre>
+</div>
+
+
+<p>Additional value lines can be added using the <code>graph-lines</code> function and the <code>.chart__val_line</code> class.</p>
+<div class="codeBlock hljs">
+<pre>
+.chart__val_line {
+    @include graph-lines(
+    $line-class-name: &apos;chart__val_line-primary&apos;,
+    $line-color: $line-graph-primary-color);
+}
+</pre>
+</div>
+
+<h3 class="main-section-sg-by-lvnm" id="section-Value_Dots/Circles">Value Dots/Circles</h3>
+<p>Dots can be added overlaying each data point along a value lines with the wrapper class <code>.chart__val_dots</code>. Each dot should have a class of <code>.chart__val_dot
+.chart__val_dot-primary</code> or <code>.chart__val_dot .chart__val_dot-secondary</code> depending on the associated value line.</p>
+<p>JavaScript Example:</p>
+<div class="codeBlock hljs">
+<pre>
+// Add dots wrapper element
+dots = g.append(&apos;g&apos;).attr(&apos;class&apos;, &apos;chart__val_dots&apos;);
+// make some dot overlays for each data point on the primary line
+dots.select(&apos;.chart__val_dots&apos;)
+.data(datum).enter()
+    .append(&apos;circle&apos;)
+    .attr(&apos;class&apos;, &apos;chart__val_dot chart__val_dot-primary&apos;)
+    .attr(&apos;cx&apos;, (d) =&gt; x(moment(d.date)))
+    .attr(&apos;cy&apos;, (d) =&gt; y(d.planned));
+</pre>
+</div>
+
+
+<h3 class="main-section-sg-by-lvnm" id="section-Delta_Areas">Delta Areas</h3>
+<p>Two colors for negative and positive delta areas are provided and can be used by added the class name to the path object.</p>
+<p><table class="docs-variable-table" style="width: auto;">
+    <thead>
+    <tr><th>Color</th><th>Class Name</th></tr>
+    </thead>
+    <tbody>
+    <tr>
+    <td class="name text-center"><code style="background-color: #fbdcda"></code></td>
+    <td><p>chart__negative_val_delta</p></td>
+    </tr>
+    <tr>
+    <td class="name text-center"><code style="background-color: #cce8fd"></code></td>
+    <td><p>chart__positive_val_delta</p></td>
+    </tr>
+    </tbody>
+</table>
+<br>
+</p></div><p></p>
+					</div>
+
+
+
+				</div>
+				<div class="section" id="NM_Hero_Number" data-section="" data-heading="">
+
+					<div class="comment">
+						
+						<h2 class="main-section-sg-by-lvnm" id="section-NM_Hero_Number">NM Hero Number</h2>
+<div class="show-for-nm">
+Default Hero Number classes are available to ease of adding the currency number at the top of the graph. A hero number mixin is available if the
+fonts sizes need to be changed.
+
+Two colors are available for the <code>hero-number</code> element:
+<table class="docs-variable-table" style="width: auto;">
+    <thead>
+    <tr><th>Color</th><th>Class Name</th></tr>
+    </thead>
+    <tbody>
+    <tr>
+    <td class="name text-center"><code style="background-color: #00487c"></code></td>
+    <td><p>no-accounts</p></td>
+    </tr>
+    <tr>
+    <td class="name text-center"><code style="background-color: #0090f9"></code></td>
+    <td><p>accounts-added</p></td>
+    </tr>
+    </tbody>
+</table>
+<br>
+</div>
+					</div>
+
+					<div class="ss-title">EXAMPLE
+						<span class="icon-code tooltip-target tooltip-show-on-hover">
+							<div class="show-hide-code tooltip tooltip-top-right reset-child-margins">
+								<p>Show Code</p>
+							</div>
+							<span class="icon icon-caret-left"></span>
+							<span class="icon icon-caret-right"></span>
+						</span>
+					</div>
+					<div class="codeBlock markup hljs">
+						<pre><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"hero-number accounts-added"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"small-number"</span>&gt;</span>$<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"big-number"</span>&gt;</span>1,388<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"small-number"</span>&gt;</span>21<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
+					</div>
+
+					<div class="result codeExample">
+						<div class="exampleOutput">
+							<div class="hero-number accounts-added">
+    <span class="small-number">$</span>
+    <span class="big-number">1,388</span>
+    <span class="small-number">21</span>
+</div>
+						</div>
+					</div>
+
+				</div>
+				<div class="section" id="NM_Graphs-JavaScript" data-section="NM Graphs" data-heading="JavaScript">
+
+					<div class="comment">
+						<h1>JavaScript</h1>
+						<p>JavaScript functions are provided to assist in setting up the graph. It can be imported into your project by installing the ui-toolkit via npm and
+importing your themed js file. Additional you can link to or download a compiled <code>NM-CX</code> version at <a href="http://uitk.learnvest.com/v/[version_number]/js/nm-cx/nm-cx-uitk.js">http://uitk.learnvest.com/v/[version_number]/js/nm-cx/nm-cx-uitk.js</a> or <a href="http://uitk.learnvest.com/v/[version_number]/js/nm-cx/nm-cx-uitk.min.js">http://uitk.learnvest.com/v/[version_number]/js/nm-cx/nm-cx-uitk.min.js</a>.
+(Note graph js is only available in <code>1.14.1</code> and above.)</p>
+					</div>
+
+
+
+				</div>
+				<div class="section" id="NM_NPM_Installation" data-section="" data-heading="">
+
+					<div class="comment">
+						
+						<h2 class="main-section-sg-by-lvnm" id="section-NM_NPM_Installation">NM NPM Installation</h2>
+<p>Create/Update your project&apos;s .npmrc to point toward LV&apos;s internal private NPM registry. Include the following line:</p>
+
+<p><code>registry=http://build.learnvest.net:8081/nexus/content/groups/npm-all/</code></p>
+<p><br>Install the UI-Toolkit.</p>
+
+<p><code>npm install --save-dev ui-toolkit</code></p>
+<p><br>Import into your project.</p>
+
+<p>Example:</p>
+
+<p><code>var uitk = require(&apos;node_modules/ui-toolkit/src/js/theme/nm-uitk&apos;);</code></p>
+<p><br></p>
+					</div>
+
+
+
+				</div>
+				<div class="section" id="NM_Available_Functions/Objects" data-section="" data-heading="">
+
+					<div class="comment">
+						
+						<h2 class="main-section-sg-by-lvnm" id="section-NM_Available_Functions/Objects">NM Available Functions/Objects</h2>
+<p></p><h3>NM Colors</h3>
+Object containing any brand colors that may be needed in creating graphs.<p></p>
+<div class="codeBlock hljs">
+<pre>
+colors = {
+    white: &apos;#ffffff&apos;,
+    black: &apos;#000000&apos;,
+    charcoal: &apos;#444444&apos;,
+    blue: &apos;#0090f9&apos;,
+    lightBlue: &apos;#c6d4e2&apos;,
+    regalBlue: &apos;#00487c&apos;,
+    burntSienna: &apos;#ec544a&apos;,
+    burntSiennaFaded: &apos;#fbdcda&apos;,
+    green: &apos;#00aea6&apos;,
+    greenFaded: &apos;#cce8fd&apos;,
+    grayBlue: &apos;#5d7286&apos;,
+    slateGrey: &apos;#697e90&apos;,
+    offWhite: &apos;#f3f9ff&apos;
+};
+</pre>
+</div>
+
+
+<h3 class="main-section-sg-by-lvnm" id="section-Graph_Values">Graph Values</h3>
+<p>Object containing values that may be needed in creating graphs. For examples, the <code>inactiveDotRadius</code>, <code>todayDotRadius</code> and <code>activeDotRadius</code> should
+be used when adding dots to the graph with the attribute <code>r</code>.</p>
+<div class="codeBlock hljs">
+<pre>
+graphValues = {
+    // Highlighted Text
+    onTrackColor: colors.blue,
+    offTrackColor: colors.burntSienna,
+    aheadColor: colors.green,
+
+    // Graph lines
+    lineGraphPrimaryColor: colors.regalBlue,
+    lineGraphSecondaryColor: colors.blue,
+    lineGraphStrokeWidth: &apos;3px&apos;,
+    lineGraphAxisColor: colors.lightBlue,
+    lineGraphAxisStrokeWidth: &apos;1px&apos;,
+    lineGraphXAxisStrokeWidth: &apos;1px&apos;,
+    lineGraphYAxisStrokeWidth: &apos;0px&apos;,
+
+    // Delta Fill
+    offTrackDeltaColor: colors.burntSiennaFaded,
+    aheadDeltaColor: colors.greenFaded,
+
+    // Line Gradients &amp; Dot colorss
+    inactiveStartColor: colors.lightBlue,
+    inactiveStopColor: colors.offWhite,
+    inactiveStrokeWidth: &apos;2px&apos;,
+    inactiveTextColor: colors.grayBlue,
+    inactiveTextWeight: 400,
+    inactiveTextSize: &apos;12px&apos;,
+    inactiveDotRadius: &apos;4.5px&apos;,
+    inactiveDotBorderWidth: &apos;2px&apos;,
+    inactiveDotBorderColor: colors.white,
+    inactiveDotPrimaryColor: colors.regalBlue,
+    inactiveDotSecondaryColor: colors.blue,
+
+    todayStartColor: colors.slateGrey,
+    todayStopColor: colors.offWhite,
+    todayStrokeWidth: &apos;2px&apos;,
+    todayTextColor: colors.charcoal,
+    todayTextWeight: 500,
+    todayTextSize: &apos;12px&apos;,
+    todayDotRadius: &apos;4.5px&apos;,
+    todayDotBorderWidth: &apos;2px&apos;,
+    todayDotBorderColor: colors.white,
+    todayDotPrimaryColor: colors.regalBlue,
+    todayDotSecondaryColor: colors.blue,
+
+    activeStartColor: colors.black,
+    activeStopColor: colors.black,
+    activeStrokeWidth: &apos;2px&apos;,
+    activeTextcolors: colors.charcoal,
+    activeTextWeight: 500,
+    activeTextSize: &apos;14px&apos;,
+    activeDotRadius: &apos;6.5px&apos;,
+    activeDotBorderWidth: &apos;2px&apos;,
+    activeDotBorderColor: colors.white,
+    activeDotPrimaryColor: colors.regalBlue,
+    activeDotSecondaryColor: colors.blue
+};
+</pre>
+</div>
+
+<h3 class="main-section-sg-by-lvnm" id="section-Default_Gradients">Default Gradients</h3>
+<p>Object containing two default gradients values. Additional gradients can be added by passing a new or appended object containing key value pairs of
+name-of-gradient: { ... offset values ... }.</p>
+<div class="codeBlock hljs">
+<pre>
+defaultGradients = {
+    &apos;gridlines-gradient-inactive&apos;: [
+    { offset: &apos;0%&apos;, color: graphValues.inactiveStartColor },
+    { offset: &apos;100%&apos;, color: graphValues.inactiveStopColor }
+    ],
+    &apos;gridlines-gradient-today&apos;: [
+    { offset: &apos;0%&apos;, color: graphValues.todayStartColor },
+    { offset: &apos;100%&apos;, color: graphValues.todayStopColor }
+    ]
+};
+</pre>
+</div>
+
+
+<h3 class="main-section-sg-by-lvnm" id="section-Add_Linear_Gradient_Function">Add Linear Gradient Function</h3>
+<p>Adds LinearGradients to refs for grid lines</p>
+<div class="codeBlock hljs">
+<pre>
+@function
+@param {Object} container - d3 svg container
+@param {Object} gradients - obj contain key:array pairs of gradient information
+@param {Object} configs - height and padding are required
+
+addLinearGradient = function (svgContainer, gradients = defaultGradients, configs = { height: 0, padding: 0 })
+</pre>
+</div>
+
+<h3 class="main-section-sg-by-lvnm" id="section-Add_X_Axis_Line_Function">Add X Axis Line Function</h3>
+<p>Adds x axis line on y-zero horizontal</p>
+<div class="codeBlock hljs">
+<pre>
+@function
+@param {Object} container - d3 svg container
+@param {Object} configs - { x1, x2, y1, y2, color, strokeWidth }
+
+addXAxisLine = function (
+svgContainer,
+options = {
+x1: 0,
+x2: 0,
+y1: 0,
+y2: 0,
+color: colors.lightBlue,
+strokeWidth: graphValues.lineGraphXAxisStrokeWidth
+})
+</pre>
+</div>
+					</div>
+
+
+
+				</div>
+				<div class="section" id="NM_Graphs-SASS_Reference" data-section="NM Graphs" data-heading="SASS Reference">
+
+					<div class="comment">
+						<h1>SASS Reference</h1>
+						<h2 class="main-section-sg-by-lvnm" id="section-Variables">Variables</h2>
+<table class="docs-variable-table">
+    <thead>
+    <tr><th>Name</th><th>Type</th><th>Default Value</th><th>Description</th></tr>
+    </thead>
+    <tbody>
+    <tr>
+    <td class="name"><code>$on-track-color:</code></td>
+    <td>Color</td>
+    <td class="color"><code>$blue</code></td>
+    <td><p>Font color for on track display.</p></td>
+    </tr>
+    <tr>
+    <td class="name"><code>$off-track-color</code></td>
+    <td>Color</td>
+    <td class="color"><code>$burnt-sienna</code></td>
+    <td><p>Font color for off track display.</p></td>
+    </tr>
+    <tr>
+    <td class="name"><code>$ahead-color</code></td>
+    <td>Color</td>
+    <td class="color"><code>$green</code></td>
+    <td><p>Font color for ahead display.</p></td>
+    </tr>
+    <tr>
+    <td class="name"><code>$no-accounts</code></td>
+    <td>Color</td>
+    <td class="color"><code>$regal-blue</code></td>
+    <td><p>Font color for hero number when no accounts are added.</p></td>
+    </tr>
+    <tr>
+    <td class="name"><code>$accounts-added</code></td>
+    <td>Color</td>
+    <td class="color"><code>$blue</code></td>
+    <td><p>Font color for hero number when accounts are added.</p></td>
+    </tr>
+    <tr>
+    <td class="name"><code>$hero-number-large-font-size</code></td>
+    <td>Number</td>
+    <td class="number"><code>50px</code></td>
+    <td><p>Font size for hero number on top of graph. $ and cents will be calculated to be a percentage of the large dollar number.</p></td>
+    </tr>
+    <tr>
+    <td class="name"><code>$hero-number-padding-bottom</code></td>
+    <td>Number</td>
+    <td class="number"><code>16px</code></td>
+    <td><p>Padding under the hero number.</p></td>
+    </tr>
+    <tr>
+    <td class="name"><code>$off-track-delta-color</code></td>
+    <td>Color</td>
+    <td class="color"><code>$burnt-sienna-faded</code></td>
+    <td><p>Fill color for are of chart when off track.</p></td>
+    </tr>
+    <tr>
+    <td class="name"><code>$ahead-delta-color</code></td>
+    <td>Color</td>
+    <td class="color"><code>$green-faded</code></td>
+    <td><p>Fill color for area of chart ahead display.</p></td>
+    </tr>
+
+    <tr>
+    <td class="name"><code>$line-graph-primary-color</code></td>
+    <td>Color</td>
+    <td class="color"><code>$regal-blue</code></td>
+    <td><p>Default color of the main value line.</p></td>
+    </tr>
+    <tr>
+    <td class="name"><code>$line-graph-secondary-color</code></td>
+    <td>Color</td>
+    <td class="color"><code>$blue</code></td>
+    <td><p>Default color of the secondary value line.</p></td>
+    </tr>
+    <tr>
+    <td class="name"><code>$line-graph-stroke-width/code&gt;</code></td>
+    <td>Number</td>
+    <td class="number"><code>3px</code></td>
+    <td><p>Default stroke width of graph value lines.</p></td>
+    </tr>
+    <tr>
+    <td class="name"><code>$line-graph-axis-color/code&gt;</code></td>
+    <td>Color</td>
+    <td class="color"><code>$light-blue</code></td>
+    <td><p>Default color for the axes.</p></td>
+    </tr>
+    <tr>
+    <td class="name"><code>$line-graph-x-axis-stroke-width</code></td>
+    <td>Number</td>
+    <td class="number"><code>0</code></td>
+    <td><p>Default axes stroke width. The axes have a stroke width of 0 to hide the default axes which do not conform to designs.</p></td>
+    </tr>
+    <tr>
+    <td class="name"><code>$line-graph-y-axis-stroke-width</code></td>
+    <td>Number</td>
+    <td class="number"><code>0</code></td>
+    <td><p>Default axes stroke width. The axes have a stroke width of 0 to hide the default axes which do not conform to designs.</p></td>
+    </tr>
+
+    <tr>
+    <td class="name"><code>$inactive-start-color</code></td>
+    <td>Color</td>
+    <td class="color"><code>$off-white</code></td>
+    <td><p>Gradient start color for default tick lines.</p></td>
+    </tr>
+    <tr>
+    <td class="name"><code>$inactive-stop-color</code></td>
+    <td>Color</td>
+    <td class="color"><code>$light-blue</code></td>
+    <td><p>Gradient stop color for default tick lines.</p></td>
+    </tr>
+    <tr>
+    <td class="name"><code>$inactive-stroke-width</code></td>
+    <td>Number</td>
+    <td class="number"><code>1px/code&gt;</code></td>
+    <td><p>stroke width for default tick lines.</p></td>
+    </tr>
+    <tr>
+    <td class="name"><code>$inactive-text-color</code></td>
+    <td>Color</td>
+    <td class="color"><code>$gray-blue</code></td>
+    <td><p>Text color for default ticks.</p></td>
+    </tr>
+    <tr>
+    <td class="name"><code>$inactive-text-weight</code></td>
+    <td>Number</td>
+    <td class="number"><code>400/code&gt;</code></td>
+    <td><p>Text weight for default ticks.</p></td>
+    </tr>
+    <tr>
+    <td class="name"><code>$inactive-text-size</code></td>
+    <td>Number</td>
+    <td class="number"><code>12px/code&gt;</code></td>
+    <td><p>Text size for default ticks.</p></td>
+    </tr>
+    <tr>
+    <td class="name"><code>$inactive-dot-radius</code></td>
+    <td>Number</td>
+    <td class="number"><code>4.5px</code></td>
+    <td><p>Radius for default dots.</p></td>
+    </tr>
+    <tr>
+    <td class="name"><code>$inactive-dot-border-width</code></td>
+    <td>Number</td>
+    <td class="number"><code>2px/code&gt;</code></td>
+    <td><p>Border width for default dots.</p></td>
+    </tr>
+    <tr>
+    <td class="name"><code>$inactive-dot-border-color</code></td>
+    <td>Color</td>
+    <td class="color"><code>$white</code></td>
+    <td><p>Border color for default dots.</p></td>
+    </tr>
+    <tr>
+    <td class="name"><code>$inactive-dot-primary-color</code></td>
+    <td>Color</td>
+    <td class="color"><code>$line-graph-primary-color</code></td>
+    <td><p>Color of default dots on the primary value line.</p></td>
+    </tr>
+    <tr>
+    <td class="name"><code>$inactive-dot-secondary-color</code></td>
+    <td>Color</td>
+    <td class="color"><code>$line-graph-secondary-color</code></td>
+    <td><p>Color of default dots on the secondary value line.</p></td>
+    </tr>
+
+    <tr>
+    <td class="name"><code>$today-start-color</code></td>
+    <td>Color</td>
+    <td class="color"><code>$off-white</code></td>
+    <td><p>Gradient start color for current tick line.</p></td>
+    </tr>
+    <tr>
+    <td class="name"><code>$today-stop-color</code></td>
+    <td>Color</td>
+    <td class="color"><code>$slate-gray</code></td>
+    <td><p>Gradient stop color for the current tick line.</p></td>
+    </tr>
+    <tr>
+    <td class="name"><code>$today-stroke-width</code></td>
+    <td>Number</td>
+    <td class="number"><code>1px/code&gt;</code></td>
+    <td><p>stroke width for the current tick line.</p></td>
+    </tr>
+    <tr>
+    <td class="name"><code>$today-text-color</code></td>
+    <td>Color</td>
+    <td class="color"><code>$charcoal</code></td>
+    <td><p>Text color for the current tick.</p></td>
+    </tr>
+    <tr>
+    <td class="name"><code>$today-text-weight</code></td>
+    <td>Number</td>
+    <td class="number"><code>500/code&gt;</code></td>
+    <td><p>Text weight for the current tick.</p></td>
+    </tr>
+    <tr>
+    <td class="name"><code>$today-text-size</code></td>
+    <td>Number</td>
+    <td class="number"><code>12px</code></td>
+    <td><p>Text size for the current tick.</p></td>
+    </tr>
+    <tr>
+    <td class="name"><code>$today-dot-radius</code></td>
+    <td>Number</td>
+    <td class="number"><code>4.5px</code></td>
+    <td><p>Radius for the current dot.</p></td>
+    </tr>
+    <tr>
+    <td class="name"><code>$today-dot-border-width</code></td>
+    <td>Number</td>
+    <td class="number"><code>2px</code></td>
+    <td><p>Border width for current dot.</p></td>
+    </tr>
+    <tr>
+    <td class="name"><code>$today-dot-border-color</code></td>
+    <td>Color</td>
+    <td class="color"><code>$white</code></td>
+    <td><p>Border color for current dot.</p></td>
+    </tr>
+    <tr>
+    <td class="name"><code>$today-dot-primary-color</code></td>
+    <td>Color</td>
+    <td class="color"><code>$line-graph-primary-color</code></td>
+    <td><p>Color of current dot on the primary value line.</p></td>
+    </tr>
+    <tr>
+    <td class="name"><code>$today-dot-secondary-color</code></td>
+    <td>Color</td>
+    <td class="color"><code>$line-graph-secondary-color</code></td>
+    <td><p>Color of current dot on the secondary value line.</p></td>
+    </tr>
+
+    <tr>
+    <td class="name"><code>$active-start-color</code></td>
+    <td>Color</td>
+    <td class="color"><code>$off-white</code></td>
+    <td><p>Gradient start color for active tick line.</p></td>
+    </tr>
+    <tr>
+    <td class="name"><code>$active-stop-color</code></td>
+    <td>Color</td>
+    <td class="color"><code>$slate-gray</code></td>
+    <td><p>Gradient stop color for the active tick line.</p></td>
+    </tr>
+    <tr>
+    <td class="name"><code>$active-stroke-width</code></td>
+    <td>Number</td>
+    <td class="number"><code>1px</code></td>
+    <td><p>stroke width for the active tick line.</p></td>
+    </tr>
+    <tr>
+    <td class="name"><code>$active-text-color</code></td>
+    <td>Color</td>
+    <td class="color"><code>$charcoal</code></td>
+    <td><p>Text color for the active tick.</p></td>
+    </tr>
+    <tr>
+    <td class="name"><code>$active-text-weight</code></td>
+    <td>Number</td>
+    <td class="number"><code>500/code&gt;</code></td>
+    <td><p>Text weight for the active tick.</p></td>
+    </tr>
+    <tr>
+    <td class="name"><code>$active-text-size</code></td>
+    <td>Number</td>
+    <td class="number"><code>12px/code&gt;</code></td>
+    <td><p>Text size for the active tick.</p></td>
+    </tr>
+    <tr>
+    <td class="name"><code>$active-dot-radius</code></td>
+    <td>Number</td>
+    <td class="number"><code>4.5px</code></td>
+    <td><p>Radius for the active dot.</p></td>
+    </tr>
+    <tr>
+    <td class="name"><code>$active-dot-border-width</code></td>
+    <td>Number</td>
+    <td class="number"><code>2px</code></td>
+    <td><p>Border width for active dot.</p></td>
+    </tr>
+    <tr>
+    <td class="name"><code>$active-dot-border-color</code></td>
+    <td>Color</td>
+    <td class="color"><code>$white</code></td>
+    <td><p>Border color for active dot.</p></td>
+    </tr>
+    <tr>
+    <td class="name"><code>$active-dot-primary-color</code></td>
+    <td>Color</td>
+    <td class="color"><code>$line-graph-primary-color</code></td>
+    <td><p>Color of active dot on the primary value line.</p></td>
+    </tr>
+    <tr>
+    <td class="name"><code>$active-dot-secondary-color</code></td>
+    <td>Color</td>
+    <td class="color"><code>$line-graph-secondary-color</code></td>
+    <td><p>Color of active dot on the secondary value line.</p></td>
+    </tr>
+    </tbody>
+</table>
+					</div>
+
+
+
+				</div>
+				<div class="section" id="NM_Mixins" data-section="" data-heading="">
+
+					<div class="comment">
+						
+						<h2 class="main-section-sg-by-lvnm" id="section-NM_Mixins">NM Mixins</h2>
+<p>You can use the mixins yourself to build your own class structure out of the UITK components.</p>
+<h4 class="main-section-sg-by-lvnm" id="section-graph-hero-number">graph-hero-number</h4>
+<div class="codeBlock">
+<pre>
+@mixin graph-hero-number($dollar-font-size, $dollar-small-font-ratio)
+</pre>
+</div>
+
+<table class="docs-variable-table">
+    <thead>
+        <tr><th>Parameter</th><th>Type</th><th>Default Value</th><th>Description</th></tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><code>$dollar-font-size</code></td>
+            <td>Number</td>
+            <td><code>$hero-number-large-font-size</code></td>
+            <td><p>Font size of the large (dollar) numbers in the Hero number.</p></td>
+        </tr>
+        <tr>
+            <td><code>$dollar-small-font-ratio</code></td>
+            <td>Number</td>
+            <td><code>0.56</code></td>
+            <td><p>Percentage of large (dollar) number for the smaller (cents) number. <code>$small-font: $dollar-font-size * $dollar-small-font-ratio;</code></p></td>
+        </tr>
+    </tbody>
+</table>
+
+
+<h4 class="main-section-sg-by-lvnm" id="section-graph-fill">graph-fill</h4>
+<div class="codeBlock">
+<pre>
+@mixin graph-fill($fill-class-name,    $fill-color)
+</pre>
+</div>
+
+<table class="docs-variable-table">
+    <thead>
+        <tr><th>Parameter</th><th>Type</th><th>Default Value</th><th>Description</th></tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><code>$fill-class-name</code></td>
+            <td>String</td>
+            <td><code>&quot;&quot;</code></td>
+            <td><p>Name of fill class</p></td>
+        </tr>
+        <tr>
+            <td><code>$fill-color</code></td>
+            <td>Color</td>
+            <td><code>$ahead-delta-color</code></td>
+            <td><p>Fill color</p></td>
+        </tr>
+    </tbody>
+</table>
+
+<h4 class="main-section-sg-by-lvnm" id="section-graph-lines">graph-lines</h4>
+<div class="codeBlock">
+<pre>
+@mixin graph-lines($line-class-name, $line-color)
+</pre>
+</div>
+
+<table class="docs-variable-table">
+    <thead>
+        <tr><th>Parameter</th><th>Type</th><th>Default Value</th><th>Description</th></tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><code>$line-class-name</code></td>
+            <td>String</td>
+            <td><code>&quot;&quot;</code></td>
+            <td><p>Name of line class</p></td>
+        </tr>
+        <tr>
+            <td><code>$line-color</code></td>
+            <td>Color</td>
+            <td><code>$line-graph-primary-color</code></td>
+            <td><p>Line stroke color</p></td>
+        </tr>
+    </tbody>
+</table>
+
+
+<h4 class="main-section-sg-by-lvnm" id="section-graph-dots">graph-dots</h4>
+<div class="codeBlock">
+<pre>
+@mixin graph-dots($dot-class-name, $dot-color)
+</pre>
+</div>
+
+<table class="docs-variable-table">
+    <thead>
+        <tr><th>Parameter</th><th>Type</th><th>Default Value</th><th>Description</th></tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><code>$dot-class-name</code></td>
+            <td>String</td>
+            <td><code>&quot;&quot;</code></td>
+            <td><p>Name of dot class</p></td>
+        </tr>
+        <tr>
+            <td><code>$dot-color</code></td>
+            <td>Color</td>
+            <td><code>$line-graph-primary-color</code></td>
+            <td><p>Dot fill color</p></td>
+        </tr>
+    </tbody>
+</table>
+
+
+<h4 class="main-section-sg-by-lvnm" id="section-graph-tick">graph-tick</h4>
+<div class="codeBlock">
+<pre>
+@mixin graph-tick(
+    $stroke-width,
+    $text-color,
+    $text-weight,
+    $text-size,
+    $line-gradient,
+    $line-color)
+</pre>
+</div>
+
+<table class="docs-variable-table">
+    <thead>
+        <tr><th>Parameter</th><th>Type</th><th>Default Value</th><th>Description</th></tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><code>$stroke-width</code></td>
+            <td>Number</td>
+            <td><code>$inactive-stroke-width</code></td>
+            <td><p>Tick stroke width</p></td>
+        </tr>
+        <tr>
+            <td><code>$text-color</code></td>
+            <td>Color</td>
+            <td><code>$inactive-text-color</code></td>
+            <td><p>Tick text color</p></td>
+        </tr>
+        <tr>
+            <td><code>$text-weight</code></td>
+            <td>Number</td>
+            <td><code>$inactive-text-weight</code></td>
+            <td><p>Tick text weight</p></td>
+        </tr>
+        <tr>
+            <td><code>$text-size</code></td>
+            <td>Number</td>
+            <td><code>$inactive-text-size</code></td>
+            <td><p>Tick text size</p></td>
+        </tr>
+        <tr>
+            <td><code>$line-gradient</code></td>
+            <td>Boolean</td>
+            <td><code>false</code></td>
+            <td><p>Set to <code>true</code> if using a gradient url.</p></td>
+        </tr>
+        <tr>
+            <td><code>$line-color</code></td>
+            <td>Color</td>
+            <td><code>$inactive-line-color</code></td>
+            <td><p>Tick line color</p></td>
+        </tr>
+    </tbody>
+</table>
+					</div>
+
+
+
+				</div>
+			</div>
+		</section>
+
+		<footer class="sg-footer">
+			<div class="grid-container reset-child-margins">
+				<p class="padding-horiz-xlarge"></p>
+			</div>
+		</footer>
+	</div>
+
+	<div class="modal-overlay"></div>
+
+	<div class="modal-container">
+		<div class="modal">
+			<h1>Example Modal</h1>
+
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodoconsequat. Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat nonproident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		</div>
+		<button class="modal-close">
+			<span class="icon icon-close"></span>
+		</button>
+	</div>
+
+	<div class="toaster-fixed-region">
+		<div class="grid-container sg-padding-responsive-horiz padding-vert-medium toaster-grid">
+			<div class="toaster-container show-with-transition text-right">
+				<div class="toaster-trigger inline-block bg-medium-grey padding-horiz-tiny">
+					<button class="reset-button">
+						<span class="icon icon-caret-down"></span>
+					</button>
+				</div>
+				<div class="toaster-content padding-small bg-medium-grey">
+					<a href="http://uitk.learnvest.com/explorer" class="button tiny info margin-bottom-none">Back to Version Explorer!</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="./resources/js/vendor/moment.min.js"></script>
+	<script src="./resources/js/vendor/d3.min.js"></script>
+	<script src="./resources/js/app.js" id="appjs"></script>
+</body>
+</html>

@@ -1,0 +1,2470 @@
+<!doctype html>
+<html>
+<head>
+	<title>Style Guide - NM / LV</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+	<link rel="stylesheet" href="../css/static/fader-overlay.css">
+	<style>
+	/*
+	
+	github.com style (c) Vasily Polovnyov <vast@whiteants.net>
+	
+	*/
+	
+	.hljs {
+	  display: block;
+	  overflow-x: auto;
+	  padding: 0.5em;
+	  color: #333;
+	  background: #f8f8f8;
+	  -webkit-text-size-adjust: none;
+	}
+	
+	.hljs-comment,
+	.diff .hljs-header {
+	  color: #998;
+	  font-style: italic;
+	}
+	
+	.hljs-keyword,
+	.css .rule .hljs-keyword,
+	.hljs-winutils,
+	.nginx .hljs-title,
+	.hljs-subst,
+	.hljs-request,
+	.hljs-status {
+	  color: #333;
+	  font-weight: bold;
+	}
+	
+	.hljs-number,
+	.hljs-hexcolor,
+	.ruby .hljs-constant {
+	  color: #008080;
+	}
+	
+	.hljs-string,
+	.hljs-tag .hljs-value,
+	.hljs-doctag,
+	.tex .hljs-formula {
+	  color: #d14;
+	}
+	
+	.hljs-title,
+	.hljs-id,
+	.scss .hljs-preprocessor {
+	  color: #900;
+	  font-weight: bold;
+	}
+	
+	.hljs-list .hljs-keyword,
+	.hljs-subst {
+	  font-weight: normal;
+	}
+	
+	.hljs-class .hljs-title,
+	.hljs-type,
+	.vhdl .hljs-literal,
+	.tex .hljs-command {
+	  color: #458;
+	  font-weight: bold;
+	}
+	
+	.hljs-tag,
+	.hljs-tag .hljs-title,
+	.hljs-rule .hljs-property,
+	.django .hljs-tag .hljs-keyword {
+	  color: #000080;
+	  font-weight: normal;
+	}
+	
+	.hljs-attribute,
+	.hljs-variable,
+	.lisp .hljs-body,
+	.hljs-name {
+	  color: #008080;
+	}
+	
+	.hljs-regexp {
+	  color: #009926;
+	}
+	
+	.hljs-symbol,
+	.ruby .hljs-symbol .hljs-string,
+	.lisp .hljs-keyword,
+	.clojure .hljs-keyword,
+	.scheme .hljs-keyword,
+	.tex .hljs-special,
+	.hljs-prompt {
+	  color: #990073;
+	}
+	
+	.hljs-built_in {
+	  color: #0086b3;
+	}
+	
+	.hljs-preprocessor,
+	.hljs-pragma,
+	.hljs-pi,
+	.hljs-doctype,
+	.hljs-shebang,
+	.hljs-cdata {
+	  color: #999;
+	  font-weight: bold;
+	}
+	
+	.hljs-deletion {
+	  background: #fdd;
+	}
+	
+	.hljs-addition {
+	  background: #dfd;
+	}
+	
+	.diff .hljs-change {
+	  background: #0086b3;
+	}
+	
+	.hljs-chunk {
+	  color: #aaa;
+	}
+	
+	</style></head>
+<body>
+	<div class="page-container">
+		<div id="fader-overlay" class="sg-fader-overlay"></div>
+
+		<nav class="row sg-nav padding-vert-small viewport-el" role="navigation" data-emit-events data-top-bottom >
+			<div class="small-2 columns burger-wrapper show-for-small">
+				<button class="burger reset-button trigger-menu">
+					<div class="burger-content"></div>
+				</button>
+			</div>
+
+			<h1 class="medium-7 columns hide-for-small margin-vert-none"><a href="#">LearnVest &amp; Northwestern Mutual - A Style Guide</a></h1>
+
+			<div class="small-10 medium-5 columns theme-switch-wrapper reset-child-margins text-right">
+				<span class="text-white inline-block valign-middle margin-right-small">Select Theme: </span>
+				<!-- jQuery injects select el here (theme-switch.js) -->
+			</div>
+		</nav>
+
+		<section class="row height-full">
+			<div class="medium-4 large-3 xlarge-2 columns height-full hide-for-small sg-sidebar">
+				<div class="padding-top-medium reset-child-margins">
+					<ul class="sg-block-nav sg-block-nav-submenu reset-list reset-child-margins">
+
+						<h3>Tables</h3>
+						<li><a href="#Tables-Basic">Basic</a></li>
+						<li><a href="#Tables-Sub-Tables">Sub-Tables</a></li>
+						<li><a href="#Tables-Sub-Keyvals">Sub-Keyvals</a></li>
+						<li><a href="#Tables-Accessibility">Accessibility</a></li>
+						<li><a href="#Tables-Actionable">Actionable</a></li>
+						<li><a href="#Tables-Keyval_Charts">Keyval Charts</a></li>
+						<li><a href="#Tables-Sortable_Table">Sortable Table</a></li>
+						<li><a href="#Tables-Group_Headers">Group Headers</a></li>
+						<li><a href="#Tables-Contextual_Colors">Contextual Colors</a></li>
+						<li><a href="#Tables-Ghosting_Tables">Ghosting Tables</a></li>
+						<li><a href="#Tables-Scrollable_Table">Scrollable Table</a></li>
+						<li><a href="#Tables-Sticky_Table_Header">Sticky Table Header</a></li>
+
+					</ul>
+					<ul class="sg-block-nav sg-block-nav-submenu reset-list reset-child-margins">
+
+						<h3></h3>
+
+					</ul>
+
+
+					<ul class="sg-block-nav sg-category-nav reset-list reset-child-margins">
+						<h3>Categories</h3>
+						<li><a href="button-groups.html">Button Groups</a></li>
+						<li><a href="buttons.html">Buttons</a></li>
+						<li><a href="card.html">Card</a></li>
+						<li><a href="colors.html">Colors</a></li>
+						<li><a href="forms.html">Forms</a></li>
+						<li><a href="ghosting.html">Ghosting</a></li>
+						<li><a href="graphs.html">Graphs</a></li>
+						<li><a href="grid.html">Grid</a></li>
+						<li><a href="icons.html">Icons</a></li>
+						<li><a href="labels.html">Labels</a></li>
+						<li><a href="loading-indicators.html">Loading Indicators</a></li>
+						<li><a href="modals.html">Modals</a></li>
+						<li><a href="navigation.html">Navigation</a></li>
+						<li><a href="notifications.html">Notifications</a></li>
+						<li><a href="switches.html">Switches</a></li>
+						<li><a href="tables.html">Tables</a></li>
+						<li><a href="tooltips.html">Tooltips</a></li>
+						<li><a href="type.html">Type</a></li>
+						<li><a href="utility-classes.html">Utility Classes</a></li>
+						<li><a href="visibility.html">Visibility</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="medium-8 large-9 xlarge-10 columns sg-content" id="styleguide">
+				<div class="section" id="Tables-Tables" data-section="Tables" data-heading="Tables">
+
+					<div class="comment">
+						<h1>Tables</h1>
+						<p>Tables should be used for tabular data. For styling add the base class <code> .table</code> to any <code>&lt;table&gt;</code>. This will isolate our custom table styles. For ADA compliance tables are written using summary and caption.</p>
+					</div>
+
+
+
+				</div>
+				<div class="section" id="Tables-Basic" data-section="Tables" data-heading="Basic">
+
+					<div class="comment">
+						<h1>Basic</h1>
+						<p>Tables should be rendered with standard markup.</p>
+					</div>
+
+					<div class="ss-title">EXAMPLE
+						<span class="icon-code tooltip-target tooltip-show-on-hover">
+							<div class="show-hide-code tooltip tooltip-top-right reset-child-margins">
+								<p>Show Code</p>
+							</div>
+							<span class="icon icon-caret-left"></span>
+							<span class="icon icon-caret-right"></span>
+						</span>
+					</div>
+					<div class="codeBlock markup hljs">
+						<pre><span class="hljs-tag">&lt;<span class="hljs-title">table</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"table"</span> <span class="hljs-attribute">summary</span>=<span class="hljs-value">"This summary is for screen readers and should summarize the structure of the table headers and rows"</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">caption</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"show-for-sr"</span>&gt;</span>Basic Table<span class="hljs-tag">&lt;/<span class="hljs-title">caption</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">thead</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">tr</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">th</span> <span class="hljs-attribute">width</span>=<span class="hljs-value">"500"</span>&gt;</span>Expenses<span class="hljs-tag">&lt;/<span class="hljs-title">th</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">th</span> <span class="hljs-attribute">width</span>=<span class="hljs-value">"100"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"text-right"</span>&gt;</span>Amount<span class="hljs-tag">&lt;/<span class="hljs-title">th</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">th</span> <span class="hljs-attribute">width</span>=<span class="hljs-value">"400"</span>&gt;</span>Frequency<span class="hljs-tag">&lt;/<span class="hljs-title">th</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">tr</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">thead</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">tbody</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">tr</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Rent<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">td</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"text-right"</span>&gt;</span>$1,480<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Monthly<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">tr</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">tr</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Resident Service Fee<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">td</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"text-right"</span>&gt;</span>$51<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Monthly<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">tr</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">tr</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Cell Phone<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">td</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"text-right"</span>&gt;</span>$90<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Monthly<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">tr</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">tbody</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">table</span>&gt;</span></pre>
+					</div>
+
+					<div class="result codeExample">
+						<div class="exampleOutput">
+							<table class="table" summary="This summary is for screen readers and should summarize the structure of the table headers and rows">
+<caption class="show-for-sr">Basic Table</caption>
+    <thead>
+        <tr>
+            <th width="500">Expenses</th>
+            <th width="100" class="text-right">Amount</th>
+            <th width="400">Frequency</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Rent</td>
+            <td class="text-right">$1,480</td>
+            <td>Monthly</td>
+        </tr>
+        <tr>
+            <td>Resident Service Fee</td>
+            <td class="text-right">$51</td>
+            <td>Monthly</td>
+        </tr>
+        <tr>
+            <td>Cell Phone</td>
+            <td class="text-right">$90</td>
+            <td>Monthly</td>
+        </tr>
+    </tbody>
+</table>
+						</div>
+					</div>
+
+				</div>
+				<div class="section" id="-" data-section="" data-heading="">
+
+					<div class="comment">
+						
+						<p>Tables may also be used without its side borders (if applicable, based on theme). Just add the <code>.side-borders-none</code> class to a
+table or keyval chart and you will notice <code>border-left</code> and <code>border-right</code> properties will be set to <code>none</code>.</p>
+					</div>
+
+					<div class="ss-title">EXAMPLE
+						<span class="icon-code tooltip-target tooltip-show-on-hover">
+							<div class="show-hide-code tooltip tooltip-top-right reset-child-margins">
+								<p>Show Code</p>
+							</div>
+							<span class="icon icon-caret-left"></span>
+							<span class="icon icon-caret-right"></span>
+						</span>
+					</div>
+					<div class="codeBlock markup hljs">
+						<pre><span class="hljs-tag">&lt;<span class="hljs-title">table</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"table side-borders-none"</span> <span class="hljs-attribute">summary</span>=<span class="hljs-value">"This summary is for screen readers and should summarize the structure of the table headers and rows"</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">caption</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"show-for-sr"</span>&gt;</span>Basic Table<span class="hljs-tag">&lt;/<span class="hljs-title">caption</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">thead</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">tr</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">th</span> <span class="hljs-attribute">width</span>=<span class="hljs-value">"500"</span>&gt;</span>Expenses<span class="hljs-tag">&lt;/<span class="hljs-title">th</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">th</span> <span class="hljs-attribute">width</span>=<span class="hljs-value">"100"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"text-right"</span>&gt;</span>Amount<span class="hljs-tag">&lt;/<span class="hljs-title">th</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">th</span> <span class="hljs-attribute">width</span>=<span class="hljs-value">"400"</span>&gt;</span>Frequency<span class="hljs-tag">&lt;/<span class="hljs-title">th</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">tr</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">thead</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">tbody</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">tr</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Rent<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">td</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"text-right"</span>&gt;</span>$1,480<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Monthly<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">tr</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">tr</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Resident Service Fee<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">td</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"text-right"</span>&gt;</span>$51<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Monthly<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">tr</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">tr</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Cell Phone<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">td</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"text-right"</span>&gt;</span>$90<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Monthly<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">tr</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">tbody</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">table</span>&gt;</span></pre>
+					</div>
+
+					<div class="result codeExample">
+						<div class="exampleOutput">
+							<table class="table side-borders-none" summary="This summary is for screen readers and should summarize the structure of the table headers and rows">
+<caption class="show-for-sr">Basic Table</caption>
+    <thead>
+        <tr>
+            <th width="500">Expenses</th>
+            <th width="100" class="text-right">Amount</th>
+            <th width="400">Frequency</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Rent</td>
+            <td class="text-right">$1,480</td>
+            <td>Monthly</td>
+        </tr>
+        <tr>
+            <td>Resident Service Fee</td>
+            <td class="text-right">$51</td>
+            <td>Monthly</td>
+        </tr>
+        <tr>
+            <td>Cell Phone</td>
+            <td class="text-right">$90</td>
+            <td>Monthly</td>
+        </tr>
+    </tbody>
+</table>
+						</div>
+					</div>
+
+				</div>
+				<div class="section" id="Tables-Sub-Tables" data-section="Tables" data-heading="Sub-Tables">
+
+					<div class="comment">
+						<h1>Sub-Tables</h1>
+						<h3 class="main-section-sg-by-lvnm" id="section-Sub-Tables">Sub-Tables</h3>
+<p>Sub-tables can be used alongside basic tables (and keyvals as shown below). Sub-tables should be structured by using a
+separate <code>&lt;tbody&gt;</code> nested inside the <code>&lt;table&gt;</code> tags. Then, you may apply the <code>.has-sub-table</code> class on the <code>&lt;table&gt;</code> tag,
+and the .<code>sub-table</code> class on the <code>&lt;tbody&gt;</code> that you wish to make a sub-table.</p>
+<p>*Note: Be sure to add the proper <code>colspan</code> settings to the first column in the parent table. A sub-table will create an extra column
+of <code>:before</code> content, so this step is crucial for formatting.</p>
+					</div>
+
+					<div class="ss-title">EXAMPLE
+						<span class="icon-code tooltip-target tooltip-show-on-hover">
+							<div class="show-hide-code tooltip tooltip-top-right reset-child-margins">
+								<p>Show Code</p>
+							</div>
+							<span class="icon icon-caret-left"></span>
+							<span class="icon icon-caret-right"></span>
+						</span>
+					</div>
+					<div class="codeBlock markup hljs">
+						<pre><span class="hljs-tag">&lt;<span class="hljs-title">table</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"table has-sub-table"</span> <span class="hljs-attribute">summary</span>=<span class="hljs-value">"This summary is for screen readers and should summarize the structure of the table headers and rows"</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">caption</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"show-for-sr"</span>&gt;</span>Basic Table<span class="hljs-tag">&lt;/<span class="hljs-title">caption</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">thead</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">tr</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">th</span> <span class="hljs-attribute">width</span>=<span class="hljs-value">"500"</span> <span class="hljs-attribute">colspan</span>=<span class="hljs-value">"2"</span>&gt;</span>Expenses<span class="hljs-tag">&lt;/<span class="hljs-title">th</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">th</span> <span class="hljs-attribute">width</span>=<span class="hljs-value">"100"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"text-right"</span>&gt;</span>Amount<span class="hljs-tag">&lt;/<span class="hljs-title">th</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">th</span> <span class="hljs-attribute">width</span>=<span class="hljs-value">"400"</span>&gt;</span>Frequency<span class="hljs-tag">&lt;/<span class="hljs-title">th</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">tr</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">thead</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">tbody</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">tr</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">td</span> <span class="hljs-attribute">colspan</span>=<span class="hljs-value">"2"</span>&gt;</span>Rent<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">td</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"text-right"</span>&gt;</span>$1,480<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Monthly<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">tr</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">tr</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">td</span> <span class="hljs-attribute">colspan</span>=<span class="hljs-value">"2"</span>&gt;</span>Resident Service Fee<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">td</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"text-right"</span>&gt;</span>$51<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Monthly<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">tr</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">tr</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">td</span> <span class="hljs-attribute">colspan</span>=<span class="hljs-value">"2"</span>&gt;</span>Cell Phone<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">td</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"text-right"</span>&gt;</span>$90<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Monthly<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">tr</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">tbody</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">tbody</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"sub-table"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">tr</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Expense 1<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">td</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"text-right"</span>&gt;</span>$1,480<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Monthly<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">tr</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">tr</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Expense 2<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">td</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"text-right"</span>&gt;</span>$51<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Monthly<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">tr</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">tr</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Expense 3<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">td</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"text-right"</span>&gt;</span>$90<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Monthly<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">tr</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">tbody</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">table</span>&gt;</span></pre>
+					</div>
+
+					<div class="result codeExample">
+						<div class="exampleOutput">
+							<table class="table has-sub-table" summary="This summary is for screen readers and should summarize the structure of the table headers and rows">
+<caption class="show-for-sr">Basic Table</caption>
+    <thead>
+        <tr>
+            <th width="500" colspan="2">Expenses</th>
+            <th width="100" class="text-right">Amount</th>
+            <th width="400">Frequency</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td colspan="2">Rent</td>
+            <td class="text-right">$1,480</td>
+            <td>Monthly</td>
+        </tr>
+        <tr>
+            <td colspan="2">Resident Service Fee</td>
+            <td class="text-right">$51</td>
+            <td>Monthly</td>
+        </tr>
+        <tr>
+            <td colspan="2">Cell Phone</td>
+            <td class="text-right">$90</td>
+            <td>Monthly</td>
+        </tr>
+    </tbody>
+    <tbody class="sub-table">
+        <tr>
+            <td>Expense 1</td>
+            <td class="text-right">$1,480</td>
+            <td>Monthly</td>
+        </tr>
+        <tr>
+            <td>Expense 2</td>
+            <td class="text-right">$51</td>
+            <td>Monthly</td>
+        </tr>
+        <tr>
+            <td>Expense 3</td>
+            <td class="text-right">$90</td>
+            <td>Monthly</td>
+        </tr>
+    </tbody>
+</table>
+						</div>
+					</div>
+
+				</div>
+				<div class="section" id="-" data-section="" data-heading="">
+
+					<div class="comment">
+						
+						<h3 class="main-section-sg-by-lvnm" id="section-Sub-Table_Accordions">Sub-Table Accordions</h3>
+<p>The <code>.sub-table-accordion</code> class may be added the the preceeding sibling <code>&lt;tbody&gt;</code> of the sub-table that you&apos;d like to collapse/expand.
+This will append the icon in the last table row. At the same time, you will want to add <code>.sub-table-hide</code> in order to have the sub-table
+collapsed on page load. You will need use the <code>.sub-table-hide</code> class to toggle on and off in order to show and hide the sub-table itself.
+You will need to change <code>&lt;td&gt;</code> widths accordingly, since the icon will be added as a column of <code>:before</code> content.
+*Note: JS toggle functionality does not come with classes out of the box.</p>
+					</div>
+
+					<div class="ss-title">EXAMPLE
+						<span class="icon-code tooltip-target tooltip-show-on-hover">
+							<div class="show-hide-code tooltip tooltip-top-right reset-child-margins">
+								<p>Show Code</p>
+							</div>
+							<span class="icon icon-caret-left"></span>
+							<span class="icon icon-caret-right"></span>
+						</span>
+					</div>
+					<div class="codeBlock markup hljs">
+						<pre><span class="hljs-tag">&lt;<span class="hljs-title">table</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"table has-sub-table"</span> <span class="hljs-attribute">summary</span>=<span class="hljs-value">"This summary is for screen readers and should summarize the structure of the table headers and rows"</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">caption</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"show-for-sr"</span>&gt;</span>Basic Table<span class="hljs-tag">&lt;/<span class="hljs-title">caption</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">thead</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">tr</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">th</span> <span class="hljs-attribute">width</span>=<span class="hljs-value">"500"</span> <span class="hljs-attribute">colspan</span>=<span class="hljs-value">"2"</span>&gt;</span>Expenses<span class="hljs-tag">&lt;/<span class="hljs-title">th</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">th</span> <span class="hljs-attribute">width</span>=<span class="hljs-value">"100"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"text-right"</span>&gt;</span>Amount<span class="hljs-tag">&lt;/<span class="hljs-title">th</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">th</span> <span class="hljs-attribute">width</span>=<span class="hljs-value">"400"</span>&gt;</span>Frequency<span class="hljs-tag">&lt;/<span class="hljs-title">th</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">tr</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">thead</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">tbody</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"sub-table-accordion sub-table-hide"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">tr</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">td</span> <span class="hljs-attribute">colspan</span>=<span class="hljs-value">"2"</span>&gt;</span>Rent<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">td</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"text-right"</span>&gt;</span>$1,480<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Monthly<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">tr</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">tr</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">td</span> <span class="hljs-attribute">colspan</span>=<span class="hljs-value">"2"</span>&gt;</span>Resident Service Fee<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">td</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"text-right"</span>&gt;</span>$51<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Monthly<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">tr</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">tr</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Cell Phone<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">td</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"text-right"</span>&gt;</span>$90<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Monthly<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">tr</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">tbody</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">tbody</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"sub-table"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">tr</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Expense 1<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">td</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"text-right"</span>&gt;</span>$1,480<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Monthly<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">tr</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">tr</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Expense 2<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">td</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"text-right"</span>&gt;</span>$51<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Monthly<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">tr</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">tr</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Expense 3<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">td</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"text-right"</span>&gt;</span>$90<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Monthly<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">tr</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">tbody</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">tbody</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"sub-table-accordion sub-table-hide"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">tr</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">td</span> <span class="hljs-attribute">width</span>=<span class="hljs-value">"50%"</span>&gt;</span>Living<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">td</span> <span class="hljs-attribute">width</span>=<span class="hljs-value">"10%"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"text-right"</span>&gt;</span>$1,480<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">td</span> <span class="hljs-attribute">width</span>=<span class="hljs-value">"40%"</span>&gt;</span>Monthly<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">tr</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">tbody</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">tbody</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"sub-table"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">tr</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">th</span>&gt;</span>Expenses<span class="hljs-tag">&lt;/<span class="hljs-title">th</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">th</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"text-right"</span>&gt;</span>Amount<span class="hljs-tag">&lt;/<span class="hljs-title">th</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">th</span>&gt;</span>Frequency<span class="hljs-tag">&lt;/<span class="hljs-title">th</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">tr</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">tr</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Expense 4<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">td</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"text-right"</span>&gt;</span>$1,590<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Monthly<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">tr</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">tr</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Expense 5<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">td</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"text-right"</span>&gt;</span>$51<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Monthly<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">tr</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">tr</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Expense 6<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">td</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"text-right"</span>&gt;</span>$90<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Monthly<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">tr</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">tbody</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">table</span>&gt;</span></pre>
+					</div>
+
+					<div class="result codeExample">
+						<div class="exampleOutput">
+							<table class="table has-sub-table" summary="This summary is for screen readers and should summarize the structure of the table headers and rows">
+<caption class="show-for-sr">Basic Table</caption>
+    <thead>
+        <tr>
+            <th width="500" colspan="2">Expenses</th>
+            <th width="100" class="text-right">Amount</th>
+            <th width="400">Frequency</th>
+        </tr>
+    </thead>
+    <tbody class="sub-table-accordion sub-table-hide">
+        <tr>
+            <td colspan="2">Rent</td>
+            <td class="text-right">$1,480</td>
+            <td>Monthly</td>
+        </tr>
+        <tr>
+            <td colspan="2">Resident Service Fee</td>
+            <td class="text-right">$51</td>
+            <td>Monthly</td>
+        </tr>
+        <tr>
+            <td>Cell Phone</td>
+            <td class="text-right">$90</td>
+            <td>Monthly</td>
+        </tr>
+    </tbody>
+    <tbody class="sub-table">
+        <tr>
+            <td>Expense 1</td>
+            <td class="text-right">$1,480</td>
+            <td>Monthly</td>
+        </tr>
+        <tr>
+            <td>Expense 2</td>
+            <td class="text-right">$51</td>
+            <td>Monthly</td>
+        </tr>
+        <tr>
+            <td>Expense 3</td>
+            <td class="text-right">$90</td>
+            <td>Monthly</td>
+        </tr>
+    </tbody>
+    <tbody class="sub-table-accordion sub-table-hide">
+        <tr>
+            <td width="50%">Living</td>
+            <td width="10%" class="text-right">$1,480</td>
+            <td width="40%">Monthly</td>
+        </tr>
+    </tbody>
+    <tbody class="sub-table">
+        <tr>
+            <th>Expenses</th>
+            <th class="text-right">Amount</th>
+            <th>Frequency</th>
+        </tr>
+        <tr>
+            <td>Expense 4</td>
+            <td class="text-right">$1,590</td>
+            <td>Monthly</td>
+        </tr>
+        <tr>
+            <td>Expense 5</td>
+            <td class="text-right">$51</td>
+            <td>Monthly</td>
+        </tr>
+        <tr>
+            <td>Expense 6</td>
+            <td class="text-right">$90</td>
+            <td>Monthly</td>
+        </tr>
+    </tbody>
+</table>
+						</div>
+					</div>
+
+				</div>
+				<div class="section" id="Tables-Sub-Keyvals" data-section="Tables" data-heading="Sub-Keyvals">
+
+					<div class="comment">
+						<h1>Sub-Keyvals</h1>
+						<h3 class="main-section-sg-by-lvnm" id="section-Sub-Keyval_Charts">Sub-Keyval Charts</h3>
+<p>*Note: Unlike sub-tables, sub-keyval charts do not require the <code>.has-sub-table</code> class. To apply a sub-keyval chart,
+simply apply create a sibling <code>&lt;ul&gt;</code>, and add the <code>.sub-keyval</code> class to the desired <code>&lt;ul&gt;</code> tag.</p>
+					</div>
+
+					<div class="ss-title">EXAMPLE
+						<span class="icon-code tooltip-target tooltip-show-on-hover">
+							<div class="show-hide-code tooltip tooltip-top-right reset-child-margins">
+								<p>Show Code</p>
+							</div>
+							<span class="icon icon-caret-left"></span>
+							<span class="icon icon-caret-right"></span>
+						</span>
+					</div>
+					<div class="codeBlock markup hljs">
+						<pre><span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"keyval-chart"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"chart-head"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"key"</span>&gt;</span>Expense<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"val"</span>&gt;</span>Amount<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"key"</span>&gt;</span>Rent<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"val"</span>&gt;</span>$14,800<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"key"</span>&gt;</span>Resident Service Fee<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"val"</span>&gt;</span>$51
+    <span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"key"</span>&gt;</span>Cell Phone<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"val"</span>&gt;</span>$90
+    <span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"keyval-chart sub-keyval"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"key"</span> <span class="hljs-attribute">colspan</span>=<span class="hljs-value">"2"</span>&gt;</span>Rent<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"val"</span>&gt;</span>$14,800<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"key"</span> <span class="hljs-attribute">colspan</span>=<span class="hljs-value">"2"</span>&gt;</span>Resident Service Fee<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"val"</span>&gt;</span>$51
+    <span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"key"</span> <span class="hljs-attribute">colspan</span>=<span class="hljs-value">"2"</span>&gt;</span>Cell Phone<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"val"</span>&gt;</span>$90
+    <span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span></pre>
+					</div>
+
+					<div class="result codeExample">
+						<div class="exampleOutput">
+							<ul class="keyval-chart">
+    <li class="chart-head">
+        <span class="key">Expense</span>
+        <span class="val">Amount</span>
+    </li>
+    <li>
+        <span class="key">Rent</span>
+        <span class="val">$14,800</span>
+    </li>
+    <li>
+        <span class="key">Resident Service Fee</span>
+        <span class="val">$51
+    </span></li>
+    <li>
+        <span class="key">Cell Phone</span>
+        <span class="val">$90
+    </span></li>
+</ul>
+<ul class="keyval-chart sub-keyval">
+    <li>
+        <span class="key" colspan="2">Rent</span>
+        <span class="val">$14,800</span>
+    </li>
+    <li>
+        <span class="key" colspan="2">Resident Service Fee</span>
+        <span class="val">$51
+    </span></li>
+    <li>
+        <span class="key" colspan="2">Cell Phone</span>
+        <span class="val">$90
+    </span></li>
+</ul>
+						</div>
+					</div>
+
+				</div>
+				<div class="section" id="-" data-section="" data-heading="">
+
+					<div class="comment">
+						
+						<h3 class="main-section-sg-by-lvnm" id="section-Sub-Keyval_Accordions">Sub-Keyval Accordions</h3>
+					</div>
+
+					<div class="ss-title">EXAMPLE
+						<span class="icon-code tooltip-target tooltip-show-on-hover">
+							<div class="show-hide-code tooltip tooltip-top-right reset-child-margins">
+								<p>Show Code</p>
+							</div>
+							<span class="icon icon-caret-left"></span>
+							<span class="icon icon-caret-right"></span>
+						</span>
+					</div>
+					<div class="codeBlock markup hljs">
+						<pre><span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"keyval-chart sub-keyval-accordion sub-keyval-hide"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"chart-head"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"key"</span>&gt;</span>Expense<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"val"</span>&gt;</span>Amount<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"key"</span>&gt;</span>Rent<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"val"</span>&gt;</span>$14,800<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"key"</span>&gt;</span>Resident Service Fee<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"val"</span>&gt;</span>$51
+    <span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"key"</span>&gt;</span>Cell Phone<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"val"</span>&gt;</span>$90
+    <span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"keyval-chart sub-keyval"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"key"</span> <span class="hljs-attribute">colspan</span>=<span class="hljs-value">"2"</span>&gt;</span>Rent<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"val"</span>&gt;</span>$14,800<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"key"</span> <span class="hljs-attribute">colspan</span>=<span class="hljs-value">"2"</span>&gt;</span>Resident Service Fee<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"val"</span>&gt;</span>$51
+    <span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"key"</span> <span class="hljs-attribute">colspan</span>=<span class="hljs-value">"2"</span>&gt;</span>Cell Phone<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"val"</span>&gt;</span>$90
+    <span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span></pre>
+					</div>
+
+					<div class="result codeExample">
+						<div class="exampleOutput">
+							<ul class="keyval-chart sub-keyval-accordion sub-keyval-hide">
+    <li class="chart-head">
+        <span class="key">Expense</span>
+        <span class="val">Amount</span>
+    </li>
+    <li>
+        <span class="key">Rent</span>
+        <span class="val">$14,800</span>
+    </li>
+    <li>
+        <span class="key">Resident Service Fee</span>
+        <span class="val">$51
+    </span></li>
+    <li>
+        <span class="key">Cell Phone</span>
+        <span class="val">$90
+    </span></li>
+</ul>
+<ul class="keyval-chart sub-keyval">
+    <li>
+        <span class="key" colspan="2">Rent</span>
+        <span class="val">$14,800</span>
+    </li>
+    <li>
+        <span class="key" colspan="2">Resident Service Fee</span>
+        <span class="val">$51
+    </span></li>
+    <li>
+        <span class="key" colspan="2">Cell Phone</span>
+        <span class="val">$90
+    </span></li>
+</ul>
+						</div>
+					</div>
+
+				</div>
+				<div class="section" id="Tables-Accessibility" data-section="Tables" data-heading="Accessibility">
+
+					<div class="comment">
+						<h1>Accessibility</h1>
+						<p>Tables have a lot of handy built-in features to make them more usable with screen readers. The key thing to remember is that <em>vision-impaired users can&apos;t quickly scan a table like sighted users can</em>. Typically, screen readers will read out the contents of a table one row at a time. Simpler tables with clear hierarchy and organization will be more easy to use for vision-impaired users.</p>
+<p>Here are some things you can do to make your tables more accessible:</p>
+<h3 class="main-section-sg-by-lvnm" id="section-Define_tables_for_data">Define tables for data</h3>
+<p>Tables should almost always be used for actual data and not for creating page layouts. (You&apos;re using our awesome grid for layout anyway, <em>right?</em>) When a screen reader encounters a table, it runs a series of tests to determine if the table is a layout table or data table. The easiest way to define a table as being for data is by using <code>&lt;th&gt;</code> tags to define the headers of the table. Newer assistive software will also immediately interpret any table with the attribute <code>role=&quot;grid&quot;</code> as being for data.</p>
+					</div>
+
+					<div class="ss-title">EXAMPLE
+						<span class="icon-code tooltip-target tooltip-show-on-hover">
+							<div class="show-hide-code tooltip tooltip-top-right reset-child-margins">
+								<p>Show Code</p>
+							</div>
+							<span class="icon icon-caret-left"></span>
+							<span class="icon icon-caret-right"></span>
+						</span>
+					</div>
+					<div class="codeBlock markup hljs">
+						<pre><span class="hljs-tag">&lt;<span class="hljs-title">table</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"table"</span> <span class="hljs-attribute">role</span>=<span class="hljs-value">"grid"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">thead</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">tr</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">th</span> <span class="hljs-attribute">width</span>=<span class="hljs-value">"200"</span>&gt;</span>Table Header<span class="hljs-tag">&lt;/<span class="hljs-title">th</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">th</span>&gt;</span>Table Header<span class="hljs-tag">&lt;/<span class="hljs-title">th</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">th</span> <span class="hljs-attribute">width</span>=<span class="hljs-value">"150"</span>&gt;</span>Table Header<span class="hljs-tag">&lt;/<span class="hljs-title">th</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">th</span> <span class="hljs-attribute">width</span>=<span class="hljs-value">"150"</span>&gt;</span>Table Header<span class="hljs-tag">&lt;/<span class="hljs-title">th</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">tr</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">thead</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">tbody</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">tr</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Content Goes Here<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>This is longer content Donec id elit non mi porta gravida at eget metus.<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Content Goes Here<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Content Goes Here<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">tr</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">tbody</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">table</span>&gt;</span></pre>
+					</div>
+
+					<div class="result codeExample">
+						<div class="exampleOutput">
+							<table class="table" role="grid">
+    <thead>
+        <tr>
+            <th width="200">Table Header</th>
+            <th>Table Header</th>
+            <th width="150">Table Header</th>
+            <th width="150">Table Header</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Content Goes Here</td>
+            <td>This is longer content Donec id elit non mi porta gravida at eget metus.</td>
+            <td>Content Goes Here</td>
+            <td>Content Goes Here</td>
+        </tr>
+    </tbody>
+</table>
+						</div>
+					</div>
+
+				</div>
+				<div class="section" id="-" data-section="" data-heading="">
+
+					<div class="comment">
+						
+						<h3 class="main-section-sg-by-lvnm" id="section-Add_a_summary">Add a summary</h3>
+<p>The contents of a table can be described using the <code>&lt;caption&gt;</code> tag. However, you can also add the <code>summary</code> attribute to a table to further clarify its use. The <code>summary</code> attribute is specifically designed to explain a table to a vision-impaired user. If a table has both a summary and a caption, the summary should not simply restate the caption.</p>
+<p>The W3C offers <a href="http://www.w3.org/TR/WCAG20-TECHS/H73.html" target="_blank">this example</a> for a table detailing a bus schedule:</p>
+					</div>
+
+					<div class="ss-title">EXAMPLE
+						<span class="icon-code tooltip-target tooltip-show-on-hover">
+							<div class="show-hide-code tooltip tooltip-top-right reset-child-margins">
+								<p>Show Code</p>
+							</div>
+							<span class="icon icon-caret-left"></span>
+							<span class="icon icon-caret-right"></span>
+						</span>
+					</div>
+					<div class="codeBlock markup hljs">
+						<pre><span class="hljs-tag">&lt;<span class="hljs-title">table</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"table"</span> <span class="hljs-attribute">summary</span>=<span class="hljs-value">"Schedule for Route 7 going downtown. Service begins
+at 4:00 AM and ends at midnight. Intersections are listed in the top row.
+Find the intersection closest to your starting point or destination, then read
+down that column to find out what time the bus leaves that intersection."</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">caption</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"show-for-sr"</span>&gt;</span>Table with summary and caption<span class="hljs-tag">&lt;/<span class="hljs-title">caption</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">thead</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">tr</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">th</span> <span class="hljs-attribute">width</span>=<span class="hljs-value">"200"</span>&gt;</span>Table Header<span class="hljs-tag">&lt;/<span class="hljs-title">th</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">th</span>&gt;</span>Table Header<span class="hljs-tag">&lt;/<span class="hljs-title">th</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">th</span> <span class="hljs-attribute">width</span>=<span class="hljs-value">"150"</span>&gt;</span>Table Header<span class="hljs-tag">&lt;/<span class="hljs-title">th</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">th</span> <span class="hljs-attribute">width</span>=<span class="hljs-value">"150"</span>&gt;</span>Table Header<span class="hljs-tag">&lt;/<span class="hljs-title">th</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">tr</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">thead</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">tbody</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">tr</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>4:00<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>4:05<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>4:11<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>4:19<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">tr</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">tbody</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">table</span>&gt;</span></pre>
+					</div>
+
+					<div class="result codeExample">
+						<div class="exampleOutput">
+							<table class="table" summary="Schedule for Route 7 going downtown. Service begins
+at 4:00 AM and ends at midnight. Intersections are listed in the top row.
+Find the intersection closest to your starting point or destination, then read
+down that column to find out what time the bus leaves that intersection.">
+<caption class="show-for-sr">Table with summary and caption</caption>
+    <thead>
+        <tr>
+            <th width="200">Table Header</th>
+            <th>Table Header</th>
+            <th width="150">Table Header</th>
+            <th width="150">Table Header</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>4:00</td>
+            <td>4:05</td>
+            <td>4:11</td>
+            <td>4:19</td>
+        </tr>
+    </tbody>
+</table>
+						</div>
+					</div>
+
+				</div>
+				<div class="section" id="Tables-Actionable" data-section="Tables" data-heading="Actionable">
+
+					<div class="comment">
+						<h1>Actionable</h1>
+						<p>You may make an individual row appear actionable with the <code>.actionable</code>. When applied a row will highlight with an actionable color on hover.</p>
+					</div>
+
+					<div class="ss-title">EXAMPLE
+						<span class="icon-code tooltip-target tooltip-show-on-hover">
+							<div class="show-hide-code tooltip tooltip-top-right reset-child-margins">
+								<p>Show Code</p>
+							</div>
+							<span class="icon icon-caret-left"></span>
+							<span class="icon icon-caret-right"></span>
+						</span>
+					</div>
+					<div class="codeBlock markup hljs">
+						<pre><span class="hljs-tag">&lt;<span class="hljs-title">table</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"table"</span> <span class="hljs-attribute">summary</span>=<span class="hljs-value">"This summary is for screen readers and should summarize the structure of the table headers and rows"</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">caption</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"show-for-sr"</span>&gt;</span>Actionalbe Table Rows<span class="hljs-tag">&lt;/<span class="hljs-title">caption</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">thead</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">tr</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">th</span> <span class="hljs-attribute">width</span>=<span class="hljs-value">"500"</span>&gt;</span>Expenses<span class="hljs-tag">&lt;/<span class="hljs-title">th</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">th</span> <span class="hljs-attribute">width</span>=<span class="hljs-value">"100"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"text-right"</span>&gt;</span>Amount<span class="hljs-tag">&lt;/<span class="hljs-title">th</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">th</span> <span class="hljs-attribute">width</span>=<span class="hljs-value">"400"</span>&gt;</span>Frequency<span class="hljs-tag">&lt;/<span class="hljs-title">th</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">tr</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">thead</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">tbody</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">tr</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"actionable"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Rent<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">td</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"text-right"</span>&gt;</span>$1,480<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Monthly<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">tr</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">tr</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"actionable"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Resident Service Fee<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">td</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"text-right"</span>&gt;</span>$51<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Monthly<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">tr</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">tr</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"actionable"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Cell Phone<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">td</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"text-right"</span>&gt;</span>$90<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Monthly<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">tr</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">tbody</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">table</span>&gt;</span></pre>
+					</div>
+
+					<div class="result codeExample">
+						<div class="exampleOutput">
+							<table class="table" summary="This summary is for screen readers and should summarize the structure of the table headers and rows">
+<caption class="show-for-sr">Actionalbe Table Rows</caption>
+    <thead>
+        <tr>
+            <th width="500">Expenses</th>
+            <th width="100" class="text-right">Amount</th>
+            <th width="400">Frequency</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr class="actionable">
+            <td>Rent</td>
+            <td class="text-right">$1,480</td>
+            <td>Monthly</td>
+        </tr>
+        <tr class="actionable">
+            <td>Resident Service Fee</td>
+            <td class="text-right">$51</td>
+            <td>Monthly</td>
+        </tr>
+            <tr class="actionable">
+            <td>Cell Phone</td>
+            <td class="text-right">$90</td>
+            <td>Monthly</td>
+        </tr>
+    </tbody>
+</table>
+						</div>
+					</div>
+
+				</div>
+				<div class="section" id="Tables-Keyval_Charts" data-section="Tables" data-heading="Keyval Charts">
+
+					<div class="comment">
+						<h1>Keyval Charts</h1>
+						<p>A key-val chart is a semi-tabular structure intended to display a set of key-value pairs.</p>
+					</div>
+
+					<div class="ss-title">EXAMPLE
+						<span class="icon-code tooltip-target tooltip-show-on-hover">
+							<div class="show-hide-code tooltip tooltip-top-right reset-child-margins">
+								<p>Show Code</p>
+							</div>
+							<span class="icon icon-caret-left"></span>
+							<span class="icon icon-caret-right"></span>
+						</span>
+					</div>
+					<div class="codeBlock markup hljs">
+						<pre><span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"keyval-chart"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"chart-head"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"key"</span>&gt;</span>Expense<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"val"</span>&gt;</span>Amount<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"key"</span>&gt;</span>Rent<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"val"</span>&gt;</span>$14,800<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"key"</span>&gt;</span>Resident Service Fee<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"val"</span>&gt;</span>$51
+    <span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"key"</span>&gt;</span>Cell Phone<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"val"</span>&gt;</span>$90
+    <span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span></pre>
+					</div>
+
+					<div class="result codeExample">
+						<div class="exampleOutput">
+							<ul class="keyval-chart">
+    <li class="chart-head">
+        <span class="key">Expense</span>
+        <span class="val">Amount</span>
+    </li>
+    <li>
+        <span class="key">Rent</span>
+        <span class="val">$14,800</span>
+    </li>
+    <li>
+        <span class="key">Resident Service Fee</span>
+        <span class="val">$51
+    </span></li>
+    <li>
+        <span class="key">Cell Phone</span>
+        <span class="val">$90
+    </span></li>
+</ul>
+						</div>
+					</div>
+
+				</div>
+				<div class="section" id="-" data-section="" data-heading="">
+
+					<div class="comment">
+						
+						<h3 class="main-section-sg-by-lvnm" id="section-Actionable_Key-val">Actionable Key-val</h3>
+					</div>
+
+					<div class="ss-title">EXAMPLE
+						<span class="icon-code tooltip-target tooltip-show-on-hover">
+							<div class="show-hide-code tooltip tooltip-top-right reset-child-margins">
+								<p>Show Code</p>
+							</div>
+							<span class="icon icon-caret-left"></span>
+							<span class="icon icon-caret-right"></span>
+						</span>
+					</div>
+					<div class="codeBlock markup hljs">
+						<pre><span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"keyval-chart"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"chart-head"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"key"</span>&gt;</span>Expense<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"val"</span>&gt;</span>Amount<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"actionable"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"key"</span>&gt;</span>Rent<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"val"</span>&gt;</span>$14,800<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"actionable"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"key"</span>&gt;</span>Resident Service Fee<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"val"</span>&gt;</span>$51
+    <span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"actionable"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"key"</span>&gt;</span>Cell Phone<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"val"</span>&gt;</span>$90
+    <span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span></pre>
+					</div>
+
+					<div class="result codeExample">
+						<div class="exampleOutput">
+							<ul class="keyval-chart">
+    <li class="chart-head">
+        <span class="key">Expense</span>
+        <span class="val">Amount</span>
+    </li>
+    <li class="actionable">
+            <span class="key">Rent</span>
+        <span class="val">$14,800</span>
+    </li>
+    <li class="actionable">
+        <span class="key">Resident Service Fee</span>
+        <span class="val">$51
+    </span></li>
+    <li class="actionable">
+        <span class="key">Cell Phone</span>
+        <span class="val">$90
+    </span></li>
+</ul>
+						</div>
+					</div>
+
+				</div>
+				<div class="section" id="Column_Widths" data-section="" data-heading="">
+
+					<div class="comment">
+						
+						<h2 class="main-section-sg-by-lvnm" id="section-Column_Widths">Column Widths</h2>
+<p>By default, the <code>.key</code> and <code>.val</code> classes on elements will render at a default width of <strong>50%</strong>.</p>
+<p>As certain contexts may require this width to be set explicitly, you may set the width of these columns using the <code>.key-columns-#</code> and <code>.val-columns-#</code> classes (where # is a number from 1 - 12). The idea behind how to implement this feature is based in the 12 column grid.</p>
+					</div>
+
+					<div class="ss-title">EXAMPLE
+						<span class="icon-code tooltip-target tooltip-show-on-hover">
+							<div class="show-hide-code tooltip tooltip-top-right reset-child-margins">
+								<p>Show Code</p>
+							</div>
+							<span class="icon icon-caret-left"></span>
+							<span class="icon icon-caret-right"></span>
+						</span>
+					</div>
+					<div class="codeBlock markup hljs">
+						<pre><span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"keyval-chart key-columns-5 val-columns-7"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"chart-head"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"key"</span>&gt;</span>Expense<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"val"</span>&gt;</span>Amount<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"key"</span>&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam placerat vestibulum ultrices. Quisque venenatis nulla at ipsum vestibulum bibendum. Nunc et sem vel neque molestie lobortis non eu ex. In hac habitasse platea dictumst. Nam quis dapibus urna, vel interdum mauris. <span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"val"</span>&gt;</span>$14,800<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"key"</span>&gt;</span>Resident Service Fee<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"val"</span>&gt;</span>$51
+    <span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"key"</span>&gt;</span>Cell Phone<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"val"</span>&gt;</span>$90
+    <span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span></pre>
+					</div>
+
+					<div class="result codeExample">
+						<div class="exampleOutput">
+							<ul class="keyval-chart key-columns-5 val-columns-7">
+    <li class="chart-head">
+        <span class="key">Expense</span>
+        <span class="val">Amount</span>
+    </li>
+    <li>
+        <span class="key">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam placerat vestibulum ultrices. Quisque venenatis nulla at ipsum vestibulum bibendum. Nunc et sem vel neque molestie lobortis non eu ex. In hac habitasse platea dictumst. Nam quis dapibus urna, vel interdum mauris. </span>
+        <span class="val">$14,800</span>
+    </li>
+    <li>
+        <span class="key">Resident Service Fee</span>
+        <span class="val">$51
+    </span></li>
+    <li>
+        <span class="key">Cell Phone</span>
+        <span class="val">$90
+    </span></li>
+</ul>
+						</div>
+					</div>
+
+				</div>
+				<div class="section" id="-" data-section="" data-heading="">
+
+					<div class="comment">
+						
+						<p>These values should be between 1 and the number of columns in your theme&apos;s grid. The example above contains values whose sum is 12, the number of columns in the grid by default.</p>
+					</div>
+
+
+
+				</div>
+				<div class="section" id="Tables-Sortable_Table" data-section="Tables" data-heading="Sortable Table">
+
+					<div class="comment">
+						<h1>Sortable Table</h1>
+						<p>A sortable table is indicated by an arrow on the left of header column which is sortable. The sortable table header style includes the use of <code>.sortable</code> , <code>.icon-arrow-down</code>, <code>.icon-arrow-up</code>. (In this example javaScript is used to toggle the <code>.sorted</code> class and to sort the table. The UI Toolkit does not provide the javascript behind this action - only the style.)</p>
+					</div>
+
+					<div class="ss-title">EXAMPLE
+						<span class="icon-code tooltip-target tooltip-show-on-hover">
+							<div class="show-hide-code tooltip tooltip-top-right reset-child-margins">
+								<p>Show Code</p>
+							</div>
+							<span class="icon icon-caret-left"></span>
+							<span class="icon icon-caret-right"></span>
+						</span>
+					</div>
+					<div class="codeBlock markup hljs">
+						<pre><span class="hljs-tag">&lt;<span class="hljs-title">table</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"table sortable-table"</span> <span class="hljs-attribute">summary</span>=<span class="hljs-value">"This summary is for screen readers and should summarize the structure of the table headers and rows"</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">caption</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"show-for-sr"</span>&gt;</span>Section table with groupings<span class="hljs-tag">&lt;/<span class="hljs-title">caption</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">thead</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">tr</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">th</span> <span class="hljs-attribute">width</span>=<span class="hljs-value">"800"</span> <span class="hljs-attribute">scope</span>=<span class="hljs-value">"col"</span>&gt;</span>Name<span class="hljs-tag">&lt;/<span class="hljs-title">th</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">th</span> <span class="hljs-attribute">width</span>=<span class="hljs-value">"200"</span> <span class="hljs-attribute">scope</span>=<span class="hljs-value">"col"</span>&gt;</span>Collection<span class="hljs-tag">&lt;/<span class="hljs-title">th</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">th</span> <span class="hljs-attribute">width</span>=<span class="hljs-value">"300"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"sortable-table-header"</span> <span class="hljs-attribute">scope</span>=<span class="hljs-value">"col"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span>&gt;</span>Document Type <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"icon icon-arrow-down margin-left-small"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">th</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">th</span> <span class="hljs-attribute">width</span>=<span class="hljs-value">"300"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"sortable-table-header sorted"</span> <span class="hljs-attribute">scope</span>=<span class="hljs-value">"col"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span>&gt;</span>Upload Date <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"icon icon-arrow-down margin-left-small"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">th</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">tr</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">thead</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">tbody</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">tr</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Mitchell&amp;apos;s living will<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Estate<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Living Will<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Sep 10, 2015<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">tr</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">tr</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Toyota Rav4 insurance statement<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Insurance<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Car Insurance<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Oct 20, 2015<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">tr</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">tr</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>478 Main St. Loan<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Financial<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Mortgage<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Nov 4, 2015<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">tr</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">tr</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>478 Main St. Loan<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Estate<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Power of Attorney<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Dec 5, 2015<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">tr</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">tbody</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">table</span>&gt;</span></pre>
+					</div>
+
+					<div class="result codeExample">
+						<div class="exampleOutput">
+							<table class="table sortable-table" summary="This summary is for screen readers and should summarize the structure of the table headers and rows">
+<caption class="show-for-sr">Section table with groupings</caption>
+    <thead>
+        <tr>
+            <th width="800" scope="col">Name</th>
+            <th width="200" scope="col">Collection</th>
+            <th width="300" class="sortable-table-header" scope="col"><a href="#">Document Type <span class="icon icon-arrow-down margin-left-small"></span></a></th>
+            <th width="300" class="sortable-table-header sorted" scope="col"><a href="#">Upload Date <span class="icon icon-arrow-down margin-left-small"></span></a></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Mitchell&apos;s living will</td>
+            <td>Estate</td>
+            <td>Living Will</td>
+            <td>Sep 10, 2015</td>
+        </tr>
+        <tr>
+            <td>Toyota Rav4 insurance statement</td>
+            <td>Insurance</td>
+            <td>Car Insurance</td>
+            <td>Oct 20, 2015</td>
+        </tr>
+        <tr>
+            <td>478 Main St. Loan</td>
+            <td>Financial</td>
+            <td>Mortgage</td>
+            <td>Nov 4, 2015</td>
+        </tr>
+        <tr>
+        <td>478 Main St. Loan</td>
+            <td>Estate</td>
+            <td>Power of Attorney</td>
+            <td>Dec 5, 2015</td>
+        </tr>
+    </tbody>
+</table>
+						</div>
+					</div>
+
+				</div>
+				<div class="section" id="Tables-Group_Headers" data-section="Tables" data-heading="Group Headers">
+
+					<div class="comment">
+						<h1>Group Headers</h1>
+						<p>The table group header style includes the use of <code>.table-group-header</code> on the table row, a <code>colspan</code> value on the table column to span all columns, and a header (<code>h5</code> recommended) with the group title inside the column. Adjust the padding by adding utility classes to the header element.</p>
+					</div>
+
+					<div class="ss-title">EXAMPLE
+						<span class="icon-code tooltip-target tooltip-show-on-hover">
+							<div class="show-hide-code tooltip tooltip-top-right reset-child-margins">
+								<p>Show Code</p>
+							</div>
+							<span class="icon icon-caret-left"></span>
+							<span class="icon icon-caret-right"></span>
+						</span>
+					</div>
+					<div class="codeBlock markup hljs">
+						<pre><span class="hljs-tag">&lt;<span class="hljs-title">table</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"table"</span> <span class="hljs-attribute">summary</span>=<span class="hljs-value">"This summary is for screen readers and should summarize the structure of the table headers and rows"</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">caption</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"show-for-sr"</span>&gt;</span>Section table with groupings<span class="hljs-tag">&lt;/<span class="hljs-title">caption</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">thead</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">tr</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">th</span> <span class="hljs-attribute">width</span>=<span class="hljs-value">"800"</span> <span class="hljs-attribute">scope</span>=<span class="hljs-value">"col"</span>&gt;</span>Name<span class="hljs-tag">&lt;/<span class="hljs-title">th</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">th</span> <span class="hljs-attribute">width</span>=<span class="hljs-value">"200"</span> <span class="hljs-attribute">scope</span>=<span class="hljs-value">"col"</span>&gt;</span>Collection<span class="hljs-tag">&lt;/<span class="hljs-title">th</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">th</span> <span class="hljs-attribute">width</span>=<span class="hljs-value">"300"</span> <span class="hljs-attribute">scope</span>=<span class="hljs-value">"col"</span>&gt;</span>Document Type<span class="hljs-tag">&lt;/<span class="hljs-title">th</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">th</span> <span class="hljs-attribute">width</span>=<span class="hljs-value">"300"</span> <span class="hljs-attribute">scope</span>=<span class="hljs-value">"col"</span>&gt;</span>Upload Date<span class="hljs-tag">&lt;/<span class="hljs-title">th</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">tr</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">thead</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">tbody</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">tr</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"table-group-header"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">td</span> <span class="hljs-attribute">colspan</span>=<span class="hljs-value">"4"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">h5</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"padding-top-small"</span>&gt;</span>Estate<span class="hljs-tag">&lt;/<span class="hljs-title">h5</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">tr</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">tr</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Mitchell&amp;apos;s living will<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Estate<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Living Will<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Sep 10, 2015<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">tr</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">tr</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>478 Main St. Loan<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Estate<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Power of Attorney<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Dec 5, 2015<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">tr</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">tr</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"table-group-header"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">td</span> <span class="hljs-attribute">colspan</span>=<span class="hljs-value">"4"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">h5</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"padding-top-small"</span>&gt;</span>Financial<span class="hljs-tag">&lt;/<span class="hljs-title">h5</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">tr</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">tr</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>478 Main St. Loan<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Financial<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Mortgage<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Nov 4, 2015<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">tr</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">tr</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"table-group-header"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">td</span> <span class="hljs-attribute">colspan</span>=<span class="hljs-value">"4"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">h5</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"padding-top-small"</span>&gt;</span>Insurance<span class="hljs-tag">&lt;/<span class="hljs-title">h5</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">tr</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">tr</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Toyota Rav4 insurance statement<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Insurance<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Car Insurance<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Oct 20, 2015<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">tr</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">tbody</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">table</span>&gt;</span></pre>
+					</div>
+
+					<div class="result codeExample">
+						<div class="exampleOutput">
+							<table class="table" summary="This summary is for screen readers and should summarize the structure of the table headers and rows">
+<caption class="show-for-sr">Section table with groupings</caption>
+    <thead>
+        <tr>
+            <th width="800" scope="col">Name</th>
+            <th width="200" scope="col">Collection</th>
+            <th width="300" scope="col">Document Type</th>
+            <th width="300" scope="col">Upload Date</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr class="table-group-header">
+            <td colspan="4"><h5 class="padding-top-small">Estate</h5></td>
+        </tr>
+        <tr>
+            <td>Mitchell&apos;s living will</td>
+            <td>Estate</td>
+            <td>Living Will</td>
+            <td>Sep 10, 2015</td>
+        </tr>
+        <tr>
+            <td>478 Main St. Loan</td>
+            <td>Estate</td>
+            <td>Power of Attorney</td>
+            <td>Dec 5, 2015</td>
+        </tr>
+        <tr class="table-group-header">
+            <td colspan="4"><h5 class="padding-top-small">Financial</h5></td>
+        </tr>
+        <tr>
+            <td>478 Main St. Loan</td>
+            <td>Financial</td>
+            <td>Mortgage</td>
+            <td>Nov 4, 2015</td>
+        </tr>
+        <tr class="table-group-header">
+            <td colspan="4"><h5 class="padding-top-small">Insurance</h5></td>
+        </tr>
+        <tr>
+            <td>Toyota Rav4 insurance statement</td>
+            <td>Insurance</td>
+            <td>Car Insurance</td>
+            <td>Oct 20, 2015</td>
+        </tr>
+    </tbody>
+</table>
+						</div>
+					</div>
+
+				</div>
+				<div class="section" id="Tables-Contextual_Colors" data-section="Tables" data-heading="Contextual Colors">
+
+					<div class="comment">
+						<h1>Contextual Colors</h1>
+						<p>You may also add contextual colors to table rows:</p>
+					</div>
+
+					<div class="ss-title">EXAMPLE
+						<span class="icon-code tooltip-target tooltip-show-on-hover">
+							<div class="show-hide-code tooltip tooltip-top-right reset-child-margins">
+								<p>Show Code</p>
+							</div>
+							<span class="icon icon-caret-left"></span>
+							<span class="icon icon-caret-right"></span>
+						</span>
+					</div>
+					<div class="codeBlock markup hljs">
+						<pre><span class="hljs-tag">&lt;<span class="hljs-title">table</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"table"</span> <span class="hljs-attribute">summary</span>=<span class="hljs-value">"This summary is for screen readers and should summarize the structure of the table headers and rows"</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">caption</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"show-for-sr"</span>&gt;</span>Basic Table<span class="hljs-tag">&lt;/<span class="hljs-title">caption</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">thead</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">tr</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">th</span> <span class="hljs-attribute">width</span>=<span class="hljs-value">"200"</span>&gt;</span>Table Header<span class="hljs-tag">&lt;/<span class="hljs-title">th</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">th</span>&gt;</span>Table Header<span class="hljs-tag">&lt;/<span class="hljs-title">th</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">th</span> <span class="hljs-attribute">width</span>=<span class="hljs-value">"150"</span>&gt;</span>Table Header<span class="hljs-tag">&lt;/<span class="hljs-title">th</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">th</span> <span class="hljs-attribute">width</span>=<span class="hljs-value">"150"</span>&gt;</span>Table Header<span class="hljs-tag">&lt;/<span class="hljs-title">th</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">tr</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">thead</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">tbody</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">tr</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"success"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span>&gt;</span>Success Content Goes Here<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>This is longer content Donec id elit non mi porta gravida at eget metus.<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Content Goes Here<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Content Goes Here<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">tr</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">tr</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"warning"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span>&gt;</span>Warning Content Goes Here<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>This is longer content Donec id elit non mi porta gravida at eget metus.<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Content Goes Here<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Content Goes Here<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">tr</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">tr</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"info"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span>&gt;</span>Info Content Goes Here<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>This is longer content Donec id elit non mi porta gravida at eget metus.<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Content Goes Here<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Content Goes Here<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">tr</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">tr</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"alert"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span>&gt;</span>Alert Content Goes Here<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>This is longer content Donec id elit non mi porta gravida at eget metus.<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Content Goes Here<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Content Goes Here<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">tr</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">tbody</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">table</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"keyval-chart"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"chart-head"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"key"</span>&gt;</span>Key<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"val"</span>&gt;</span>Value<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"success"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"key"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span>&gt;</span>Success<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"val"</span>&gt;</span>Content Goes Here<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"warning"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"key"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span>&gt;</span>Warning<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"val"</span>&gt;</span>Content Goes Here
+    <span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"info"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"key"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span>&gt;</span>Info<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"val"</span>&gt;</span>Content Goes Here
+    <span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"alert"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"key"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span>&gt;</span>Alert<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"val"</span>&gt;</span>Content Goes Here
+    <span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span></pre>
+					</div>
+
+					<div class="result codeExample">
+						<div class="exampleOutput">
+							<table class="table" summary="This summary is for screen readers and should summarize the structure of the table headers and rows">
+<caption class="show-for-sr">Basic Table</caption>
+    <thead>
+        <tr>
+            <th width="200">Table Header</th>
+            <th>Table Header</th>
+            <th width="150">Table Header</th>
+            <th width="150">Table Header</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr class="success">
+            <td><a href="#">Success Content Goes Here</a></td>
+            <td>This is longer content Donec id elit non mi porta gravida at eget metus.</td>
+            <td>Content Goes Here</td>
+            <td>Content Goes Here</td>
+        </tr>
+        <tr class="warning">
+            <td><a href="#">Warning Content Goes Here</a></td>
+            <td>This is longer content Donec id elit non mi porta gravida at eget metus.</td>
+            <td>Content Goes Here</td>
+            <td>Content Goes Here</td>
+        </tr>
+        <tr class="info">
+            <td><a href="#">Info Content Goes Here</a></td>
+            <td>This is longer content Donec id elit non mi porta gravida at eget metus.</td>
+            <td>Content Goes Here</td>
+            <td>Content Goes Here</td>
+        </tr>
+        <tr class="alert">
+            <td><a href="#">Alert Content Goes Here</a></td>
+            <td>This is longer content Donec id elit non mi porta gravida at eget metus.</td>
+            <td>Content Goes Here</td>
+            <td>Content Goes Here</td>
+        </tr>
+    </tbody>
+</table>
+
+<ul class="keyval-chart">
+    <li class="chart-head">
+        <span class="key">Key</span>
+        <span class="val">Value</span>
+    </li>
+    <li class="success">
+        <span class="key"><a href="#">Success</a></span>
+        <span class="val">Content Goes Here</span>
+    </li>
+    <li class="warning">
+        <span class="key"><a href="#">Warning</a></span>
+        <span class="val">Content Goes Here
+    </span></li>
+    <li class="info">
+        <span class="key"><a href="#">Info</a></span>
+        <span class="val">Content Goes Here
+    </span></li>
+    <li class="alert">
+        <span class="key"><a href="#">Alert</a></span>
+        <span class="val">Content Goes Here
+    </span></li>
+</ul>
+						</div>
+					</div>
+
+				</div>
+				<div class="section" id="Tables-Ghosting_Tables" data-section="Tables" data-heading="Ghosting Tables">
+
+					<div class="comment">
+						<h1>Ghosting Tables</h1>
+						<h3 class="main-section-sg-by-lvnm" id="section-Ghosting_Basic_Tables">Ghosting Basic Tables</h3>
+<p>Tables can be used on dark backgrounds using the <code>.ghost</code> snf <code>.ghost-children</code> classes. See the <a href="ghosting.html">ghosting section</a>
+for more details on ghosting.</p>
+					</div>
+
+					<div class="ss-title">EXAMPLE
+						<span class="icon-code tooltip-target tooltip-show-on-hover">
+							<div class="show-hide-code tooltip tooltip-top-right reset-child-margins">
+								<p>Show Code</p>
+							</div>
+							<span class="icon icon-caret-left"></span>
+							<span class="icon icon-caret-right"></span>
+						</span>
+					</div>
+					<div class="codeBlock markup hljs">
+						<pre><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"bg-off-black padding-medium"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">table</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"table ghost"</span> <span class="hljs-attribute">summary</span>=<span class="hljs-value">"This summary is for screen readers and should summarize the structure of the table headers and rows"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">caption</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"show-for-sr"</span>&gt;</span>Basic Table<span class="hljs-tag">&lt;/<span class="hljs-title">caption</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">thead</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">tr</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">th</span> <span class="hljs-attribute">width</span>=<span class="hljs-value">"500"</span>&gt;</span>Expenses<span class="hljs-tag">&lt;/<span class="hljs-title">th</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">th</span> <span class="hljs-attribute">width</span>=<span class="hljs-value">"100"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"text-right"</span>&gt;</span>Amount<span class="hljs-tag">&lt;/<span class="hljs-title">th</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">th</span> <span class="hljs-attribute">width</span>=<span class="hljs-value">"400"</span>&gt;</span>Frequency<span class="hljs-tag">&lt;/<span class="hljs-title">th</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-title">tr</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">thead</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">tbody</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">tr</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Rent<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">td</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"text-right"</span>&gt;</span>$1,480<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Monthly<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-title">tr</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">tr</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Resident Service Fee<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">td</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"text-right"</span>&gt;</span>$51<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Monthly<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-title">tr</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">tr</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Cell Phone<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">td</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"text-right"</span>&gt;</span>$90<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Monthly<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-title">tr</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">tbody</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">table</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
+					</div>
+
+					<div class="result codeExample">
+						<div class="exampleOutput">
+							<div class="bg-off-black padding-medium">
+    <table class="table ghost" summary="This summary is for screen readers and should summarize the structure of the table headers and rows">
+    <caption class="show-for-sr">Basic Table</caption>
+        <thead>
+            <tr>
+                <th width="500">Expenses</th>
+                <th width="100" class="text-right">Amount</th>
+                <th width="400">Frequency</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Rent</td>
+                <td class="text-right">$1,480</td>
+                <td>Monthly</td>
+            </tr>
+            <tr>
+                <td>Resident Service Fee</td>
+                <td class="text-right">$51</td>
+                <td>Monthly</td>
+            </tr>
+            <tr>
+                <td>Cell Phone</td>
+                <td class="text-right">$90</td>
+                <td>Monthly</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+						</div>
+					</div>
+
+				</div>
+				<div class="section" id="-" data-section="" data-heading="">
+
+					<div class="comment">
+						
+						<h3 class="main-section-sg-by-lvnm" id="section-Ghosting_Sortable_Tables">Ghosting Sortable Tables</h3>
+					</div>
+
+					<div class="ss-title">EXAMPLE
+						<span class="icon-code tooltip-target tooltip-show-on-hover">
+							<div class="show-hide-code tooltip tooltip-top-right reset-child-margins">
+								<p>Show Code</p>
+							</div>
+							<span class="icon icon-caret-left"></span>
+							<span class="icon icon-caret-right"></span>
+						</span>
+					</div>
+					<div class="codeBlock markup hljs">
+						<pre><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"bg-off-black padding-medium"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">table</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"table sortable-table ghost"</span> <span class="hljs-attribute">summary</span>=<span class="hljs-value">"This summary is for screen readers and should summarize the structure of the table headers and rows"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">caption</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"show-for-sr"</span>&gt;</span>Section table with groupings<span class="hljs-tag">&lt;/<span class="hljs-title">caption</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">thead</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">tr</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">th</span> <span class="hljs-attribute">width</span>=<span class="hljs-value">"800"</span> <span class="hljs-attribute">scope</span>=<span class="hljs-value">"col"</span>&gt;</span>Name<span class="hljs-tag">&lt;/<span class="hljs-title">th</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">th</span> <span class="hljs-attribute">width</span>=<span class="hljs-value">"200"</span> <span class="hljs-attribute">scope</span>=<span class="hljs-value">"col"</span>&gt;</span>Collection<span class="hljs-tag">&lt;/<span class="hljs-title">th</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">th</span> <span class="hljs-attribute">width</span>=<span class="hljs-value">"300"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"sortable-table-header"</span> <span class="hljs-attribute">scope</span>=<span class="hljs-value">"col"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span>&gt;</span>Document Type <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"icon icon-arrow-down margin-left-small"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">th</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">th</span> <span class="hljs-attribute">width</span>=<span class="hljs-value">"300"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"sortable-table-header sorted"</span> <span class="hljs-attribute">scope</span>=<span class="hljs-value">"col"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span>&gt;</span>Upload Date <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"icon icon-arrow-down margin-left-small"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">th</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-title">tr</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">thead</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">tbody</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">tr</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Mitchell&amp;apos;s living will<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Estate<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Living Will<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Sep 10, 2015<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-title">tr</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">tr</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Toyota Rav4 insurance statement<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Insurance<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Car Insurance<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Oct 20, 2015<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-title">tr</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">tr</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>478 Main St. Loan<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Financial<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Mortgage<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Nov 4, 2015<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-title">tr</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">tr</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>478 Main St. Loan<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Estate<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Power of Attorney<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Dec 5, 2015<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-title">tr</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">tbody</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">table</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
+					</div>
+
+					<div class="result codeExample">
+						<div class="exampleOutput">
+							<div class="bg-off-black padding-medium">
+    <table class="table sortable-table ghost" summary="This summary is for screen readers and should summarize the structure of the table headers and rows">
+    <caption class="show-for-sr">Section table with groupings</caption>
+        <thead>
+            <tr>
+                <th width="800" scope="col">Name</th>
+                <th width="200" scope="col">Collection</th>
+                <th width="300" class="sortable-table-header" scope="col"><a href="#">Document Type <span class="icon icon-arrow-down margin-left-small"></span></a></th>
+                <th width="300" class="sortable-table-header sorted" scope="col"><a href="#">Upload Date <span class="icon icon-arrow-down margin-left-small"></span></a></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Mitchell&apos;s living will</td>
+                <td>Estate</td>
+                <td>Living Will</td>
+                <td>Sep 10, 2015</td>
+            </tr>
+            <tr>
+                <td>Toyota Rav4 insurance statement</td>
+                <td>Insurance</td>
+                <td>Car Insurance</td>
+                <td>Oct 20, 2015</td>
+            </tr>
+            <tr>
+                <td>478 Main St. Loan</td>
+                <td>Financial</td>
+                <td>Mortgage</td>
+                <td>Nov 4, 2015</td>
+            </tr>
+            <tr>
+            <td>478 Main St. Loan</td>
+                <td>Estate</td>
+                <td>Power of Attorney</td>
+                <td>Dec 5, 2015</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+						</div>
+					</div>
+
+				</div>
+				<div class="section" id="-" data-section="" data-heading="">
+
+					<div class="comment">
+						
+						<h3 class="main-section-sg-by-lvnm" id="section-Ghosting_Actionable_Key-val">Ghosting Actionable Key-val</h3>
+					</div>
+
+					<div class="ss-title">EXAMPLE
+						<span class="icon-code tooltip-target tooltip-show-on-hover">
+							<div class="show-hide-code tooltip tooltip-top-right reset-child-margins">
+								<p>Show Code</p>
+							</div>
+							<span class="icon icon-caret-left"></span>
+							<span class="icon icon-caret-right"></span>
+						</span>
+					</div>
+					<div class="codeBlock markup hljs">
+						<pre><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"bg-off-black padding-medium ghost-children"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"keyval-chart"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"chart-head"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"key"</span>&gt;</span>Expense<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"val"</span>&gt;</span>Amount<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"actionable"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"key"</span>&gt;</span>Rent<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"val"</span>&gt;</span>$14,800<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"actionable"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"key"</span>&gt;</span>Resident Service Fee<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"val"</span>&gt;</span>$51
+        <span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"actionable"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"key"</span>&gt;</span>Cell Phone<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"val"</span>&gt;</span>$90
+        <span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
+					</div>
+
+					<div class="result codeExample">
+						<div class="exampleOutput">
+							<div class="bg-off-black padding-medium ghost-children">
+    <ul class="keyval-chart">
+        <li class="chart-head">
+            <span class="key">Expense</span>
+            <span class="val">Amount</span>
+        </li>
+        <li class="actionable">
+                <span class="key">Rent</span>
+            <span class="val">$14,800</span>
+        </li>
+        <li class="actionable">
+            <span class="key">Resident Service Fee</span>
+            <span class="val">$51
+        </span></li>
+        <li class="actionable">
+            <span class="key">Cell Phone</span>
+            <span class="val">$90
+        </span></li>
+    </ul>
+</div>
+						</div>
+					</div>
+
+				</div>
+				<div class="section" id="-" data-section="" data-heading="">
+
+					<div class="comment">
+						
+						<h3 class="main-section-sg-by-lvnm" id="section-Ghosting_Group_Headers">Ghosting Group Headers</h3>
+					</div>
+
+					<div class="ss-title">EXAMPLE
+						<span class="icon-code tooltip-target tooltip-show-on-hover">
+							<div class="show-hide-code tooltip tooltip-top-right reset-child-margins">
+								<p>Show Code</p>
+							</div>
+							<span class="icon icon-caret-left"></span>
+							<span class="icon icon-caret-right"></span>
+						</span>
+					</div>
+					<div class="codeBlock markup hljs">
+						<pre><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"bg-off-black padding-medium"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">table</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"table ghost"</span> <span class="hljs-attribute">summary</span>=<span class="hljs-value">"This summary is for screen readers and should summarize the structure of the table headers and rows"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">caption</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"show-for-sr"</span>&gt;</span>Section table with groupings<span class="hljs-tag">&lt;/<span class="hljs-title">caption</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">thead</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">tr</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">th</span> <span class="hljs-attribute">width</span>=<span class="hljs-value">"800"</span> <span class="hljs-attribute">scope</span>=<span class="hljs-value">"col"</span>&gt;</span>Name<span class="hljs-tag">&lt;/<span class="hljs-title">th</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">th</span> <span class="hljs-attribute">width</span>=<span class="hljs-value">"200"</span> <span class="hljs-attribute">scope</span>=<span class="hljs-value">"col"</span>&gt;</span>Collection<span class="hljs-tag">&lt;/<span class="hljs-title">th</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">th</span> <span class="hljs-attribute">width</span>=<span class="hljs-value">"300"</span> <span class="hljs-attribute">scope</span>=<span class="hljs-value">"col"</span>&gt;</span>Document Type<span class="hljs-tag">&lt;/<span class="hljs-title">th</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">th</span> <span class="hljs-attribute">width</span>=<span class="hljs-value">"300"</span> <span class="hljs-attribute">scope</span>=<span class="hljs-value">"col"</span>&gt;</span>Upload Date<span class="hljs-tag">&lt;/<span class="hljs-title">th</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-title">tr</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">thead</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">tbody</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">tr</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"table-group-header"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">td</span> <span class="hljs-attribute">colspan</span>=<span class="hljs-value">"4"</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-title">h5</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"padding-top-small"</span>&gt;</span>Estate<span class="hljs-tag">&lt;/<span class="hljs-title">h5</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-title">tr</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">tr</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Mitchell&amp;apos;s living will<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Estate<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Living Will<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Sep 10, 2015<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-title">tr</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">tr</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>478 Main St. Loan<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Estate<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Power of Attorney<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Dec 5, 2015<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-title">tr</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">tr</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"table-group-header"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">td</span> <span class="hljs-attribute">colspan</span>=<span class="hljs-value">"4"</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-title">h5</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"padding-top-small"</span>&gt;</span>Financial<span class="hljs-tag">&lt;/<span class="hljs-title">h5</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-title">tr</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">tr</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>478 Main St. Loan<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Financial<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Mortgage<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Nov 4, 2015<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-title">tr</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">tr</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"table-group-header"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">td</span> <span class="hljs-attribute">colspan</span>=<span class="hljs-value">"4"</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-title">h5</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"padding-top-small"</span>&gt;</span>Insurance<span class="hljs-tag">&lt;/<span class="hljs-title">h5</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-title">tr</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">tr</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Toyota Rav4 insurance statement<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Insurance<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Car Insurance<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Oct 20, 2015<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-title">tr</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">tbody</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">table</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
+					</div>
+
+					<div class="result codeExample">
+						<div class="exampleOutput">
+							<div class="bg-off-black padding-medium">
+    <table class="table ghost" summary="This summary is for screen readers and should summarize the structure of the table headers and rows">
+        <caption class="show-for-sr">Section table with groupings</caption>
+        <thead>
+            <tr>
+                <th width="800" scope="col">Name</th>
+                <th width="200" scope="col">Collection</th>
+                <th width="300" scope="col">Document Type</th>
+                <th width="300" scope="col">Upload Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="table-group-header">
+                <td colspan="4">
+                    <h5 class="padding-top-small">Estate</h5>
+                </td>
+            </tr>
+            <tr>
+                <td>Mitchell&apos;s living will</td>
+                <td>Estate</td>
+                <td>Living Will</td>
+                <td>Sep 10, 2015</td>
+            </tr>
+            <tr>
+                <td>478 Main St. Loan</td>
+                <td>Estate</td>
+                <td>Power of Attorney</td>
+                <td>Dec 5, 2015</td>
+            </tr>
+            <tr class="table-group-header">
+                <td colspan="4">
+                    <h5 class="padding-top-small">Financial</h5></td>
+            </tr>
+            <tr>
+                <td>478 Main St. Loan</td>
+                <td>Financial</td>
+                <td>Mortgage</td>
+                <td>Nov 4, 2015</td>
+            </tr>
+            <tr class="table-group-header">
+                <td colspan="4">
+                    <h5 class="padding-top-small">Insurance</h5></td>
+            </tr>
+            <tr>
+                <td>Toyota Rav4 insurance statement</td>
+                <td>Insurance</td>
+                <td>Car Insurance</td>
+                <td>Oct 20, 2015</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+						</div>
+					</div>
+
+				</div>
+				<div class="section" id="-" data-section="" data-heading="">
+
+					<div class="comment">
+						
+						<h3 class="main-section-sg-by-lvnm" id="section-Ghosting_Contextual_Colors">Ghosting Contextual Colors</h3>
+					</div>
+
+					<div class="ss-title">EXAMPLE
+						<span class="icon-code tooltip-target tooltip-show-on-hover">
+							<div class="show-hide-code tooltip tooltip-top-right reset-child-margins">
+								<p>Show Code</p>
+							</div>
+							<span class="icon icon-caret-left"></span>
+							<span class="icon icon-caret-right"></span>
+						</span>
+					</div>
+					<div class="codeBlock markup hljs">
+						<pre><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"bg-off-black padding-medium ghost-children"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">table</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"table"</span> <span class="hljs-attribute">summary</span>=<span class="hljs-value">"This summary is for screen readers and should summarize the structure of the table headers and rows"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">caption</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"show-for-sr"</span>&gt;</span>Basic Table<span class="hljs-tag">&lt;/<span class="hljs-title">caption</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">thead</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">tr</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">th</span> <span class="hljs-attribute">width</span>=<span class="hljs-value">"200"</span>&gt;</span>Table Header<span class="hljs-tag">&lt;/<span class="hljs-title">th</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">th</span>&gt;</span>Table Header<span class="hljs-tag">&lt;/<span class="hljs-title">th</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">th</span> <span class="hljs-attribute">width</span>=<span class="hljs-value">"150"</span>&gt;</span>Table Header<span class="hljs-tag">&lt;/<span class="hljs-title">th</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">th</span> <span class="hljs-attribute">width</span>=<span class="hljs-value">"150"</span>&gt;</span>Table Header<span class="hljs-tag">&lt;/<span class="hljs-title">th</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-title">tr</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">thead</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">tbody</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">tr</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"success"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span>&gt;</span>Success Content Goes Here<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>This is longer content Donec id elit non mi porta gravida at eget metus.<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Content Goes Here<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Content Goes Here<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-title">tr</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">tr</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"warning"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span>&gt;</span>Warning Content Goes Here<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>This is longer content Donec id elit non mi porta gravida at eget metus.<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Content Goes Here<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Content Goes Here<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-title">tr</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">tr</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"info"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span>&gt;</span>Info Content Goes Here<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>This is longer content Donec id elit non mi porta gravida at eget metus.<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Content Goes Here<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Content Goes Here<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-title">tr</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">tr</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"alert"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span>&gt;</span>Alert Content Goes Here<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>This is longer content Donec id elit non mi porta gravida at eget metus.<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Content Goes Here<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Content Goes Here<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-title">tr</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">tbody</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">table</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"keyval-chart"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"chart-head"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"key"</span>&gt;</span>Key<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"val"</span>&gt;</span>Value<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"success"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"key"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span>&gt;</span>Success<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"val"</span>&gt;</span>Content Goes Here<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"warning"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"key"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span>&gt;</span>Warning<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"val"</span>&gt;</span>Content Goes Here
+        <span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"info"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"key"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span>&gt;</span>Info<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"val"</span>&gt;</span>Content Goes Here
+        <span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"alert"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"key"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span>&gt;</span>Alert<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"val"</span>&gt;</span>Content Goes Here
+        <span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
+					</div>
+
+					<div class="result codeExample">
+						<div class="exampleOutput">
+							<div class="bg-off-black padding-medium ghost-children">
+    <table class="table" summary="This summary is for screen readers and should summarize the structure of the table headers and rows">
+    <caption class="show-for-sr">Basic Table</caption>
+        <thead>
+            <tr>
+                <th width="200">Table Header</th>
+                <th>Table Header</th>
+                <th width="150">Table Header</th>
+                <th width="150">Table Header</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="success">
+                <td><a href="#">Success Content Goes Here</a></td>
+                <td>This is longer content Donec id elit non mi porta gravida at eget metus.</td>
+                <td>Content Goes Here</td>
+                <td>Content Goes Here</td>
+            </tr>
+            <tr class="warning">
+                <td><a href="#">Warning Content Goes Here</a></td>
+                <td>This is longer content Donec id elit non mi porta gravida at eget metus.</td>
+                <td>Content Goes Here</td>
+                <td>Content Goes Here</td>
+            </tr>
+            <tr class="info">
+                <td><a href="#">Info Content Goes Here</a></td>
+                <td>This is longer content Donec id elit non mi porta gravida at eget metus.</td>
+                <td>Content Goes Here</td>
+                <td>Content Goes Here</td>
+            </tr>
+            <tr class="alert">
+                <td><a href="#">Alert Content Goes Here</a></td>
+                <td>This is longer content Donec id elit non mi porta gravida at eget metus.</td>
+                <td>Content Goes Here</td>
+                <td>Content Goes Here</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul class="keyval-chart">
+        <li class="chart-head">
+            <span class="key">Key</span>
+            <span class="val">Value</span>
+        </li>
+        <li class="success">
+            <span class="key"><a href="#">Success</a></span>
+            <span class="val">Content Goes Here</span>
+        </li>
+        <li class="warning">
+            <span class="key"><a href="#">Warning</a></span>
+            <span class="val">Content Goes Here
+        </span></li>
+        <li class="info">
+            <span class="key"><a href="#">Info</a></span>
+            <span class="val">Content Goes Here
+        </span></li>
+        <li class="alert">
+            <span class="key"><a href="#">Alert</a></span>
+            <span class="val">Content Goes Here
+        </span></li>
+    </ul>
+</div>
+						</div>
+					</div>
+
+				</div>
+				<div class="section" id="Tables-Scrollable_Table" data-section="Tables" data-heading="Scrollable Table">
+
+					<div class="comment">
+						<h1>Scrollable Table</h1>
+						<p>Add the <code>.scrollable</code> class and a height to the <code>tbody</code> element to make the table scrollable while keeping the header columns visible.</p>
+					</div>
+
+					<div class="ss-title">EXAMPLE
+						<span class="icon-code tooltip-target tooltip-show-on-hover">
+							<div class="show-hide-code tooltip tooltip-top-right reset-child-margins">
+								<p>Show Code</p>
+							</div>
+							<span class="icon icon-caret-left"></span>
+							<span class="icon icon-caret-right"></span>
+						</span>
+					</div>
+					<div class="codeBlock markup hljs">
+						<pre><span class="hljs-tag">&lt;<span class="hljs-title">table</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"table scrollable"</span> <span class="hljs-attribute">summary</span>=<span class="hljs-value">"This summary is for screen readers and should summarize the structure of the table headers and rows"</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">caption</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"show-for-sr"</span>&gt;</span>Basic Table<span class="hljs-tag">&lt;/<span class="hljs-title">caption</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">thead</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">tr</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">th</span> <span class="hljs-attribute">width</span>=<span class="hljs-value">"500"</span>&gt;</span>Expenses<span class="hljs-tag">&lt;/<span class="hljs-title">th</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">th</span> <span class="hljs-attribute">width</span>=<span class="hljs-value">"100"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"text-right"</span>&gt;</span>Amount<span class="hljs-tag">&lt;/<span class="hljs-title">th</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">th</span> <span class="hljs-attribute">width</span>=<span class="hljs-value">"400"</span>&gt;</span>Frequency<span class="hljs-tag">&lt;/<span class="hljs-title">th</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">tr</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">thead</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">tbody</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">"height: 200px"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">tr</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Rent<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">td</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"text-right"</span>&gt;</span>$1,480<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Monthly<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">tr</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">tr</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Resident Service Fee<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">td</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"text-right"</span>&gt;</span>$51<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Monthly<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">tr</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">tr</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Cell Phone<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">td</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"text-right"</span>&gt;</span>$90<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Monthly<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">tr</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">tr</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Rent<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">td</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"text-right"</span>&gt;</span>$1,480<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Monthly<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">tr</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">tr</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Resident Service Fee<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">td</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"text-right"</span>&gt;</span>$51<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Monthly<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">tr</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">tr</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Cell Phone<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">td</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"text-right"</span>&gt;</span>$90<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Monthly<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">tr</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">tr</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Rent<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">td</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"text-right"</span>&gt;</span>$1,480<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Monthly<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">tr</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">tr</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Resident Service Fee<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">td</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"text-right"</span>&gt;</span>$51<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Monthly<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">tr</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">tr</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Cell Phone<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">td</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"text-right"</span>&gt;</span>$90<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Monthly<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">tr</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">tbody</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">table</span>&gt;</span></pre>
+					</div>
+
+					<div class="result codeExample">
+						<div class="exampleOutput">
+							<table class="table scrollable" summary="This summary is for screen readers and should summarize the structure of the table headers and rows">
+<caption class="show-for-sr">Basic Table</caption>
+    <thead>
+        <tr>
+            <th width="500">Expenses</th>
+            <th width="100" class="text-right">Amount</th>
+            <th width="400">Frequency</th>
+        </tr>
+    </thead>
+    <tbody style="height: 200px">
+        <tr>
+            <td>Rent</td>
+            <td class="text-right">$1,480</td>
+            <td>Monthly</td>
+        </tr>
+        <tr>
+            <td>Resident Service Fee</td>
+            <td class="text-right">$51</td>
+            <td>Monthly</td>
+        </tr>
+        <tr>
+            <td>Cell Phone</td>
+            <td class="text-right">$90</td>
+            <td>Monthly</td>
+        </tr>
+        <tr>
+            <td>Rent</td>
+            <td class="text-right">$1,480</td>
+            <td>Monthly</td>
+        </tr>
+        <tr>
+            <td>Resident Service Fee</td>
+            <td class="text-right">$51</td>
+            <td>Monthly</td>
+        </tr>
+        <tr>
+            <td>Cell Phone</td>
+            <td class="text-right">$90</td>
+            <td>Monthly</td>
+        </tr>
+        <tr>
+            <td>Rent</td>
+            <td class="text-right">$1,480</td>
+            <td>Monthly</td>
+        </tr>
+        <tr>
+            <td>Resident Service Fee</td>
+            <td class="text-right">$51</td>
+            <td>Monthly</td>
+        </tr>
+        <tr>
+            <td>Cell Phone</td>
+            <td class="text-right">$90</td>
+            <td>Monthly</td>
+        </tr>
+    </tbody>
+</table>
+						</div>
+					</div>
+
+				</div>
+				<div class="section" id="Tables-Sticky_Table_Header" data-section="Tables" data-heading="Sticky Table Header">
+
+					<div class="comment">
+						<h1>Sticky Table Header</h1>
+						<p>There are <code>.sticky-wrap</code>, <code>.sticky-thead</code> and <code>.sticky-enabled</code> classes available to enable sticky table headers. JavaScript is needed to implement this feature. The basic concept is to grab the table and wrap it in a <code>.sticky-wrap</code> container element. Then create a new <code>&lt;table&gt;</code> with the same classes as the original and clone the <code>&lt;thead&gt;</code> into it. Finally, set up some sort of event listener to resize/reposition the header as needed. The demo shown here is a simplified version of this <a href="http://tympanus.net/codrops/2014/01/09/sticky-table-headers-columns/">codrops tutorial</a>.</p>
+					</div>
+
+					<div class="ss-title">EXAMPLE
+						<span class="icon-code tooltip-target tooltip-show-on-hover">
+							<div class="show-hide-code tooltip tooltip-top-right reset-child-margins">
+								<p>Show Code</p>
+							</div>
+							<span class="icon icon-caret-left"></span>
+							<span class="icon icon-caret-right"></span>
+						</span>
+					</div>
+					<div class="codeBlock markup hljs">
+						<pre><span class="hljs-tag">&lt;<span class="hljs-title">table</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"table sticky"</span> <span class="hljs-attribute">summary</span>=<span class="hljs-value">"This summary is for screen readers and should summarize the structure of the table headers and rows"</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">caption</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"show-for-sr"</span>&gt;</span>Basic Table<span class="hljs-tag">&lt;/<span class="hljs-title">caption</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">thead</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">tr</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">th</span> <span class="hljs-attribute">width</span>=<span class="hljs-value">"500"</span>&gt;</span>Expenses<span class="hljs-tag">&lt;/<span class="hljs-title">th</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">th</span> <span class="hljs-attribute">width</span>=<span class="hljs-value">"100"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"text-right"</span>&gt;</span>Amount<span class="hljs-tag">&lt;/<span class="hljs-title">th</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">th</span> <span class="hljs-attribute">width</span>=<span class="hljs-value">"400"</span>&gt;</span>Frequency<span class="hljs-tag">&lt;/<span class="hljs-title">th</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">tr</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">thead</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">tbody</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">tr</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Rent<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">td</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"text-right"</span>&gt;</span>$1,480<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Monthly<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">tr</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">tr</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Resident Service Fee<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">td</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"text-right"</span>&gt;</span>$51<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Monthly<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">tr</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">tr</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Cell Phone<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">td</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"text-right"</span>&gt;</span>$90<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Monthly<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">tr</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">tr</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Rent<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">td</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"text-right"</span>&gt;</span>$1,480<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Monthly<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">tr</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">tr</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Resident Service Fee<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">td</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"text-right"</span>&gt;</span>$51<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Monthly<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">tr</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">tr</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Cell Phone<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">td</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"text-right"</span>&gt;</span>$90<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Monthly<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">tr</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">tr</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Rent<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">td</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"text-right"</span>&gt;</span>$1,480<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Monthly<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">tr</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">tr</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Resident Service Fee<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">td</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"text-right"</span>&gt;</span>$51<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Monthly<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">tr</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">tr</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Cell Phone<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">td</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"text-right"</span>&gt;</span>$90<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Monthly<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">tr</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">tbody</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">table</span>&gt;</span></pre>
+					</div>
+
+					<div class="result codeExample">
+						<div class="exampleOutput">
+							<table class="table sticky" summary="This summary is for screen readers and should summarize the structure of the table headers and rows">
+<caption class="show-for-sr">Basic Table</caption>
+    <thead>
+        <tr>
+            <th width="500">Expenses</th>
+            <th width="100" class="text-right">Amount</th>
+            <th width="400">Frequency</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Rent</td>
+            <td class="text-right">$1,480</td>
+            <td>Monthly</td>
+        </tr>
+        <tr>
+            <td>Resident Service Fee</td>
+            <td class="text-right">$51</td>
+            <td>Monthly</td>
+        </tr>
+        <tr>
+            <td>Cell Phone</td>
+            <td class="text-right">$90</td>
+            <td>Monthly</td>
+        </tr>
+        <tr>
+            <td>Rent</td>
+            <td class="text-right">$1,480</td>
+            <td>Monthly</td>
+        </tr>
+        <tr>
+            <td>Resident Service Fee</td>
+            <td class="text-right">$51</td>
+            <td>Monthly</td>
+        </tr>
+        <tr>
+            <td>Cell Phone</td>
+            <td class="text-right">$90</td>
+            <td>Monthly</td>
+        </tr>
+        <tr>
+            <td>Rent</td>
+            <td class="text-right">$1,480</td>
+            <td>Monthly</td>
+        </tr>
+        <tr>
+            <td>Resident Service Fee</td>
+            <td class="text-right">$51</td>
+            <td>Monthly</td>
+        </tr>
+        <tr>
+            <td>Cell Phone</td>
+            <td class="text-right">$90</td>
+            <td>Monthly</td>
+        </tr>
+    </tbody>
+</table>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</section>
+
+		<footer class="sg-footer">
+			<div class="grid-container reset-child-margins">
+				<p class="padding-horiz-xlarge"></p>
+			</div>
+		</footer>
+	</div>
+
+	<div class="modal-overlay"></div>
+
+	<div class="modal-container">
+		<div class="modal">
+			<h1>Example Modal</h1>
+
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodoconsequat. Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat nonproident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		</div>
+		<button class="modal-close">
+			<span class="icon icon-close"></span>
+		</button>
+	</div>
+
+	<div class="toaster-fixed-region">
+		<div class="grid-container sg-padding-responsive-horiz padding-vert-medium toaster-grid">
+			<div class="toaster-container show-with-transition text-right">
+				<div class="toaster-trigger inline-block bg-medium-grey padding-horiz-tiny">
+					<button class="reset-button">
+						<span class="icon icon-caret-down"></span>
+					</button>
+				</div>
+				<div class="toaster-content padding-small bg-medium-grey">
+					<a href="http://uitk.learnvest.com/explorer" class="button tiny info margin-bottom-none">Back to Version Explorer!</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="./resources/js/vendor/moment.min.js"></script>
+	<script src="./resources/js/vendor/d3.min.js"></script>
+	<script src="./resources/js/app.js" id="appjs"></script>
+</body>
+</html>

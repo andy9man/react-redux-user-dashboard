@@ -1,0 +1,1095 @@
+<!doctype html>
+<html>
+<head>
+	<title>Style Guide - NM / LV</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+	<link rel="stylesheet" href="../css/static/fader-overlay.css">
+	<style>
+	/*
+	
+	github.com style (c) Vasily Polovnyov <vast@whiteants.net>
+	
+	*/
+	
+	.hljs {
+	  display: block;
+	  overflow-x: auto;
+	  padding: 0.5em;
+	  color: #333;
+	  background: #f8f8f8;
+	  -webkit-text-size-adjust: none;
+	}
+	
+	.hljs-comment,
+	.diff .hljs-header {
+	  color: #998;
+	  font-style: italic;
+	}
+	
+	.hljs-keyword,
+	.css .rule .hljs-keyword,
+	.hljs-winutils,
+	.nginx .hljs-title,
+	.hljs-subst,
+	.hljs-request,
+	.hljs-status {
+	  color: #333;
+	  font-weight: bold;
+	}
+	
+	.hljs-number,
+	.hljs-hexcolor,
+	.ruby .hljs-constant {
+	  color: #008080;
+	}
+	
+	.hljs-string,
+	.hljs-tag .hljs-value,
+	.hljs-doctag,
+	.tex .hljs-formula {
+	  color: #d14;
+	}
+	
+	.hljs-title,
+	.hljs-id,
+	.scss .hljs-preprocessor {
+	  color: #900;
+	  font-weight: bold;
+	}
+	
+	.hljs-list .hljs-keyword,
+	.hljs-subst {
+	  font-weight: normal;
+	}
+	
+	.hljs-class .hljs-title,
+	.hljs-type,
+	.vhdl .hljs-literal,
+	.tex .hljs-command {
+	  color: #458;
+	  font-weight: bold;
+	}
+	
+	.hljs-tag,
+	.hljs-tag .hljs-title,
+	.hljs-rule .hljs-property,
+	.django .hljs-tag .hljs-keyword {
+	  color: #000080;
+	  font-weight: normal;
+	}
+	
+	.hljs-attribute,
+	.hljs-variable,
+	.lisp .hljs-body,
+	.hljs-name {
+	  color: #008080;
+	}
+	
+	.hljs-regexp {
+	  color: #009926;
+	}
+	
+	.hljs-symbol,
+	.ruby .hljs-symbol .hljs-string,
+	.lisp .hljs-keyword,
+	.clojure .hljs-keyword,
+	.scheme .hljs-keyword,
+	.tex .hljs-special,
+	.hljs-prompt {
+	  color: #990073;
+	}
+	
+	.hljs-built_in {
+	  color: #0086b3;
+	}
+	
+	.hljs-preprocessor,
+	.hljs-pragma,
+	.hljs-pi,
+	.hljs-doctype,
+	.hljs-shebang,
+	.hljs-cdata {
+	  color: #999;
+	  font-weight: bold;
+	}
+	
+	.hljs-deletion {
+	  background: #fdd;
+	}
+	
+	.hljs-addition {
+	  background: #dfd;
+	}
+	
+	.diff .hljs-change {
+	  background: #0086b3;
+	}
+	
+	.hljs-chunk {
+	  color: #aaa;
+	}
+	
+	</style></head>
+<body>
+	<div class="page-container">
+		<div id="fader-overlay" class="sg-fader-overlay"></div>
+
+		<nav class="row sg-nav padding-vert-small viewport-el" role="navigation" data-emit-events data-top-bottom >
+			<div class="small-2 columns burger-wrapper show-for-small">
+				<button class="burger reset-button trigger-menu">
+					<div class="burger-content"></div>
+				</button>
+			</div>
+
+			<h1 class="medium-7 columns hide-for-small margin-vert-none"><a href="#">LearnVest &amp; Northwestern Mutual - A Style Guide</a></h1>
+
+			<div class="small-10 medium-5 columns theme-switch-wrapper reset-child-margins text-right">
+				<span class="text-white inline-block valign-middle margin-right-small">Select Theme: </span>
+				<!-- jQuery injects select el here (theme-switch.js) -->
+			</div>
+		</nav>
+
+		<section class="row height-full">
+			<div class="medium-4 large-3 xlarge-2 columns height-full hide-for-small sg-sidebar">
+				<div class="padding-top-medium reset-child-margins">
+					<ul class="sg-block-nav sg-block-nav-submenu reset-list reset-child-margins">
+
+						<h3>Icons</h3>
+
+					</ul>
+					<ul class="sg-block-nav sg-block-nav-submenu reset-list reset-child-margins">
+
+						<h3></h3>
+
+					</ul>
+
+
+					<ul class="sg-block-nav sg-category-nav reset-list reset-child-margins">
+						<h3>Categories</h3>
+						<li><a href="button-groups.html">Button Groups</a></li>
+						<li><a href="buttons.html">Buttons</a></li>
+						<li><a href="card.html">Card</a></li>
+						<li><a href="colors.html">Colors</a></li>
+						<li><a href="forms.html">Forms</a></li>
+						<li><a href="ghosting.html">Ghosting</a></li>
+						<li><a href="graphs.html">Graphs</a></li>
+						<li><a href="grid.html">Grid</a></li>
+						<li><a href="icons.html">Icons</a></li>
+						<li><a href="labels.html">Labels</a></li>
+						<li><a href="loading-indicators.html">Loading Indicators</a></li>
+						<li><a href="modals.html">Modals</a></li>
+						<li><a href="navigation.html">Navigation</a></li>
+						<li><a href="notifications.html">Notifications</a></li>
+						<li><a href="switches.html">Switches</a></li>
+						<li><a href="tables.html">Tables</a></li>
+						<li><a href="tooltips.html">Tooltips</a></li>
+						<li><a href="type.html">Type</a></li>
+						<li><a href="utility-classes.html">Utility Classes</a></li>
+						<li><a href="visibility.html">Visibility</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="medium-8 large-9 xlarge-10 columns sg-content" id="styleguide">
+				<div class="section" id="Icons-Icons" data-section="Icons" data-heading="Icons">
+
+					<div class="comment">
+						<h1>Icons</h1>
+						<p class="show-for-nm-cx">All icons need to be used in partnership with a product designer so we can ensure consistency of use throughout the NM experience.</p>
+
+
+<p>The icons in the <em>UI-Toolkit</em> are automatically generated from SVG files. These files are packaged up into a font that is then served directly to the browser via the <em>UI-Toolkit</em> CSS.</p>
+<p>To render an icon, simply use the <code>.icon</code> class, along with the the class for the particular slug that you wish to render. For example, below, we render the <em class="sg-demo-icon-title">Success</em> icon using the <code class="sg-demo-icon-classname">.icon-success</code> class ( <code>.icon-util-success</code> for NM-CX ).</p>
+					</div>
+
+
+
+				</div>
+				<div class="section" id="LV_Example" data-section="" data-heading="">
+
+					<div class="comment">
+						
+						<h2 class="main-section-sg-by-lvnm" id="section-LV_Example">LV Example</h2>
+					</div>
+
+					<div class="ss-title">EXAMPLE
+						<span class="icon-code tooltip-target tooltip-show-on-hover">
+							<div class="show-hide-code tooltip tooltip-top-right reset-child-margins">
+								<p>Show Code</p>
+							</div>
+							<span class="icon icon-caret-left"></span>
+							<span class="icon icon-caret-right"></span>
+						</span>
+					</div>
+					<div class="codeBlock markup hljs">
+						<pre><span class="hljs-comment">&lt;!-- Example icon --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"icon icon-success"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span></pre>
+					</div>
+
+					<div class="result codeExample">
+						<div class="exampleOutput">
+							<!-- Example icon -->
+<span class="icon icon-success"></span>
+						</div>
+					</div>
+
+				</div>
+				<div class="section" id="NM_PX_Example" data-section="" data-heading="">
+
+					<div class="comment">
+						
+						<h2 class="main-section-sg-by-lvnm" id="section-NM_PX_Example">NM PX Example</h2>
+					</div>
+
+					<div class="ss-title">EXAMPLE
+						<span class="icon-code tooltip-target tooltip-show-on-hover">
+							<div class="show-hide-code tooltip tooltip-top-right reset-child-margins">
+								<p>Show Code</p>
+							</div>
+							<span class="icon icon-caret-left"></span>
+							<span class="icon icon-caret-right"></span>
+						</span>
+					</div>
+					<div class="codeBlock markup hljs">
+						<pre><span class="hljs-comment">&lt;!-- Example icon --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"icon icon-success"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span></pre>
+					</div>
+
+					<div class="result codeExample">
+						<div class="exampleOutput">
+							<!-- Example icon -->
+<span class="icon icon-success"></span>
+						</div>
+					</div>
+
+				</div>
+				<div class="section" id="NM_CX_Example" data-section="" data-heading="">
+
+					<div class="comment">
+						
+						<h2 class="main-section-sg-by-lvnm" id="section-NM_CX_Example">NM CX Example</h2>
+
+
+<p>The Icon is purely functional. It provides a visual cue when it is part of an interactive element such as a form field.</p>
+					</div>
+
+					<div class="ss-title">EXAMPLE
+						<span class="icon-code tooltip-target tooltip-show-on-hover">
+							<div class="show-hide-code tooltip tooltip-top-right reset-child-margins">
+								<p>Show Code</p>
+							</div>
+							<span class="icon icon-caret-left"></span>
+							<span class="icon icon-caret-right"></span>
+						</span>
+					</div>
+					<div class="codeBlock markup hljs">
+						<pre><span class="hljs-comment">&lt;!-- Example icon --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"icon icon-util-success"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span></pre>
+					</div>
+
+					<div class="result codeExample">
+						<div class="exampleOutput">
+							<!-- Example icon -->
+<span class="icon icon-util-success"></span>
+						</div>
+					</div>
+
+				</div>
+				<div class="section" id="-" data-section="" data-heading="">
+
+					<div class="comment">
+						
+						<div id="icons-main"></div>
+					</div>
+
+
+
+				</div>
+				<div class="section" id="NM_CX_Illustrative_Icons" data-section="" data-heading="">
+
+					<div class="comment">
+						
+						<h2 class="main-section-sg-by-lvnm" id="section-NM_CX_Illustrative_Icons">NM CX Illustrative Icons</h2>
+<p>Illustrative icons are rendered as background-images since they contain colors and are not packaged as a font.</p>
+<p>To render an illustrative icon, use the <code>.icon-illustrative</code> class with the icon class name you want to render.</p>
+<p>Use Illustrative Icon when:<br>
+Conveying a celebratory moment or message description<br>
+Or to add brand personality.</p>
+<p>Do not resize these icons; they should remain this size.</p>
+<div id="sg-illustrative-icons padding-bottom-large">
+    <div class="row collapse icon-list padding-bottom-large">
+        <div class="columns small-12 medium-6 large-4 padding-bottom-medium sg-illustrative-icon">
+            <span class="icon-illustrative icon-ill-acheivement"></span>
+            <pre class="sg-icon-entry-name margin-left-small">.icon-ill-acheivement</pre>
+        </div>
+        <div class="columns small-12 medium-6 large-4 padding-bottom-medium sg-illustrative-icon">
+            <span class="icon-illustrative icon-ill-airplane"></span>
+            <pre class="sg-icon-entry-name margin-left-small">.icon-ill-airplane</pre>
+        </div>
+        <div class="columns small-12 medium-6 large-4 padding-bottom-medium sg-illustrative-icon">
+            <span class="icon-illustrative icon-ill-alarmclock"></span>
+            <pre class="sg-icon-entry-name margin-left-small">.icon-ill-alarmclock</pre>
+        </div>
+        <div class="columns small-12 medium-6 large-4 padding-bottom-medium sg-illustrative-icon">
+            <span class="icon-illustrative icon-ill-bagofmoney"></span>
+            <pre class="sg-icon-entry-name margin-left-small">.icon-ill-bagofmoney</pre>
+        </div>
+        <div class="columns small-12 medium-6 large-4 padding-bottom-medium sg-illustrative-icon">
+            <span class="icon-illustrative icon-ill-bank"></span>
+            <pre class="sg-icon-entry-name margin-left-small">.icon-ill-bank</pre>
+        </div>
+        <div class="columns small-12 medium-6 large-4 padding-bottom-medium sg-illustrative-icon">
+            <span class="icon-illustrative icon-ill-barchart"></span>
+            <pre class="sg-icon-entry-name margin-left-small">.icon-ill-barchart</pre>
+        </div>
+        <div class="columns small-12 medium-6 large-4 padding-bottom-medium sg-illustrative-icon">
+            <span class="icon-illustrative icon-ill-billdue"></span>
+            <pre class="sg-icon-entry-name margin-left-small">.icon-ill-billdue</pre>
+        </div>
+        <div class="columns small-12 medium-6 large-4 padding-bottom-medium sg-illustrative-icon">
+            <span class="icon-illustrative icon-ill-boatgoal"></span>
+            <pre class="sg-icon-entry-name margin-left-small">.icon-ill-boatgoal</pre>
+        </div>
+        <div class="columns small-12 medium-6 large-4 padding-bottom-medium sg-illustrative-icon">
+            <span class="icon-illustrative icon-ill-bookmark"></span>
+            <pre class="sg-icon-entry-name margin-left-small">.icon-ill-bookmark</pre>
+        </div>
+        <div class="columns small-12 medium-6 large-4 padding-bottom-medium sg-illustrative-icon">
+            <span class="icon-illustrative icon-ill-briefcase"></span>
+            <pre class="sg-icon-entry-name margin-left-small">.icon-ill-briefcase</pre>
+        </div>
+        <div class="columns small-12 medium-6 large-4 padding-bottom-medium sg-illustrative-icon">
+            <span class="icon-illustrative icon-ill-calculator"></span>
+            <pre class="sg-icon-entry-name margin-left-small">.icon-ill-calculator</pre>
+        </div>
+        <div class="columns small-12 medium-6 large-4 padding-bottom-medium sg-illustrative-icon">
+            <span class="icon-illustrative icon-ill-calendar"></span>
+            <pre class="sg-icon-entry-name margin-left-small">.icon-ill-calendar</pre>
+        </div>
+        <div class="columns small-12 medium-6 large-4 padding-bottom-medium sg-illustrative-icon">
+            <span class="icon-illustrative icon-ill-carddebt"></span>
+            <pre class="sg-icon-entry-name margin-left-small">.icon-ill-carddebt</pre>
+        </div>
+        <div class="columns small-12 medium-6 large-4 padding-bottom-medium sg-illustrative-icon">
+            <span class="icon-illustrative icon-ill-cargoal"></span>
+            <pre class="sg-icon-entry-name margin-left-small">.icon-ill-cargoal</pre>
+        </div>
+        <div class="columns small-12 medium-6 large-4 padding-bottom-medium sg-illustrative-icon">
+            <span class="icon-illustrative icon-ill-champagne"></span>
+            <pre class="sg-icon-entry-name margin-left-small">.icon-ill-champagne</pre>
+        </div>
+        <div class="columns small-12 medium-6 large-4 padding-bottom-medium sg-illustrative-icon">
+            <span class="icon-illustrative icon-ill-check"></span>
+            <pre class="sg-icon-entry-name margin-left-small">.icon-ill-check</pre>
+        </div>
+        <div class="columns small-12 medium-6 large-4 padding-bottom-medium sg-illustrative-icon">
+            <span class="icon-illustrative icon-ill-children"></span>
+            <pre class="sg-icon-entry-name margin-left-small">.icon-ill-children</pre>
+        </div>
+        <div class="columns small-12 medium-6 large-4 padding-bottom-medium sg-illustrative-icon">
+            <span class="icon-illustrative icon-ill-cocktail"></span>
+            <pre class="sg-icon-entry-name margin-left-small">.icon-ill-cocktail</pre>
+        </div>
+        <div class="columns small-12 medium-6 large-4 padding-bottom-medium sg-illustrative-icon">
+            <span class="icon-illustrative icon-ill-coin"></span>
+            <pre class="sg-icon-entry-name margin-left-small">.icon-ill-coin</pre>
+        </div>
+        <div class="columns small-12 medium-6 large-4 padding-bottom-medium sg-illustrative-icon">
+            <span class="icon-illustrative icon-ill-college"></span>
+            <pre class="sg-icon-entry-name margin-left-small">.icon-ill-college</pre>
+        </div>
+        <div class="columns small-12 medium-6 large-4 padding-bottom-medium sg-illustrative-icon">
+            <span class="icon-illustrative icon-ill-composedraft"></span>
+            <pre class="sg-icon-entry-name margin-left-small">.icon-ill-composedraft</pre>
+        </div>
+        <div class="columns small-12 medium-6 large-4 padding-bottom-medium sg-illustrative-icon">
+            <span class="icon-illustrative icon-ill-creditcard"></span>
+            <pre class="sg-icon-entry-name margin-left-small">.icon-ill-creditcard</pre>
+        </div>
+        <div class="columns small-12 medium-6 large-4 padding-bottom-medium sg-illustrative-icon">
+            <span class="icon-illustrative icon-ill-designerclothing"></span>
+            <pre class="sg-icon-entry-name margin-left-small">.icon-ill-designerclothing</pre>
+        </div>
+        <div class="columns small-12 medium-6 large-4 padding-bottom-medium sg-illustrative-icon">
+            <span class="icon-illustrative icon-ill-desktop"></span>
+            <pre class="sg-icon-entry-name margin-left-small">.icon-ill-desktop</pre>
+        </div>
+        <div class="columns small-12 medium-6 large-4 padding-bottom-medium sg-illustrative-icon">
+            <span class="icon-illustrative icon-ill-devices"></span>
+            <pre class="sg-icon-entry-name margin-left-small">.icon-ill-devices</pre>
+        </div>
+        <div class="columns small-12 medium-6 large-4 padding-bottom-medium sg-illustrative-icon">
+            <span class="icon-illustrative icon-ill-diamondring"></span>
+            <pre class="sg-icon-entry-name margin-left-small">.icon-ill-diamondring</pre>
+        </div>
+        <div class="columns small-12 medium-6 large-4 padding-bottom-medium sg-illustrative-icon">
+            <span class="icon-illustrative icon-ill-diningout"></span>
+            <pre class="sg-icon-entry-name margin-left-small">.icon-ill-diningout</pre>
+        </div>
+        <div class="columns small-12 medium-6 large-4 padding-bottom-medium sg-illustrative-icon">
+            <span class="icon-illustrative icon-ill-document"></span>
+            <pre class="sg-icon-entry-name margin-left-small">.icon-ill-document</pre>
+        </div>
+        <div class="columns small-12 medium-6 large-4 padding-bottom-medium sg-illustrative-icon">
+            <span class="icon-illustrative icon-ill-dollar"></span>
+            <pre class="sg-icon-entry-name margin-left-small">.icon-ill-dollar</pre>
+        </div>
+        <div class="columns small-12 medium-6 large-4 padding-bottom-medium sg-illustrative-icon">
+            <span class="icon-illustrative icon-ill-downloadalt"></span>
+            <pre class="sg-icon-entry-name margin-left-small">.icon-ill-downloadalt</pre>
+        </div>
+        <div class="columns small-12 medium-6 large-4 padding-bottom-medium sg-illustrative-icon">
+            <span class="icon-illustrative icon-ill-edit"></span>
+            <pre class="sg-icon-entry-name margin-left-small">.icon-ill-edit</pre>
+        </div>
+        <div class="columns small-12 medium-6 large-4 padding-bottom-medium sg-illustrative-icon">
+            <span class="icon-illustrative icon-ill-email"></span>
+            <pre class="sg-icon-entry-name margin-left-small">.icon-ill-email</pre>
+        </div>
+        <div class="columns small-12 medium-6 large-4 padding-bottom-medium sg-illustrative-icon">
+            <span class="icon-illustrative icon-ill-emergencyfund"></span>
+            <pre class="sg-icon-entry-name margin-left-small">.icon-ill-emergencyfund</pre>
+        </div>
+        <div class="columns small-12 medium-6 large-4 padding-bottom-medium sg-illustrative-icon">
+            <span class="icon-illustrative icon-ill-excel"></span>
+            <pre class="sg-icon-entry-name margin-left-small">.icon-ill-excel</pre>
+        </div>
+        <div class="columns small-12 medium-6 large-4 padding-bottom-medium sg-illustrative-icon">
+            <span class="icon-illustrative icon-ill-feedback"></span>
+            <pre class="sg-icon-entry-name margin-left-small">.icon-ill-feedback</pre>
+        </div>
+        <div class="columns small-12 medium-6 large-4 padding-bottom-medium sg-illustrative-icon">
+            <span class="icon-illustrative icon-ill-femaleavatar"></span>
+            <pre class="sg-icon-entry-name margin-left-small">.icon-ill-femaleavatar</pre>
+        </div>
+        <div class="columns small-12 medium-6 large-4 padding-bottom-medium sg-illustrative-icon">
+            <span class="icon-illustrative icon-ill-fileandfolder"></span>
+            <pre class="sg-icon-entry-name margin-left-small">.icon-ill-fileandfolder</pre>
+        </div>
+        <div class="columns small-12 medium-6 large-4 padding-bottom-medium sg-illustrative-icon">
+            <span class="icon-illustrative icon-ill-flagalt"></span>
+            <pre class="sg-icon-entry-name margin-left-small">.icon-ill-flagalt</pre>
+        </div>
+        <div class="columns small-12 medium-6 large-4 padding-bottom-medium sg-illustrative-icon">
+            <span class="icon-illustrative icon-ill-flashlight"></span>
+            <pre class="sg-icon-entry-name margin-left-small">.icon-ill-flashlight</pre>
+        </div>
+        <div class="columns small-12 medium-6 large-4 padding-bottom-medium sg-illustrative-icon">
+            <span class="icon-illustrative icon-ill-folder"></span>
+            <pre class="sg-icon-entry-name margin-left-small">.icon-ill-folder</pre>
+        </div>
+        <div class="columns small-12 medium-6 large-4 padding-bottom-medium sg-illustrative-icon">
+            <span class="icon-illustrative icon-ill-happyface"></span>
+            <pre class="sg-icon-entry-name margin-left-small">.icon-ill-happyface</pre>
+        </div>
+        <div class="columns small-12 medium-6 large-4 padding-bottom-medium sg-illustrative-icon">
+            <span class="icon-illustrative icon-ill-heart"></span>
+            <pre class="sg-icon-entry-name margin-left-small">.icon-ill-heart</pre>
+        </div>
+        <div class="columns small-12 medium-6 large-4 padding-bottom-medium sg-illustrative-icon">
+            <span class="icon-illustrative icon-ill-home"></span>
+            <pre class="sg-icon-entry-name margin-left-small">.icon-ill-home</pre>
+        </div>
+        <div class="columns small-12 medium-6 large-4 padding-bottom-medium sg-illustrative-icon">
+            <span class="icon-illustrative icon-ill-insurance"></span>
+            <pre class="sg-icon-entry-name margin-left-small">.icon-ill-insurance</pre>
+        </div>
+        <div class="columns small-12 medium-6 large-4 padding-bottom-medium sg-illustrative-icon">
+            <span class="icon-illustrative icon-ill-investments"></span>
+            <pre class="sg-icon-entry-name margin-left-small">.icon-ill-investments</pre>
+        </div>
+        <div class="columns small-12 medium-6 large-4 padding-bottom-medium sg-illustrative-icon">
+            <span class="icon-illustrative icon-ill-journey"></span>
+            <pre class="sg-icon-entry-name margin-left-small">.icon-ill-journey</pre>
+        </div>
+        <div class="columns small-12 medium-6 large-4 padding-bottom-medium sg-illustrative-icon">
+            <span class="icon-illustrative icon-ill-key"></span>
+            <pre class="sg-icon-entry-name margin-left-small">.icon-ill-key</pre>
+        </div>
+        <div class="columns small-12 medium-6 large-4 padding-bottom-medium sg-illustrative-icon">
+            <span class="icon-illustrative icon-ill-laptop"></span>
+            <pre class="sg-icon-entry-name margin-left-small">.icon-ill-laptop</pre>
+        </div>
+        <div class="columns small-12 medium-6 large-4 padding-bottom-medium sg-illustrative-icon">
+            <span class="icon-illustrative icon-ill-legaldocument"></span>
+            <pre class="sg-icon-entry-name margin-left-small">.icon-ill-legaldocument</pre>
+        </div>
+        <div class="columns small-12 medium-6 large-4 padding-bottom-medium sg-illustrative-icon">
+            <span class="icon-illustrative icon-ill-lightbulb"></span>
+            <pre class="sg-icon-entry-name margin-left-small">.icon-ill-lightbulb</pre>
+        </div>
+        <div class="columns small-12 medium-6 large-4 padding-bottom-medium sg-illustrative-icon">
+            <span class="icon-illustrative icon-ill-link"></span>
+            <pre class="sg-icon-entry-name margin-left-small">.icon-ill-link</pre>
+        </div>
+        <div class="columns small-12 medium-6 large-4 padding-bottom-medium sg-illustrative-icon">
+            <span class="icon-illustrative icon-ill-lock"></span>
+            <pre class="sg-icon-entry-name margin-left-small">.icon-ill-lock</pre>
+        </div>
+        <div class="columns small-12 medium-6 large-4 padding-bottom-medium sg-illustrative-icon">
+            <span class="icon-illustrative icon-ill-magicwand"></span>
+            <pre class="sg-icon-entry-name margin-left-small">.icon-ill-magicwand</pre>
+        </div>
+        <div class="columns small-12 medium-6 large-4 padding-bottom-medium sg-illustrative-icon">
+            <span class="icon-illustrative icon-ill-mail"></span>
+            <pre class="sg-icon-entry-name margin-left-small">.icon-ill-mail</pre>
+        </div>
+        <div class="columns small-12 medium-6 large-4 padding-bottom-medium sg-illustrative-icon">
+            <span class="icon-illustrative icon-ill-maintenance"></span>
+            <pre class="sg-icon-entry-name margin-left-small">.icon-ill-maintenance</pre>
+        </div>
+        <div class="columns small-12 medium-6 large-4 padding-bottom-medium sg-illustrative-icon">
+            <span class="icon-illustrative icon-ill-maleavatar"></span>
+            <pre class="sg-icon-entry-name margin-left-small">.icon-ill-maleavatar</pre>
+        </div>
+        <div class="columns small-12 medium-6 large-4 padding-bottom-medium sg-illustrative-icon">
+            <span class="icon-illustrative icon-ill-map"></span>
+            <pre class="sg-icon-entry-name margin-left-small">.icon-ill-map</pre>
+        </div>
+        <div class="columns small-12 medium-6 large-4 padding-bottom-medium sg-illustrative-icon">
+            <span class="icon-illustrative icon-ill-mappin"></span>
+            <pre class="sg-icon-entry-name margin-left-small">.icon-ill-mappin</pre>
+        </div>
+        <div class="columns small-12 medium-6 large-4 padding-bottom-medium sg-illustrative-icon">
+            <span class="icon-illustrative icon-ill-menstie"></span>
+            <pre class="sg-icon-entry-name margin-left-small">.icon-ill-menstie</pre>
+        </div>
+        <div class="columns small-12 medium-6 large-4 padding-bottom-medium sg-illustrative-icon">
+            <span class="icon-illustrative icon-ill-mobilephone"></span>
+            <pre class="sg-icon-entry-name margin-left-small">.icon-ill-mobilephone</pre>
+        </div>
+        <div class="columns small-12 medium-6 large-4 padding-bottom-medium sg-illustrative-icon">
+            <span class="icon-illustrative icon-ill-multiplecards"></span>
+            <pre class="sg-icon-entry-name margin-left-small">.icon-ill-multiplecards</pre>
+        </div>
+        <div class="columns small-12 medium-6 large-4 padding-bottom-medium sg-illustrative-icon">
+            <span class="icon-illustrative icon-ill-multipledocument"></span>
+            <pre class="sg-icon-entry-name margin-left-small">.icon-ill-multipledocument</pre>
+        </div>
+        <div class="columns small-12 medium-6 large-4 padding-bottom-medium sg-illustrative-icon">
+            <span class="icon-illustrative icon-ill-multiplefolders"></span>
+            <pre class="sg-icon-entry-name margin-left-small">.icon-ill-multiplefolders</pre>
+        </div>
+        <div class="columns small-12 medium-6 large-4 padding-bottom-medium sg-illustrative-icon">
+            <span class="icon-illustrative icon-ill-navigation"></span>
+            <pre class="sg-icon-entry-name margin-left-small">.icon-ill-navigation</pre>
+        </div>
+        <div class="columns small-12 medium-6 large-4 padding-bottom-medium sg-illustrative-icon">
+            <span class="icon-illustrative icon-ill-newwindow"></span>
+            <pre class="sg-icon-entry-name margin-left-small">.icon-ill-newwindow</pre>
+        </div>
+        <div class="columns small-12 medium-6 large-4 padding-bottom-medium sg-illustrative-icon">
+            <span class="icon-illustrative icon-ill-notifications"></span>
+            <pre class="sg-icon-entry-name margin-left-small">.icon-ill-notifications</pre>
+        </div>
+        <div class="columns small-12 medium-6 large-4 padding-bottom-medium sg-illustrative-icon">
+            <span class="icon-illustrative icon-ill-paperless"></span>
+            <pre class="sg-icon-entry-name margin-left-small">.icon-ill-paperless</pre>
+        </div>
+        <div class="columns small-12 medium-6 large-4 padding-bottom-medium sg-illustrative-icon">
+            <span class="icon-illustrative icon-ill-pdf"></span>
+            <pre class="sg-icon-entry-name margin-left-small">.icon-ill-pdf</pre>
+        </div>
+        <div class="columns small-12 medium-6 large-4 padding-bottom-medium sg-illustrative-icon">
+            <span class="icon-illustrative icon-ill-pets"></span>
+            <pre class="sg-icon-entry-name margin-left-small">.icon-ill-pets</pre>
+        </div>
+        <div class="columns small-12 medium-6 large-4 padding-bottom-medium sg-illustrative-icon">
+            <span class="icon-illustrative icon-ill-phone"></span>
+            <pre class="sg-icon-entry-name margin-left-small">.icon-ill-phone</pre>
+        </div>
+        <div class="columns small-12 medium-6 large-4 padding-bottom-medium sg-illustrative-icon">
+            <span class="icon-illustrative icon-ill-piggybank"></span>
+            <pre class="sg-icon-entry-name margin-left-small">.icon-ill-piggybank</pre>
+        </div>
+        <div class="columns small-12 medium-6 large-4 padding-bottom-medium sg-illustrative-icon">
+            <span class="icon-illustrative icon-ill-pizza"></span>
+            <pre class="sg-icon-entry-name margin-left-small">.icon-ill-pizza</pre>
+        </div>
+        <div class="columns small-12 medium-6 large-4 padding-bottom-medium sg-illustrative-icon">
+            <span class="icon-illustrative icon-ill-retirementalt"></span>
+            <pre class="sg-icon-entry-name margin-left-small">.icon-ill-retirementalt</pre>
+        </div>
+        <div class="columns small-12 medium-6 large-4 padding-bottom-medium sg-illustrative-icon">
+            <span class="icon-illustrative icon-ill-sadface"></span>
+            <pre class="sg-icon-entry-name margin-left-small">.icon-ill-sadface</pre>
+        </div>
+        <div class="columns small-12 medium-6 large-4 padding-bottom-medium sg-illustrative-icon">
+            <span class="icon-illustrative icon-ill-safety"></span>
+            <pre class="sg-icon-entry-name margin-left-small">.icon-ill-safety</pre>
+        </div>
+        <div class="columns small-12 medium-6 large-4 padding-bottom-medium sg-illustrative-icon">
+            <span class="icon-illustrative icon-ill-salestag"></span>
+            <pre class="sg-icon-entry-name margin-left-small">.icon-ill-salestag</pre>
+        </div>
+        <div class="columns small-12 medium-6 large-4 padding-bottom-medium sg-illustrative-icon">
+            <span class="icon-illustrative icon-ill-save"></span>
+            <pre class="sg-icon-entry-name margin-left-small">.icon-ill-save</pre>
+        </div>
+        <div class="columns small-12 medium-6 large-4 padding-bottom-medium sg-illustrative-icon">
+            <span class="icon-illustrative icon-ill-search"></span>
+            <pre class="sg-icon-entry-name margin-left-small">.icon-ill-search</pre>
+        </div>
+        <div class="columns small-12 medium-6 large-4 padding-bottom-medium sg-illustrative-icon">
+            <span class="icon-illustrative icon-ill-security"></span>
+            <pre class="sg-icon-entry-name margin-left-small">.icon-ill-security</pre>
+        </div>
+        <div class="columns small-12 medium-6 large-4 padding-bottom-medium sg-illustrative-icon">
+            <span class="icon-illustrative icon-ill-settings"></span>
+            <pre class="sg-icon-entry-name margin-left-small">.icon-ill-settings</pre>
+        </div>
+        <div class="columns small-12 medium-6 large-4 padding-bottom-medium sg-illustrative-icon">
+            <span class="icon-illustrative icon-ill-signdocument"></span>
+            <pre class="sg-icon-entry-name margin-left-small">.icon-ill-signdocument</pre>
+        </div>
+        <div class="columns small-12 medium-6 large-4 padding-bottom-medium sg-illustrative-icon">
+            <span class="icon-illustrative icon-ill-star"></span>
+            <pre class="sg-icon-entry-name margin-left-small">.icon-ill-star</pre>
+        </div>
+        <div class="columns small-12 medium-6 large-4 padding-bottom-medium sg-illustrative-icon">
+            <span class="icon-illustrative icon-ill-sunglasses"></span>
+            <pre class="sg-icon-entry-name margin-left-small">.icon-ill-sunglasses</pre>
+        </div>
+        <div class="columns small-12 medium-6 large-4 padding-bottom-medium sg-illustrative-icon">
+            <span class="icon-illustrative icon-ill-systemdown"></span>
+            <pre class="sg-icon-entry-name margin-left-small">.icon-ill-systemdown</pre>
+        </div>
+        <div class="columns small-12 medium-6 large-4 padding-bottom-medium sg-illustrative-icon">
+            <span class="icon-illustrative icon-ill-target"></span>
+            <pre class="sg-icon-entry-name margin-left-small">.icon-ill-target</pre>
+        </div>
+        <div class="columns small-12 medium-6 large-4 padding-bottom-medium sg-illustrative-icon">
+            <span class="icon-illustrative icon-ill-trash"></span>
+            <pre class="sg-icon-entry-name margin-left-small">.icon-ill-trash</pre>
+        </div>
+        <div class="columns small-12 medium-6 large-4 padding-bottom-medium sg-illustrative-icon">
+            <span class="icon-illustrative icon-ill-trophy"></span>
+            <pre class="sg-icon-entry-name margin-left-small">.icon-ill-trophy</pre>
+        </div>
+        <div class="columns small-12 medium-6 large-4 padding-bottom-medium sg-illustrative-icon">
+            <span class="icon-illustrative icon-ill-unlock"></span>
+            <pre class="sg-icon-entry-name margin-left-small">.icon-ill-unlock</pre>
+        </div>
+        <div class="columns small-12 medium-6 large-4 padding-bottom-medium sg-illustrative-icon">
+            <span class="icon-illustrative icon-ill-upcomingpayment"></span>
+            <pre class="sg-icon-entry-name margin-left-small">.icon-ill-upcomingpayment</pre>
+        </div>
+        <div class="columns small-12 medium-6 large-4 padding-bottom-medium sg-illustrative-icon">
+            <span class="icon-illustrative icon-ill-uploadalt"></span>
+            <pre class="sg-icon-entry-name margin-left-small">.icon-ill-uploadalt</pre>
+        </div>
+        <div class="columns small-12 medium-6 large-4 padding-bottom-medium sg-illustrative-icon">
+            <span class="icon-illustrative icon-ill-vacation"></span>
+            <pre class="sg-icon-entry-name margin-left-small">.icon-ill-vacation</pre>
+        </div>
+        <div class="columns small-12 medium-6 large-4 padding-bottom-medium sg-illustrative-icon">
+            <span class="icon-illustrative icon-ill-vault"></span>
+            <pre class="sg-icon-entry-name margin-left-small">.icon-ill-vault</pre>
+        </div>
+        <div class="columns small-12 medium-6 large-4 padding-bottom-medium sg-illustrative-icon">
+            <span class="icon-illustrative icon-ill-wallet"></span>
+            <pre class="sg-icon-entry-name margin-left-small">.icon-ill-wallet</pre>
+        </div>
+        <div class="columns small-12 medium-6 large-4 padding-bottom-medium sg-illustrative-icon">
+            <span class="icon-illustrative icon-ill-wayfinding"></span>
+            <pre class="sg-icon-entry-name margin-left-small">.icon-ill-wayfinding</pre>
+        </div>
+        <div class="columns small-12 medium-6 large-4 end padding-bottom-medium sg-illustrative-icon">
+            <span class="icon-illustrative icon-ill-yougotmail"></span>
+            <pre class="sg-icon-entry-name margin-left-small">.icon-ill-yougotmail</pre>
+        </div>
+    </div>
+</div>
+					</div>
+
+
+
+				</div>
+				<div class="section" id="NM_PX_Illustrative_Icons" data-section="" data-heading="">
+
+					<div class="comment">
+						
+						<h2 class="main-section-sg-by-lvnm" id="section-NM_PX_Illustrative_Icons">NM PX Illustrative Icons</h2>
+<p>Illustrative icons are rendered as background-images since they contain colors and are not packaged as a font.</p>
+<p>To render an illustrative icon, use the <code>.icon-illustrative</code> class with the icon class name you want to render.</p>
+<p>Use Illustrative Icon when:<br>
+Conveying a celebratory moment or message description<br>
+Or to add brand personality.</p>
+<p>Do not resize these icons; they should remain this size.</p>
+<div id="sg-illustrative-icons padding-bottom-large">
+    <div class="row collapse icon-list padding-bottom-large">
+        <div class="columns small-12 medium-6 large-4 padding-bottom-medium sg-illustrative-icon">
+            <span class="icon-illustrative icon-ill-document"></span>
+            <pre class="sg-icon-entry-name margin-left-small">.icon-ill-document</pre>
+        </div>
+        <div class="columns small-12 medium-6 large-4 padding-bottom-medium sg-illustrative-icon">
+            <span class="icon-illustrative icon-ill-folder"></span>
+            <pre class="sg-icon-entry-name margin-left-small">.icon-ill-folder</pre>
+        </div>
+        <div class="columns small-12 medium-6 large-4 padding-bottom-medium sg-illustrative-icon">
+            <span class="icon-illustrative icon-ill-document-multiple"></span>
+            <pre class="sg-icon-entry-name margin-left-small">.icon-ill-document-multiple</pre>
+        </div>
+        <div class="columns small-12 medium-6 large-4 end padding-bottom-medium sg-illustrative-icon">
+            <span class="icon-illustrative icon-ill-upload-document"></span>
+            <pre class="sg-icon-entry-name margin-left-small">.icon-ill-upload-document</pre>
+        </div>
+    </div>
+</div>
+					</div>
+
+
+
+				</div>
+				<div class="section" id="Styling_Icons" data-section="" data-heading="">
+
+					<div class="comment">
+						
+						<h2 class="main-section-sg-by-lvnm" id="section-Styling_Icons">Styling Icons</h2>
+<p>Note that because these icons are rendered as characters in a font, you may style them however you wish using CSS.</p>
+					</div>
+
+					<div class="ss-title">EXAMPLE
+						<span class="icon-code tooltip-target tooltip-show-on-hover">
+							<div class="show-hide-code tooltip tooltip-top-right reset-child-margins">
+								<p>Show Code</p>
+							</div>
+							<span class="icon icon-caret-left"></span>
+							<span class="icon icon-caret-right"></span>
+						</span>
+					</div>
+					<div class="codeBlock markup hljs">
+						<pre><span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"icon icon-arrow-up"</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">"color: green;"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span></pre>
+					</div>
+
+					<div class="result codeExample">
+						<div class="exampleOutput">
+							<span class="icon icon-arrow-up" style="color: green;"></span>
+						</div>
+					</div>
+
+				</div>
+				<div class="section" id="LV_Icons_in_Buttons" data-section="" data-heading="">
+
+					<div class="comment">
+						
+						<h2 class="main-section-sg-by-lvnm" id="section-LV_Icons_in_Buttons">LV Icons in Buttons</h2>
+<p>Primarily, buttons will contain only text. In the event that you would like to inject an icon into a button, the icon will be aligned to the text automatically.
+Note that the icon can appear on either side.</p>
+					</div>
+
+					<div class="ss-title">EXAMPLE
+						<span class="icon-code tooltip-target tooltip-show-on-hover">
+							<div class="show-hide-code tooltip tooltip-top-right reset-child-margins">
+								<p>Show Code</p>
+							</div>
+							<span class="icon icon-caret-left"></span>
+							<span class="icon icon-caret-right"></span>
+						</span>
+					</div>
+					<div class="codeBlock markup hljs">
+						<pre><span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"button btn-cta"</span>&gt;</span>Look Up <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"icon icon-arrow-up margin-left-tiny"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"button btn-cta"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"icon icon-arrow-up margin-right-tiny"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span> Look Up!<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span></pre>
+					</div>
+
+					<div class="result codeExample">
+						<div class="exampleOutput">
+							<button class="button btn-cta">Look Up <span class="icon icon-arrow-up margin-left-tiny"></span></button>
+<button class="button btn-cta"><span class="icon icon-arrow-up margin-right-tiny"></span> Look Up!</button>
+						</div>
+					</div>
+
+				</div>
+				<div class="section" id="NM_CX_Icons_with_Type" data-section="" data-heading="">
+
+					<div class="comment">
+						
+						<h2 class="main-section-sg-by-lvnm" id="section-NM_CX_Icons_with_Type">NM CX Icons with Type</h2>
+<p>Icons should be separated from their associated text by 14px. To include the appropriate right padding, add the class <code>.icon-left-text</code> to the icon element.</p>
+<p>Icons should <strong><em>not</em></strong>:</p>
+<ul>
+<li>Be used with text under 14px size.</li>
+<li>Be used with text over 20px size.</li>
+</ul>
+					</div>
+
+					<div class="ss-title">EXAMPLE
+						<span class="icon-code tooltip-target tooltip-show-on-hover">
+							<div class="show-hide-code tooltip tooltip-top-right reset-child-margins">
+								<p>Show Code</p>
+							</div>
+							<span class="icon icon-caret-left"></span>
+							<span class="icon icon-caret-right"></span>
+						</span>
+					</div>
+					<div class="codeBlock markup hljs">
+						<pre><span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">"font-weight:200"</span>&gt;</span>14px font size:<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">"font-size: 14px"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"icon icon-sysicon-maleavatar icon-left-text"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>John Smith<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">"font-weight:200"</span>&gt;</span>16px font size:<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">"font-size: 16px"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"icon icon-sysicon-maleavatar icon-left-text"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>John Smith<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">"font-weight:200"</span>&gt;</span>20px font size:<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">"font-size: 20px"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"icon icon-sysicon-maleavatar icon-left-text"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>John Smith<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span></pre>
+					</div>
+
+					<div class="result codeExample">
+						<div class="exampleOutput">
+							<span style="font-weight:200">14px font size:</span>
+<p style="font-size: 14px"><span class="icon icon-sysicon-maleavatar icon-left-text"></span>John Smith</p>
+
+<span style="font-weight:200">16px font size:</span>
+<p style="font-size: 16px"><span class="icon icon-sysicon-maleavatar icon-left-text"></span>John Smith</p>
+
+<span style="font-weight:200">20px font size:</span>
+<p style="font-size: 20px"><span class="icon icon-sysicon-maleavatar icon-left-text"></span>John Smith</p>
+						</div>
+					</div>
+
+				</div>
+				<div class="section" id="-" data-section="" data-heading="">
+
+					<div class="comment">
+						
+						<div class="show-for-nm-cx">
+    <h4>Additional Examples</h4>
+    <div class="row padding-horiz-xsmall padding-bottom-large collapse">
+        <div class="small-12 medium-4 columns">
+            <p class="font-family-titles" style="text-align: left">14px</p>
+            <p style="font-size: 14px"><span class="icon icon-sysicon-save icon-left-text"></span>Download</p>
+            <p style="font-size: 14px"><span class="icon icon-sysicon-downloadalt icon-left-text"></span>Download</p>
+            <p style="font-size: 14px"><span class="icon icon-sysicon-navigation icon-left-text"></span>Navigate</p>
+            <p style="font-size: 14px"><span class="icon icon-sysicon-edit icon-left-text"></span>Edit</p>
+            <p style="font-size: 14px"><span class="icon icon-sysicon-maleavatar icon-left-text"></span>John Smith</p>
+            <p style="font-size: 14px"><span class="icon icon-sysicon-yougotmail icon-left-text"></span>jsmith@smithfarms.com</p>
+            <p style="font-size: 14px"><span class="icon icon-sysicon-phone icon-left-text"></span>(555) 555-5555</p>
+            <p style="font-size: 14px"><span class="icon icon-sysicon-mappin icon-left-text"></span>123 Main St, Townton, NJ</p>
+        </div>
+        <div class="small-12 medium-4 columns">
+            <p class="font-family-titles" style="text-align: left">16px</p>
+            <p style="font-size: 16px"><span class="icon icon-sysicon-save icon-left-text"></span>Download</p>
+            <p style="font-size: 16px"><span class="icon icon-sysicon-downloadalt icon-left-text"></span>Download</p>
+            <p style="font-size: 16px"><span class="icon icon-sysicon-navigation icon-left-text"></span>Navigate</p>
+            <p style="font-size: 16px"><span class="icon icon-sysicon-edit icon-left-text"></span>Edit</p>
+            <p style="font-size: 16px"><span class="icon icon-sysicon-maleavatar icon-left-text"></span>John Smith</p>
+            <p style="font-size: 16px"><span class="icon icon-sysicon-yougotmail icon-left-text"></span>jsmith@smithfarms.com</p>
+            <p style="font-size: 16px"><span class="icon icon-sysicon-phone icon-left-text"></span>(555) 555-5555</p>
+            <p style="font-size: 16px"><span class="icon icon-sysicon-mappin icon-left-text"></span>123 Main St, Townton, NJ</p>
+        </div>
+        <div class="small-12 medium-4 columns">
+            <p class="font-family-titles" style="text-align: left">20px</p>
+            <p style="font-size: 20px"><span class="icon icon-sysicon-save icon-left-text"></span>Download</p>
+            <p style="font-size: 20px"><span class="icon icon-sysicon-downloadalt icon-left-text"></span>Download</p>
+            <p style="font-size: 20px"><span class="icon icon-sysicon-navigation icon-left-text"></span>Navigate</p>
+            <p style="font-size: 20px"><span class="icon icon-sysicon-edit icon-left-text"></span>Edit</p>
+            <p style="font-size: 20px"><span class="icon icon-sysicon-maleavatar icon-left-text"></span>John Smith</p>
+            <p style="font-size: 20px"><span class="icon icon-sysicon-yougotmail icon-left-text"></span>jsmith@smithfarms.com</p>
+            <p style="font-size: 20px"><span class="icon icon-sysicon-phone icon-left-text"></span>(555) 555-5555</p>
+            <p style="font-size: 20px"><span class="icon icon-sysicon-mappin icon-left-text"></span>123 Main St, Townton, NJ</p>
+        </div>
+    </div>
+</div>
+					</div>
+
+
+
+				</div>
+				<div class="section" id="NM_CX_Icons_with_Form_Fields" data-section="" data-heading="">
+
+					<div class="comment">
+						
+						<h2 class="main-section-sg-by-lvnm" id="section-NM_CX_Icons_with_Form_Fields">NM CX Icons with Form Fields</h2>
+<p>Icons on the left of form fields should:</p>
+<ul>
+<li>Be aligned with the main text line of the form fields</li>
+<li>Sit 14px to the left of the edge of the field</li>
+</ul>
+<p>Icons on the right of form fields should:</p>
+<ul>
+<li>Be aligned with the main text line of the form fields</li>
+<li>Sit 2px in from the right to keep it from appearing visually as if it were slightly outside the line end</li>
+</ul>
+<p>Form fields stacked vertically should have their left icons aligned vertically centered to other icons.</p>
+<p>To add an icon to a form, add class <code>.icon-left</code> or <code>.icon-right</code> to <code>.md-text-field</code> for the aligned icon you need and place the icon element as the last child within the <code>.md-text-field</code> container.</p>
+<p>Additionally, icons will automatically change color along with the form field active/error/disabled colors.</p>
+					</div>
+
+					<div class="ss-title">EXAMPLE
+						<span class="icon-code tooltip-target tooltip-show-on-hover">
+							<div class="show-hide-code tooltip tooltip-top-right reset-child-margins">
+								<p>Show Code</p>
+							</div>
+							<span class="icon icon-caret-left"></span>
+							<span class="icon icon-caret-right"></span>
+						</span>
+					</div>
+					<div class="codeBlock markup hljs">
+						<pre><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"row"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"small-12 medium-4 columns"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"md-text-field with-floating-label icon-left"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"text"</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"input_1"</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"John Smith"</span> <span class="hljs-attribute">required</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">label</span> <span class="hljs-attribute">for</span>=<span class="hljs-value">"input_1"</span>&gt;</span>Name<span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"icon icon-sysicon-maleavatar"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"row"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"small-12 medium-4 columns"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"md-text-field with-floating-label icon-right"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"password"</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"input_2"</span> <span class="hljs-attribute">required</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">label</span> <span class="hljs-attribute">for</span>=<span class="hljs-value">"input_2"</span>&gt;</span>Password<span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"icon icon-sysicon-eye"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"row"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"small-12 medium-4 columns"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"md-text-field with-floating-label icon-left"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"text"</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"input_3"</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"4567 2nd St, New York, NY"</span> <span class="hljs-attribute">required</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"has-focus"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">label</span> <span class="hljs-attribute">for</span>=<span class="hljs-value">"input_3"</span>&gt;</span>Address<span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"icon icon-sysicon-mappin"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"row"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"small-12 medium-4 columns"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"md-text-field with-floating-label icon-left"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"text"</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"input_4"</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"4567 2nd St, New York, NY"</span> <span class="hljs-attribute">required</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"has-error has-focus"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">label</span> <span class="hljs-attribute">for</span>=<span class="hljs-value">"input_4"</span>&gt;</span>Address<span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"icon icon-sysicon-mappin"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"row"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"small-12 medium-4 columns"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"md-text-field with-floating-label icon-left"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"text"</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"input_5"</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"4567 2nd St, New York, NY"</span> <span class="hljs-attribute">required</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"has-error"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">label</span> <span class="hljs-attribute">for</span>=<span class="hljs-value">"input_5"</span>&gt;</span>Address<span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"icon icon-sysicon-mappin"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"row"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"small-12 medium-4 columns"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"md-text-field with-floating-label icon-left"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"text"</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"input_6"</span> <span class="hljs-attribute">required</span> <span class="hljs-attribute">disabled</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">label</span> <span class="hljs-attribute">for</span>=<span class="hljs-value">"input_6"</span>&gt;</span>Address<span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"icon icon-sysicon-mappin"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
+					</div>
+
+					<div class="result codeExample">
+						<div class="exampleOutput">
+							<div class="row">
+    <div class="small-12 medium-4 columns">
+        <div class="md-text-field with-floating-label icon-left">
+            <input type="text" id="input_1" value="John Smith" required>
+            <label for="input_1">Name</label>
+            <span class="icon icon-sysicon-maleavatar"></span>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="small-12 medium-4 columns">
+        <div class="md-text-field with-floating-label icon-right">
+            <input type="password" id="input_2" required>
+            <label for="input_2">Password</label>
+            <span class="icon icon-sysicon-eye"></span>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="small-12 medium-4 columns">
+        <div class="md-text-field with-floating-label icon-left">
+            <input type="text" id="input_3" value="4567 2nd St, New York, NY" required class="has-focus">
+            <label for="input_3">Address</label>
+            <span class="icon icon-sysicon-mappin"></span>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="small-12 medium-4 columns">
+        <div class="md-text-field with-floating-label icon-left">
+            <input type="text" id="input_4" value="4567 2nd St, New York, NY" required class="has-error has-focus">
+            <label for="input_4">Address</label>
+            <span class="icon icon-sysicon-mappin"></span>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="small-12 medium-4 columns">
+        <div class="md-text-field with-floating-label icon-left">
+            <input type="text" id="input_5" value="4567 2nd St, New York, NY" required class="has-error">
+            <label for="input_5">Address</label>
+            <span class="icon icon-sysicon-mappin"></span>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="small-12 medium-4 columns">
+        <div class="md-text-field with-floating-label icon-left">
+            <input type="text" id="input_6" required disabled>
+            <label for="input_6">Address</label>
+            <span class="icon icon-sysicon-mappin"></span>
+        </div>
+    </div>
+</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</section>
+
+		<footer class="sg-footer">
+			<div class="grid-container reset-child-margins">
+				<p class="padding-horiz-xlarge"></p>
+			</div>
+		</footer>
+	</div>
+
+	<div class="modal-overlay"></div>
+
+	<div class="modal-container">
+		<div class="modal">
+			<h1>Example Modal</h1>
+
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodoconsequat. Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat nonproident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		</div>
+		<button class="modal-close">
+			<span class="icon icon-close"></span>
+		</button>
+	</div>
+
+	<div class="toaster-fixed-region">
+		<div class="grid-container sg-padding-responsive-horiz padding-vert-medium toaster-grid">
+			<div class="toaster-container show-with-transition text-right">
+				<div class="toaster-trigger inline-block bg-medium-grey padding-horiz-tiny">
+					<button class="reset-button">
+						<span class="icon icon-caret-down"></span>
+					</button>
+				</div>
+				<div class="toaster-content padding-small bg-medium-grey">
+					<a href="http://uitk.learnvest.com/explorer" class="button tiny info margin-bottom-none">Back to Version Explorer!</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="./resources/js/vendor/moment.min.js"></script>
+	<script src="./resources/js/vendor/d3.min.js"></script>
+	<script src="./resources/js/app.js" id="appjs"></script>
+</body>
+</html>

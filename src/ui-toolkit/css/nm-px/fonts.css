@@ -1,0 +1,194 @@
+*:focus {
+  outline: 1px solid #9C9C9C;
+  outline: auto -webkit-focus-ring-color;
+  outline-color: #9C9C9C; }
+
+*:active {
+  outline: 0; }
+
+@media all and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  *:focus {
+    outline: 0; }
+  a:focus,
+  button:focus,
+  input:focus,
+  optgroup:focus,
+  select:focus,
+  textarea:focus,
+  [type="button"]:focus,
+  [type="reset"]:focus,
+  [type="submit"]:focus,
+  [type="checkbox"]:focus,
+  [type="radio"]:focus,
+  [type="search"]:focus {
+    outline: 1px solid #9C9C9C;
+    outline: auto -webkit-focus-ring-color;
+    outline-color: #9C9C9C; } }
+
+@font-face {
+  font-family: "Guardian Sans Headline";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../../fonts/nm-px/type/GuardianSans-Regular.eot");
+  src: url(../../fonts/nm-px/type/GuardianSans-Regular.eot?#iefix) format("embedded-opentype"), url(../../fonts/nm-px/type/GuardianSans-Regular.woff) format("woff"), url(../../fonts/nm-px/type/GuardianSans-Regular.ttf) format("ttf"), url(../../fonts/nm-px/type/GuardianSans-Regular.svg#GuardianSans-Regular) format("svg"); }
+
+@font-face {
+  font-family: "Guardian Sans Headline";
+  font-style: normal;
+  font-weight: 100;
+  src: url("../../fonts/nm-px/type/GuardianSans-Light.eot");
+  src: url(../../fonts/nm-px/type/GuardianSans-Light.eot?#iefix) format("embedded-opentype"), url(../../fonts/nm-px/type/GuardianSans-Light.woff) format("woff"), url(../../fonts/nm-px/type/GuardianSans-Light.ttf) format("ttf"), url(../../fonts/nm-px/type/GuardianSans-Light.svg#GuardianSans-Light) format("svg"); }
+
+@font-face {
+  font-family: "Guardian Sans Headline";
+  font-style: normal;
+  font-weight: 200;
+  src: url("../../fonts/nm-px/type/GuardianSans-Light.eot");
+  src: url(../../fonts/nm-px/type/GuardianSans-Light.eot?#iefix) format("embedded-opentype"), url(../../fonts/nm-px/type/GuardianSans-Light.woff) format("woff"), url(../../fonts/nm-px/type/GuardianSans-Light.ttf) format("ttf"), url(../../fonts/nm-px/type/GuardianSans-Light.svg#GuardianSans-Light) format("svg"); }
+
+@font-face {
+  font-family: "Guardian Sans Regular";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../../fonts/nm-px/type/GuardianSans-Regular.eot");
+  src: url(../../fonts/nm-px/type/GuardianSans-Regular.eot?#iefix) format("embedded-opentype"), url(../../fonts/nm-px/type/GuardianSans-Regular.woff) format("woff"), url(../../fonts/nm-px/type/GuardianSans-Regular.ttf) format("ttf"), url(../../fonts/nm-px/type/GuardianSans-Regular.svg#GuardianSans-Regular) format("svg"); }
+
+@font-face {
+  font-family: "Guardian Sans Text";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../../fonts/nm-px/type/GuardianSans-Regular.eot");
+  src: url(../../fonts/nm-px/type/GuardianSans-Regular.eot?#iefix) format("embedded-opentype"), url(../../fonts/nm-px/type/GuardianSans-Regular.woff) format("woff"), url(../../fonts/nm-px/type/GuardianSans-Regular.ttf) format("ttf"), url(../../fonts/nm-px/type/GuardianSans-Regular.svg#GuardianSans-Regular) format("svg"); }
+
+@font-face {
+  font-family: "Guardian Sans Text";
+  font-style: normal;
+  font-weight: 800;
+  src: url("../../fonts/nm-px/type/GuardianSans-Bold.eot");
+  src: url(../../fonts/nm-px/type/GuardianSans-Bold.eot?#iefix) format("embedded-opentype"), url(../../fonts/nm-px/type/GuardianSans-Bold.woff) format("woff"), url(../../fonts/nm-px/type/GuardianSans-Bold.ttf) format("ttf"), url(../../fonts/nm-px/type/GuardianSans-Bold.svg#GuardianSans-Bold) format("svg"); }
+
+@font-face {
+  font-family: "Guardian Sans Text";
+  font-style: italic;
+  font-weight: 400;
+  src: url("../../fonts/nm-px/type/GuardianSans-Regular-Italic.eot");
+  src: url(../../fonts/nm-px/type/GuardianSans-Regular-Italic.eot?#iefix) format("embedded-opentype"), url(../../fonts/nm-px/type/GuardianSans-Regular-Italic.woff) format("woff"), url(../../fonts/nm-px/type/GuardianSans-Regular-Italic.ttf) format("ttf"), url(../../fonts/nm-px/type/GuardianSans-Regular-Italic.svg#GuardianSans-Regular-Italic) format("svg"); }
+
+@font-face {
+  font-family: "Guardian Sans Text TF";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../../fonts/nm-px/type/GuardianSans-Regular.eot");
+  src: url(../../fonts/nm-px/type/GuardianSans-Regular.eot?#iefix) format("embedded-opentype"), url(../../fonts/nm-px/type/GuardianSans-Regular.woff) format("woff"), url(../../fonts/nm-px/type/GuardianSans-Regular.ttf) format("ttf"), url(../../fonts/nm-px/type/GuardianSans-Regular.svg#GuardianSans-Regular) format("svg"); }
+
+@font-face {
+  font-family: "Guardian Sans Text TF";
+  font-style: normal;
+  font-weight: 800;
+  src: url("../../fonts/nm-px/type/GuardianSans-Bold.eot");
+  src: url(../../fonts/nm-px/type/GuardianSans-Bold.eot?#iefix) format("embedded-opentype"), url(../../fonts/nm-px/type/GuardianSans-Bold.woff) format("woff"), url(../../fonts/nm-px/type/GuardianSans-Bold.ttf) format("ttf"), url(../../fonts/nm-px/type/GuardianSans-Bold.svg#GuardianSans-Bold) format("svg"); }
+
+@font-face {
+  font-family: "Guardian Sans Text TF";
+  font-style: italic;
+  font-weight: 400;
+  src: url("../../fonts/nm-px/type/GuardianSans-Regular-Italic.eot");
+  src: url(../../fonts/nm-px/type/GuardianSans-Regular-Italic.eot?#iefix) format("embedded-opentype"), url(../../fonts/nm-px/type/GuardianSans-Regular-Italic.woff) format("woff"), url(../../fonts/nm-px/type/GuardianSans-Regular-Italic.ttf) format("ttf"), url(../../fonts/nm-px/type/GuardianSans-Regular-Italic.svg#GuardianSans-Regular-Italic) format("svg"); }
+
+@font-face {
+  font-family: "Guardian Sans";
+  font-style: italic;
+  font-weight: 900;
+  src: url("../../fonts/nm-px/type/GuardianSans-Black-Italic.eot");
+  src: url(../../fonts/nm-px/type/GuardianSans-Black-Italic.eot?#iefix) format("embedded-opentype"), url(../../fonts/nm-px/type/GuardianSans-Black-Italic.woff) format("woff"), url(../../fonts/nm-px/type/GuardianSans-Black-Italic.ttf) format("ttf"), url(../../fonts/nm-px/type/GuardianSans-Black-Italic.svg#GuardianSans-Black-Italic) format("svg"); }
+
+@font-face {
+  font-family: "Guardian Sans";
+  font-style: normal;
+  font-weight: 900;
+  src: url("../../fonts/nm-px/type/GuardianSans-Black.eot");
+  src: url(../../fonts/nm-px/type/GuardianSans-Black.eot?#iefix) format("embedded-opentype"), url(../../fonts/nm-px/type/GuardianSans-Black.woff) format("woff"), url(../../fonts/nm-px/type/GuardianSans-Black.ttf) format("ttf"), url(../../fonts/nm-px/type/GuardianSans-Black.svg#GuardianSans-Black) format("svg"); }
+
+@font-face {
+  font-family: "Guardian Sans";
+  font-style: italic;
+  font-weight: 800;
+  src: url("../../fonts/nm-px/type/GuardianSans-Bold-Italic.eot");
+  src: url(../../fonts/nm-px/type/GuardianSans-Bold-Italic.eot?#iefix) format("embedded-opentype"), url(../../fonts/nm-px/type/GuardianSans-Bold-Italic.woff) format("woff"), url(../../fonts/nm-px/type/GuardianSans-Bold-Italic.ttf) format("ttf"), url(../../fonts/nm-px/type/GuardianSans-Bold-Italic.svg#GuardianSans-Bold-Italic) format("svg"); }
+
+@font-face {
+  font-family: "Guardian Sans";
+  font-style: normal;
+  font-weight: 800;
+  src: url("../../fonts/nm-px/type/GuardianSans-Bold.eot");
+  src: url(../../fonts/nm-px/type/GuardianSans-Bold.eot?#iefix) format("embedded-opentype"), url(../../fonts/nm-px/type/GuardianSans-Bold.woff) format("woff"), url(../../fonts/nm-px/type/GuardianSans-Bold.ttf) format("ttf"), url(../../fonts/nm-px/type/GuardianSans-Bold.svg#GuardianSans-Bold) format("svg"); }
+
+@font-face {
+  font-family: "Guardian Sans";
+  font-style: italic;
+  font-weight: 700;
+  src: url("../../fonts/nm-px/type/GuardianSans-SemiBold-Italic.eot");
+  src: url(../../fonts/nm-px/type/GuardianSans-SemiBold-Italic.eot?#iefix) format("embedded-opentype"), url(../../fonts/nm-px/type/GuardianSans-SemiBold-Italic.woff) format("woff"), url(../../fonts/nm-px/type/GuardianSans-SemiBold-Italic.ttf) format("ttf"), url(../../fonts/nm-px/type/GuardianSans-SemiBold-Italic.svg#GuardianSans-SemiBold-Italic) format("svg"); }
+
+@font-face {
+  font-family: "Guardian Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../../fonts/nm-px/type/GuardianSans-SemiBold.eot");
+  src: url(../../fonts/nm-px/type/GuardianSans-SemiBold.eot?#iefix) format("embedded-opentype"), url(../../fonts/nm-px/type/GuardianSans-SemiBold.woff) format("woff"), url(../../fonts/nm-px/type/GuardianSans-SemiBold.ttf) format("ttf"), url(../../fonts/nm-px/type/GuardianSans-SemiBold.svg#GuardianSans-SemiBold) format("svg"); }
+
+@font-face {
+  font-family: "Guardian Sans";
+  font-style: italic;
+  font-weight: 500;
+  src: url("../../fonts/nm-px/type/GuardianSans-Medium-Italic.eot");
+  src: url(../../fonts/nm-px/type/GuardianSans-Medium-Italic.eot?#iefix) format("embedded-opentype"), url(../../fonts/nm-px/type/GuardianSans-Medium-Italic.woff) format("woff"), url(../../fonts/nm-px/type/GuardianSans-Medium-Italic.ttf) format("ttf"), url(../../fonts/nm-px/type/GuardianSans-Medium-Italic.svg#GuardianSans-Medium-Italic) format("svg"); }
+
+@font-face {
+  font-family: "Guardian Sans";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../../fonts/nm-px/type/GuardianSans-Medium.eot");
+  src: url(../../fonts/nm-px/type/GuardianSans-Medium.eot?#iefix) format("embedded-opentype"), url(../../fonts/nm-px/type/GuardianSans-Medium.woff) format("woff"), url(../../fonts/nm-px/type/GuardianSans-Medium.ttf) format("ttf"), url(../../fonts/nm-px/type/GuardianSans-Medium.svg#GuardianSans-Medium) format("svg"); }
+
+@font-face {
+  font-family: "Guardian Sans";
+  font-style: italic;
+  font-weight: 100;
+  src: url("../../fonts/nm-px/type/GuardianSans-Thin-Italic.eot");
+  src: url(../../fonts/nm-px/type/GuardianSans-Thin-Italic.eot?#iefix) format("embedded-opentype"), url(../../fonts/nm-px/type/GuardianSans-Thin-Italic.woff) format("woff"), url(../../fonts/nm-px/type/GuardianSans-Thin-Italic.ttf) format("ttf"), url(../../fonts/nm-px/type/GuardianSans-Thin-Italic.svg#GuardianSans-Thin-Italic) format("svg"); }
+
+@font-face {
+  font-family: "Guardian Sans";
+  font-style: normal;
+  font-weight: 100;
+  src: url("../../fonts/nm-px/type/GuardianSans-Thin.eot");
+  src: url(../../fonts/nm-px/type/GuardianSans-Thin.eot?#iefix) format("embedded-opentype"), url(../../fonts/nm-px/type/GuardianSans-Thin.woff) format("woff"), url(../../fonts/nm-px/type/GuardianSans-Thin.ttf) format("ttf"), url(../../fonts/nm-px/type/GuardianSans-Thin.svg#GuardianSans-Thin) format("svg"); }
+
+@font-face {
+  font-family: "Guardian Sans";
+  font-style: italic;
+  font-weight: 200;
+  src: url("../../fonts/nm-px/type/GuardianSans-Light-Italic.eot");
+  src: url(../../fonts/nm-px/type/GuardianSans-Light-Italic.eot?#iefix) format("embedded-opentype"), url(../../fonts/nm-px/type/GuardianSans-Light-Italic.woff) format("woff"), url(../../fonts/nm-px/type/GuardianSans-Light-Italic.ttf) format("ttf"), url(../../fonts/nm-px/type/GuardianSans-Light-Italic.svg#GuardianSans-Light-Italic) format("svg"); }
+
+@font-face {
+  font-family: "Guardian Sans";
+  font-style: normal;
+  font-weight: 200;
+  src: url("../../fonts/nm-px/type/GuardianSans-Light.eot");
+  src: url(../../fonts/nm-px/type/GuardianSans-Light.eot?#iefix) format("embedded-opentype"), url(../../fonts/nm-px/type/GuardianSans-Light.woff) format("woff"), url(../../fonts/nm-px/type/GuardianSans-Light.ttf) format("ttf"), url(../../fonts/nm-px/type/GuardianSans-Light.svg#GuardianSans-Light) format("svg"); }
+
+@font-face {
+  font-family: "Guardian Sans";
+  font-style: italic;
+  font-weight: 400;
+  src: url("../../fonts/nm-px/type/GuardianSans-Regular-Italic.eot");
+  src: url(../../fonts/nm-px/type/GuardianSans-Regular-Italic.eot?#iefix) format("embedded-opentype"), url(../../fonts/nm-px/type/GuardianSans-Regular-Italic.woff) format("woff"), url(../../fonts/nm-px/type/GuardianSans-Regular-Italic.ttf) format("ttf"), url(../../fonts/nm-px/type/GuardianSans-Regular-Italic.svg#GuardianSans-Regular-Italic) format("svg"); }
+
+@font-face {
+  font-family: "Guardian Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../../fonts/nm-px/type/GuardianSans-Regular.eot");
+  src: url(../../fonts/nm-px/type/GuardianSans-Regular.eot?#iefix) format("embedded-opentype"), url(../../fonts/nm-px/type/GuardianSans-Regular.woff) format("woff"), url(../../fonts/nm-px/type/GuardianSans-Regular.ttf) format("ttf"), url(../../fonts/nm-px/type/GuardianSans-Regular.svg#GuardianSans-Regular) format("svg"); }

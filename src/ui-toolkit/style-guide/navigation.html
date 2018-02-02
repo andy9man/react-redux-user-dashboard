@@ -1,0 +1,659 @@
+<!doctype html>
+<html>
+<head>
+	<title>Style Guide - NM / LV</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+	<link rel="stylesheet" href="../css/static/fader-overlay.css">
+	<style>
+	/*
+	
+	github.com style (c) Vasily Polovnyov <vast@whiteants.net>
+	
+	*/
+	
+	.hljs {
+	  display: block;
+	  overflow-x: auto;
+	  padding: 0.5em;
+	  color: #333;
+	  background: #f8f8f8;
+	  -webkit-text-size-adjust: none;
+	}
+	
+	.hljs-comment,
+	.diff .hljs-header {
+	  color: #998;
+	  font-style: italic;
+	}
+	
+	.hljs-keyword,
+	.css .rule .hljs-keyword,
+	.hljs-winutils,
+	.nginx .hljs-title,
+	.hljs-subst,
+	.hljs-request,
+	.hljs-status {
+	  color: #333;
+	  font-weight: bold;
+	}
+	
+	.hljs-number,
+	.hljs-hexcolor,
+	.ruby .hljs-constant {
+	  color: #008080;
+	}
+	
+	.hljs-string,
+	.hljs-tag .hljs-value,
+	.hljs-doctag,
+	.tex .hljs-formula {
+	  color: #d14;
+	}
+	
+	.hljs-title,
+	.hljs-id,
+	.scss .hljs-preprocessor {
+	  color: #900;
+	  font-weight: bold;
+	}
+	
+	.hljs-list .hljs-keyword,
+	.hljs-subst {
+	  font-weight: normal;
+	}
+	
+	.hljs-class .hljs-title,
+	.hljs-type,
+	.vhdl .hljs-literal,
+	.tex .hljs-command {
+	  color: #458;
+	  font-weight: bold;
+	}
+	
+	.hljs-tag,
+	.hljs-tag .hljs-title,
+	.hljs-rule .hljs-property,
+	.django .hljs-tag .hljs-keyword {
+	  color: #000080;
+	  font-weight: normal;
+	}
+	
+	.hljs-attribute,
+	.hljs-variable,
+	.lisp .hljs-body,
+	.hljs-name {
+	  color: #008080;
+	}
+	
+	.hljs-regexp {
+	  color: #009926;
+	}
+	
+	.hljs-symbol,
+	.ruby .hljs-symbol .hljs-string,
+	.lisp .hljs-keyword,
+	.clojure .hljs-keyword,
+	.scheme .hljs-keyword,
+	.tex .hljs-special,
+	.hljs-prompt {
+	  color: #990073;
+	}
+	
+	.hljs-built_in {
+	  color: #0086b3;
+	}
+	
+	.hljs-preprocessor,
+	.hljs-pragma,
+	.hljs-pi,
+	.hljs-doctype,
+	.hljs-shebang,
+	.hljs-cdata {
+	  color: #999;
+	  font-weight: bold;
+	}
+	
+	.hljs-deletion {
+	  background: #fdd;
+	}
+	
+	.hljs-addition {
+	  background: #dfd;
+	}
+	
+	.diff .hljs-change {
+	  background: #0086b3;
+	}
+	
+	.hljs-chunk {
+	  color: #aaa;
+	}
+	
+	</style></head>
+<body>
+	<div class="page-container">
+		<div id="fader-overlay" class="sg-fader-overlay"></div>
+
+		<nav class="row sg-nav padding-vert-small viewport-el" role="navigation" data-emit-events data-top-bottom >
+			<div class="small-2 columns burger-wrapper show-for-small">
+				<button class="burger reset-button trigger-menu">
+					<div class="burger-content"></div>
+				</button>
+			</div>
+
+			<h1 class="medium-7 columns hide-for-small margin-vert-none"><a href="#">LearnVest &amp; Northwestern Mutual - A Style Guide</a></h1>
+
+			<div class="small-10 medium-5 columns theme-switch-wrapper reset-child-margins text-right">
+				<span class="text-white inline-block valign-middle margin-right-small">Select Theme: </span>
+				<!-- jQuery injects select el here (theme-switch.js) -->
+			</div>
+		</nav>
+
+		<section class="row height-full">
+			<div class="medium-4 large-3 xlarge-2 columns height-full hide-for-small sg-sidebar">
+				<div class="padding-top-medium reset-child-margins">
+					<ul class="sg-block-nav sg-block-nav-submenu reset-list reset-child-margins">
+
+						<h3>Navigation</h3>
+						<li><a href="#Navigation-Tabs">Tabs</a></li>
+						<li><a href="#Navigation-Filter_Navigation">Filter Navigation</a></li>
+						<li><a href="#Navigation-Heading_Navigation">Heading Navigation</a></li>
+						<li><a href="#Navigation-Contextual_Example">Contextual Example</a></li>
+						<li><a href="#Navigation-Ghosting_Navigation">Ghosting Navigation</a></li>
+
+					</ul>
+					<ul class="sg-block-nav sg-block-nav-submenu reset-list reset-child-margins">
+
+						<h3></h3>
+
+					</ul>
+
+
+					<ul class="sg-block-nav sg-category-nav reset-list reset-child-margins">
+						<h3>Categories</h3>
+						<li><a href="button-groups.html">Button Groups</a></li>
+						<li><a href="buttons.html">Buttons</a></li>
+						<li><a href="card.html">Card</a></li>
+						<li><a href="colors.html">Colors</a></li>
+						<li><a href="forms.html">Forms</a></li>
+						<li><a href="ghosting.html">Ghosting</a></li>
+						<li><a href="graphs.html">Graphs</a></li>
+						<li><a href="grid.html">Grid</a></li>
+						<li><a href="icons.html">Icons</a></li>
+						<li><a href="labels.html">Labels</a></li>
+						<li><a href="loading-indicators.html">Loading Indicators</a></li>
+						<li><a href="modals.html">Modals</a></li>
+						<li><a href="navigation.html">Navigation</a></li>
+						<li><a href="notifications.html">Notifications</a></li>
+						<li><a href="switches.html">Switches</a></li>
+						<li><a href="tables.html">Tables</a></li>
+						<li><a href="tooltips.html">Tooltips</a></li>
+						<li><a href="type.html">Type</a></li>
+						<li><a href="utility-classes.html">Utility Classes</a></li>
+						<li><a href="visibility.html">Visibility</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="medium-8 large-9 xlarge-10 columns sg-content" id="styleguide">
+				<div class="section" id="Navigation-Navigation" data-section="Navigation" data-heading="Navigation">
+
+					<div class="comment">
+						<h1>Navigation</h1>
+						<p>While some navigation components are sure to be application-specific, the <em>UI-Toolkit</em> provides a suite of common navigation components that should hopefully form the backbone for your application&apos;s navigation paradigms.</p>
+<p>Below, we provide discussions and demonstrations of each of these individual components, as well as an example of how they can work together in context.</p>
+<p>*Note: We use <code>&lt;button&gt;</code> tags in this demonstration to show how the focus state gives a clear representation of the selected item. Navigation features will also work with <code>&lt;a&gt;</code> tags if you so desire.</p>
+					</div>
+
+
+
+				</div>
+				<div class="section" id="Navigation-Tabs" data-section="Navigation" data-heading="Tabs">
+
+					<div class="comment">
+						<h1>Tabs</h1>
+						<p>Tabs are elements that help you organize and navigate multiple documents in a single container. They can be used for switching between items in the container. To display a tab as active, simply add the <code>.active</code> class.</p>
+					</div>
+
+					<div class="ss-title">EXAMPLE
+						<span class="icon-code tooltip-target tooltip-show-on-hover">
+							<div class="show-hide-code tooltip tooltip-top-right reset-child-margins">
+								<p>Show Code</p>
+							</div>
+							<span class="icon icon-caret-left"></span>
+							<span class="icon icon-caret-right"></span>
+						</span>
+					</div>
+					<div class="codeBlock markup hljs">
+						<pre><span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"tabs"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"tab-title active"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">button</span>&gt;</span>Summary<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"tab-title"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">button</span>&gt;</span>Basics<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"tab-title"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">button</span>&gt;</span>Budget<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"tab-title"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">button</span>&gt;</span>Accounts<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span></pre>
+					</div>
+
+					<div class="result codeExample">
+						<div class="exampleOutput">
+							<ul class="tabs">
+    <li class="tab-title active"><button>Summary</button></li>
+    <li class="tab-title"><button>Basics</button></li>
+    <li class="tab-title"><button>Budget</button></li>
+    <li class="tab-title"><button>Accounts</button></li>
+</ul>
+						</div>
+					</div>
+
+				</div>
+				<div class="section" id="Vertical_Tabs" data-section="" data-heading="">
+
+					<div class="comment">
+						
+						<h2 class="main-section-sg-by-lvnm" id="section-Vertical_Tabs">Vertical Tabs</h2>
+<p>To display your tabs vertically, add the <code>.vertical</code> class.</p>
+					</div>
+
+					<div class="ss-title">EXAMPLE
+						<span class="icon-code tooltip-target tooltip-show-on-hover">
+							<div class="show-hide-code tooltip tooltip-top-right reset-child-margins">
+								<p>Show Code</p>
+							</div>
+							<span class="icon icon-caret-left"></span>
+							<span class="icon icon-caret-right"></span>
+						</span>
+					</div>
+					<div class="codeBlock markup hljs">
+						<pre><span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"tabs vertical"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"tab-title active"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">button</span>&gt;</span>Summary<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"tab-title"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">button</span>&gt;</span>Basics<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"tab-title"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">button</span>&gt;</span>Budget<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"tab-title"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">button</span>&gt;</span>Accounts<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span></pre>
+					</div>
+
+					<div class="result codeExample">
+						<div class="exampleOutput">
+							<ul class="tabs vertical">
+    <li class="tab-title active"><button>Summary</button></li>
+    <li class="tab-title"><button>Basics</button></li>
+    <li class="tab-title"><button>Budget</button></li>
+    <li class="tab-title"><button>Accounts</button></li>
+</ul>
+						</div>
+					</div>
+
+				</div>
+				<div class="section" id="Navigation-Filter_Navigation" data-section="Navigation" data-heading="Filter Navigation">
+
+					<div class="comment">
+						<h1>Filter Navigation</h1>
+						<p>Filters are elements that allow you to re-organize the content within a single container to fit a desired context or categorical match. To display an entry as active, again, add the <code>.active</code> class.</p>
+					</div>
+
+					<div class="ss-title">EXAMPLE
+						<span class="icon-code tooltip-target tooltip-show-on-hover">
+							<div class="show-hide-code tooltip tooltip-top-right reset-child-margins">
+								<p>Show Code</p>
+							</div>
+							<span class="icon icon-caret-left"></span>
+							<span class="icon icon-caret-right"></span>
+						</span>
+					</div>
+					<div class="codeBlock markup hljs">
+						<pre><span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"filter-nav"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"filter-nav-entry active"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">button</span>&gt;</span>Summary<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"filter-nav-entry"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">button</span>&gt;</span>Basics<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"filter-nav-entry"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">button</span>&gt;</span>Budget<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"filter-nav-entry"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">button</span>&gt;</span>Accounts<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span></pre>
+					</div>
+
+					<div class="result codeExample">
+						<div class="exampleOutput">
+							<ul class="filter-nav">
+    <li class="filter-nav-entry active"><button>Summary</button></li>
+    <li class="filter-nav-entry"><button>Basics</button></li>
+    <li class="filter-nav-entry"><button>Budget</button></li>
+    <li class="filter-nav-entry"><button>Accounts</button></li>
+</ul>
+						</div>
+					</div>
+
+				</div>
+				<div class="section" id="-" data-section="" data-heading="">
+
+					<div class="comment">
+						
+						<p>Like with tabs, you may display your filters vertically with the <code>.vertical</code> class.</p>
+					</div>
+
+					<div class="ss-title">EXAMPLE
+						<span class="icon-code tooltip-target tooltip-show-on-hover">
+							<div class="show-hide-code tooltip tooltip-top-right reset-child-margins">
+								<p>Show Code</p>
+							</div>
+							<span class="icon icon-caret-left"></span>
+							<span class="icon icon-caret-right"></span>
+						</span>
+					</div>
+					<div class="codeBlock markup hljs">
+						<pre><span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"filter-nav vertical"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"filter-nav-entry active"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">button</span>&gt;</span>Summary<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"filter-nav-entry"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">button</span>&gt;</span>Basics<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"filter-nav-entry"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">button</span>&gt;</span>Budget<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"filter-nav-entry"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">button</span>&gt;</span>Accounts<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span></pre>
+					</div>
+
+					<div class="result codeExample">
+						<div class="exampleOutput">
+							<ul class="filter-nav vertical">
+    <li class="filter-nav-entry active"><button>Summary</button></li>
+    <li class="filter-nav-entry"><button>Basics</button></li>
+    <li class="filter-nav-entry"><button>Budget</button></li>
+    <li class="filter-nav-entry"><button>Accounts</button></li>
+</ul>
+						</div>
+					</div>
+
+				</div>
+				<div class="section" id="Navigation-Heading_Navigation" data-section="Navigation" data-heading="Heading Navigation">
+
+					<div class="comment">
+						<h1>Heading Navigation</h1>
+						<p>The heading-navigation component operates very similarly to tabs, but should exist at a higher-level on the page in the event that a secondary level of specificity is required. Again, to display an entry as active, add the <code>.active</code> class.</p>
+					</div>
+
+					<div class="ss-title">EXAMPLE
+						<span class="icon-code tooltip-target tooltip-show-on-hover">
+							<div class="show-hide-code tooltip tooltip-top-right reset-child-margins">
+								<p>Show Code</p>
+							</div>
+							<span class="icon icon-caret-left"></span>
+							<span class="icon icon-caret-right"></span>
+						</span>
+					</div>
+					<div class="codeBlock markup hljs">
+						<pre><span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"heading-nav"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"heading-nav-entry active"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">button</span>&gt;</span>Summary<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"heading-nav-entry"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">button</span>&gt;</span>Basics<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"heading-nav-entry"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">button</span>&gt;</span>Budget<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"heading-nav-entry"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">button</span>&gt;</span>Accounts<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span></pre>
+					</div>
+
+					<div class="result codeExample">
+						<div class="exampleOutput">
+							<ul class="heading-nav">
+    <li class="heading-nav-entry active"><button>Summary</button></li>
+    <li class="heading-nav-entry"><button>Basics</button></li>
+    <li class="heading-nav-entry"><button>Budget</button></li>
+    <li class="heading-nav-entry"><button>Accounts</button></li>
+</ul>
+						</div>
+					</div>
+
+				</div>
+				<div class="section" id="-" data-section="" data-heading="">
+
+					<div class="comment">
+						
+						<p>Unlike both filters and tabs, heading-navigation entries cannot be displayed vertically.</p>
+					</div>
+
+
+
+				</div>
+				<div class="section" id="Navigation-Contextual_Example" data-section="Navigation" data-heading="Contextual Example">
+
+					<div class="comment">
+						<h1>Contextual Example</h1>
+						<p>Below is an example of the way in which these navigation components can be combined in context.</p>
+					</div>
+
+					<div class="ss-title">EXAMPLE
+						<span class="icon-code tooltip-target tooltip-show-on-hover">
+							<div class="show-hide-code tooltip tooltip-top-right reset-child-margins">
+								<p>Show Code</p>
+							</div>
+							<span class="icon icon-caret-left"></span>
+							<span class="icon icon-caret-right"></span>
+						</span>
+					</div>
+					<div class="codeBlock markup hljs">
+						<pre><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"bg-off-white padding-medium"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">h1</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"padding-bottom-medium"</span>&gt;</span>Navigation Concepts<span class="hljs-tag">&lt;/<span class="hljs-title">h1</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"heading-nav padding-bottom-medium"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"heading-nav-entry active"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">button</span>&gt;</span>Doc Vault<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"heading-nav-entry"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">button</span>&gt;</span>Statements &amp;amp; Reports<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"heading-nav-entry"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">button</span>&gt;</span>More Documents<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"card padding-none"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"tabs padding-left-medium padding-top-small"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"tab-title active"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">button</span>&gt;</span>My Uploads<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"tab-title"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">button</span>&gt;</span>Shared with Me<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"tab-title"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">button</span>&gt;</span>eSignatures<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"tab-title"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">button</span>&gt;</span>All Documents<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"row padding-horiz-medium"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"columns small-3 padding-top-medium"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"filter-nav vertical"</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-title">h6</span>&gt;</span>Collection Types<span class="hljs-tag">&lt;/<span class="hljs-title">h6</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"filter-nav-entry active"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">button</span>&gt;</span>All Collections<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"filter-nav-entry"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">button</span>&gt;</span>Insurance Docs<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"filter-nav-entry"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">button</span>&gt;</span>Estate Docs<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"filter-nav-entry"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">button</span>&gt;</span>Financial Docs<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"columns small-9 padding-vert-medium"</span>&gt;</span>                
+                <span class="hljs-tag">&lt;<span class="hljs-title">h1</span>&gt;</span>All Collections<span class="hljs-tag">&lt;/<span class="hljs-title">h1</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">h3</span>&gt;</span>Subheading for content below<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam quis facilisis lorem, vitae egestas leo. Nulla at augue vulputate, sodales diam rutrum, rhoncus felis. Mauris vitae lacus sodales, ullamcorper felis sed, sodales est. Nullam volutpat leo mi, non pellentesque ante porttitor at. Integer a diam massa. Suspendisse cursus velit mi, eget accumsan massa eleifend vel. Phasellus ut placerat quam. Integer eleifend enim et elit malesuada, commodo congue ipsum tempor. Nulla feugiat leo vel magna feugiat bibendum. Sed eget eros vulputate, laoreet ante sit amet, malesuada nulla. Aenean id maximus ante, ac mattis ex.<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>Integer vestibulum est in justo finibus faucibus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Ut massa justo, scelerisque vitae auctor at, sagittis tincidunt risus. Duis aliquet est ante, non congue lectus fermentum sit amet. Aliquam iaculis laoreet risus eget vulputate. Etiam sodales condimentum odio, scelerisque pulvinar velit varius quis. Duis eu ex velit. Sed vel massa accumsan, bibendum nulla id, interdum elit. Duis sollicitudin cursus felis, id molestie risus hendrerit vel. Nulla id nisi vitae erat eleifend vestibulum a tempor neque. Donec neque dui, maximus sed ultrices nec, vestibulum nec ex. Donec tempor condimentum nisl, ac finibus ligula facilisis at. Quisque eu dui lacus. Sed lobortis elit nec consequat fermentum. Maecenas a erat ut risus vestibulum consectetur. Aliquam erat volutpat.<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
+					</div>
+
+					<div class="result codeExample">
+						<div class="exampleOutput">
+							<div class="bg-off-white padding-medium">
+    <h1 class="padding-bottom-medium">Navigation Concepts</h1>
+    <ul class="heading-nav padding-bottom-medium">
+        <li class="heading-nav-entry active"><button>Doc Vault</button></li>
+        <li class="heading-nav-entry"><button>Statements &amp; Reports</button></li>
+        <li class="heading-nav-entry"><button>More Documents</button></li>
+    </ul>
+    <div class="card padding-none">
+        <ul class="tabs padding-left-medium padding-top-small">
+            <li class="tab-title active"><button>My Uploads</button></li>
+            <li class="tab-title"><button>Shared with Me</button></li>
+            <li class="tab-title"><button>eSignatures</button></li>
+            <li class="tab-title"><button>All Documents</button></li>
+        </ul>
+        <div class="row padding-horiz-medium">
+            <div class="columns small-3 padding-top-medium">
+                <ul class="filter-nav vertical">
+                    <h6>Collection Types</h6>
+                    <li class="filter-nav-entry active"><button>All Collections</button></li>
+                    <li class="filter-nav-entry"><button>Insurance Docs</button></li>
+                    <li class="filter-nav-entry"><button>Estate Docs</button></li>
+                    <li class="filter-nav-entry"><button>Financial Docs</button></li>
+                </ul>
+            </div>
+            <div class="columns small-9 padding-vert-medium">                
+                <h1>All Collections</h1>
+                <h3>Subheading for content below</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam quis facilisis lorem, vitae egestas leo. Nulla at augue vulputate, sodales diam rutrum, rhoncus felis. Mauris vitae lacus sodales, ullamcorper felis sed, sodales est. Nullam volutpat leo mi, non pellentesque ante porttitor at. Integer a diam massa. Suspendisse cursus velit mi, eget accumsan massa eleifend vel. Phasellus ut placerat quam. Integer eleifend enim et elit malesuada, commodo congue ipsum tempor. Nulla feugiat leo vel magna feugiat bibendum. Sed eget eros vulputate, laoreet ante sit amet, malesuada nulla. Aenean id maximus ante, ac mattis ex.</p>
+                <p>Integer vestibulum est in justo finibus faucibus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Ut massa justo, scelerisque vitae auctor at, sagittis tincidunt risus. Duis aliquet est ante, non congue lectus fermentum sit amet. Aliquam iaculis laoreet risus eget vulputate. Etiam sodales condimentum odio, scelerisque pulvinar velit varius quis. Duis eu ex velit. Sed vel massa accumsan, bibendum nulla id, interdum elit. Duis sollicitudin cursus felis, id molestie risus hendrerit vel. Nulla id nisi vitae erat eleifend vestibulum a tempor neque. Donec neque dui, maximus sed ultrices nec, vestibulum nec ex. Donec tempor condimentum nisl, ac finibus ligula facilisis at. Quisque eu dui lacus. Sed lobortis elit nec consequat fermentum. Maecenas a erat ut risus vestibulum consectetur. Aliquam erat volutpat.</p>
+            </div>
+        </div>
+    </div>
+</div>
+						</div>
+					</div>
+
+				</div>
+				<div class="section" id="Navigation-Ghosting_Navigation" data-section="Navigation" data-heading="Ghosting Navigation">
+
+					<div class="comment">
+						<h1>Ghosting Navigation</h1>
+						<h2 class="main-section-sg-by-lvnm" id="section-Ghosting_Tabs">Ghosting Tabs</h2>
+<p>Tabs may be used on a dark background using the <code>.ghost</code> class. You may also use the <code>.ghost-children</code> class to target descendants.
+See the <a href="ghosting.html">ghosting section</a> for more explanation.</p>
+					</div>
+
+					<div class="ss-title">EXAMPLE
+						<span class="icon-code tooltip-target tooltip-show-on-hover">
+							<div class="show-hide-code tooltip tooltip-top-right reset-child-margins">
+								<p>Show Code</p>
+							</div>
+							<span class="icon icon-caret-left"></span>
+							<span class="icon icon-caret-right"></span>
+						</span>
+					</div>
+					<div class="codeBlock markup hljs">
+						<pre><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"bg-black padding-medium"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"tabs ghost"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"tab-title active"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">button</span>&gt;</span>Summary<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"tab-title"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">button</span>&gt;</span>Basics<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"tab-title"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">button</span>&gt;</span>Budget<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"tab-title"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">button</span>&gt;</span>Accounts<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
+					</div>
+
+					<div class="result codeExample">
+						<div class="exampleOutput">
+							<div class="bg-black padding-medium">
+    <ul class="tabs ghost">
+        <li class="tab-title active"><button>Summary</button></li>
+        <li class="tab-title"><button>Basics</button></li>
+        <li class="tab-title"><button>Budget</button></li>
+        <li class="tab-title"><button>Accounts</button></li>
+    </ul>
+</div>
+						</div>
+					</div>
+
+				</div>
+				<div class="section" id="Ghosting_Filter_Navigation" data-section="" data-heading="">
+
+					<div class="comment">
+						
+						<h2 class="main-section-sg-by-lvnm" id="section-Ghosting_Filter_Navigation">Ghosting Filter Navigation</h2>
+<p>Filter Navigation may be used on a dark background using the <code>.ghost</code> class. See the <a href="ghosting.html">ghosting section</a> for more explanation.</p>
+					</div>
+
+					<div class="ss-title">EXAMPLE
+						<span class="icon-code tooltip-target tooltip-show-on-hover">
+							<div class="show-hide-code tooltip tooltip-top-right reset-child-margins">
+								<p>Show Code</p>
+							</div>
+							<span class="icon icon-caret-left"></span>
+							<span class="icon icon-caret-right"></span>
+						</span>
+					</div>
+					<div class="codeBlock markup hljs">
+						<pre><span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"filter-nav padding-medium bg-black ghost"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"filter-nav-entry active"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">button</span>&gt;</span>Summary<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"filter-nav-entry"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">button</span>&gt;</span>Basics<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"filter-nav-entry"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">button</span>&gt;</span>Budget<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"filter-nav-entry"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">button</span>&gt;</span>Accounts<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span></pre>
+					</div>
+
+					<div class="result codeExample">
+						<div class="exampleOutput">
+							<ul class="filter-nav padding-medium bg-black ghost">
+    <li class="filter-nav-entry active"><button>Summary</button></li>
+    <li class="filter-nav-entry"><button>Basics</button></li>
+    <li class="filter-nav-entry"><button>Budget</button></li>
+    <li class="filter-nav-entry"><button>Accounts</button></li>
+</ul>
+						</div>
+					</div>
+
+				</div>
+				<div class="section" id="Ghosting_Heading_Navigation" data-section="" data-heading="">
+
+					<div class="comment">
+						
+						<h2 class="main-section-sg-by-lvnm" id="section-Ghosting_Heading_Navigation">Ghosting Heading Navigation</h2>
+<p>Heading navigation may be used on a dark background using the <code>.ghost</code> class. See the <a href="ghosting.html">ghosting section</a> for more explanation.</p>
+					</div>
+
+					<div class="ss-title">EXAMPLE
+						<span class="icon-code tooltip-target tooltip-show-on-hover">
+							<div class="show-hide-code tooltip tooltip-top-right reset-child-margins">
+								<p>Show Code</p>
+							</div>
+							<span class="icon icon-caret-left"></span>
+							<span class="icon icon-caret-right"></span>
+						</span>
+					</div>
+					<div class="codeBlock markup hljs">
+						<pre><span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"heading-nav bg-black padding-medium ghost"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"heading-nav-entry active"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">button</span>&gt;</span>Summary<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"heading-nav-entry"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">button</span>&gt;</span>Basics<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"heading-nav-entry"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">button</span>&gt;</span>Budget<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"heading-nav-entry"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">button</span>&gt;</span>Accounts<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span></pre>
+					</div>
+
+					<div class="result codeExample">
+						<div class="exampleOutput">
+							<ul class="heading-nav bg-black padding-medium ghost">
+    <li class="heading-nav-entry active"><button>Summary</button></li>
+    <li class="heading-nav-entry"><button>Basics</button></li>
+    <li class="heading-nav-entry"><button>Budget</button></li>
+    <li class="heading-nav-entry"><button>Accounts</button></li>
+</ul>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</section>
+
+		<footer class="sg-footer">
+			<div class="grid-container reset-child-margins">
+				<p class="padding-horiz-xlarge"></p>
+			</div>
+		</footer>
+	</div>
+
+	<div class="modal-overlay"></div>
+
+	<div class="modal-container">
+		<div class="modal">
+			<h1>Example Modal</h1>
+
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodoconsequat. Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat nonproident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		</div>
+		<button class="modal-close">
+			<span class="icon icon-close"></span>
+		</button>
+	</div>
+
+	<div class="toaster-fixed-region">
+		<div class="grid-container sg-padding-responsive-horiz padding-vert-medium toaster-grid">
+			<div class="toaster-container show-with-transition text-right">
+				<div class="toaster-trigger inline-block bg-medium-grey padding-horiz-tiny">
+					<button class="reset-button">
+						<span class="icon icon-caret-down"></span>
+					</button>
+				</div>
+				<div class="toaster-content padding-small bg-medium-grey">
+					<a href="http://uitk.learnvest.com/explorer" class="button tiny info margin-bottom-none">Back to Version Explorer!</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="./resources/js/vendor/moment.min.js"></script>
+	<script src="./resources/js/vendor/d3.min.js"></script>
+	<script src="./resources/js/app.js" id="appjs"></script>
+</body>
+</html>
