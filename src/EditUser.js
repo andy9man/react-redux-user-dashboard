@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import './App.css';
 import { connect } from 'react-redux'
-import { appInitialView, getUsers, showSelectedUser, editUser, selectedUser } from './state/actions';
+import { appInitialView, getUsers, showSelectedUser } from './state/actions';
 
 class ListView extends Component {
   constructor(props) {
@@ -52,21 +53,29 @@ class ListView extends Component {
         <header>
         </header>
 
-        <div>
-        <table className="table" border="1">
-          <thead><tr><th>Name</th><th>email</th><th>created at</th><th>actions</th></tr></thead>
-          <tbody>
-          {this.props.users.map( user => (
-             <tr key={user.id}>
-              <td><a onClick={() => {this.props.showSelectedUser(user.id)}}>{user.name}</a></td>
-              <td>{user.email}</td>
-              <td>{user.createdAt}</td>
-              <td><a onClick={() => {this.props.showSelectedUser(user.id)}}>show</a> <a onClick={() => {this.props.appEditUser(user.id)}}>edit</a> delete</td>
-            </tr>
-          ))}
-          </tbody>
-          </table>
-        </div>
+        <form style={ {marginTop: '30px'} } onSubmit={ (e) => {
+          e.preventDefault();
+          this.addUser();
+        } }>
+
+          <label htmlFor="">
+            Email:
+            <input name="email" value={email} />
+          </label>
+
+          <label htmlFor="">
+            Username:
+            <input name="username" value={username} />
+          </label>
+
+          <label htmlFor="">
+            Avatar:
+            <input name="avatar" value={avatar} />
+          </label>
+          <button>Add User</button>
+        </form>
+
+        
       </div>
     );
   }
@@ -89,9 +98,6 @@ const getDispatchFromReduxToAppComponentAsProps = (dispatch) => {
     },
     showSelectedUser(id){
       dispatch(selectedUser(id))
-    },
-    appEditUser(id){
-      dispatch(editUser(id))
     }
   }
 }
