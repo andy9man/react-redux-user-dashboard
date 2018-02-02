@@ -11,7 +11,7 @@ function reducer(state=intialState, action) {
     case INITIAL_VIEW:
       return {
         ...state,
-        iFilterName: ''
+        viewState: INITIAL_VIEW
       }
 
     default:
