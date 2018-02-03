@@ -48,25 +48,61 @@ class ListView extends Component {
     const {email, username, avatar} = this.state;
     console.log(this.props.users)
     return (
-      <div>
-        <header>
-        </header>
+      <div className="padding-horiz-xlarge padding-vert-xlarge">
 
-        <div>
-        <table className="table" border="1">
-          <thead><tr><th>Name</th><th>email</th><th>created at</th><th>actions</th></tr></thead>
-          <tbody>
-          {this.props.users.map( user => (
-             <tr key={user.id}>
-              <td><a onClick={() => {this.props.showSelectedUser(user.id)}}>{user.name}</a></td>
-              <td>{user.email}</td>
-              <td>{user.createdAt}</td>
-              <td><a onClick={() => {this.props.showSelectedUser(user.id)}}>show</a> <a onClick={() => {this.props.appEditUser(user.id)}}>edit</a> delete</td>
+        {this.props.loadingData &&
+          <div
+            style={ {
+              width: '100%',
+              height: '100%',
+              top: '0',
+              position: 'fixed',
+              display: 'flex',
+              justifyContent: 'center',
+              alignItems: 'center'
+            } }
+          >
+            <span className="loading-indicator xlarge"></span>
+          </div>}
+
+        <table className="table" summary="">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Created At</th>
+              <th style={ {width: '175px'} }>Actions</th>
             </tr>
-          ))}
+          </thead>
+          <tbody>
+            {this.props.users.map( user => (
+              <tr key={user.id}>
+                <td><a onClick={() => {this.props.showSelectedUser(user.id)}}>{user.name}</a></td>
+                <td>{user.email}</td>
+                <td>{( (d) => {
+                      d = new Date(parseInt(d, 10));
+                      return `${d.getMonth()+1}/${d.getDay()+1}/${d.getFullYear()}`;
+                    })(user.createdAt)}
+                </td>
+                <td>
+                  <ul className="button-group tiny" style={ {marginBottom: '.5em', marginTop: '.5em'} }>
+                    <li>
+                      <button onClick={() => {this.props.showSelectedUser(user.id)}}>Show</button>
+                    </li>
+
+                    <li>
+                      <button onClick={() => {this.props.appEditUser(user.id)}}>Edit</button>
+                    </li>
+
+                    <li>
+                      <button onClick={ () => (alert('Need to delete'))} className="alert">Delete</button>
+                    </li>
+                  </ul>
+                </td>
+              </tr>
+            ))}
           </tbody>
-          </table>
-        </div>
+        </table>
       </div>
     );
   }

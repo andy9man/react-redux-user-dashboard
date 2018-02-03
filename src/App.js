@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import axios from 'axios';
 import './App.css';
 import { connect } from 'react-redux'
 import { addNameToState } from './state/actions';
@@ -12,13 +11,16 @@ class App extends Component {
       appViewState: ''
     }
   }
-  
+
   render() {
     const RenderComponent = this.props.appViewState
     return (
-
+      <div className="margin-vert-medium margin-horiz-medium" style={ {height: '100vh', width: '100vw'} }>
+        <header>
+          <h1><strong>User Dashboard</strong></h1>
+        </header>
             <RenderComponent />
-   
+      </div>
     );
   }
 }
@@ -28,13 +30,5 @@ const getStateFromReduxPassToAppComponentAsProps = (state) => {
     appViewState: state.viewState
   }
 }
-
-// const getDispatchFromReduxToAppComponentAsProps = (dispatch) => {
-//   return {
-//     appInitialView(dispatchName) {
-//       dispatch(initialView(dispatchName))
-//     }
-//   }
-// }
 
 export default connect(getStateFromReduxPassToAppComponentAsProps)(App)
