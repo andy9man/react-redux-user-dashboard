@@ -4,27 +4,7 @@ import { connect } from 'react-redux'
 import { appInitialView, getUsers, showSelectedUser, editUser, selectedUser } from './state/actions';
 
 class ListView extends Component {
-  constructor(props) {
-    super(props);
 
-    this.state = {
-      users: [],
-      username: '',
-      email: '',
-      avatar: ''
-    }
-
-    this.addUser = this.addUser.bind(this);
-    this.getUsers = this.getUsers.bind(this);
-    this.handleChange = this.handleChange.bind(this)
-  }
-
-  getUsers() {
-    axios.get(`http://5a74994008118e0012fd4c84.mockapi.io/users`)
-      .then((response) => {
-        this.props.appGetUsers(response.data);
-      })
-  }
 
   addUser() {
     const {email, username, avatar} = this.state;
@@ -41,12 +21,12 @@ class ListView extends Component {
   }
 
   componentDidMount(){
-    this.getUsers();
+    console.log("Attempting to load users...");
+    this.props.appGetUsers();
   }
 
   render() {
-    const {email, username, avatar} = this.state;
-    console.log(this.props.users)
+
     return (
       <div className="padding-horiz-xlarge padding-vert-xlarge">
 
@@ -77,7 +57,7 @@ class ListView extends Component {
           <tbody>
             {this.props.users.map( user => (
               <tr key={user.id}>
-                <td><a onClick={() => {this.props.showSelectedUser(user.id)}}>{user.name}</a></td>
+                <td><a onClick={() => {this.props.showSelectedUser(user.id)}}>{user.firstName} {user.lastName}</a></td>
                 <td>{user.email}</td>
                 <td>{( (d) => {
                       d = new Date(parseInt(d, 10));
@@ -120,8 +100,8 @@ const getDispatchFromReduxToAppComponentAsProps = (dispatch) => {
     appInitialView(dispatchName) {
       // dispatch(initialView(dispatchName))
     },
-    appGetUsers(data) {
-      dispatch(getUsers(data))
+    appGetUsers() {
+      dispatch( getUsers() );
     },
     showSelectedUser(id){
       dispatch(selectedUser(id))

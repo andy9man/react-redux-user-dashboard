@@ -1,18 +1,20 @@
-import reducer from './reducers'
+import {createStore, compose, applyMiddleware} from 'redux';
+import thunk from 'redux-thunk';
+import reducer from './reducers.js';
+import {API_URL} from './actions';
 
 // **********************************************************************
 // For the redux tools
 // **********************************************************************
 // import { createStore } from 'redux'
-import { createStore, compose } from 'redux';
-const store = createStore(
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+
+export default createStore(
   reducer,
-  compose(
-    window.devToolsExtension ? window.devToolsExtension() : f => f
+  composeEnhancers(
+    applyMiddleware(thunk.withExtraArgument(API_URL))
   )
 )
 // else you only need to create a store
 // const store = createStore(reducer)
 // **********************************************************************
-
-export default store;
